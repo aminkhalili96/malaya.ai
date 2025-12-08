@@ -1,0 +1,17 @@
+
+fastapi
+uvicorn
+pydantic
+python-dotenv
+langchain
+langchain-openai
+chromadb
+sentence-transformers
+rank_bm25
+presidio-analyzer
+presidio-anonymizer
+numpy
+pandas
+malaya
+tavily-python
+ragas

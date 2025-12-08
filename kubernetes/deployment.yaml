@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: malaya-ai
+  labels:
+    app: malaya-ai
+spec:
+  replicas: 1  # Scale to 3+ in production
+  selector:
+    matchLabels:
+      app: malaya-ai
+  template:
+    metadata:
+      labels:
+        app: malaya-ai
+    spec:
+      containers:
+      - name: malaya-ai
+        image: malaya-ai:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000  # FastAPI port (was 8501 for Streamlit)
+        env:
+        # API Keys from K8s Secrets
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: malaya-secrets
+              key: OPENAI_API_KEY
+        - name: TAVILY_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: malaya-secrets
+              key: TAVILY_API_KEY
+        # CORS configuration
+        - name: ALLOWED_ORIGINS
+          value: "https://malaya.ytl.com,https://chat.malaya.ai"
+        # Resource limits
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        # FastAPI health endpoint
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3

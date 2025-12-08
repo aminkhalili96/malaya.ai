@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Claude.ai style base */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FAF9F7;
+}
+
+/* Remove default focus outlines, use custom */
+*:focus {
+  outline: none;
+}
+
+/* Custom scrollbar - Claude.ai style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D2CC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A3A29E;
+}
+
+/* Textarea reset */
+textarea {
+  font-family: inherit;
+}
