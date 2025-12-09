@@ -186,15 +186,12 @@ Do NOT be robotic. Be human-like and have 'vibe'."""
         # Step 3: Search (Tavily + local chunks) using the contextualized query
         search_results = self.retriever.search(search_query, k=self.config["rag"]["k"])
 
-        if not search_results:
-            return {
-                "original_query": user_input,
-                "normalized_query": normalized_query,
-                "answer": "No context found. Add documents in Q2 or set TAVILY_API_KEY for web search.",
-                "sources": []
-            }
-
-        context_str, sources_list = self._build_context(search_results)
+        # Build context (empty string if no results - LLM will use its own knowledge)
+        if search_results:
+            context_str, sources_list = self._build_context(search_results)
+        else:
+            context_str = "(No external sources found. Answer using your general knowledge.)"
+            sources_list = []
 
         # Step 4: Generate Answer (with Memory + Language Mirroring)
         # Use DSPy-enhanced prompt if available (better slang understanding)
