@@ -1,6 +1,6 @@
 # Malaya LLM (Sovereign AI Copilot)
 
-A full-stack AI application (FastAPI + React) designed for YTL AI Labs.
+An LLM-powered chatbot built for deep Malay language understanding, powered by Qwen 3.2 and enhanced with custom NLP preprocessing for cleaner intent detection, smarter reasoning, and more natural conversation.
 
 ## 🚀 Quick Start
 
