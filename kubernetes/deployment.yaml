@@ -34,7 +34,7 @@ spec:
               key: TAVILY_API_KEY
         # CORS configuration
         - name: ALLOWED_ORIGINS
-          value: "https://malaya.ytl.com,https://chat.malaya.ai"
+          value: "http://localhost:5173,http://localhost:3000"
         # Resource limits
         resources:
           requests:

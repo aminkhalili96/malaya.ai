@@ -25,7 +25,7 @@ limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(
     title="Malaya LLM API",
     version="2.1",
-    description="Sovereign AI Copilot for YTL AI Labs"
+    description="Sovereign AI Copilot with Malaysian language understanding"
 )
 
 # Attach limiter to app state

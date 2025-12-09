@@ -9,7 +9,7 @@ class HybridRetriever:
         """
         Initialize with a list of documents (child chunks).
         docs format: [{"content": "...", "metadata": {...}}]
-        trusted_domains: List of domains to prioritize (e.g., ["ytl.com", "ytlgroup.com"])
+        trusted_domains: List of domains to prioritize (e.g., ["gov.my", "edu.my"])
         excluded_domains: List of domains to exclude (e.g., ["reddit.com"])
         """
         self.docs = docs or []

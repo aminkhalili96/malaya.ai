@@ -132,7 +132,7 @@ class MalayaChatbot:
                          for pattern in greeting_patterns)
         
         # Only intercept if it's a SHORT greeting (likely just "Hi" or "Apa khabar")
-        # If it's long (e.g. "Hi, what is YTL?"), let it fall through to RAG.
+        # If it's long (e.g. "Hi, what is this?"), let it fall through to RAG.
         is_short = len(normalized_lower.split()) <= 5
         
         if is_greeting and is_short:
@@ -144,7 +144,7 @@ class MalayaChatbot:
             else:
                 lang_instruction = "The user speaks MANGLISH (mix of Malay and English). Reply in a casual, fun Manglish style."
             
-            greeting_system_prompt = f"""You are Malaya.ai, a witty, friendly AI assistant for YTL AI Labs.
+            greeting_system_prompt = f"""You are Malaya.ai, a witty, friendly AI assistant.
 The user just said hello. {lang_instruction}
 Be brief (1-2 sentences). Ask a fun follow-up question about their day or what they need help with.
 Do NOT be robotic. Be human-like and have 'vibe'."""

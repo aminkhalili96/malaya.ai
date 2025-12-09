@@ -12,9 +12,6 @@ rag:
   k: 3
   search_provider: "tavily"
   trusted_domains:
-    - "ytl.com"
-    - "ytlgroup.com"
-    - "frogasia.com"
     - "gov.my"
     - "edu.my"
   excluded_domains:
