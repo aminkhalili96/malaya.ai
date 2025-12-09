@@ -1,5 +1,5 @@
 model:
-  name: "gpt-4o"
+  name: "qwen3:14b"
   temperature: 0
 
 # DSPy Prompt Optimization (disabled - see test results)

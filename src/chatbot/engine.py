@@ -1,7 +1,7 @@
 import os
 import yaml
 from typing import List, Dict
-from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from src.summarization.preprocessing import TextNormalizer
@@ -30,7 +30,8 @@ class MalayaChatbot:
         self.normalizer = TextNormalizer()
         self.llm_error = None
         try:
-            self.llm = ChatOpenAI(
+            # Use Ollama with Qwen 3 (14B) - no API key required
+            self.llm = ChatOllama(
                 model=self.config["model"]["name"],
                 temperature=self.config["model"]["temperature"]
             )
@@ -104,7 +105,7 @@ class MalayaChatbot:
         2. Normalize (Manglish -> Malay)
         3. Chitchat Detection (Dynamic)
         4. Search (Tavily)
-        5. Generate (OpenAI with Citations + Memory + Language Mirroring)
+        5. Generate (Qwen via Ollama with Citations + Memory + Language Mirroring)
         """
         # Step 0: Detect user's language BEFORE normalization
         detected_language = self._detect_language(user_input)
@@ -116,7 +117,7 @@ class MalayaChatbot:
             return {
                 "original_query": user_input,
                 "normalized_query": normalized_query,
-                "answer": "LLM is not configured. Please set OPENAI_API_KEY and reload.",
+                "answer": "LLM is not configured. Please ensure Ollama is running with qwen3:14b.",
                 "sources": []
             }
 

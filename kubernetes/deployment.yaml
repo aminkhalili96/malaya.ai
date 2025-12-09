@@ -21,12 +21,9 @@ spec:
         ports:
         - containerPort: 8000  # FastAPI port (was 8501 for Streamlit)
         env:
-        # API Keys from K8s Secrets
-        - name: OPENAI_API_KEY
-          valueFrom:
-            secretKeyRef:
-              name: malaya-secrets
-              key: OPENAI_API_KEY
+        # Ollama endpoint (run Ollama as sidecar or external service)
+        - name: OLLAMA_HOST
+          value: "http://ollama:11434"
         - name: TAVILY_API_KEY
           valueFrom:
             secretKeyRef:

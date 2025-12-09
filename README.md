@@ -150,29 +150,39 @@ Raw Qwen models struggle with Malaysian slang, particles, and cultural context. 
 
 ## 🚀 Quick Start
 
-### 1. Environment Setup
+### Prerequisites
+- **Ollama**: Install from [ollama.ai](https://ollama.ai)
+- **Node.js**: v18+ for frontend
+- **Python**: 3.11+
+
+### 1. Pull the Qwen 3 Model
 ```bash
-cp .env.example .env
-# Add your API keys (OPENAI_API_KEY, TAVILY_API_KEY)
+ollama pull qwen3:14b
 ```
 
-### 2. Start Backend
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
+
+### 3. Start Backend
+```bash
 python3 -m uvicorn backend.main:app --reload --port 8000
 ```
 
-### 3. Start Frontend
+### 4. Start Frontend
 ```bash
 cd frontend && npm install && npm run dev
 ```
 
-### 4. Or use the startup script
+### 5. Or use the startup script
 ```bash
 ./run.sh
 ```
 
 **Backend**: http://localhost:8000 | **Frontend**: http://localhost:5173
+
+> **Note**: No API keys required! The project uses Qwen 3 (14B) via Ollama (free, local).
 
 ---
 

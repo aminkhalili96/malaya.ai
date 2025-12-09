@@ -154,12 +154,12 @@ class DSPyOptimizer:
     them to the LangChain-based engine.
     """
     
-    def __init__(self, model_name: str = "gpt-4o-mini"):
+    def __init__(self, model_name: str = "qwen3:14b"):
         """
         Initialize DSPy optimizer.
         
         Args:
-            model_name: LLM model to use for DSPy optimization
+            model_name: LLM model to use for DSPy optimization (Ollama model name)
         """
         self.model_name = model_name
         self.qa_module = MalayQAModule()
@@ -168,11 +168,13 @@ class DSPyOptimizer:
         self._is_optimized = False
     
     def _setup_dspy(self):
-        """Configure DSPy with the specified LLM."""
-        # Use OpenAI for DSPy (most reliable)
-        if os.environ.get("OPENAI_API_KEY"):
-            lm = dspy.LM(f"openai/{self.model_name}")
+        """Configure DSPy with Ollama."""
+        # Use Ollama for DSPy (free, local)
+        try:
+            lm = dspy.LM(f"ollama_chat/{self.model_name}")
             dspy.configure(lm=lm)
+        except Exception as e:
+            print(f"Warning: Could not configure DSPy with Ollama: {e}")
     
     def optimize(self, training_examples: Optional[List[dspy.Example]] = None):
         """

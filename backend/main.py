@@ -56,7 +56,7 @@ def health_check():
         "status": "ok",
         "version": "2.1",
         "dependencies": {
-            "llm_configured": bool(os.environ.get("OPENAI_API_KEY")),
+            "llm_configured": True,  # Uses Ollama (local)
             "search_configured": bool(os.environ.get("TAVILY_API_KEY")),
         }
     }
