@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
+        "category": "Shortforms"
+    },
+    {
+        "id": 2,
+        "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
+        "category": "Shortforms"
+    },
+    {
+        "id": 3,
+        "input": "best gila siot benda ni!",
+        "category": "Sentiment"
+    },
+    {
+        "id": 4,
+        "input": "lepak mamak jom, aku belanja teh tarik",
+        "category": "Cultural"
+    },
+    {
+        "id": 5,
+        "input": "eh bro, that meeting how ah? client happy tak?",
+        "category": "Manglish"
+    },
+    {
+        "id": 6,
+        "input": "geram betul la dengan service ni, lambat macam siput",
+        "category": "Sentiment"
+    },
+    {
+        "id": 7,
+        "input": "jangan kacau aku, mengantuk gila lepas sahur",
+        "category": "Cultural"
+    },
+    {
+        "id": 8,
+        "input": "demo tokene make nasi kerabu lagi ko?",
+        "category": "Dialect: Kelantan"
+    },
+    {
+        "id": 9,
+        "input": "bakpo mung dop mari semalam?",
+        "category": "Dialect: Kelantan"
+    },
+    {
+        "id": 10,
+        "input": "hang nak pi mana tu? nampak segak semacam",
+        "category": "Dialect: Penang"
+    },
+    {
+        "id": 11,
+        "input": "awat hang tak habaq awal-awal?",
+        "category": "Dialect: Penang"
+    },
+    {
+        "id": 12,
+        "input": "kono la makan masak lemak cili api, baru sodap",
+        "category": "Dialect: Negeri Sembilan"
+    },
+    {
+        "id": 13,
+        "input": "ekau jangan bising, den nak tido ni",
+        "category": "Dialect: Negeri Sembilan"
+    },
+    {
+        "id": 14,
+        "input": "kitak urang dah makan sik?",
+        "category": "Dialect: Sarawak"
+    },
+    {
+        "id": 15,
+        "input": "kamek maok pegi pasar kejap",
+        "category": "Dialect: Sarawak"
+    },
+    {
+        "id": 16,
+        "input": "boleh bah, kalau kau mau",
+        "category": "Dialect: Sabah"
+    },
+    {
+        "id": 17,
+        "input": "ndak payah lah kau susah-susah",
+        "category": "Dialect: Sabah"
+    },
+    {
+        "id": 18,
+        "input": "can you explain how to renew my lesen memandu?",
+        "category": "Mixed"
+    },
+    {
+        "id": 19,
+        "input": "tolong buat email formal untuk apply cuti sakit esok",
+        "category": "Instruction"
+    },
+    {
+        "id": 20,
+        "input": "bg resepi nasi lemak yang paling simple",
+        "category": "Instruction"
+    },
+    {
+        "id": 21,
+        "input": "ape cer bro?",
+        "category": "Slang"
+    },
+    {
+        "id": 22,
+        "input": "pishang mat, keje byk gila",
+        "category": "Slang"
+    },
+    {
+        "id": 23,
+        "input": "koyak la mental aku hari ni",
+        "category": "Slang"
+    },
+    {
+        "id": 24,
+        "input": "dia tu acah je lebih",
+        "category": "Slang"
+    },
+    {
+        "id": 25,
+        "input": "jangan wat hal la wei",
+        "category": "Slang"
+    },
+    {
+        "id": 26,
+        "input": "fuh, padu teruk performance dia tadi",
+        "category": "Slang"
+    },
+    {
+        "id": 27,
+        "input": "aku on je kalau korang on",
+        "category": "Slang"
+    },
+    {
+        "id": 28,
+        "input": "takde hal lah, benda kecik je tu",
+        "category": "Slang"
+    },
+    {
+        "id": 29,
+        "input": "camne nak install python kat mac?",
+        "category": "Tech"
+    },
+    {
+        "id": 30,
+        "input": "what is the best time to visit Langkawi?",
+        "category": "Tourism"
+    },
+    {
+        "id": 31,
+        "input": "explain Rukun Negara to me",
+        "category": "Civics"
+    },
+    {
+        "id": 32,
+        "input": "sape PM malaysia sekarang?",
+        "category": "Civics"
+    },
+    {
+        "id": 33,
+        "input": "bila raya aidilfitri tahun ni?",
+        "category": "Cultural"
+    },
+    {
+        "id": 34,
+        "input": "suggest tempat dating best kat KL",
+        "category": "Tourism"
+    },
+    {
+        "id": 35,
+        "input": "traffic jam gila kat federal highway skrg",
+        "category": "Local knowledge"
+    },
+    {
+        "id": 36,
+        "input": "mana nak cari durian musang king murah?",
+        "category": "Local knowledge"
+    },
+    {
+        "id": 37,
+        "input": "weather esok panas ke hujan?",
+        "category": "General"
+    },
+    {
+        "id": 38,
+        "input": "tolong translate 'I love you' ke bahasa kelantan",
+        "category": "Translation"
+    },
+    {
+        "id": 39,
+        "input": "apa maksud 'gostan'?",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 40,
+        "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+        "category": "Vocabulary"
+    },
+    {
+        "id": 41,
+        "input": "canoneer tu apa? bunyi macam meriam je",
+        "category": "General"
+    },
+    {
+        "id": 42,
+        "input": "tolong kira 50 USD to MYR",
+        "category": "Utility"
+    },
+    {
+        "id": 43,
+        "input": "tulis pantun 4 kerat pasal cinta",
+        "category": "Creative"
+    },
+    {
+        "id": 44,
+        "input": "buat surat resignation notice 24 jam",
+        "category": "Creative"
+    },
+    {
+        "id": 45,
+        "input": "I want to eat something spicy, suggest one",
+        "category": "Recommendation"
+    },
+    {
+        "id": 46,
+        "input": "mana klinik 24 jam paling dekat?",
+        "category": "Local knowledge"
+    },
+    {
+        "id": 47,
+        "input": "kereta rosak tepi jalan, nak call sapa?",
+        "category": "Local knowledge"
+    },
+    {
+        "id": 48,
+        "input": "macam mana nak claim insurans kemalangan?",
+        "category": "Instruction"
+    },
+    {
+        "id": 49,
+        "input": "resepi ayam masak merah kenduri",
+        "category": "Instruction"
+    },
+    {
+        "id": 50,
+        "input": "bebal betul la driver tadi, signal tak bagi",
+        "category": "Sentiment"
+    },
+    {
+        "id": 51,
+        "input": "tolong check grammar ni: 'I go to school yesterday'",
+        "category": "Education"
+    },
+    {
+        "id": 52,
+        "input": "apa beza spm dengan stpm?",
+        "category": "Education"
+    },
+    {
+        "id": 53,
+        "input": "uitm stand for what?",
+        "category": "Education"
+    },
+    {
+        "id": 54,
+        "input": "universiti malaya world ranking berapa?",
+        "category": "Education"
+    },
+    {
+        "id": 55,
+        "input": "pdpr tu apa?",
+        "category": "Education"
+    },
+    {
+        "id": 56,
+        "input": "nak apply ptptn macam mana?",
+        "category": "Education"
+    },
+    {
+        "id": 57,
+        "input": "syarat kemasukan matrikulasi",
+        "category": "Education"
+    },
+    {
+        "id": 58,
+        "input": "asb dividen tahun ni berapa?",
+        "category": "Finance"
+    },
+    {
+        "id": 59,
+        "input": "cara buka akaun tabung haji online",
+        "category": "Finance"
+    },
+    {
+        "id": 60,
+        "input": "kwsp acc 3 boleh keluar duit tak?",
+        "category": "Finance"
+    },
+    {
+        "id": 61,
+        "input": "harga minyak ron95 terkini",
+        "category": "Finance"
+    },
+    {
+        "id": 62,
+        "input": "best credit card for cashback malaysia",
+        "category": "Finance"
+    },
+    {
+        "id": 63,
+        "input": "touch n go ewallet safe or not?",
+        "category": "Finance"
+    },
+    {
+        "id": 64,
+        "input": "scammer call cakap lhdn, apa nak buat?",
+        "category": "Finance"
+    },
+    {
+        "id": 65,
+        "input": "saman pdrm boleh bayar online ke?",
+        "category": "Civics"
+    },
+    {
+        "id": 66,
+        "input": "jpj renew license operating hours",
+        "category": "Civics"
+    },
+    {
+        "id": 67,
+        "input": "renew passport walk in boleh tak?",
+        "category": "Civics"
+    },
+    {
+        "id": 68,
+        "input": "undi 18 tu apa?",
+        "category": "Civics"
+    },
+    {
+        "id": 69,
+        "input": "cuti umum malaysia 2024",
+        "category": "Civics"
+    },
+    {
+        "id": 70,
+        "input": "baju melayu cekak musang vs teluk belanga",
+        "category": "Cultural"
+    },
+    {
+        "id": 71,
+        "input": "adat merisik tu wajib ke?",
+        "category": "Cultural"
+    },
+    {
+        "id": 72,
+        "input": "hantaran tunang biasanya berapa dulang?",
+        "category": "Cultural"
+    },
+    {
+        "id": 73,
+        "input": "pantang larang orang mengandung masa dulu",
+        "category": "Cultural"
+    },
+    {
+        "id": 74,
+        "input": "lagu raya paling legend",
+        "category": "Cultural"
+    },
+    {
+        "id": 75,
+        "input": "filem p ramlee paling lawak",
+        "category": "Entertainment"
+    },
+    {
+        "id": 76,
+        "input": "siapa menang ajl tahun lepas?",
+        "category": "Entertainment"
+    },
+    {
+        "id": 77,
+        "input": "panggung wayang terdekat",
+        "category": "Entertainment"
+    },
+    {
+        "id": 78,
+        "input": "concert coldplay malaysia ticket price",
+        "category": "Entertainment"
+    },
+    {
+        "id": 79,
+        "input": "malaysia vs korea bola sepak result",
+        "category": "Sports"
+    },
+    {
+        "id": 80,
+        "input": "dato lee chong wei retired bila?",
+        "category": "Sports"
+    },
+    {
+        "id": 81,
+        "input": "badminton court near me",
+        "category": "Sports"
+    },
+    {
+        "id": 82,
+        "input": "jdt menang lagi ke?",
+        "category": "Sports"
+    },
+    {
+        "id": 83,
+        "input": "sukan sea next kat mana?",
+        "category": "Sports"
+    },
+    {
+        "id": 84,
+        "input": "hiking trail best kat selangor/kl",
+        "category": "Lifestyle"
+    },
+    {
+        "id": 85,
+        "input": "tempat camping tepi sungai best",
+        "category": "Lifestyle"
+    },
+    {
+        "id": 86,
+        "input": "gym membership price fitness first",
+        "category": "Lifestyle"
+    },
+    {
+        "id": 87,
+        "input": "diet atkins menu malaysia",
+        "category": "Lifestyle"
+    },
+    {
+        "id": 88,
+        "input": "cara report jalan berlubang",
+        "category": "Local issue"
+    },
+    {
+        "id": 89,
+        "input": "jiran bising malam-malam, boleh report polis tak?",
+        "category": "Local issue"
+    },
+    {
+        "id": 90,
+        "input": "sampah tak kutip seminggu, nak adu kat mana?",
+        "category": "Local issue"
+    },
+    {
+        "id": 91,
+        "input": "anjing liar banyak kat taman ni, bahaya",
+        "category": "Local issue"
+    },
+    {
+        "id": 92,
+        "input": "paip air pecah, syabas contact number",
+        "category": "Local issue"
+    },
+    {
+        "id": 93,
+        "input": "blackout rumah aku sorang je, kenapa?",
+        "category": "Local issue"
+    },
+    {
+        "id": 94,
+        "input": "internet unifi slow gila hari ni",
+        "category": "Tech issue"
+    },
+    {
+        "id": 95,
+        "input": "celcom line takde signal",
+        "category": "Tech issue"
+    },
+    {
+        "id": 96,
+        "input": "mytv tak dapat siaran",
+        "category": "Tech issue"
+    },
+    {
+        "id": 97,
+        "input": "grab driver cancel last minute, geramnya",
+        "category": "Service issue"
+    },
+    {
+        "id": 98,
+        "input": "shopee delivery lambat sampai",
+        "category": "Service issue"
+    },
+    {
+        "id": 99,
+        "input": "foodpanda wrong order refund",
+        "category": "Service issue"
+    },
+    {
+        "id": 100,
+        "input": "tolong buat kesimpulan untuk essay ni pasal kemerdekaan",
+        "category": "Education"
+    }
+]

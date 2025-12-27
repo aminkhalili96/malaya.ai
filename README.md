@@ -15,6 +15,7 @@ A **Malaysian-language AI chatbot** that understands Malay, Manglish, and Malays
 | Feature | Description |
 |:--------|:------------|
 | 🎧 **Podcast Mode** | Paste any article URL → AI summarizes → Listen in Malaysian voice |
+| 📍 **Smart Maps** | Rich interactive cards with ⭐ ratings, photos & AI signature dish descriptions |
 | 🗺️ **Tourist Mode** | Get curated travel itineraries for Malaysian destinations |
 | 📸 **Snap & Translate** | Upload photo of signboard/menu → Translate Chinese/Jawi/Tamil |
 | ⚡ **Agent Mode** | Execute multi-step tasks automatically using LangGraph |
