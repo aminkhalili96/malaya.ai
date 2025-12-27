@@ -8,6 +8,15 @@ body {
   background-color: #FAF9F7;
 }
 
+body.high-contrast {
+  filter: contrast(1.08);
+}
+
+body.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
 /* Remove default focus outlines, use custom */
 *:focus {
   outline: none;

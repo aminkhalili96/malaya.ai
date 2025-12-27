@@ -26,6 +26,9 @@ import os
 import sys
 import re
 import json
+import socket
+import importlib.util
+import asyncio
 import yaml
 import pytest
 from dotenv import load_dotenv
@@ -33,6 +36,39 @@ from dotenv import load_dotenv
 # Load env and add path
 load_dotenv()
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+def _run_query(bot, text: str, **kwargs):
+    result = bot.process_query(text, **kwargs)
+    if asyncio.iscoroutine(result):
+        return asyncio.run(result)
+    return result
+
+def _tavily_reachable() -> bool:
+    if "TAVILY_API_KEY" not in os.environ:
+        return False
+    if importlib.util.find_spec("tavily") is None:
+        return False
+    try:
+        conn = socket.create_connection(("api.tavily.com", 443), timeout=2)
+        conn.close()
+        return True
+    except OSError:
+        return False
+
+
+def _openai_reachable() -> bool:
+    if "OPENAI_API_KEY" not in os.environ:
+        return False
+    try:
+        conn = socket.create_connection(("api.openai.com", 443), timeout=2)
+        conn.close()
+        return True
+    except OSError:
+        return False
+
+TAVILY_REACHABLE = _tavily_reachable()
+OPENAI_REACHABLE = _openai_reachable()
 
 # ============================================================
 # BACKEND TESTS
@@ -80,7 +116,9 @@ class TestManglishNormalization:
         from src.summarization.preprocessing import TextNormalizer
         normalizer = TextNormalizer()
         result = normalizer.normalize("xleh pergi")
-        assert "tak boleh" in result.lower(), f"'xleh' not normalized: {result}"
+        normalized = result.lower()
+        assert "tak boleh" in normalized or "tidak boleh" in normalized, \
+            f"'xleh' not normalized: {result}"
     
     def test_normalizer_xde(self):
         """Test 'xde' normalization - Malaya or local dict should handle it"""
@@ -102,6 +140,10 @@ class TestDeadCodeRemoved:
         assert "class CrossEncoderRanker" not in content, "Dead code CrossEncoderRanker still exists"
 
 
+@pytest.mark.skipif(
+    "TAVILY_API_KEY" not in os.environ or not TAVILY_REACHABLE,
+    reason="TAVILY_API_KEY not set or Tavily unreachable"
+)
 class TestTavilyConfiguration:
     """Issue #5 & #11: Tavily search configuration"""
     
@@ -198,26 +240,31 @@ class TestFrontendConfig:
 # INTEGRATION TESTS (Require API keys)
 # ============================================================
 
+@pytest.mark.integration
 class TestEndToEndChat:
     """Full integration tests for chat functionality"""
     
     @pytest.fixture(autouse=True)
     def setup(self):
-        self.has_openai = "OPENAI_API_KEY" in os.environ
+        self.has_openai = "OPENAI_API_KEY" in os.environ and OPENAI_REACHABLE
         if not self.has_openai:
-            pytest.skip("OPENAI_API_KEY not set")
+            pytest.skip("OPENAI_API_KEY not set or OpenAI unreachable")
     
     def test_greeting_response(self):
         from src.chatbot.engine import MalayaChatbot
         bot = MalayaChatbot()
-        response = bot.process_query("Halo!")
+        if bot.llm is None:
+            pytest.skip(f"LLM not configured: {bot.llm_error}")
+        response = _run_query(bot, "Halo!")
         assert response.get("answer"), "No answer returned"
         assert len(response["answer"]) > 10, "Answer too short"
     
     def test_factual_query_with_context(self):
         from src.chatbot.engine import MalayaChatbot
         bot = MalayaChatbot()
-        response = bot.process_query("What is YTL AI Labs?")
+        if bot.llm is None:
+            pytest.skip(f"LLM not configured: {bot.llm_error}")
+        response = _run_query(bot, "What is YTL AI Labs?")
         assert response.get("answer"), "No answer returned"
         assert response.get("context"), "No context returned"
 

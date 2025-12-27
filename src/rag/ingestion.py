@@ -1,6 +1,6 @@
 import re
 import uuid
-from typing import List, Dict
+from typing import List, Dict, Tuple
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # Presidio can be heavy to initialize and requires its spaCy model; fall back gracefully if unavailable
@@ -73,12 +73,12 @@ class ParentChildIndexer:
         self.redactor = PIIRedactor()
         self.store = {} # Mock store: {doc_id: parent_content}
 
-    def process_document(self, text: str) -> List[Dict]:
+    def process_document(self, text: str) -> Tuple[List[Dict], Dict[str, str]]:
         """
         1. Redact PII
         2. Split into Parents
         3. Split Parents into Children
-        4. Return Child chunks with Parent ID references
+        4. Return child chunks with Parent ID references and the parent store
         """
         # Step 1: Redaction (Defense in Depth)
         clean_text = self.redactor.redact(text)

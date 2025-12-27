@@ -1,0 +1,21 @@
+variants:
+  default:
+    label: "Default"
+    description: "Base system prompt"
+    prefix: ""
+    suffix: ""
+  concise:
+    label: "Concise"
+    description: "Short, bullet-first responses for fast reading."
+    suffix: |
+      STYLE: Keep responses concise. Prefer bullets, 3-6 items. Lead with the answer.
+  deep_dive:
+    label: "Deep Dive"
+    description: "Longer explanations with structure and brief rationale."
+    suffix: |
+      STYLE: Provide a structured response with short rationale. Avoid revealing internal chain-of-thought.
+  analyst:
+    label: "Analyst"
+    description: "Focus on tradeoffs, risks, and recommendations."
+    suffix: |
+      STYLE: Highlight tradeoffs, risks, and recommended next steps. Use headings when helpful.

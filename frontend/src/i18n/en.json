@@ -1,0 +1,54 @@
+{
+    "common": {
+        "send": "Send",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "close": "Close",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "back": "Back",
+        "next": "Next",
+        "search": "Search",
+        "upload": "Upload",
+        "download": "Download",
+        "share": "Share",
+        "copy": "Copy"
+    },
+    "chat": {
+        "placeholder": "Type a message...",
+        "newChat": "New Chat",
+        "thinking": "Thinking...",
+        "regenerate": "Regenerate",
+        "copied": "Copied!",
+        "sources": "Sources"
+    },
+    "sidebar": {
+        "conversations": "Conversations",
+        "projects": "Projects",
+        "settings": "Settings",
+        "archived": "Archived",
+        "newProject": "New Project"
+    },
+    "features": {
+        "snapTranslate": "Snap & Translate",
+        "podcastMode": "Podcast Mode",
+        "touristMode": "Tourist Mode",
+        "agentMode": "Agent Mode",
+        "priceCompare": "Price Compare",
+        "documentQA": "Document Q&A",
+        "codeExplain": "Code Explainer",
+        "memeGen": "Meme Generator"
+    },
+    "settings": {
+        "title": "Settings",
+        "language": "Language",
+        "theme": "Theme",
+        "dark": "Dark",
+        "light": "Light",
+        "profile": "Profile",
+        "customInstructions": "Custom Instructions"
+    }
+}

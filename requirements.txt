@@ -12,9 +12,14 @@ PyYAML>=6.0
 # --- LLM & LangChain ---
 langchain>=0.1.0
 langchain-ollama>=0.1.0
+langchain-openai>=0.1.0
 langchain-core>=0.1.0
 langsmith>=0.0.65
 dspy-ai>=2.4.0  # Prompt optimization (additive to LangChain)
+
+# --- gRPC Compatibility (DSPy/LiteLLM) ---
+grpcio>=1.62.3,<1.68.0
+grpcio-status>=1.62.3,<1.68.0
 
 # --- RAG & Search ---
 chromadb>=0.4.0
@@ -31,6 +36,8 @@ malaya>=5.0.0
 # --- Security & Validation ---
 presidio-analyzer>=2.2.0
 presidio-anonymizer>=2.2.0
+jsonschema>=4.21.0
+sentry-sdk>=1.45.0
 
 # --- Data Processing ---
 numpy>=1.24.0
@@ -44,3 +51,11 @@ datasets>=2.14.0  # For Ragas evaluation
 
 # --- Observability ---
 slowapi>=0.1.9  # Rate limiting
+prometheus-client>=0.20.0  # Metrics
+
+# --- Voice (TTS/STT) ---
+edge-tts>=6.1.0  # Malaysian TTS (free, Microsoft)
+# openai-whisper>=20231117  # Optional: Local STT (uncomment for offline use)
+
+# --- MCP (Model Context Protocol) ---
+mcp>=0.1.0

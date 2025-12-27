@@ -1,14 +1,66 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Plus, Clock, SlidersHorizontal, User } from 'lucide-react';
+import { Send, Plus, Clock, SlidersHorizontal, Camera, Headphones, MapPin, Zap } from 'lucide-react';
 import clsx from 'clsx';
+import PlaceCard from './PlaceCard';
 
-const ChatInterface = ({ mode, onNewChat }) => {
+const API_KEY = import.meta.env.VITE_API_KEY;
+
+// Extract widgets from tool_calls for rendering
+// For maps_search_places, split each place into its own widget so each gets a full card
+const buildWidgetsFromToolCalls = (toolCalls) => {
+    if (!Array.isArray(toolCalls)) return [];
+    const widgets = [];
+    toolCalls.forEach((tool) => {
+        if (tool.name === 'maps_geocode' && tool.content) {
+            widgets.push({ type: 'place', data: tool.content });
+        } else if (tool.name === 'maps_directions' && tool.content) {
+            widgets.push({ type: 'directions', data: tool.content });
+        } else if (tool.name === 'maps_search_places' && tool.content) {
+            // Parse the content to extract individual places
+            let parsed = tool.content;
+            if (typeof parsed === 'string') {
+                try {
+                    parsed = JSON.parse(parsed);
+                } catch {
+                    parsed = null;
+                }
+            }
+            // If we have a places array, create a widget for each place (up to 5)
+            if (parsed?.places && Array.isArray(parsed.places)) {
+                const placesToShow = parsed.places.slice(0, 5);
+                placesToShow.forEach((place) => {
+                    // Wrap each place as a single-place result for PlaceCard
+                    widgets.push({
+                        type: 'place',
+                        data: { places: [place] }
+                    });
+                });
+            } else {
+                // Fallback: just pass the whole thing
+                widgets.push({ type: 'place', data: tool.content });
+            }
+        }
+    });
+    return widgets;
+};
+
+
+const ChatInterface = ({ mode, onNewChat, onFeatureSelect }) => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [toolsOpen, setToolsOpen] = useState(false);
     const messagesEndRef = useRef(null);
     const textareaRef = useRef(null);
+    const toolsRef = useRef(null);
+
+    const featureButtons = [
+        { id: 'snap', icon: Camera, label: 'Snap & Translate', color: '#DA7756' },
+        { id: 'podcast', icon: Headphones, label: 'Podcast Mode', color: '#E8956E' },
+        { id: 'tourist', icon: MapPin, label: 'Tourist Mode', color: '#4CAF50' },
+        { id: 'agent', icon: Zap, label: 'Agent Mode', color: '#9C27B0' },
+    ];
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -17,6 +69,16 @@ const ChatInterface = ({ mode, onNewChat }) => {
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
+
+    useEffect(() => {
+        const handleClick = (event) => {
+            if (toolsRef.current && !toolsRef.current.contains(event.target)) {
+                setToolsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClick);
+        return () => document.removeEventListener('mousedown', handleClick);
+    }, []);
 
     // Auto-resize textarea
     useEffect(() => {
@@ -29,21 +91,23 @@ const ChatInterface = ({ mode, onNewChat }) => {
     const handleNewChat = () => {
         setMessages([]);
         setInput('');
+        setToolsOpen(false);
         if (onNewChat) onNewChat();
     };
 
     const handleSend = async () => {
         if (!input.trim() || isLoading) return;
 
+        setToolsOpen(false);
         const userMsg = { role: 'user', content: input };
         setMessages(prev => [...prev, userMsg]);
         setInput('');
         setIsLoading(true);
 
         try {
-            const res = await fetch('/api/chat', {
+            const res = await fetch('/api/chat/', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', ...(API_KEY ? { 'X-API-Key': API_KEY } : {}) },
                 body: JSON.stringify({
                     message: input,
                     history: messages.map(m => ({ role: m.role, content: m.content }))
@@ -53,9 +117,14 @@ const ChatInterface = ({ mode, onNewChat }) => {
             if (!res.ok) throw new Error('API Error');
             const data = await res.json();
 
+            // Extract widgets from tool_calls (e.g., maps_search_places)
+            const widgets = buildWidgetsFromToolCalls(data.tool_calls || []);
+
             setMessages(prev => [...prev, {
                 role: 'assistant',
-                content: data.answer
+                content: data.answer,
+                widgets: widgets,
+                sources: data.sources || []
             }]);
             setIsLoading(false);
         } catch (error) {
@@ -72,16 +141,7 @@ const ChatInterface = ({ mode, onNewChat }) => {
 
     return (
         <div className="flex flex-col h-full w-full bg-[#FAF9F7] relative">
-            {/* Header - New Chat button (top right) */}
-            <div className="absolute top-4 right-6 z-10">
-                <button
-                    onClick={handleNewChat}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-[#706F6C] hover:text-[#1A1915] transition-colors"
-                >
-                    <Plus size={16} strokeWidth={1.5} />
-                    <span>New chat</span>
-                </button>
-            </div>
+
 
             {/* Main Content Area */}
             <div className="flex-1 overflow-y-auto flex flex-col">
@@ -119,9 +179,33 @@ const ChatInterface = ({ mode, onNewChat }) => {
                                         <button className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors">
                                             <Plus size={18} strokeWidth={1.5} />
                                         </button>
-                                        <button className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors">
-                                            <SlidersHorizontal size={18} strokeWidth={1.5} />
-                                        </button>
+                                        <div ref={toolsRef} className="relative">
+                                            <button
+                                                type="button"
+                                                onClick={() => setToolsOpen((open) => !open)}
+                                                className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors"
+                                            >
+                                                <SlidersHorizontal size={18} strokeWidth={1.5} />
+                                            </button>
+                                            {toolsOpen && (
+                                                <div className="absolute left-0 bottom-full mb-2 w-52 rounded-xl border border-[#E8E5DE] bg-white shadow-lg py-2 text-sm text-[#1A1915] z-30">
+                                                    {featureButtons.map((btn) => (
+                                                        <button
+                                                            key={btn.id}
+                                                            type="button"
+                                                            onClick={() => {
+                                                                onFeatureSelect?.(btn.id);
+                                                                setToolsOpen(false);
+                                                            }}
+                                                            className="w-full flex items-center gap-2 px-3 py-2 hover:bg-[#F5F4F0] transition-colors"
+                                                        >
+                                                            <btn.icon size={14} style={{ color: btn.color }} />
+                                                            <span>{btn.label}</span>
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
                                         <button className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors">
                                             <Clock size={18} strokeWidth={1.5} />
                                         </button>
@@ -152,16 +236,9 @@ const ChatInterface = ({ mode, onNewChat }) => {
                         <div className="max-w-[720px] mx-auto px-4 py-8 space-y-6 pb-40">
                             {messages.map((msg, idx) => (
                                 <div key={idx} className={clsx(
-                                    "flex gap-3",
-                                    msg.role === 'user' ? "justify-end" : "justify-start"
+                                    "flex flex-col",
+                                    msg.role === 'user' ? "items-end" : "items-start"
                                 )}>
-                                    {/* Assistant Avatar (Left) */}
-                                    {msg.role === 'assistant' && (
-                                        <div className="w-8 h-8 rounded-full bg-[#DA7756] flex items-center justify-center shrink-0">
-                                            <span className="text-white text-sm font-medium">M</span>
-                                        </div>
-                                    )}
-
                                     {/* Message Bubble */}
                                     <div className={clsx(
                                         "max-w-[75%] rounded-2xl px-4 py-3 text-[15px] leading-relaxed",
@@ -172,10 +249,14 @@ const ChatInterface = ({ mode, onNewChat }) => {
                                         <div className="whitespace-pre-wrap">{msg.content}</div>
                                     </div>
 
-                                    {/* User Avatar (Right) */}
-                                    {msg.role === 'user' && (
-                                        <div className="w-8 h-8 rounded-full bg-[#E8E5DE] flex items-center justify-center shrink-0">
-                                            <User size={16} className="text-[#706F6C]" />
+                                    {/* Render PlaceCard widgets if present */}
+                                    {msg.widgets && msg.widgets.length > 0 && (
+                                        <div className="mt-3 w-full max-w-[90%]">
+                                            {msg.widgets.map((widget, widx) => (
+                                                widget.type === 'place' && (
+                                                    <PlaceCard key={widx} data={widget.data} />
+                                                )
+                                            ))}
                                         </div>
                                     )}
                                 </div>
@@ -183,10 +264,7 @@ const ChatInterface = ({ mode, onNewChat }) => {
 
                             {/* Loading indicator */}
                             {isLoading && (
-                                <div className="flex gap-3 justify-start">
-                                    <div className="w-8 h-8 rounded-full bg-[#DA7756] flex items-center justify-center shrink-0">
-                                        <span className="text-white text-sm font-medium">M</span>
-                                    </div>
+                                <div className="flex justify-start">
                                     <div className="bg-white border border-[#E8E5DE] rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
                                         <div className="flex items-center gap-1.5">
                                             <div className="w-2 h-2 bg-[#DA7756] rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
@@ -230,9 +308,33 @@ const ChatInterface = ({ mode, onNewChat }) => {
                                     <button className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors">
                                         <Plus size={18} strokeWidth={1.5} />
                                     </button>
-                                    <button className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors">
-                                        <SlidersHorizontal size={18} strokeWidth={1.5} />
-                                    </button>
+                                    <div ref={toolsRef} className="relative">
+                                        <button
+                                            type="button"
+                                            onClick={() => setToolsOpen((open) => !open)}
+                                            className="p-2 text-[#706F6C] hover:text-[#1A1915] hover:bg-[#F5F4F0] rounded-lg transition-colors"
+                                        >
+                                            <SlidersHorizontal size={18} strokeWidth={1.5} />
+                                        </button>
+                                        {toolsOpen && (
+                                            <div className="absolute left-0 bottom-full mb-2 w-52 rounded-xl border border-[#E8E5DE] bg-white shadow-lg py-2 text-sm text-[#1A1915] z-30">
+                                                {featureButtons.map((btn) => (
+                                                    <button
+                                                        key={btn.id}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            onFeatureSelect?.(btn.id);
+                                                            setToolsOpen(false);
+                                                        }}
+                                                        className="w-full flex items-center gap-2 px-3 py-2 hover:bg-[#F5F4F0] transition-colors"
+                                                    >
+                                                        <btn.icon size={14} style={{ color: btn.color }} />
+                                                        <span>{btn.label}</span>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
 
                                 <button

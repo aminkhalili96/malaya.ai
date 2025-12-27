@@ -45,12 +45,17 @@ COPY config.yaml .
 # Copy built frontend from Stage 1
 COPY --from=frontend-builder /app/frontend/dist ./static
 
-# Expose FastAPI port
-EXPOSE 8000
+# Copy entrypoint script
+COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 
-# Healthcheck using FastAPI /health endpoint
+# Cloud Run expects the container to listen on $PORT (default 8080)
+ENV PORT=8080
+EXPOSE 8080
+
+# Healthcheck using dynamic port (localhost might not work if binding 0.0.0.0 only, but curl typically fine)
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl --fail http://localhost:8000/health || exit 1
+    CMD curl --fail http://localhost:$PORT/health || exit 1
 
-# Run FastAPI with uvicorn
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run via entrypoint
+ENTRYPOINT ["./entrypoint.sh"]

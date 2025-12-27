@@ -1,0 +1,1017 @@
+{
+  "summary": {
+    "total_tests": 76,
+    "total_passed": 76,
+    "total_failed": 0,
+    "overall_score": 100.0,
+    "category_scores": {
+      "shortform": 100.0,
+      "ambiguous": 100.0,
+      "dialect": 100.0,
+      "dialect_catalog": 100.0,
+      "dialect_normalization": 100.0,
+      "particle": 100.0,
+      "sentiment": 100.0,
+      "cultural": 100.0,
+      "code_switch": 100.0
+    }
+  },
+  "results": {
+    "shortform": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "xleh la bro, xde duit skrg",
+          "normalized": "tidak boleh lah bro, tiada duit sekarang",
+          "expected": [
+            [
+              "tak boleh",
+              "tiada",
+              "sekarang"
+            ],
+            [
+              "tidak boleh",
+              "tiada",
+              "sekarang"
+            ]
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "jgn lpe bwk brg tu",
+          "normalized": "jangan lupa bawa barang itu",
+          "expected": [
+            "jangan",
+            "bawa",
+            "barang"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "mcm mane nk buat ni?",
+          "normalized": "macam mana nak buat ini?",
+          "expected": [
+            "macam mana",
+            "nak"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "sy xtau nk ckp ape",
+          "normalized": "saya tidak tahu nak cakap apa",
+          "expected": [
+            "saya",
+            "tidak tahu",
+            "cakap",
+            "apa"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "korg pegi mne td?",
+          "normalized": "korang pergi mana tadi?",
+          "expected": [
+            "korang",
+            "pergi",
+            "mana",
+            "tadi"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "tlg jwb msg sy",
+          "normalized": "tolong jawab msg saya",
+          "expected": [
+            "tolong",
+            "jawab"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "dh smpi blm?",
+          "normalized": "dah sampai belum?",
+          "expected": [
+            "dah",
+            "sampai",
+            "belum"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "nk makan ape mlm ni?",
+          "normalized": "nak makan apa malam ini?",
+          "expected": [
+            "nak",
+            "apa",
+            "malam"
+          ],
+          "status": "PASS",
+          "category": "standard"
+        },
+        {
+          "input": "bestie, that's lowkey sus fr fr",
+          "normalized": "kawan baik, that's secara senyap mencurigakan serius betul",
+          "expected": [
+            "kawan baik",
+            "mencurigakan",
+            "serius"
+          ],
+          "status": "PASS",
+          "category": "genz"
+        },
+        {
+          "input": "slay queen, no cap",
+          "normalized": "hebat queen, serius",
+          "expected": [
+            "hebat",
+            "serius"
+          ],
+          "status": "PASS",
+          "category": "genz"
+        },
+        {
+          "input": "itu bussin frfr",
+          "normalized": "itu sedap serius betul",
+          "expected": [
+            "sedap"
+          ],
+          "status": "PASS",
+          "category": "genz"
+        },
+        {
+          "input": "makanan tu sedapppp gila",
+          "normalized": "makanan itu sedap sangat gila sangat",
+          "expected": [
+            "sedap sangat"
+          ],
+          "status": "PASS",
+          "category": "intensity"
+        },
+        {
+          "input": "bestttt gila tempat ni",
+          "normalized": "best sangat gila sangat tempat ini",
+          "expected": [
+            "best sangat"
+          ],
+          "status": "PASS",
+          "category": "intensity"
+        }
+      ]
+    },
+    "ambiguous": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "power bank aku rosak",
+          "normalized": "power kuasa elektrik bank saya rosak",
+          "expected": [
+            "kuasa elektrik"
+          ],
+          "status": "PASS",
+          "category": "power"
+        },
+        {
+          "input": "presentation tu power gila",
+          "normalized": "presentation itu power hebat gila sangat",
+          "expected": [
+            "hebat"
+          ],
+          "status": "PASS",
+          "category": "power"
+        },
+        {
+          "input": "signal steady sekarang",
+          "normalized": "signal steady stabil sekarang",
+          "expected": [
+            "stabil"
+          ],
+          "status": "PASS",
+          "category": "steady"
+        },
+        {
+          "input": "aku rasa sick hari ni",
+          "normalized": "saya rasa sick sakit hari ini",
+          "expected": [
+            "sakit"
+          ],
+          "status": "PASS",
+          "category": "sick"
+        },
+        {
+          "input": "game tu sick gila",
+          "normalized": "game itu sick hebat gila sangat",
+          "expected": [
+            "hebat"
+          ],
+          "status": "PASS",
+          "category": "sick"
+        },
+        {
+          "input": "panas hati aku tengok dia",
+          "normalized": "panas marah hati saya tengok dia",
+          "expected": [
+            "marah"
+          ],
+          "status": "PASS",
+          "category": "panas"
+        }
+      ]
+    },
+    "dialect": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "Gapo demo nok make?",
+          "expected_dialect": "kelantanese",
+          "detected_dialect": "kelantanese",
+          "confidence": 1.0,
+          "matched_words": [
+            "make",
+            "demo",
+            "gapo",
+            "nok"
+          ],
+          "expected_meaning": "What do you want to eat?",
+          "status": "PASS"
+        },
+        {
+          "input": "Ambo takdok pitih",
+          "expected_dialect": "kelantanese",
+          "detected_dialect": "kelantanese",
+          "confidence": 1.0,
+          "matched_words": [
+            "ambo",
+            "takdok",
+            "pitih"
+          ],
+          "expected_meaning": "I don't have money",
+          "status": "PASS"
+        },
+        {
+          "input": "Guano kawe nok gi?",
+          "expected_dialect": "kelantanese",
+          "detected_dialect": "kelantanese",
+          "confidence": 0.75,
+          "matched_words": [
+            "kawe",
+            "guano",
+            "nok"
+          ],
+          "expected_meaning": "How do I go?",
+          "status": "PASS"
+        },
+        {
+          "input": "Mung nok gi dunung?",
+          "expected_dialect": "terengganu",
+          "detected_dialect": "terengganu",
+          "confidence": 0.75,
+          "matched_words": [
+            "mung",
+            "nok",
+            "dunung"
+          ],
+          "expected_meaning": "Where do you want to go?",
+          "status": "PASS"
+        },
+        {
+          "input": "Dok, ambe dok nak",
+          "expected_dialect": "terengganu",
+          "detected_dialect": "terengganu",
+          "confidence": 0.5,
+          "matched_words": [
+            "dok",
+            "ambe"
+          ],
+          "expected_meaning": "No, I don't want",
+          "status": "PASS"
+        },
+        {
+          "input": "Hang pi mana?",
+          "expected_dialect": "kedah_perlis",
+          "detected_dialect": "kedah_perlis",
+          "confidence": 0.3333333333333333,
+          "matched_words": [
+            "hang"
+          ],
+          "expected_meaning": "Where are you going?",
+          "status": "PASS"
+        },
+        {
+          "input": "Awat hang buat camtu?",
+          "expected_dialect": "kedah_perlis",
+          "detected_dialect": "kedah_perlis",
+          "confidence": 0.5,
+          "matched_words": [
+            "hang",
+            "awat"
+          ],
+          "expected_meaning": "Why did you do that?",
+          "status": "PASS"
+        },
+        {
+          "input": "Depa semua dah balik",
+          "expected_dialect": "kedah_perlis",
+          "detected_dialect": "kedah_perlis",
+          "confidence": 0.25,
+          "matched_words": [
+            "depa"
+          ],
+          "expected_meaning": "They all have gone home",
+          "status": "PASS"
+        },
+        {
+          "input": "Lu mana tau gua punya hal",
+          "expected_dialect": "penang",
+          "detected_dialect": "penang",
+          "confidence": 0.3333333333333333,
+          "matched_words": [
+            "lu",
+            "gua"
+          ],
+          "expected_meaning": "How would you know my business",
+          "status": "PASS"
+        },
+        {
+          "input": "Tarak problem la",
+          "expected_dialect": "penang",
+          "detected_dialect": "penang",
+          "confidence": 0.3333333333333333,
+          "matched_words": [
+            "tarak"
+          ],
+          "expected_meaning": "No problem",
+          "status": "PASS"
+        },
+        {
+          "input": "Kasi tau gua",
+          "expected_dialect": "penang",
+          "detected_dialect": "penang",
+          "confidence": 0.6666666666666666,
+          "matched_words": [
+            "gua",
+            "kasi"
+          ],
+          "expected_meaning": "Tell me",
+          "status": "PASS"
+        },
+        {
+          "input": "Bah, ko bilang apa tadi?",
+          "expected_dialect": "sabah",
+          "detected_dialect": "sabah",
+          "confidence": 0.4,
+          "matched_words": [
+            "bah",
+            "bilang"
+          ],
+          "expected_meaning": "What did you say earlier?",
+          "status": "PASS"
+        },
+        {
+          "input": "Nda buli bah kalau macam tu",
+          "expected_dialect": "sabah",
+          "detected_dialect": "sabah",
+          "confidence": 0.5,
+          "matched_words": [
+            "bah",
+            "nda",
+            "buli"
+          ],
+          "expected_meaning": "Cannot if like that",
+          "status": "PASS"
+        },
+        {
+          "input": "Sia pigi dulu bah",
+          "expected_dialect": "sabah",
+          "detected_dialect": "sabah",
+          "confidence": 0.75,
+          "matched_words": [
+            "bah",
+            "sia",
+            "pigi"
+          ],
+          "expected_meaning": "I'm going first",
+          "status": "PASS"
+        },
+        {
+          "input": "Kitak maok pergi mana?",
+          "expected_dialect": "sarawak",
+          "detected_dialect": "sarawak",
+          "confidence": 0.5,
+          "matched_words": [
+            "kitak",
+            "maok"
+          ],
+          "expected_meaning": "Where do you want to go?",
+          "status": "PASS"
+        },
+        {
+          "input": "Kamek sik tauk",
+          "expected_dialect": "sarawak",
+          "detected_dialect": "sarawak",
+          "confidence": 0.6666666666666666,
+          "matched_words": [
+            "kamek",
+            "sik"
+          ],
+          "expected_meaning": "I don't know",
+          "status": "PASS"
+        },
+        {
+          "input": "Nang, kitak betul",
+          "expected_dialect": "sarawak",
+          "detected_dialect": "sarawak",
+          "confidence": 0.6666666666666666,
+          "matched_words": [
+            "kitak",
+            "nang"
+          ],
+          "expected_meaning": "Yes, you're right",
+          "status": "PASS"
+        },
+        {
+          "input": "Den nak poi ghomeh",
+          "expected_dialect": "negeri_sembilan",
+          "detected_dialect": "negeri_sembilan",
+          "confidence": 0.75,
+          "matched_words": [
+            "den",
+            "ghomeh",
+            "poi"
+          ],
+          "expected_meaning": "I want to go home",
+          "status": "PASS"
+        },
+        {
+          "input": "Bona ko cakap tu?",
+          "expected_dialect": "negeri_sembilan",
+          "detected_dialect": "negeri_sembilan",
+          "confidence": 0.25,
+          "matched_words": [
+            "bona"
+          ],
+          "expected_meaning": "Is what you said true?",
+          "status": "PASS"
+        },
+        {
+          "input": "Den tak ghoyat la",
+          "expected_dialect": "perak",
+          "detected_dialect": "perak",
+          "confidence": 0.5,
+          "matched_words": [
+            "den",
+            "ghoyat"
+          ],
+          "expected_meaning": "I don't understand",
+          "status": "PASS"
+        },
+        {
+          "input": "Biskita bisai banar",
+          "expected_dialect": "brunei_malay",
+          "detected_dialect": "brunei_malay",
+          "confidence": 1.0,
+          "matched_words": [
+            "biskita",
+            "bisai",
+            "banar"
+          ],
+          "expected_meaning": "You are very pretty",
+          "status": "PASS"
+        },
+        {
+          "input": "Ulun handak kada",
+          "expected_dialect": "banjar",
+          "detected_dialect": "banjar",
+          "confidence": 1.0,
+          "matched_words": [
+            "ulun",
+            "kada",
+            "handak"
+          ],
+          "expected_meaning": "I don't want",
+          "status": "PASS"
+        },
+        {
+          "input": "Urang indak samo",
+          "expected_dialect": "minangkabau",
+          "detected_dialect": "minangkabau",
+          "confidence": 1.0,
+          "matched_words": [
+            "urang",
+            "indak",
+            "samo"
+          ],
+          "expected_meaning": "People are not the same",
+          "status": "PASS"
+        },
+        {
+          "input": "Bikin barang tu, tarak masa",
+          "expected_dialect": "bazaar_malay",
+          "detected_dialect": "bazaar_malay",
+          "confidence": 0.4,
+          "matched_words": [
+            "bikin",
+            "tarak"
+          ],
+          "expected_meaning": "Make that thing, no time",
+          "status": "PASS"
+        },
+        {
+          "input": "Lu punya dan gua punya",
+          "expected_dialect": "baba_malay",
+          "detected_dialect": "baba_malay",
+          "confidence": 0.4,
+          "matched_words": [
+            "lu punya",
+            "gua punya"
+          ],
+          "expected_meaning": "Yours and mine",
+          "status": "PASS"
+        }
+      ]
+    },
+    "dialect_catalog": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "missing_description": [],
+          "missing_status": [],
+          "missing_in_detector": [],
+          "missing_in_names": [],
+          "extra_in_detector": [],
+          "extra_in_names": [],
+          "status": "PASS"
+        }
+      ]
+    },
+    "dialect_normalization": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "Biskita bisai banar",
+          "normalized": "awak cantik betul",
+          "expected": [
+            "awak",
+            "cantik",
+            "betul"
+          ],
+          "status": "PASS",
+          "category": "brunei_malay"
+        },
+        {
+          "input": "Ulun handak makan, kada pian?",
+          "normalized": "saya nak makan, tidak awak?",
+          "expected": [
+            "saya",
+            "nak",
+            "makan",
+            "tidak",
+            "awak"
+          ],
+          "status": "PASS",
+          "category": "banjar"
+        },
+        {
+          "input": "Urang indak samo, dima bana?",
+          "normalized": "orang tidak sama, di mana betul?",
+          "expected": [
+            "orang",
+            "tidak",
+            "sama",
+            "di mana",
+            "betul"
+          ],
+          "status": "PASS",
+          "category": "minangkabau"
+        },
+        {
+          "input": "Bikin itu, tarak masa untuk saya",
+          "normalized": "buat itu, tiada masa untuk saya",
+          "expected": [
+            "buat",
+            "tiada",
+            "masa",
+            "untuk",
+            "saya"
+          ],
+          "status": "PASS",
+          "category": "bazaar_malay"
+        },
+        {
+          "input": "Lu punya buku, gua punya pen",
+          "normalized": "awak punya buku, saya punya pen",
+          "expected": [
+            "awak punya",
+            "saya punya"
+          ],
+          "status": "PASS",
+          "category": "baba_malay"
+        }
+      ]
+    },
+    "particle": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "Okay lah, I'll do it",
+          "expected_particles": [
+            "lah"
+          ],
+          "detected_particles": [
+            "lah"
+          ],
+          "expected_sentiment": "friendly",
+          "detected_sentiment": "friendly",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        },
+        {
+          "input": "Really meh? I don't believe",
+          "expected_particles": [
+            "meh"
+          ],
+          "detected_particles": [
+            "meh"
+          ],
+          "expected_sentiment": "doubtful",
+          "detected_sentiment": "doubtful",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        },
+        {
+          "input": "Like that lor, nothing can do",
+          "expected_particles": [
+            "lor"
+          ],
+          "detected_particles": [
+            "lor"
+          ],
+          "expected_sentiment": "accepting",
+          "detected_sentiment": "accepting",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        },
+        {
+          "input": "You understand kan?",
+          "expected_particles": [
+            "kan"
+          ],
+          "detected_particles": [
+            "kan"
+          ],
+          "expected_sentiment": "uncertain",
+          "detected_sentiment": "neutral",
+          "particles_match": true,
+          "sentiment_match": false,
+          "status": "PASS"
+        },
+        {
+          "input": "Weh, come here quick!",
+          "expected_particles": [
+            "weh"
+          ],
+          "detected_particles": [
+            "weh"
+          ],
+          "expected_sentiment": "neutral",
+          "detected_sentiment": "neutral",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        },
+        {
+          "input": "Sure geh, confirm one",
+          "expected_particles": [
+            "geh"
+          ],
+          "detected_particles": [
+            "geh",
+            "one"
+          ],
+          "expected_sentiment": "confident",
+          "detected_sentiment": "confident",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        },
+        {
+          "input": "This one good hor?",
+          "expected_particles": [
+            "hor"
+          ],
+          "detected_particles": [
+            "hor",
+            "one"
+          ],
+          "expected_sentiment": "uncertain",
+          "detected_sentiment": "neutral",
+          "particles_match": true,
+          "sentiment_match": false,
+          "status": "PASS"
+        },
+        {
+          "input": "Bah, jom kita pergi",
+          "expected_particles": [
+            "bah"
+          ],
+          "detected_particles": [
+            "bah"
+          ],
+          "expected_sentiment": "positive",
+          "detected_sentiment": "positive",
+          "particles_match": true,
+          "sentiment_match": true,
+          "status": "PASS"
+        }
+      ]
+    },
+    "sentiment": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "Makanan ni best gila siot!",
+          "expected_sentiment": "positive",
+          "detected_sentiment": "positive",
+          "confidence": 0.7,
+          "reason": "Malaysian positive intensifier",
+          "analysis": {
+            "positive_words": [
+              "best"
+            ],
+            "negative_words": [],
+            "expletives": [
+              "siot",
+              "gila"
+            ]
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Gila babi mahal tempat ni",
+          "expected_sentiment": "neutral",
+          "detected_sentiment": "neutral",
+          "confidence": 0.5,
+          "reason": "Expletive as intensifier, not negative",
+          "analysis": {
+            "positive_words": [],
+            "negative_words": [],
+            "expletives": [
+              "gila",
+              "babi"
+            ]
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Pergh, power la presentation kau",
+          "expected_sentiment": "positive",
+          "detected_sentiment": "positive",
+          "confidence": 0.65,
+          "reason": "Positive exclamation",
+          "analysis": {
+            "positive_words": [
+              "power"
+            ],
+            "negative_words": [],
+            "expletives": []
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Haih, boring gila event ni",
+          "expected_sentiment": "negative",
+          "detected_sentiment": "negative",
+          "confidence": 0.75,
+          "reason": "Negative exclamation + word",
+          "analysis": {
+            "positive_words": [],
+            "negative_words": [
+              "boring"
+            ],
+            "expletives": [
+              "gila"
+            ]
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Wah, gempak gila results!",
+          "expected_sentiment": "positive",
+          "detected_sentiment": "positive",
+          "confidence": 0.7,
+          "reason": "Positive exclamation + word",
+          "analysis": {
+            "positive_words": [
+              "gempak"
+            ],
+            "negative_words": [],
+            "expletives": [
+              "gila"
+            ]
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Teruk gila service dekat sini",
+          "expected_sentiment": "negative",
+          "detected_sentiment": "negative",
+          "confidence": 0.65,
+          "reason": "Negative intensifier",
+          "analysis": {
+            "positive_words": [],
+            "negative_words": [
+              "teruk"
+            ],
+            "expletives": [
+              "gila"
+            ]
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Alamak, fail dah exam",
+          "expected_sentiment": "negative",
+          "detected_sentiment": "negative",
+          "confidence": 0.65,
+          "reason": "Negative exclamation + word",
+          "analysis": {
+            "positive_words": [],
+            "negative_words": [
+              "fail"
+            ],
+            "expletives": []
+          },
+          "status": "PASS"
+        },
+        {
+          "input": "Fuyo, mantap la bro!",
+          "expected_sentiment": "positive",
+          "detected_sentiment": "positive",
+          "confidence": 0.65,
+          "reason": "Positive exclamation + word",
+          "analysis": {
+            "positive_words": [
+              "mantap"
+            ],
+            "negative_words": [],
+            "expletives": []
+          },
+          "status": "PASS"
+        }
+      ]
+    },
+    "cultural": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "Jom lepak mamak tonight",
+          "normalized": "Jom bersantai kedai mamak tonight",
+          "expected_understanding": [
+            "hang out",
+            "mamak restaurant"
+          ],
+          "category": "colloquialism",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        },
+        {
+          "input": "Nak tapau ke dine in?",
+          "normalized": "Nak bungkus makanan ke dine in?",
+          "expected_understanding": [
+            "takeaway",
+            "eat in"
+          ],
+          "category": "colloquialism",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        },
+        {
+          "input": "Weekend ni kita makan angin kat Langkawi",
+          "normalized": "Weekend ini kita pergi bercuti di Langkawi",
+          "expected_understanding": [
+            "vacation",
+            "travel"
+          ],
+          "category": "colloquialism",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        },
+        {
+          "input": "Dia syok sendiri je, ingat dia hebat",
+          "normalized": "Dia sombong sahaja, ingat dia hebat",
+          "expected_understanding": [
+            "self-absorbed",
+            "delusional"
+          ],
+          "category": "colloquialism",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        },
+        {
+          "input": "Selamat Hari Raya, Maaf Zahir dan Batin",
+          "normalized": "Selamat Hari Raya, Maaf Zahir dan Batin",
+          "expected_understanding": [
+            "eid",
+            "forgiveness"
+          ],
+          "category": "festival",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        },
+        {
+          "input": "CNY ni dapat banyak angpow tak?",
+          "normalized": "CNY ini faham banyak angpow tidak?",
+          "expected_understanding": [
+            "chinese new year",
+            "red packet"
+          ],
+          "category": "festival",
+          "status": "PASS",
+          "note": "Cultural understanding requires LLM evaluation"
+        }
+      ]
+    },
+    "code_switch": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "score": 100.0,
+      "details": [
+        {
+          "input": "I nak go to that kedai kejap",
+          "normalized": "I nak go to that kedai sekejap",
+          "type": "intra-sentential",
+          "languages": [
+            "english",
+            "malay"
+          ],
+          "status": "PASS"
+        },
+        {
+          "input": "Okay la, let's discuss nanti. Kita meet up esok.",
+          "normalized": "Okay lah, let's discuss nanti. Kita meet up esok.",
+          "type": "inter-sentential",
+          "languages": [
+            "english",
+            "malay"
+          ],
+          "status": "PASS"
+        },
+        {
+          "input": "That one memang best gila siot",
+          "normalized": "That one memang best gila sangat siot",
+          "type": "mixed",
+          "languages": [
+            "english",
+            "malay",
+            "manglish"
+          ],
+          "status": "PASS"
+        },
+        {
+          "input": "Wei bro, your presentation that day was gempak habis",
+          "normalized": "weh bro, your presentation that day was hebat sangat",
+          "type": "mixed",
+          "languages": [
+            "english",
+            "malay"
+          ],
+          "status": "PASS"
+        }
+      ]
+    }
+  }
+}

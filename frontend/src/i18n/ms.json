@@ -1,0 +1,54 @@
+{
+    "common": {
+        "send": "Hantar",
+        "cancel": "Batal",
+        "save": "Simpan",
+        "delete": "Padam",
+        "edit": "Edit",
+        "close": "Tutup",
+        "loading": "Memuatkan...",
+        "error": "Ralat",
+        "success": "Berjaya",
+        "back": "Kembali",
+        "next": "Seterusnya",
+        "search": "Cari",
+        "upload": "Muat Naik",
+        "download": "Muat Turun",
+        "share": "Kongsi",
+        "copy": "Salin"
+    },
+    "chat": {
+        "placeholder": "Taip mesej...",
+        "newChat": "Chat Baru",
+        "thinking": "Sedang fikir...",
+        "regenerate": "Jana Semula",
+        "copied": "Disalin!",
+        "sources": "Sumber"
+    },
+    "sidebar": {
+        "conversations": "Perbualan",
+        "projects": "Projek",
+        "settings": "Tetapan",
+        "archived": "Diarkibkan",
+        "newProject": "Projek Baru"
+    },
+    "features": {
+        "snapTranslate": "Snap & Terjemah",
+        "podcastMode": "Mod Podcast",
+        "touristMode": "Mod Pelancong",
+        "agentMode": "Mod Agen",
+        "priceCompare": "Bandingkan Harga",
+        "documentQA": "Soal Jawab Dokumen",
+        "codeExplain": "Jelaskan Kod",
+        "memeGen": "Buat Meme"
+    },
+    "settings": {
+        "title": "Tetapan",
+        "language": "Bahasa",
+        "theme": "Tema",
+        "dark": "Gelap",
+        "light": "Cerah",
+        "profile": "Profil",
+        "customInstructions": "Arahan Khas"
+    }
+}

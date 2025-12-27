@@ -12,6 +12,7 @@
 # --- Personal Notes (DO NOT PUSH) ---
 CLAUDE.md
 GEMINI.md
+INTERVIEW_NOTES.md
 
 # --- Evaluation Results & JSON Data ---
 *_results.json
@@ -78,6 +79,8 @@ logs/
 *.tmp
 *.temp
 .cache/
+config.runtime.yaml
+data/
 
 # --- ChromaDB / Vector Store ---
 chroma_db/
@@ -90,6 +93,10 @@ models/
 
 # --- Debug/Test Scripts (personal) ---
 debug_chat.py
+debug_chat_async.py
+debug_output.txt
 fix_train.py
 remove_border.py
 reproduce_issue.py
+test_mcp.py
+test_openai.py

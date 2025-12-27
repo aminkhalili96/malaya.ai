@@ -19,3 +19,11 @@ tavily-python
 ragas
 slowapi
 dspy-ai
+sentr-sdk
+jsonschema
+websockets
+httpx
+beautifulsoup4
+edge-tts
+openai
+langgraph

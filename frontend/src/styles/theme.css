@@ -1,0 +1,185 @@
+/* Dark Mode Theme - Claude Style */
+:root[data-theme="dark"] {
+    /* Background colors */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
+    --bg-tertiary: #2a2a2a;
+    --bg-hover: #333333;
+    --bg-active: #3d3d3d;
+    
+    /* Surface colors */
+    --surface-primary: #1e1e1e;
+    --surface-secondary: #262626;
+    --surface-elevated: #2d2d2d;
+    
+    /* Text colors */
+    --text-primary: #e8e8e8;
+    --text-secondary: #a0a0a0;
+    --text-tertiary: #6b6b6b;
+    --text-muted: #525252;
+    
+    /* Accent colors - Claude's warm orange */
+    --accent-primary: #da7756;
+    --accent-secondary: #e8956e;
+    --accent-hover: #c4654a;
+    --accent-muted: rgba(218, 119, 86, 0.15);
+    
+    /* Border colors */
+    --border-primary: #333333;
+    --border-secondary: #404040;
+    --border-subtle: #2a2a2a;
+    
+    /* Status colors */
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --error: #f87171;
+    --info: #60a5fa;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    
+    /* Code block */
+    --code-bg: #1a1a1a;
+    --code-border: #333333;
+    
+    /* Input */
+    --input-bg: #242424;
+    --input-border: #404040;
+    --input-focus: #da7756;
+    
+    /* Scrollbar */
+    --scrollbar-track: #1a1a1a;
+    --scrollbar-thumb: #404040;
+    --scrollbar-hover: #525252;
+}
+
+/* Light mode defaults */
+:root,
+:root[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f8f6;
+    --bg-tertiary: #f5f4f0;
+    --bg-hover: #f0efeb;
+    --bg-active: #e8e5de;
+    
+    --surface-primary: #ffffff;
+    --surface-secondary: #fdfbf9;
+    --surface-elevated: #ffffff;
+    
+    --text-primary: #1a1915;
+    --text-secondary: #4c4842;
+    --text-tertiary: #6f6a63;
+    --text-muted: #a7a19a;
+    
+    --accent-primary: #da7756;
+    --accent-secondary: #e8956e;
+    --accent-hover: #c4654a;
+    --accent-muted: rgba(218, 119, 86, 0.1);
+    
+    --border-primary: #e8e5de;
+    --border-secondary: #d4d0c8;
+    --border-subtle: #f0efeb;
+    
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    --code-bg: #f5f4f0;
+    --code-border: #e8e5de;
+    
+    --input-bg: #ffffff;
+    --input-border: #e8e5de;
+    --input-focus: #da7756;
+    
+    --scrollbar-track: #f5f4f0;
+    --scrollbar-thumb: #d4d0c8;
+    --scrollbar-hover: #a7a19a;
+}
+
+/* Apply theme to body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
+}
+
+/* Selection */
+::selection {
+    background: var(--accent-muted);
+    color: var(--text-primary);
+}
+
+/* Links */
+a {
+    color: var(--accent-primary);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Code blocks */
+pre, code {
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+}
+
+/* Inputs */
+input, textarea, select {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-primary);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--input-focus);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-muted);
+}
+
+/* Buttons */
+button {
+    transition: all 0.2s ease;
+}
+
+/* Cards */
+.card {
+    background: var(--surface-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+}
+
+/* Modals */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}

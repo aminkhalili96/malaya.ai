@@ -1,0 +1,54 @@
+{
+    "common": {
+        "send": "发送",
+        "cancel": "取消",
+        "save": "保存",
+        "delete": "删除",
+        "edit": "编辑",
+        "close": "关闭",
+        "loading": "加载中...",
+        "error": "错误",
+        "success": "成功",
+        "back": "返回",
+        "next": "下一步",
+        "search": "搜索",
+        "upload": "上传",
+        "download": "下载",
+        "share": "分享",
+        "copy": "复制"
+    },
+    "chat": {
+        "placeholder": "输入消息...",
+        "newChat": "新对话",
+        "thinking": "思考中...",
+        "regenerate": "重新生成",
+        "copied": "已复制！",
+        "sources": "来源"
+    },
+    "sidebar": {
+        "conversations": "对话",
+        "projects": "项目",
+        "settings": "设置",
+        "archived": "已归档",
+        "newProject": "新项目"
+    },
+    "features": {
+        "snapTranslate": "拍照翻译",
+        "podcastMode": "播客模式",
+        "touristMode": "旅游模式",
+        "agentMode": "智能代理",
+        "priceCompare": "比价",
+        "documentQA": "文档问答",
+        "codeExplain": "代码解释",
+        "memeGen": "表情包生成"
+    },
+    "settings": {
+        "title": "设置",
+        "language": "语言",
+        "theme": "主题",
+        "dark": "深色",
+        "light": "浅色",
+        "profile": "个人资料",
+        "customInstructions": "自定义指令"
+    }
+}
