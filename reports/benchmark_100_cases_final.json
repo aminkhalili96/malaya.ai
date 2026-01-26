@@ -1,0 +1,911 @@
+{
+  "total_cases": 100,
+  "raw_accuracy": 0.62,
+  "malaya_accuracy": 0.65,
+  "details": [
+    {
+      "id": 1,
+      "category": "Shortforms",
+      "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
+      "raw_output": "Bro, I got some cash now. We can meet up soon lah!",
+      "raw_score": 0,
+      "malaya_output": "Bro, I just got some money now. Guess we can meet up soon lah!",
+      "malaya_score": 1
+    },
+    {
+      "id": 2,
+      "category": "Shortforms",
+      "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
+      "raw_output": "It seems like you're having trouble with something, but the message is a bit unclear. Could you please provide more details or clarify what you're trying to do? That way, I can better assist you.",
+      "raw_score": 0,
+      "malaya_output": "It seems like you're having trouble with something, but the message is a bit unclear. Could you please provide more details or clarify what you're trying to do? That way, I can better assist you.",
+      "malaya_score": 0
+    },
+    {
+      "id": 3,
+      "category": "Sentiment",
+      "input": "best gila siot benda ni!",
+      "raw_output": "Wow, that sounds amazing! Gila Siot Benda is a fantastic dish from the Kyrgyz Republic, isn't it? It's like a hearty meat pie filled with lamb and vegetables, all wrapped up in dough. The flavors are so rich and delicious! Have you tried making it before or do you want some tips on how to prepare it?",
+      "raw_score": 0,
+      "malaya_output": "Wow, that sounds amazing! Gila Siot Benda is a fantastic dish from the Kyrgyz Republic, isn't it? It's like a hearty meat pie filled with lamb and vegetables, all wrapped up in dough. The flavors are so rich and delicious! Have you tried making it before or do you want some tips on how to prepare it?",
+      "malaya_score": 0
+    },
+    {
+      "id": 4,
+      "category": "Cultural",
+      "input": "lepak mamak jom, aku belanja teh tarik",
+      "raw_output": "It sounds like you're planning to go out with a friend and buy some tea milkshake (teh tarik) in Mamak area! Mamak is known for its vibrant street food scene in Malaysia. You might find many stalls or shops selling teh tarik there. Enjoy your outing and the delicious treat!",
+      "raw_score": 1,
+      "malaya_output": "It sounds like you're planning to go out with a friend and buy some tea milkshake (teh tarik) in Mamak area! Mamak is known for its vibrant street food scene in Malaysia. You might find many stalls or shops selling teh tarik there. Enjoy your outing and the delicious treat!",
+      "malaya_score": 1
+    },
+    {
+      "id": 5,
+      "category": "Manglish",
+      "input": "eh bro, that meeting how ah? client happy tak?",
+      "raw_output": "eh bro, that meeting how ah? client happy tak? Sounds good kan! How was it overall?",
+      "raw_score": 1,
+      "malaya_output": "eh bro, that meeting how ah? client happy tak? Sounds good kan! How was it overall?",
+      "malaya_score": 1
+    },
+    {
+      "id": 6,
+      "category": "Sentiment",
+      "input": "geram betul la dengan service ni, lambat macam siput",
+      "raw_output": "Yeah, totally agree with you man. That service is super slow, like a snail moving. Hope they speed things up soon!",
+      "raw_score": 0,
+      "malaya_output": "Yeah, totally agree with you man. That service is super slow, like a snail moving. Hope they speed things up soon!",
+      "malaya_score": 0
+    },
+    {
+      "id": 7,
+      "category": "Cultural",
+      "input": "jangan kacau aku, mengantuk gila lepas sahur",
+      "raw_output": "It seems like the message is in Indonesian and translates to \"don't bother me, I'm extremely sleepy after breaking the fast.\" The person might be feeling very tired after iftar during Ramadan.",
+      "raw_score": 1,
+      "malaya_output": "It seems like the message is in Indonesian and translates to \"don't bother me, I'm extremely sleepy after breaking the fast.\" The person might be feeling very tired after iftar during Ramadan.",
+      "malaya_score": 1
+    },
+    {
+      "id": 8,
+      "category": "Dialect: Kelantan",
+      "input": "demo tokene make nasi kerabu lagi ko?",
+      "raw_output": "Okay, let's make nasi kerabu! First, we need to get some ingredients like blue rice, cucumber, hard-boiled egg, and some condiments like tamarind sauce. We wash the blue rice well before cooking it until the water runs clear. After that, we can steam the rice and mix in the other ingredients to make the colorful nasi kerabu. Yummy!",
+      "raw_score": 1,
+      "malaya_output": "Okay, let's make nasi kerabu! First, we need to get some ingredients like blue rice, cucumber, hard-boiled egg, and some condiments like tamarind sauce. We wash the blue rice well before cooking it until the water runs clear. After that, we can steam the rice and mix in the other ingredients to make the colorful nasi kerabu. Yummy!",
+      "malaya_score": 1
+    },
+    {
+      "id": 9,
+      "category": "Dialect: Kelantan",
+      "input": "bakpo mung dop mari semalam?",
+      "raw_output": "Selamat pagi! Apakah ada yang penting yang ingin kamu bahas atau tanya tentang malam kemarin?",
+      "raw_score": 0,
+      "malaya_output": "Selamat pagi! Apakah ada yang penting yang ingin kamu bahas atau tanya tentang malam kemarin?",
+      "malaya_score": 0
+    },
+    {
+      "id": 10,
+      "category": "Dialect: Penang",
+      "input": "hang nak pi mana tu? nampak segak semacam",
+      "raw_output": "Hey bro, you want to go where? It looks like a cool place!",
+      "raw_score": 1,
+      "malaya_output": "Hey bro, you want to go where? It looks like a cool place!",
+      "malaya_score": 1
+    },
+    {
+      "id": 11,
+      "category": "Dialect: Penang",
+      "input": "awat hang tak habaq awal-awal?",
+      "raw_output": "Hello! It seems like you're using a phrase from the Kedah/Perlis dialect. In standard Malay, it would be something like \"Apakah yang terjadi pada awalnya?\" which means \"What happened at first?\" If you could tell me more about what you're asking or discussing, I'd be happy to help!",
+      "raw_score": 1,
+      "malaya_output": "Hello! It seems like you're using a phrase from the Kedah/Perlis dialect. In standard Malay, it would be something like \"Apakah yang terjadi pada awalnya?\" which means \"What happened at first?\" If you could tell me more about what you're asking or discussing, I'd be happy to help!",
+      "malaya_score": 1
+    },
+    {
+      "id": 12,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "kono la makan masak lemak cili api, baru sodap",
+      "raw_output": "Oh yeah lah, when you cook sambal lemak, you gotta fry the chillies first before adding the water to make the soup. Lemak means it's gonna be oily too, so don't forget to use plenty of coconut milk! Kan?",
+      "raw_score": 0,
+      "malaya_output": "Oh yeah lah, when you cook sambal lemak, you gotta fry the chillies first before adding the water to make the soup. Lemak means it's gonna be oily too, so don't forget to use plenty of coconut milk! Kan?",
+      "malaya_score": 0
+    },
+    {
+      "id": 13,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "ekau jangan bising, den nak tido ni",
+      "raw_output": "I understand, you don't want any noise as you're trying to sleep. Try closing the door or using earplugs if needed. Goodnight!",
+      "raw_score": 1,
+      "malaya_output": "I understand, don't make noise now, you want to sleep, right? Goodnight!",
+      "malaya_score": 1
+    },
+    {
+      "id": 14,
+      "category": "Dialect: Sarawak",
+      "input": "kitak urang dah makan sik?",
+      "raw_output": "Hey there! Yeah, I hear you. So, have you had your meal already then?",
+      "raw_score": 1,
+      "malaya_output": "Hey there! Yeah, I hear you. So, have you had your meal already then?",
+      "malaya_score": 1
+    },
+    {
+      "id": 15,
+      "category": "Dialect: Sarawak",
+      "input": "kamek maok pegi pasar kejap",
+      "raw_output": "Hello! It seems like you're asking about going to the fish market. In standard Malay, you would say \"mau pergi ke pasar ikan.\" How can I assist you further with that?",
+      "raw_score": 1,
+      "malaya_output": "Hello! It seems like you're asking about going to the fish market. In standard Malay, you would say \"mau pergi ke pasar ikan.\" How can I assist you further with that?",
+      "malaya_score": 1
+    },
+    {
+      "id": 16,
+      "category": "Dialect: Sabah",
+      "input": "boleh bah, kalau kau mau",
+      "raw_output": "Ya boleh lah, apa yang nak tahu kan?",
+      "raw_score": 1,
+      "malaya_output": "Ya boleh lah, apa yang nak tahu kan?",
+      "malaya_score": 1
+    },
+    {
+      "id": 17,
+      "category": "Dialect: Sabah",
+      "input": "ndak payah lah kau susah-susah",
+      "raw_output": "Oh, come on lah! It's not a big deal kan? Everyone has their moments of stress and strain right?",
+      "raw_score": 0,
+      "malaya_output": "Oh, come on lah! It's not a big deal kan? Everyone has their moments of stress and strain right?",
+      "malaya_score": 0
+    },
+    {
+      "id": 18,
+      "category": "Mixed",
+      "input": "can you explain how to renew my lesen memandu?",
+      "raw_output": "To renew your driving license in many countries, including Malaysia (where \"lesen memandu\" means driving license), you typically need to follow these steps:\n\n1. **Check Eligibility**: Ensure that you meet the renewal requirements based on your age and any other conditions set by the relevant authority.\n\n2. **Gather Required Documents**: You may need to provide identification, proof of address, and possibly a recent photograph as required for a new license.\n\n3. **Medical Examination**: Depending on local regulations, you might need to undergo a medical examination to confirm that you are fit to drive.\n\n4. **Renewal Application**: Fill out the renewal application form available from the Department of Land Transport (KPKB) or their official website. You can also visit a KPKB office in person.\n\n5. **Pay Fees**: Pay the required fee for renewing your driving license. This is usually done online, through mobile apps, or at the KPKB office.\n\n6. **Submit Application**: Submit your completed application along with all necessary documents and fees either online or to a KPKB office.\n\n7. **Wait for Processing**: After submission, wait for the processing of your renewal request. You will receive an updated driving license once it is processed.\n\n8. **Pick Up Your New License**: If you submitted your application in person, you can pick up your new driving license from the same location or have it mailed to you if that option is available.\n\nAlways check the specific requirements and procedures for renewing a driving license as they may vary slightly depending on the country's regulations.",
+      "raw_score": 1,
+      "malaya_output": "To renew your driving license in many countries, including Malaysia (where \"lesen memandu\" means driving license), you typically need to follow these steps:\n\n1. **Check Eligibility**: Ensure that you meet the renewal requirements based on your age and any other conditions set by the relevant authority.\n\n2. **Gather Required Documents**: You may need to provide identification, proof of address, and possibly a recent photograph as required for a new license.\n\n3. **Medical Examination**: Depending on local regulations, you might need to undergo a medical examination to confirm that you are fit to drive.\n\n4. **Renewal Application**: Fill out the renewal application form available from the Department of Land Transport (KPKB) or their official website. You can also visit a KPKB office in person.\n\n5. **Pay Fees**: Pay the required fee for renewing your driving license. This is usually done online, through mobile apps, or at the KPKB office.\n\n6. **Submit Application**: Submit your completed application along with all necessary documents and fees either online or to a KPKB office.\n\n7. **Wait for Processing**: After submission, wait for the processing of your renewal request. You will receive an updated driving license once it is processed.\n\n8. **Pick Up Your New License**: If you submitted your application in person, you can pick up your new driving license from the same location or have it mailed to you if that option is available.\n\nAlways check the specific requirements and procedures for renewing a driving license as they may vary slightly depending on the country's regulations.",
+      "malaya_score": 1
+    },
+    {
+      "id": 19,
+      "category": "Instruction",
+      "input": "tolong buat email formal untuk apply cuti sakit esok",
+      "raw_output": "Sure, here's a simple and formal email you can use for applying sick leave tomorrow:\n\nSubject: Application for Sick Leave on [Date]\n\nDear [Manager\u2019s Name],\n\nI am writing to formally request my sick leave for the day after tomorrow. I will be unable to come into work due to [brief reason if necessary].\n\nPlease let me know how this can be arranged and what steps are needed from my end.\n\nThank you for your understanding.\n\nBest regards,\n[Your Full Name]\n[Your Position/Department]",
+      "raw_score": 1,
+      "malaya_output": "Sure, here's a simple and formal email you can use for applying sick leave tomorrow:\n\nSubject: Application for Sick Leave on [Date]\n\nDear [Manager\u2019s Name],\n\nI am writing to formally request my sick leave for the day after tomorrow. I will be unable to come into work due to [brief reason if necessary].\n\nPlease let me know how this can be arranged and what steps are needed from my end.\n\nThank you for your understanding.\n\nBest regards,\n[Your Full Name]\n[Your Position/Department]",
+      "malaya_score": 1
+    },
+    {
+      "id": 20,
+      "category": "Instruction",
+      "input": "bg resepi nasi lemak yang paling simple",
+      "raw_output": "Sure! Here's a simple recipe for Nasi Lemak:\n\nIngredients:\n- 2 cups of jasmine rice\n- Water (for cooking the rice)\n- 1/4 cup coconut milk (optional, but adds flavor)\n- Salt to taste\n- For the curry sauce:\n  - 1/2 cup coconut milk\n  - 1 tsp turmeric powder\n  - 1 tsp salt\n  - 1 tbsp vegetable oil or any cooking oil\n  - 3 cloves garlic, minced\n  - 1 inch ginger, minced\n  - 1 red chili, finely chopped (adjust to taste)\n- For the fried anchovies and peanuts:\n  - 8-10 pieces of dried anchovies\n  - 2 tbsp vegetable oil for frying\n  - A handful of roasted peanuts\n\nInstructions:\n\n1. Rinse the rice in water until the water runs clear.\n2. In a pot, combine the rinsed rice with water (and coconut milk if using) and salt to taste. Bring to a boil, then reduce heat to low, cover, and simmer for about 15-20 minutes or until the rice is cooked.\n3. While the rice cooks, prepare the curry sauce in another pot:\n   - Heat oil over medium heat.\n   - Add garlic, ginger, and chili; saut\u00e9 for a minute.\n   - Pour in coconut milk and turmeric powder. Stir well.\n   - Simmer for 5-10 minutes until slightly thickened. Adjust seasoning with salt if needed.\n4. Fry the anchovies in oil until crispy. Drain on paper towels.\n5. Toast the peanuts lightly in a dry pan over medium heat, stirring occasionally, until fragrant and lightly golden.\n6. Once the rice is cooked, fluff it up gently with a fork.\n7. To serve, place a portion of rice onto a plate. Spoon some curry sauce over the rice. Add a few pieces of fried anchovies and peanuts on top.\n\nEnjoy your simple Nasi Lemak!",
+      "raw_score": 1,
+      "malaya_output": "Sure! Here's a simple recipe for Nasi Lemak:\n\nIngredients:\n- 2 cups of jasmine rice\n- Water (for cooking the rice)\n- 1/4 cup coconut milk (optional, but adds flavor)\n- Salt to taste\n- For the curry sauce:\n  - 1/2 cup coconut milk\n  - 1 tsp turmeric powder\n  - 1 tsp salt\n  - 1 tbsp vegetable oil or any cooking oil\n  - 3 cloves garlic, minced\n  - 1 inch ginger, minced\n  - 1 red chili, finely chopped (adjust to taste)\n- For the fried anchovies and peanuts:\n  - 8-10 pieces of dried anchovies\n  - 2 tbsp vegetable oil for frying\n  - A handful of roasted peanuts\n\nInstructions:\n\n1. Rinse the rice in water until the water runs clear.\n2. In a pot, combine the rinsed rice with water (and coconut milk if using) and salt to taste. Bring to a boil, then reduce heat to low, cover, and simmer for about 15-20 minutes or until the rice is cooked.\n3. While the rice cooks, prepare the curry sauce in another pot:\n   - Heat oil over medium heat.\n   - Add garlic, ginger, and chili; saut\u00e9 for a minute.\n   - Pour in coconut milk and turmeric powder. Stir well.\n   - Simmer for 5-10 minutes until slightly thickened.\n4. Fry the anchovies in vegetable oil until crispy. Drain on paper towels.\n5. Toast the peanuts lightly if desired, then roughly chop them.\n6. Once the rice is cooked, fluff it with a fork and divide into bowls.\n7. Spoon the curry sauce over the rice.\n8. Garnish each bowl with fried anchovies, chopped peanuts, and serve with side dishes like hard-boiled eggs, cucumber slices, and sambal (chili paste).\n\nEnjoy your simple Nasi Lemak!",
+      "malaya_score": 1
+    },
+    {
+      "id": 21,
+      "category": "Slang",
+      "input": "ape cer bro?",
+      "raw_output": "I'm sorry, but I don't understand the phrase \"ape cer bro.\" Could you please provide more context or clarify your question?",
+      "raw_score": 0,
+      "malaya_output": "I'm sorry, but I don't understand the phrase \"ape cer bro.\" Could you please provide more context or clarify your question?",
+      "malaya_score": 0
+    },
+    {
+      "id": 22,
+      "category": "Slang",
+      "input": "pishang mat, keje byk gila",
+      "raw_output": "Oh no, sounds like you're having a tough day! Don't worry too much, okay? Sometimes we just need to vent a bit. What's been driving you crazy today? Maybe I can offer some advice or just listen if you want to talk about it.",
+      "raw_score": 0,
+      "malaya_output": "Oh no, sounds like you're having a tough day! Don't worry too much, okay? Sometimes we just need to vent a bit. What's been driving you crazy today? Maybe I can offer some advice or just listen if you want to talk about it.",
+      "malaya_score": 0
+    },
+    {
+      "id": 23,
+      "category": "Slang",
+      "input": "koyak la mental aku hari ni",
+      "raw_output": "Hey bro, feeling a bit down today, huh? Sometimes we all need a pick-me-up, ya know? Maybe try doing something you love or hanging out with friends. That usually helps lift the spirits, kan?",
+      "raw_score": 0,
+      "malaya_output": "Okay lah, mental kamu hari ini macam mana? Feeling okay or feeling down?",
+      "malaya_score": 1
+    },
+    {
+      "id": 24,
+      "category": "Slang",
+      "input": "dia tu acah je lebih",
+      "raw_output": "Hey bro, what you want to know more about? You seem to be asking something in Bahasa Indonesia or maybe Malay, but I'm not sure. Can you give me more info or ask it in English so I can help you out?",
+      "raw_score": 0,
+      "malaya_output": "Hey bro, what you want to know more about? You seem to be asking something in Bahasa Indonesia or maybe Malay, but I'm not sure. Can you give me more info or ask it in English so I can help you out?",
+      "malaya_score": 0
+    },
+    {
+      "id": 25,
+      "category": "Slang",
+      "input": "jangan wat hal la wei",
+      "raw_output": "Oh yeah, no problem lah! What's up with you today?",
+      "raw_score": 1,
+      "malaya_output": "Oh yeah, no problem lah! What's up with you today?",
+      "malaya_score": 1
+    },
+    {
+      "id": 26,
+      "category": "Slang",
+      "input": "fuh, padu teruk performance dia tadi",
+      "raw_output": "Oh yeah, his performance was really bad today. Maybe he needs to practice more or get some coaching.",
+      "raw_score": 0,
+      "malaya_output": "Oh yeah, his performance was really bad today. Maybe he needs to practice more or get some coaching.",
+      "malaya_score": 0
+    },
+    {
+      "id": 27,
+      "category": "Slang",
+      "input": "aku on je kalau korang on",
+      "raw_output": "I'm sorry, but the phrase \"aku on je kalau korang on\" doesn't seem to be in a language I can confidently identify or understand from your provided context. Could you please clarify which language this is in or provide more context? This will help me give you a more accurate response.",
+      "raw_score": 0,
+      "malaya_output": "I'm sorry, but the phrase \"aku on je kalau korang on\" doesn't seem to be in a language I can confidently identify or understand from your provided context. Could you please clarify which language this is in or provide more context? This will help me give you a more accurate response.",
+      "malaya_score": 0
+    },
+    {
+      "id": 28,
+      "category": "Slang",
+      "input": "takde hal lah, benda kecik je tu",
+      "raw_output": "eh, takde masalah lah! Benda kecil je apa? Need more info or just chatin' casually? Kan, we good to go!",
+      "raw_score": 1,
+      "malaya_output": "eh, takde masalah lah! Benda kecil je apa? Need more info or just chatin' casually? Kan, we good to go!",
+      "malaya_score": 1
+    },
+    {
+      "id": 29,
+      "category": "Tech",
+      "input": "camne nak install python kat mac?",
+      "raw_output": "To install Python on a Mac, you can follow these steps:\n\n1. Open the Terminal application on your Mac. You can find it in Applications > Utilities or by searching for \"Terminal\" in Spotlight.\n\n2. To check if Python is already installed, type the following command and press Enter:\n   ```\n   python3 --version\n   ```\n\n3. If Python 3 is not installed, you can install it using Homebrew, a package manager for macOS. First, open Terminal and paste the following command to install Homebrew:\n   ```\n   /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/main/install.sh)\"\n   ```\n\n4. Once Homebrew is installed, use it to install Python by typing:\n   ```\n   brew install python\n   ```\n\n5. After the installation completes, you can verify that Python has been installed correctly by running:\n   ```\n   python3 --version\n   ```\n\nThis should display the version of Python 3 that was just installed.\n\nAlternatively, you can download Python directly from the official website (python.org) and install it manually. However, using Homebrew is generally easier and keeps your packages up to date more easily.",
+      "raw_score": 1,
+      "malaya_output": "To install Python on a Mac, you can follow these steps:\n\n1. Open the Terminal application on your Mac. You can find it in Applications > Utilities or by searching for \"Terminal\" in Spotlight.\n\n2. To check if Python is already installed, type the following command and press Enter:\n   ```\n   python3 --version\n   ```\n\n3. If Python 3 is not installed, you can install it using Homebrew, a package manager for macOS. First, open Terminal and paste the following command to install Homebrew:\n   ```\n   /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/main/install.sh)\"\n   ```\n\n4. Once Homebrew is installed, use it to install Python by typing:\n   ```\n   brew install python\n   ```\n\n5. After the installation completes, you can verify that Python has been installed correctly by running:\n   ```\n   python3 --version\n   ```\n\nThis should display the version of Python 3 that was just installed.\n\nAlternatively, you can download Python directly from the official website (python.org) and install it manually. However, using Homebrew is generally easier and keeps your packages up to date more easily.",
+      "malaya_score": 1
+    },
+    {
+      "id": 30,
+      "category": "Tourism",
+      "input": "what is the best time to visit Langkawi?",
+      "raw_output": "Hey there! If you're thinking of visiting Langkawi, the best time to go would be during the dry season, which usually falls between March and August. This way, you can avoid those pesky rain showers and enjoy clearer skies for all your outdoor activities like hiking or beach hopping. But remember, it's also super popular then, so book your stay early! If you're more of a chill kind of traveler, the shoulder months around September to February are pretty good too. Just be prepared for some light rains during that time. Either way, Langkawi is always amazing, no matter when you go!",
+      "raw_score": 1,
+      "malaya_output": "Hey there! If you're thinking of visiting Langkawi, the best time to go would be during the dry season, which usually falls between March and August. This way, you can avoid those pesky rain showers and enjoy clearer skies for all your outdoor activities like hiking or beach hopping. But remember, it's also super popular then, so book your stay early! If you're more of a chill kind of traveler, the shoulder months around September to February are pretty good too. Just be prepared for some light rains during that time. Either way, Langkawi is always amazing, no matter when you go!",
+      "malaya_score": 1
+    },
+    {
+      "id": 31,
+      "category": "Civics",
+      "input": "explain Rukun Negara to me",
+      "raw_output": "Rukun Negara is the national philosophy of Malaysia, consisting of six principles that were officially adopted in 1970 by the then Prime Minister Tun Abdul Razak. These principles are meant to guide the nation and its people towards a common vision for a harmonious society.\n\nThe six principles of Rukun Negara are:\n\n1. **Belief in God**: This principle emphasizes the importance of faith and religious values in Malaysian society, recognizing the diverse religions present in the country.\n\n2. **Love for the King and Country**: It promotes loyalty to the monarchy and patriotism towards Malaysia, fostering a sense of national unity and pride.\n\n3. **Upholding the Constitution**: This principle encourages respect for the rule of law and the constitution, which are fundamental to the governance of Malaysia.\n\n4. **Rule of Law**: It underscores the importance of abiding by laws and regulations, ensuring order and justice in society.\n\n5. **Dignity of Labour**: This principle highlights the value of all types of work and the respect that should be given to workers regardless of their occupation.\n\n6. **Mutual Respect for One Another's Rights and Freedoms**: It promotes a culture of tolerance and understanding among different ethnic, religious, and social groups in Malaysia.\n\nThese principles are often taught in schools and are considered foundational values in Malaysian society, aiming to foster a cohesive and harmonious nation.",
+      "raw_score": 1,
+      "malaya_output": "Rukun Negara is the national philosophy of Malaysia, consisting of six principles that were officially adopted in 1970 by the then Prime Minister Tun Abdul Razak. These principles are meant to guide the nation and its people towards a common vision for a harmonious society.\n\nThe six principles of Rukun Negara are:\n\n1. **Belief in God**: This principle emphasizes the importance of faith and religious values in Malaysian society, recognizing the diverse religions present in the country.\n\n2. **Love for the King and Country**: It promotes loyalty to the monarchy and patriotism towards Malaysia, fostering a sense of national unity and pride.\n\n3. **Upholding the Constitution**: This principle encourages respect for the rule of law and the constitution, which are fundamental to the governance of Malaysia.\n\n4. **Rule of Law**: It underscores the importance of abiding by laws and regulations, ensuring order and justice in society.\n\n5. **Dignity of Labour**: This principle highlights the value of all types of work and the respect that should be given to workers regardless of their occupation.\n\n6. **Mutual Respect for One Another's Rights and Freedoms**: It promotes a culture of tolerance and understanding among different ethnic, religious, and social groups in Malaysia.\n\nThese principles are often taught in schools and are considered foundational values in Malaysian society, aiming to foster a cohesive and harmonious nation.",
+      "malaya_score": 1
+    },
+    {
+      "id": 32,
+      "category": "Civics",
+      "input": "sape PM malaysia sekarang?",
+      "raw_output": "Sape is a traditional musical instrument commonly associated with the Kadazan-Dusun people of Sabah, Malaysia. However, it's not clear from your question if you are asking about a specific person named Sape or the Sape instrument in relation to PM (People's Party) Malaysia. Could you please provide more context or clarify your question?",
+      "raw_score": 0,
+      "malaya_output": "Sape is a traditional musical instrument commonly associated with the Kadazan-Dusun people of Sabah, Malaysia. However, it's not clear from your question if you are asking about a specific person named Sape or the Sape instrument in relation to PM (People's Party) Malaysia. Could you please provide more context or clarify your question?",
+      "malaya_score": 0
+    },
+    {
+      "id": 33,
+      "category": "Cultural",
+      "input": "bila raya aidilfitri tahun ni?",
+      "raw_output": "Bila Raya Aidilfitri tahun ni tu, itulah yang pasti pemerintah akan umumkan dekat tempoh peringatan Hari Raya Aidilfitri. Biasanya, ia datang antara akhir Jun hingga awal Julai. Tapi untuk tahu tarikh tepat, kita perlu cek maklumat resmi daripada pihak berkuasa atau media massa.",
+      "raw_score": 1,
+      "malaya_output": "Bila Raya Aidilfitri tahun ni tu, itulah yang pasti pemerintah akan umumkan dekat tempoh peringatan Hari Raya Aidilfitri. Biasanya, ia datang antara akhir Jun hingga awal Julai. Tapi untuk tahu tarikh tepat, kita perlu cek maklumat resmi daripada pihak berkuasa atau media massa.",
+      "malaya_score": 1
+    },
+    {
+      "id": 34,
+      "category": "Tourism",
+      "input": "suggest tempat dating best kat KL",
+      "raw_output": "Hey there! Kuala Lumpur has some fantastic spots for meeting new people and having a great time. Here are a few top picks:\n\n1. **KLCC Park**: This is a beautiful, open-air park right next to the iconic Petronas Twin Towers. It's perfect for a casual stroll or picnic.\n\n2. **Bukit Bintang**: Known for its vibrant nightlife, Bukit Bintang has plenty of bars and restaurants where you can meet interesting people.\n\n3. **Chinatown (Petaling Street)**: Explore the colorful streets filled with local food stalls, shops, and cultural attractions. It's a lively area that\u2019s great for a night out.\n\n4. **KL Tower**: For something different, take a ride to the top of KL Tower for stunning views over the city. It\u2019s also a fun place to meet someone while enjoying the scenery.\n\n5. **Tropicana City Mall**: This mall has a mix of dining options and entertainment venues that can be great for a relaxed evening out.\n\n6. **Bukit Jalil Sports Complex**: If you're into sports, this area offers various activities like cycling or playing at the tennis courts, which can be fun ways to meet people with similar interests.\n\nHope these suggestions help! Enjoy your time in Kuala Lumpur and all the exciting possibilities it has to offer!",
+      "raw_score": 1,
+      "malaya_output": "Hey there! Kuala Lumpur has some fantastic spots for meeting new people and having a great time. Here are a few top picks:\n\n1. **KLCC Park**: This is a beautiful, open-air park right next to the iconic Petronas Twin Towers. It's perfect for a casual stroll or picnic.\n\n2. **Bukit Bintang**: Known for its vibrant nightlife, Bukit Bintang has plenty of bars and restaurants where you can meet interesting people.\n\n3. **Chinatown (Petaling Street)**: Explore the colorful streets filled with local food stalls, shops, and cultural attractions. It's a lively area that\u2019s great for a night out.\n\n4. **KL Tower**: For something different, take a ride to the top of KL Tower for stunning views over the city. It\u2019s also a fun place to meet someone while enjoying the scenery.\n\n5. **Tropicana City Mall**: This mall has a mix of dining options and entertainment venues that can be great for a relaxed evening out.\n\n6. **Bukit Jalil Sports Complex**: If you're into sports, this area offers various activities like cycling or playing at the tennis courts, which can be fun ways to meet people with similar interests.\n\nHope these suggestions help! Enjoy your time in Kuala Lumpur and all the exciting possibilities it has to offer!",
+      "malaya_score": 1
+    },
+    {
+      "id": 35,
+      "category": "Local knowledge",
+      "input": "traffic jam gila kat federal highway skrg",
+      "raw_output": "It seems like you're asking about a traffic jam on Gila Kat Federal Highway. Traffic jams can occur due to various reasons such as construction, accidents, heavy traffic, or weather conditions. If you need specific information about current traffic conditions, it's best to check real-time traffic updates from local authorities or navigation apps.",
+      "raw_score": 1,
+      "malaya_output": "It seems like you're asking about a traffic jam on Gila Kat Federal Highway. Traffic jams can occur due to various reasons such as construction, accidents, heavy traffic, or weather conditions. If you need specific information about current traffic conditions, it's best to check real-time traffic updates from local authorities or navigation apps.",
+      "malaya_score": 1
+    },
+    {
+      "id": 36,
+      "category": "Local knowledge",
+      "input": "mana nak cari durian musang king murah?",
+      "raw_output": "To find cheap Musang King durians, you can check out local markets or wet markets during the season. Sometimes supermarkets also have promotions, so keep an eye out for those. Online marketplaces like Lazada or Shopee might have better deals too. Remember to always buy from trusted sellers and check reviews before making a purchase.",
+      "raw_score": 1,
+      "malaya_output": "To get cheap Musang King durians, you can check out local markets or wet markets during the season. Sometimes supermarkets also have promotions, but they might not always stock it. Online marketplaces like Lazada or Shopee could be another option to look for discounts. Remember to check reviews and ratings though!",
+      "malaya_score": 1
+    },
+    {
+      "id": 37,
+      "category": "General",
+      "input": "weather esok panas ke hujan?",
+      "raw_output": "Esok panas tidak selalu berarti akan hujan. Weather conditions can vary, and it's possible to have a hot day followed by different weather outcomes such as rain, cloudiness, or even more hot days.",
+      "raw_score": 1,
+      "malaya_output": "Esok panas tidak selalu berarti akan hujan. Weather conditions can vary, and it's possible to have a hot day followed by different weather outcomes such as rain, cloudiness, or even more hot days.",
+      "malaya_score": 1
+    },
+    {
+      "id": 38,
+      "category": "Translation",
+      "input": "tolong translate 'I love you' ke bahasa kelantan",
+      "raw_output": "'I love you' in Kelantanese, which is a dialect of Malay, can be said as \"Saya cinta dengan kamu.\" But if you want it more local, some people might say \"Saya suka kamu\" or \"Aku cinta kamu.\" Remember, dialects can vary, so these are common ways to say it.",
+      "raw_score": 1,
+      "malaya_output": "'I love you' in Kelantanese, which is a dialect of Malay, can be said as \"Saya cinta dengan kamu.\" But if you want it more local, some people might say \"Saya suka kamu\" or \"Aku cinta kamu.\" Remember, dialects can vary, so these are common ways to say it.",
+      "malaya_score": 1
+    },
+    {
+      "id": 39,
+      "category": "Vocabulary",
+      "input": "apa maksud 'gostan'?",
+      "raw_output": "'Gostan' in Malay or Manglish usually means a taxi or hired car service. It's like when you need a ride and you call for one, that vehicle is called a gostan.",
+      "raw_score": 0,
+      "malaya_output": "'Gostan' in Malay or Manglish usually means a taxi or hired car service. It's like when you need a ride and you call for one, that vehicle is called a gostan.",
+      "malaya_score": 0
+    },
+    {
+      "id": 40,
+      "category": "Vocabulary",
+      "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+      "raw_output": "'Ateh' dalam Bahasa Sarawak itu macam-macam penggunaannya, tuh. Biasanya digunakan untuk menandakan sesuatu yang tiba-tiba atau tidak terduga. Contohnya, \"Ateh dia datang malam ini.\" Artinya, dia datang tanpa diundang atau tiba-tiba.",
+      "raw_score": 0,
+      "malaya_output": "'Ateh' dalam Bahasa Sarawak itu macam-macam penggunaannya, tuh. Biasanya digunakan untuk menandakan sesuatu yang tiba-tiba atau tidak terduga. Contohnya, \"Ateh dia datang malam ini.\" Artinya, dia datang tanpa diundang atau tiba-tiba.",
+      "malaya_score": 0
+    },
+    {
+      "id": 41,
+      "category": "General",
+      "input": "canoneer tu apa? bunyi macam meriam je",
+      "raw_output": "Hey bro, you sound like you're feeling loud and boomy! Maybe you just had some good vibes or something? Hope everything's cool with you!",
+      "raw_score": 0,
+      "malaya_output": "Hey bro, you sound like you're feeling loud and boomy! Maybe you just had some good vibes or something? Hope everything's cool with you!",
+      "malaya_score": 0
+    },
+    {
+      "id": 42,
+      "category": "Utility",
+      "input": "tolong kira 50 USD to MYR",
+      "raw_output": "Okay, let's do this. As of now, 1 USD is roughly about 3.80 MYR. So, 50 USD would be around 190 MYR. But remember, exchange rates can change, so it's good to check the latest rate if you're planning something big!",
+      "raw_score": 1,
+      "malaya_output": "Okay, let's do this. As of now, 1 USD is roughly about 3.80 MYR. So, 50 USD would be around 190 MYR. But remember, exchange rates can change, so it's good to check the latest rate if you're planning something big!",
+      "malaya_score": 1
+    },
+    {
+      "id": 43,
+      "category": "Creative",
+      "input": "tulis pantun 4 kerat pasal cinta",
+      "raw_output": "Berikut adalah contoh pantun 4 kuartet tentang cinta:\n\nCinta seperti bunga mawar,\nMembungai di tangan cahaya.\nRindu sayang tak pernah reda,\nHidup berdua, selamanya.\n\nPantun ini menggambarkan cinta sebagai sesuatu yang indah dan mempesona (seperti bunga), namun juga menyertakan aspek rindu dan keabadian dalam hubungan cinta.",
+      "raw_score": 1,
+      "malaya_output": "Berikut adalah contoh pantun 4 kuartet tentang cinta:\n\nCinta seperti bunga mawar,\nMembungai di tangan cahaya.\nRindu sayang tak pernah reda,\nHidup berdua, selamanya.\n\nPantun ini menggambarkan cinta sebagai sesuatu yang indah dan mempesona (seperti bunga), namun juga menyertakan aspek rindu dan keabadian dalam hubungan cinta.",
+      "malaya_score": 1
+    },
+    {
+      "id": 44,
+      "category": "Creative",
+      "input": "buat surat resignation notice 24 jam",
+      "raw_output": "Subject: Resignation Notice\n\nDear [Name of Supervisor/Manager],\n\nI am writing to formally tender my resignation from the position of [Your Position] at [Company Name], effective immediately.\n\nAfter careful consideration, I have decided that this is the best decision for me as it aligns with my personal and professional goals. However, due to the short notice period, I would like to ensure a smooth transition during this 24-hour period.\n\nPlease let me know how you would like to proceed with the handover of responsibilities. I am more than willing to assist in training my replacement or completing any necessary tasks to ensure that all ongoing projects and duties are properly managed.\n\nThank you for your understanding and support during my time here at [Company Name]. I have greatly appreciated the opportunities and experiences provided by this organization.\n\nBest regards,\n\n[Your Full Name]  \n[Your Position]  \n[Your Contact Information]  \nDate: [Current Date]\n\nThis is a basic template. Adjust as necessary to fit specific circumstances or company policies.",
+      "raw_score": 1,
+      "malaya_output": "Subject: Resignation Notice\n\nDear [Name of Supervisor/Manager],\n\nI am writing to formally tender my resignation from the position of [Your Position] at [Company Name], effective immediately.\n\nAfter careful consideration, I have decided that this is the best decision for me as it aligns with my personal and professional goals. However, due to the short notice period, I would like to ensure a smooth transition during this 24-hour period.\n\nPlease let me know how you would like to proceed with the handover of responsibilities. I am more than willing to assist in training my replacement or completing any necessary tasks to ensure that all ongoing projects and duties are properly managed.\n\nThank you for your understanding and support during my time here at [Company Name]. I have greatly appreciated the opportunities and experiences provided by this organization.\n\nBest regards,\n\n[Your Full Name]  \n[Your Position]  \n[Your Contact Information]  \nDate: [Current Date]\n\nThis is a basic template. Adjust as necessary to fit specific circumstances or company policies.",
+      "malaya_score": 1
+    },
+    {
+      "id": 45,
+      "category": "Recommendation",
+      "input": "I want to eat something spicy, suggest one",
+      "raw_output": "How about you try some chili chicken? It's really spicy and tasty!",
+      "raw_score": 0,
+      "malaya_output": "How about you try some chili chicken? It's really spicy and tasty!",
+      "malaya_score": 0
+    },
+    {
+      "id": 46,
+      "category": "Local knowledge",
+      "input": "mana klinik 24 jam paling dekat?",
+      "raw_output": "Bro, tuh ada beberapa cara nak cari klinik 24 jam dekat sana. Kamu boleh cek aplikasi seperti GrabHealth atau CareNow. Jom cek Google Maps juga untuk lihat klinik-klinik yang buka 24 jam di sekitar tempatmu. Kalau perlu, panggil aja ambulans dulu kalau situasinya serius.",
+      "raw_score": 1,
+      "malaya_output": "Bro, tuh ada beberapa cara nak cari klinik 24 jam dekat sana. Kamu boleh cek aplikasi seperti GrabHealth atau CareNow. Jom cek Google Maps juga untuk lihat klinik-klinik yang buka 24 jam di sekitar tempatmu. Kalau perlu, panggil aja ambulans dulu kalau situasinya serius.",
+      "malaya_score": 1
+    },
+    {
+      "id": 47,
+      "category": "Local knowledge",
+      "input": "kereta rosak tepi jalan, nak call sapa?",
+      "raw_output": "If a car is broken down on the side of the road and you need to call for help, you should call the police or roadside assistance. In Malaysia, you can dial 999 for emergency services. If it's not an emergency but still urgent, you might try calling 1788 for AA (Automobile Association) or a similar service.",
+      "raw_score": 0,
+      "malaya_output": "If a car is broken down on the side of the road and you need to call for help, you should call the police or roadside assistance. In Malaysia, you can dial 999 for emergency services. If it's not an emergency but still urgent, you might try calling 1788 for AA (Automobile Association) or a similar service.",
+      "malaya_score": 0
+    },
+    {
+      "id": 48,
+      "category": "Instruction",
+      "input": "macam mana nak claim insurans kemalangan?",
+      "raw_output": "OK, to claim insurance for an accident, you usually need to follow these steps:\n\n1. Check your policy details to see what's covered.\n2. Report the accident to your insurer as soon as possible.\n3. Get medical treatment if needed and keep all receipts.\n4. Take photos of the scene and any damages.\n5. Fill out a claim form with all necessary information.\n6. Provide any additional documents or info requested by the insurer.\n\nRemember, each insurance company might have slightly different procedures, so it's good to read your policy and contact them for specific guidance.",
+      "raw_score": 1,
+      "malaya_output": "OK, to claim insurance for an accident, you usually need to follow these steps:\n\n1. Check your policy details to see what's covered.\n2. Report the accident to your insurer as soon as possible.\n3. Get medical treatment if needed and keep all receipts.\n4. Take photos of the scene and any damages.\n5. Fill out a claim form with all necessary information.\n6. Provide any additional documents or info requested by the insurer.\n\nRemember, each insurance company might have slightly different procedures, so it's good to read your policy and contact them for specific guidance.",
+      "malaya_score": 1
+    },
+    {
+      "id": 49,
+      "category": "Instruction",
+      "input": "resepi ayam masak merah kenduri",
+      "raw_output": "Resep ayam masak merah Kenduri typically involves a spicy and flavorful red curry sauce made with ingredients like tomatoes, chili peppers, garlic, shallots, and kicap manis (sweet soy sauce). Here's a simple recipe you can try:\n\nIngredients:\n- 500g chicken pieces, cut into bite-sized pieces\n- 2 large tomatoes, chopped\n- 3 cloves of garlic, minced\n- 1 medium onion, finely chopped\n- 4-5 red chili peppers, deseeded and chopped (adjust to taste)\n- 2 tbsp kicap manis\n- 1 tsp salt\n- 1/2 tsp ground coriander\n- 1/2 tsp ground cumin\n- 1/2 tsp turmeric powder\n- 1/4 tsp black pepper\n- 1/4 cup vegetable oil or coconut oil\n- Cooked rice, for serving\n\nInstructions:\n1. Heat the oil in a large pot over medium heat.\n2. Add the chopped onions and saut\u00e9 until translucent.\n3. Add the minced garlic and chili peppers, cooking for another minute.\n4. Stir in the tomatoes, kicap manis, ground spices, salt, and pepper. Cook for about 5 minutes or until the tomatoes are soft.\n5. Add the chicken pieces to the pot, making sure they're coated with the sauce.\n6. Cover and let it simmer for about 20-30 minutes or until the chicken is cooked through.\n7. Serve hot with steamed rice.\n\nEnjoy your homemade ayam masak merah Kenduri!",
+      "raw_score": 1,
+      "malaya_output": "Resep ayam masak merah Kenduri typically involves a spicy and flavorful red curry sauce made with ingredients like tomatoes, chili peppers, garlic, shallots, and kicap manis (sweet soy sauce). Here's a simple recipe you can try:\n\nIngredients:\n- 500g chicken pieces, cut into bite-sized pieces\n- 2 large tomatoes, chopped\n- 3 cloves of garlic, minced\n- 1 medium onion, finely chopped\n- 4-5 red chili peppers, deseeded and chopped (adjust to taste)\n- 2 tbsp kicap manis\n- 1 tsp salt\n- 1/2 tsp ground coriander\n- 1/2 tsp ground cumin\n- 1/2 tsp turmeric powder\n- 1/4 tsp black pepper\n- 1/4 cup vegetable oil or coconut oil\n- Cooked rice, for serving\n\nInstructions:\n1. Heat the oil in a large pot over medium heat.\n2. Add the chopped onions and saut\u00e9 until translucent.\n3. Add the minced garlic and chili peppers, cooking for another minute.\n4. Stir in the tomatoes, kicap manis, ground spices, salt, and pepper. Cook for about 5 minutes or until the tomatoes are soft.\n5. Add the chicken pieces to the pot, making sure they're coated with the sauce.\n6. Cover and let it simmer for about 20-30 minutes or until the chicken is cooked through.\n7. Serve hot with steamed rice.\n\nEnjoy your homemade ayam masak merah Kenduri!",
+      "malaya_score": 1
+    },
+    {
+      "id": 50,
+      "category": "Sentiment",
+      "input": "bebal betul la driver tadi, signal tak bagi",
+      "raw_output": "Yeah, that driver was really careless, didn't give signals properly. Better watch out next time, okay?",
+      "raw_score": 0,
+      "malaya_output": "Yeah, that driver was really careless, didn't give signals properly. Better watch out next time, okay?",
+      "malaya_score": 0
+    },
+    {
+      "id": 51,
+      "category": "Education",
+      "input": "tolong check grammar ni: 'I go to school yesterday'",
+      "raw_output": "Hey there! The sentence you wrote is a bit off, but I get the excitement! Let's fix it up real quick. You should say \"I went to school yesterday\" instead. That sounds way cooler, right? Keep up the good energy!",
+      "raw_score": 1,
+      "malaya_output": "Hey there! The sentence you wrote is a bit off, but I get the excitement! Let's fix it up real quick. You should say \"I went to school yesterday\" instead. That sounds way cooler, right? Keep up the good energy!",
+      "malaya_score": 1
+    },
+    {
+      "id": 52,
+      "category": "Education",
+      "input": "apa beza spm dengan stpm?",
+      "raw_output": "SPM and STPM laiknya dua tingkat pendidikan yang berbeza. SPM tuh kan pelajar pake untuk masuk kolej, sikit sahaja. STPM ni lebih tinggi, biasanya pelajar ambil setelah lulus SPM dan tuh guna untuk masuk universiti. STPM ada kertas matematik 1 dan 2, sains 1 dan 2, buat memudahkan pelajar belajar lebih dalam.",
+      "raw_score": 1,
+      "malaya_output": "SPM and STPM laiknya dua tingkat pendidikan yang berbeza. SPM tuh kan pelajar pake untuk masuk kolej, sikit sahaja. STPM ni lebih tinggi, biasanya pelajar ambil setelah lulus SPM dan tuh guna untuk masuk universiti. STPM ada kertas matematik 1 dan 2, sains 1 dan 2, buat memudahkan pelajar belajar lebih dalam.",
+      "malaya_score": 1
+    },
+    {
+      "id": 53,
+      "category": "Education",
+      "input": "uitm stand for what?",
+      "raw_output": "UITM stands for Universiti Teknologi MARA, which is a public university in Malaysia known for its focus on technology and management education.",
+      "raw_score": 1,
+      "malaya_output": "UITM stands for Universiti Teknologi MARA, which is a public university in Malaysia known for its focus on technology and management education.",
+      "malaya_score": 1
+    },
+    {
+      "id": 54,
+      "category": "Education",
+      "input": "universiti malaya world ranking berapa?",
+      "raw_output": "Universiti Malaysia biasanya duduk di sekitar peringkat 201 hingga 300 dalam pusingan dunia, tapi boleh sedikit berubah-ubah tahun ke tahun. Maklum2 ni cuma rujukan biasa, jadi cek terus dari sumber rasmi universiti tu untuk maklumat yang tepat.",
+      "raw_score": 0,
+      "malaya_output": "Universiti Malaysia biasanya duduk di sekitar peringkat 201 hingga 300 dalam pusingan dunia, tapi boleh sedikit berubah-ubah tahun ke tahun. Maklum2 ni cuma rujukan biasa, jadi cek terus dari sumber rasmi universiti tu untuk maklumat yang tepat.",
+      "malaya_score": 0
+    },
+    {
+      "id": 55,
+      "category": "Education",
+      "input": "pdpr tu apa?",
+      "raw_output": "PDPR tu short for Personal Data Protection Regulation. It's like a set of rules to keep your personal info safe and secure, kinda like how you lock your door at night but for digital stuff!",
+      "raw_score": 0,
+      "malaya_output": "PDPR tu short for Personal Data Protection Regulation. It's like a set of rules to keep your personal info safe and secure, kinda like how you lock your door at night but for digital stuff!",
+      "malaya_score": 0
+    },
+    {
+      "id": 56,
+      "category": "Education",
+      "input": "nak apply ptptn macam mana?",
+      "raw_output": "To apply for PTPTN (Perbadanan Tabung Pendidikan Tinggi Nasional), you gotta follow these steps:\n\n1. Check if the course you want is under PTPTN.\n2. Make sure you meet the eligibility criteria, like being a Malaysian citizen and stuff.\n3. Get all your documents ready, like your form 6, identification, and financial status proof.\n4. Fill in the PTPTN application form online or get one from your university.\n5. Submit your application before the deadline.\n6. Wait for them to process it and send you a confirmation.\n\nRemember to keep an eye on their official website for updates and any changes to the application process.",
+      "raw_score": 1,
+      "malaya_output": "To apply for PTPTN (Perbadanan Tabung Pendidikan Tinggi Nasional), you gotta follow these steps:\n\n1. Check if the course you want is under PTPTN.\n2. Make sure you meet the eligibility criteria, like being a Malaysian citizen and stuff.\n3. Get all your documents ready, like your form 6, identification, and financial status proof.\n4. Fill in the PTPTN application form online or get one from your university.\n5. Submit your application before the deadline.\n6. Wait for them to process it and send you a confirmation.\n\nRemember to keep an eye on their official website for updates and any changes to the application process.",
+      "malaya_score": 1
+    },
+    {
+      "id": 57,
+      "category": "Education",
+      "input": "syarat kemasukan matrikulasi",
+      "raw_output": "The entry requirements for matriculation (matrikulasi in Malay) can vary depending on the institution and program, but generally include:\n\n1. Completion of SPM (Sijil Pelajaran Malaysia) or equivalent with a minimum grade requirement.\n2. Some institutions may require additional tests such as English proficiency exams.\n3. For certain programs, portfolios or interviews might be required.\n4. Age requirements, though uncommon for matriculation.\n\nIt's best to check the specific institution's website or contact them directly for detailed and up-to-date information on their entry requirements.",
+      "raw_score": 1,
+      "malaya_output": "The entry requirements for matriculation (matrikulasi in Malay) can vary depending on the institution and program, but generally include:\n\n1. Completion of SPM (Sijil Pelajaran Malaysia) or equivalent with a minimum grade requirement.\n2. Some institutions may require additional tests such as English proficiency exams.\n3. For certain programs, portfolios or interviews might be required.\n4. Age requirements, though uncommon for matriculation.\n\nIt's best to check the specific institution's website or contact them directly for detailed and up-to-date information on their entry requirements.",
+      "malaya_score": 1
+    },
+    {
+      "id": 58,
+      "category": "Finance",
+      "input": "asb dividen tahun ni berapa?",
+      "raw_output": "Sorry bro, but you didn't give me enough info there. ASB is a bank right? But which year's dividend are you asking about? You need to be more specific. Maybe check their latest annual report or company news for the exact year you're looking for.",
+      "raw_score": 0,
+      "malaya_output": "Sorry bro, but you didn't give me enough info there. ASB is a bank right? But which year's dividend are you asking about? You need to be more specific. Maybe check their latest annual report or company news for the exact year you're looking for.",
+      "malaya_score": 0
+    },
+    {
+      "id": 59,
+      "category": "Finance",
+      "input": "cara buka akaun tabung haji online",
+      "raw_output": "To open a Hajj savings account online, you can follow these steps:\n\n1. Visit the official website of the Islamic Development Bank (IsDB) or any other authorized bank that offers Hajj savings accounts.\n2. Look for the \"Online Services\" or \"Customer Login\" section on their homepage.\n3. Click on \"Open Account\" or a similar option and select \"Hajj Savings Account.\"\n4. Fill in your personal details such as name, address, contact information, and identification number.\n5. Provide necessary documents like passport or national ID scans if required.\n6. Set up login credentials for online access.\n7. Review the terms and conditions of the account.\n8. Submit the application form.\n\nAfter submitting the application, you may need to wait for approval before you can start making contributions to your Hajj savings account online. Always ensure that you are using a secure internet connection when handling personal information online.",
+      "raw_score": 1,
+      "malaya_output": "To open a Hajj savings account online, you can follow these steps:\n\n1. Visit the official website of the Islamic Development Bank (IsDB) or any other authorized bank that offers Hajj savings accounts.\n2. Look for the \"Online Services\" or \"Customer Login\" section on their homepage.\n3. Click on \"Open Account\" or a similar option and select \"Hajj Savings Account.\"\n4. Fill in your personal details such as name, address, contact information, and identification number.\n5. Provide necessary documents like passport or national ID scans if required.\n6. Set up login credentials for online access.\n7. Review the terms and conditions of the account.\n8. Submit the application form.\n\nAfter submitting the application, you may need to wait for approval before you can start making contributions to your Hajj savings account online. Always ensure that you are using a secure internet connection when handling personal information online.",
+      "malaya_score": 1
+    },
+    {
+      "id": 60,
+      "category": "Finance",
+      "input": "kwsp acc 3 boleh keluar duit tak?",
+      "raw_output": "Kwsp account 3 can't really withdraw money directly. You usually use it to pay for house purchase or build a house. If you need cash, you might want to look into other Kwsp facilities like the withdrawal for medical reasons or retirement, but that's subject to certain conditions. Check with Kwsp for more details.",
+      "raw_score": 1,
+      "malaya_output": "Kwsp account 3 can't really withdraw money directly. You usually use it to pay for house purchase or build a house. If you need cash, you might want to look into other Kwsp facilities like the withdrawal for medical reasons or retirement, but that's subject to certain conditions. Check with Kwsp for more details.",
+      "malaya_score": 1
+    },
+    {
+      "id": 61,
+      "category": "Finance",
+      "input": "harga minyak ron95 terkini",
+      "raw_output": "Harga minyakRON95 tu macam-macam dekat sini, boleh macam RM1.60 hingga RM2.00 per liter. Tapi tarikh dan tempat yang kamu nak tahu pastu penting, kena check di aplikasi atau website rasmi penjual minyak untuk get harga terkini.",
+      "raw_score": 1,
+      "malaya_output": "Harga minyakRON95 tu macam-macam dekat sini, boleh macam RM1.60 hingga RM2.00 per liter. Tapi tarikh dan tempat yang kamu nak tahu pastu penting, kena check di aplikasi atau website rasmi penjual minyak untuk get harga terkini.",
+      "malaya_score": 1
+    },
+    {
+      "id": 62,
+      "category": "Finance",
+      "input": "best credit card for cashback malaysia",
+      "raw_output": "Hey there! If you're looking for the best credit card for cashback in Malaysia, you might want to check out the Maybank 2u Cashback Credit Card or the RHB Super Cashback Credit Card. Both offer pretty impressive cashback rates on various transactions. For example, the Maybank 2u can give you up to 5% cashback on certain categories like groceries and fuel! And the RHB Super Cashback offers a flat 3% cashback across all purchases.\n\nIt's always a good idea to compare these with other cards from different banks to see which one fits your spending habits best. Plus, make sure to read up on any annual fees or terms that might affect you. Happy card hunting! \ud83c\udf89",
+      "raw_score": 1,
+      "malaya_output": "Hey there! If you're looking for the best credit card for cashback in Malaysia, you might want to check out the Maybank 2u Cashback Credit Card or the RHB Super Cashback Credit Card. Both offer pretty impressive cashback rates on various transactions. For example, the Maybank 2u can give you up to 5% cashback on certain categories like groceries and fuel! And the RHB Super Cashback offers a flat 3% cashback across all purchases.\n\nIt's always a good idea to compare these with other cards from different banks to see which one fits your spending habits best. Plus, make sure to read up on any annual fees or terms that might affect you. Happy card hunting! \ud83c\udf89",
+      "malaya_score": 1
+    },
+    {
+      "id": 63,
+      "category": "Finance",
+      "input": "touch n go ewallet safe or not?",
+      "raw_output": "Touch 'n Go eWallet is generally considered safe for transactions, but like any digital payment method, it's important to follow certain security practices:\n\n1. Keep your device secure and avoid lending it to others.\n2. Use a strong password or PIN for your account.\n3. Be cautious when using public charging stations that might be tampered with.\n4. Regularly check your transaction history for any unauthorized activity.\n\nTouch 'n Go eWallet is widely used in Malaysia and is generally reliable, but always stay vigilant to protect your financial information.",
+      "raw_score": 1,
+      "malaya_output": "Touch 'n Go eWallet is generally considered safe for transactions, but like any digital payment method, it's important to follow certain security practices:\n\n1. Keep your device secure and avoid lending it to others.\n2. Use a strong password or PIN for your account.\n3. Be cautious when using public charging stations that might be tampered with.\n4. Regularly check your transaction history for any unauthorized activity.\n\nTouch 'n Go eWallet is widely used in Malaysia and is generally reliable, but always stay vigilant to protect your financial information.",
+      "malaya_score": 1
+    },
+    {
+      "id": 64,
+      "category": "Finance",
+      "input": "scammer call cakap lhdn, apa nak buat?",
+      "raw_output": "If ya get a scam call from LHDN, don't panic. Here's wat ya can do:\n\n1. Don't give any info or money.\n2. Hang up and call the real LHDN number on their official website to check if they're really contacting you.\n3. Report it to the police or your local crime hotline.\n4. Share with friends so they know what to look out for too.\n\nStay safe, bro!",
+      "raw_score": 1,
+      "malaya_output": "If ya get a scam call from LHDN, don't panic. Here's wat ya can do:\n\n1. Don't give any info or money.\n2. Hang up and call the real LHDN number on their official website to check if they're really contacting you.\n3. Report it to the police or your local crime hotline.\n4. Share with friends so they know what to look out for too.\n\nStay safe, bro!",
+      "malaya_score": 1
+    },
+    {
+      "id": 65,
+      "category": "Civics",
+      "input": "saman pdrm boleh bayar online ke?",
+      "raw_output": "Saman pdrm biasanya boleh bayar online leh, tapi kena cek dulu dengan pdrm tu untuk maklumat terkini kerana mereka mungkin ada perubahan. Biasanya, mereka accept pembayaran online melalui pelbagai platform macam-macam seperti internet banking, aplikasi pembayaran, atau website resmi pdrm.",
+      "raw_score": 1,
+      "malaya_output": "Saman pdrm biasanya boleh bayar online leh, tapi kena cek dulu dengan pdrm tu untuk maklumat terkini kerana mereka mungkin ada perubahan. Biasanya, mereka accept pembayaran online melalui pelbagai platform macam-macam seperti internet banking, aplikasi pembayaran, atau website resmi pdrm.",
+      "malaya_score": 1
+    },
+    {
+      "id": 66,
+      "category": "Civics",
+      "input": "jpj renew license operating hours",
+      "raw_output": "It seems like you're asking about renewing a license for an operating business, possibly in Japan (jpj likely stands for Japan). To renew a license for operating hours, businesses typically need to follow these steps:\n\n1. Check the current regulations and requirements specific to their industry and location.\n2. Ensure all necessary documentation is up-to-date and complete.\n3. Submit the renewal application through the appropriate local government office or online portal.\n4. Pay any required fees associated with license renewal.\n5. Attend any mandatory training sessions if applicable.\n6. Await approval from the relevant authorities.\n\nIt's important to consult the specific guidelines provided by the local government for accurate information tailored to your situation.",
+      "raw_score": 1,
+      "malaya_output": "It seems like you're asking about renewing a license for an operating business, possibly in Japan (jpj likely stands for Japan). To renew a license for operating hours, businesses typically need to follow these steps:\n\n1. Check the current regulations and requirements specific to their industry and location.\n2. Ensure all necessary documentation is up-to-date and complete.\n3. Submit the renewal application through the appropriate local government office or online portal.\n4. Pay any required fees associated with license renewal.\n5. Attend any mandatory training sessions if applicable.\n6. Await approval from the relevant authorities.\n\nIt's important to consult the specific guidelines provided by the local government for accurate information tailored to your situation.",
+      "malaya_score": 1
+    },
+    {
+      "id": 67,
+      "category": "Civics",
+      "input": "renew passport walk in boleh tak?",
+      "raw_output": "Yeah, you can walk in to renew your passport at some places, but it's better to call first or check their website for details. They might need an appointment, especially if there are many people wanting to do the same.",
+      "raw_score": 1,
+      "malaya_output": "Yeah, you can walk in to renew your passport at some places, but it's better to call first or check their website for details. They might need an appointment, especially if there's a lot of people. Bring all the required documents and fill out any forms they have online before you go.",
+      "malaya_score": 1
+    },
+    {
+      "id": 68,
+      "category": "Civics",
+      "input": "undi 18 tu apa?",
+      "raw_output": "undi 18 tu apa? Mmm, undi 18 usually means someone is 18 years old. In many places, 18 is when you can do stuff like get a driver's license or vote. But that might differ depending on the country.",
+      "raw_score": 1,
+      "malaya_output": "undi 18 tu apa? Mmm, undi 18 usually means someone is 18 years old. In many places, 18 is when you can do stuff like get a driver's license or vote. But that might differ depending on the country.",
+      "malaya_score": 1
+    },
+    {
+      "id": 69,
+      "category": "Civics",
+      "input": "cuti umum malaysia 2024",
+      "raw_output": "In Malaysia, public holidays are typically announced by the government and can vary from year to year. For 2024, some of the major public holidays in Malaysia include:\n\n- New Year's Day (January 1)\n- Chinese New Year (date varies; usually in January or February)\n- International Women's Day (March 8)\n- Good Friday (date varies; typically in March or April)\n- Labour Day (May 1)\n- Hari Raya Aidilfitri (date varies; marks the end of Ramadan, typically in May or June)\n- Hari Raya Aidiladha (date varies; usually in July or August)\n- Malaysia Independence Day (August 30)\n- Christmas Day (December 25)\n\nPlease check official government announcements for the exact dates and any additional public holidays that may be added to the calendar.",
+      "raw_score": 1,
+      "malaya_output": "In Malaysia, public holidays are typically announced by the government and can vary from year to year. For 2024, some of the major public holidays in Malaysia include:\n\n- New Year's Day (January 1)\n- Chinese New Year (date varies; usually in January or February)\n- International Women's Day (March 8)\n- Good Friday (date varies; typically in March or April)\n- Labour Day (May 1)\n- Hari Raya Aidilfitri (date varies; marks the end of Ramadan, typically in May or June)\n- Hari Raya Aidiladha (date varies; usually in July or August)\n- Malaysia Independence Day (August 30)\n- Christmas Day (December 25)\n\nPlease check official government announcements for the exact dates and any additional public holidays that may be added to the calendar.",
+      "malaya_score": 1
+    },
+    {
+      "id": 70,
+      "category": "Cultural",
+      "input": "baju melayu cekak musang vs teluk belanga",
+      "raw_output": "Baju Melayu Cekak Musang and Baju Melayu Teluk Belanga are traditional Malay clothing styles, each with its own unique features.\n\nCekak Musang is a type of baju melayu that is popular in certain regions. It typically features intricate embroidery on the front part of the shirt, often around the collar and chest area. The design can vary but commonly includes floral patterns or geometric shapes. This style is known for its vibrant colors and detailed craftsmanship.\n\nTeluk Belanga, on the other hand, refers to a specific baju melayu worn in the Teluk Belanga area, which is located in the state of Terengganu, Malaysia. The design of this traditional attire often includes a more subdued color palette compared to Cekak Musang. It typically features simpler embroidery or none at all, with an emphasis on the fit and quality of the fabric.\n\nBoth styles are part of the rich cultural heritage of the Malay people in Southeast Asia, reflecting local traditions and aesthetics.",
+      "raw_score": 0,
+      "malaya_output": "Baju Melayu Cekak Musang and Baju Melayu Teluk Belanga are traditional Malay clothing styles, each with its own unique features.\n\nCekak Musang is a type of baju melayu that is popular in certain regions. It typically features intricate embroidery on the front part of the shirt, often around the collar and chest area. The design can vary but commonly includes floral patterns or geometric shapes. This style is known for its vibrant colors and detailed craftsmanship.\n\nTeluk Belanga, on the other hand, refers to a specific baju melayu worn in the Teluk Belanga area, which is located in the state of Terengganu, Malaysia. The design of this traditional attire often includes a more subdued color palette compared to Cekak Musang. It typically features simpler embroidery or none at all, with an emphasis on the fit and quality of the fabric.\n\nBoth styles are part of the rich cultural heritage of the Malay people in Southeast Asia, reflecting local traditions and aesthetics.",
+      "malaya_score": 0
+    },
+    {
+      "id": 71,
+      "category": "Cultural",
+      "input": "adat merisik tu wajib ke?",
+      "raw_output": "In Malay, \"adat merisik\" refers to a traditional custom or practice in some cultures, particularly in parts of Southeast Asia like Malaysia and Indonesia. Typically, this term is used in the context of marriage customs where certain rituals or practices are followed before a wedding can take place. These may include negotiations between families, payment of dowry (if applicable), or other cultural traditions specific to the community involved. However, the exact requirements can vary greatly depending on the local culture and tradition.",
+      "raw_score": 1,
+      "malaya_output": "In Malay, \"adat merisik\" refers to a traditional custom or practice in some cultures, particularly in parts of Southeast Asia like Malaysia and Indonesia. Typically, this term is used in the context of marriage customs where certain rituals or practices are followed before a wedding can take place. These may include negotiations between families, payment of dowry (if applicable), or other cultural traditions specific to the community involved. However, the exact requirements can vary greatly depending on the local culture and tradition.",
+      "malaya_score": 1
+    },
+    {
+      "id": 72,
+      "category": "Cultural",
+      "input": "hantaran tunang biasanya berapa dulang?",
+      "raw_output": "Hantaran tunang biasanya antara 500 hingga 1000 ringgit, tapi itu tergantung pada kebiasaan keluarga dan anggaran. Ada juga yang lebih rendah atau lebih tinggi bergantung kepada situasi masing-masing.",
+      "raw_score": 1,
+      "malaya_output": "Hantaran tunang biasanya antara 500 hingga 1000 ringgit, tapi itu tergantung pada kebiasaan keluarga dan anggaran. Ada juga yang lebih rendah atau lebih tinggi bergantung kepada situasi masing-masing.",
+      "malaya_score": 1
+    },
+    {
+      "id": 73,
+      "category": "Cultural",
+      "input": "pantang larang orang mengandung masa dulu",
+      "raw_output": "In Malaysia, there's no law that specifically stops someone from getting pregnant in the past. But if you're talking about a specific situation or context like a legal case or something, it would depend on the details of that particular scenario. Generally, people are free to make their own choices about their bodies and health.",
+      "raw_score": 0,
+      "malaya_output": "In Malaysia, there's no law that specifically stops someone from getting pregnant in the past. But if you're talking about a specific situation or context like a legal case or something, it would depend on the details of that particular scenario. Generally, people are free to make their own choices about their bodies and health.",
+      "malaya_score": 0
+    },
+    {
+      "id": 74,
+      "category": "Cultural",
+      "input": "lagu raya paling legend",
+      "raw_output": "Lagu Raya is a popular Malay song often associated with the celebration of Hari Raya Aidilfitri, which marks the end of Ramadan. The most legendary version of Lagu Raya is usually attributed to the original composition by Ahmad Patah and his group, Dangdut Queen, in 1980. This version has become a classic and is widely recognized during festive occasions in Malaysia and Indonesia.",
+      "raw_score": 0,
+      "malaya_output": "Lagu Raya is a popular Malay song often associated with the celebration of Hari Raya Aidilfitri, which marks the end of Ramadan. The most legendary version of Lagu Raya is usually attributed to the original composition by Ahmad Patah and his group, Dangdut Queen, in 1980. This version has become a classic and is widely recognized during festive occasions in Malaysia and Indonesia.",
+      "malaya_score": 0
+    },
+    {
+      "id": 75,
+      "category": "Entertainment",
+      "input": "filem p ramlee paling lawak",
+      "raw_output": "Film P Ramlee paling lawak tu 'Paya Water' ya. Film ni lawak banget, Ramlee main role deng. Ada scene-scene hikmah dan lucu, terutamanya scene dengan kambing itu yang jadi viral.",
+      "raw_score": 0,
+      "malaya_output": "Film P Ramlee paling lawak tu 'Paya Water' ya. Film ni lawak banget, Ramlee main role deng. Ada scene-scene hikmah dan lucu, terutamanya scene dengan kambing itu yang jadi viral.",
+      "malaya_score": 0
+    },
+    {
+      "id": 76,
+      "category": "Entertainment",
+      "input": "siapa menang ajl tahun lepas?",
+      "raw_output": "Tahun lepas pusing jugak, macam mana tu ada juara. Boleh2 pihak A menang, boleh2 pihak B. Kalau nak tahu pasti, cek lah berita terkini atau nampak2 di media sosial.",
+      "raw_score": 1,
+      "malaya_output": "Tahun lepas pusing jugak, macam mana tu ada juara. Boleh2 pihak A menang, boleh2 pihak B. Kalau nak tahu pasti, cek lah berita terkini atau nampak2 di media sosial.",
+      "malaya_score": 1
+    },
+    {
+      "id": 77,
+      "category": "Entertainment",
+      "input": "panggung wayang terdekat",
+      "raw_output": "The closest puppet theater or wayang stage can vary depending on your location. Wayang performances are popular in Indonesia, particularly in Java and Bali. If you're near a major city in Indonesia, there might be traditional theaters or cultural centers hosting wayang shows. For example, in Yogyakarta, which is known for its rich cultural heritage, you could find wayang performances at venues like the Taman Siswa School grounds or other local cultural centers. Always check with local tourism information or cultural organizations for specific dates and locations of upcoming performances.",
+      "raw_score": 1,
+      "malaya_output": "The closest puppet theater or wayang stage can vary depending on your location. Wayang performances are popular in Indonesia, particularly in Java and Bali. If you're near a major city in Indonesia, there might be traditional theaters or cultural centers hosting wayang shows. For example, in Yogyakarta, which is known for its rich cultural heritage, you could find wayang performances at venues like the Taman Siswa School grounds or other local cultural centers. Always check with local tourism information or cultural organizations for specific dates and locations of upcoming performances.",
+      "malaya_score": 1
+    },
+    {
+      "id": 78,
+      "category": "Entertainment",
+      "input": "concert coldplay malaysia ticket price",
+      "raw_output": "The price of Coldplay concert tickets in Malaysia can vary depending on the venue, date, and specific location within the venue. Generally, you might find prices ranging from RM150 to RM800 or more for a standard seat. Premium seats or those closer to the stage may be significantly higher. It's best to check official ticketing websites or Coldplay\u2019s official website for the most accurate and up-to-date information on ticket prices and availability.",
+      "raw_score": 0,
+      "malaya_output": "The price of Coldplay concert tickets in Malaysia can vary depending on the venue, date, and specific location within the venue. Generally, you might find prices ranging from RM150 to RM800 or more for a standard seat. Premium seats or those closer to the stage may cost significantly more. It's best to check official ticketing websites or Coldplay\u2019s official website for the most accurate and up-to-date information on ticket prices and availability.",
+      "malaya_score": 0
+    },
+    {
+      "id": 79,
+      "category": "Sports",
+      "input": "malaysia vs korea bola sepak result",
+      "raw_output": "The term \"bola sepak\" refers to football, which is commonly known as soccer in some countries. However, without a specific timeframe or match details provided, I cannot give you an exact result between Malaysia and Korea (South Korea) in a particular football match. Both countries have national teams that play against each other occasionally, but the results can vary depending on when the match was played. For the most accurate and up-to-date information, you would need to check recent sports news or official FIFA records for specific matches.",
+      "raw_score": 0,
+      "malaya_output": "The term \"bola sepak\" refers to football, which is commonly known as soccer in some countries. However, without a specific timeframe or match details provided, I cannot give you an exact result between Malaysia and Korea (South Korea) in a particular football match. Both countries have national teams that play against each other occasionally, but the results can vary depending on when the match was played. For the most accurate and up-to-date information, you would need to check recent sports news or official FIFA records for specific matches.",
+      "malaya_score": 0
+    },
+    {
+      "id": 80,
+      "category": "Sports",
+      "input": "dato lee chong wei retired bila?",
+      "raw_output": "Dato' Lee Chong Wei retired lah in 2019, after he announced his decision to step down from professional badminton. Kan, that was around the time when he won his last major title too.",
+      "raw_score": 1,
+      "malaya_output": "Dato' Lee Chong Wei retired lah in 2019, after he announced his decision to step down from professional badminton. Kan, that was around the time when he won his last major title too.",
+      "malaya_score": 1
+    },
+    {
+      "id": 81,
+      "category": "Sports",
+      "input": "badminton court near me",
+      "raw_output": "I understand you're looking for a badminton court nearby! It can be frustrating when you want to play but don't know where to find a court. Have you tried checking local parks or community centers? Many areas have outdoor courts in parks, and some community centers might offer indoor facilities. You could also look online for sports facilities in your area or check social media groups dedicated to sports enthusiasts. If you let me know your location, I can try to suggest some options!",
+      "raw_score": 1,
+      "malaya_output": "I understand you're looking for a badminton court nearby! It can be frustrating when you want to play but don't know where to find a court. Have you tried checking local parks or community centers? Many areas have outdoor courts in parks, and some community centers might offer indoor facilities. You could also look online for sports facilities in your area or check social media groups dedicated to sports enthusiasts. If you let me know your location, I can try to suggest some options!",
+      "malaya_score": 1
+    },
+    {
+      "id": 82,
+      "category": "Sports",
+      "input": "jdt menang lagi ke?",
+      "raw_output": "JDT menang lagi ke depend on which match or competition you're talking about. Without any specific context, I can't say for sure. You might want to check the latest sports news or scores for the most recent game.",
+      "raw_score": 1,
+      "malaya_output": "JDT menang lagi ke depend on which match or competition you're talking about. Without any specific context, I can't say for sure. You might want to check the latest sports news or scores for the most recent game.",
+      "malaya_score": 1
+    },
+    {
+      "id": 83,
+      "category": "Sports",
+      "input": "sukan sea next kat mana?",
+      "raw_output": "Sukan sea next kena Malaysia or Singapore? If you mean Sukan Sea as in a place for swimming and such, it could be near the beach areas of both countries. But if you're asking about an actual event like the Sukan Asia or something, that usually rotates among different countries. You might want to check which country is hosting the next big sukan event if that's what you meant.",
+      "raw_score": 0,
+      "malaya_output": "Sukan sea next kena Malaysia or Singapore? If you mean Sukan Sea as in a place for swimming and such, it could be near the beach areas of both countries. But if you're asking about an actual event like the Sukan Asia or something, that usually rotates among different countries. You might want to check which country is hosting the next big sukan event if that's what you meant.",
+      "malaya_score": 0
+    },
+    {
+      "id": 84,
+      "category": "Lifestyle",
+      "input": "hiking trail best kat selangor/kl",
+      "raw_output": "Hey there! If you're looking for a great hiking trail in the Klang Valley or Selangor, the Gombak River Trail is an absolute must-visit! It's not too far from Kuala Lumpur and offers stunning views of the river and surrounding nature. Another fantastic option is the Bukit Tengah Trail, which provides a bit more challenge but rewards you with breathtaking scenery. Both trails are well-maintained and offer a great day out for hikers of all levels. Pack some snacks, wear comfortable shoes, and get ready for an amazing adventure!",
+      "raw_score": 0,
+      "malaya_output": "Hey there! If you're looking for a great hiking trail in the Klang Valley or Selangor, the Gombak River Trail is an absolute must-visit! It's not too far from Kuala Lumpur and offers stunning views of the river and surrounding nature. Another fantastic option is the Bukit Tengah Trail, which provides a bit more challenge but rewards you with breathtaking scenery. Both trails are well-maintained and offer a great day out for hikers of all levels. Pack some snacks, wear comfortable shoes, and get ready for an amazing adventure!",
+      "malaya_score": 0
+    },
+    {
+      "id": 85,
+      "category": "Lifestyle",
+      "input": "tempat camping tepi sungai best",
+      "raw_output": "Oh, camping by the river sounds amazing! There are so many beautiful spots to choose from. You can look for state parks or nature reserves that offer riverside campsites. For example, in the United States, you might consider places like the Shenandoah National Park in Virginia or the North Cascades National Park in Washington. In Australia, try camping by the Coffs River or the Wilsons River. Don't forget to check if you need a permit and always follow Leave No Trace principles to help protect these natural areas!",
+      "raw_score": 1,
+      "malaya_output": "Oh, camping by the river sounds amazing! There are so many beautiful spots to choose from. You can look for state parks or nature reserves that offer riverside campsites. For example, in the United States, you might consider places like the Shenandoah National Park in Virginia or the North Cascades National Park in Washington. In Australia, try camping by the Coffs River or the Wilsons River. Don't forget to check if you need a permit and always follow Leave No Trace principles to help protect these natural areas!",
+      "malaya_score": 1
+    },
+    {
+      "id": 86,
+      "category": "Lifestyle",
+      "input": "gym membership price fitness first",
+      "raw_output": "The price for a Fitness First gym membership can vary depending on factors such as location, type of membership (e.g., basic, premium), duration of the contract, and any additional services included like personal training or group classes. Typically, prices might range from around $20 to over $100 per month, but it's best to check directly with Fitness First for current pricing in your area.",
+      "raw_score": 1,
+      "malaya_output": "The price for a Fitness First gym membership can vary depending on factors such as location, type of membership (e.g., basic, premium), duration of the contract, and any additional services included like personal training or group classes. Typically, prices might range from around $20 to over $100 per month, but it's best to check directly with Fitness First for current pricing in your area.",
+      "malaya_score": 1
+    },
+    {
+      "id": 87,
+      "category": "Lifestyle",
+      "input": "diet atkins menu malaysia",
+      "raw_output": "The Atkins diet focuses on a low-carbohydrate approach to weight loss and managing blood sugar levels. In Malaysia, you can adapt the Atkins menu by incorporating local ingredients and dishes while following the dietary principles of the plan. Here\u2019s a simple example:\n\n**Induction Phase (Very Low-Carb):**\n- Breakfast: Scrambled eggs with sliced tomatoes and avocado\n- Lunch: Grilled chicken breast with steamed broccoli and cauliflower\n- Dinner: Fish curry with coconut milk, served with zucchini noodles or lettuce wraps\n\n**Ongoing Weight Loss Phase:**\n- Snack: A handful of almonds or a small apple\n- Dessert: Dark chocolate (70% cocoa or higher)\n\nRemember to adjust portion sizes according to your specific needs and consult with a healthcare provider before starting any new diet.",
+      "raw_score": 0,
+      "malaya_output": "The Atkins diet focuses on a low-carbohydrate approach to weight loss and managing blood sugar levels. In Malaysia, you can adapt the Atkins menu by incorporating local ingredients and dishes while following the principles of the diet. Here\u2019s a simple example:\n\n### Induction Phase (Weeks 1-2)\n- **Breakfast:** Nasi Lemak with a side of grilled chicken or fish.\n- **Lunch:** Steamed vegetables with a portion of beef rendang.\n- **Dinner:** Grilled shrimp with a salad of mixed greens and cucumber.\n\n### Ongoing Induction Phase (Weeks 3-4)\n- **Breakfast:** Coconut milk porridge with a few slices of avocado.\n- **Lunch:** Stir-fried vegetables with tofu or chicken, served with brown rice.\n- **Dinner:** Grilled fish with a side of steamed broccoli and carrots.\n\n### Ongoing Phase\n- **Breakfast:** Scrambled eggs with spinach and tomatoes.\n- **Lunch:** Chicken satay with peanut sauce and cucumber slices.\n- **Dinner:** Stir-fried mixed vegetables with lean meat or shrimp, served with quinoa.\n\nRemember to focus on high-protein, low-carb foods while ensuring you get a variety of nutrients. Always consult with a healthcare provider before starting any new diet plan.",
+      "malaya_score": 1
+    },
+    {
+      "id": 88,
+      "category": "Local issue",
+      "input": "cara report jalan berlubang",
+      "raw_output": "To report potholes in a road, you can follow these steps:\n\n1. **Identify the Pothole**: Make sure it's a significant pothole that poses a risk to drivers or pedestrians.\n\n2. **Gather Information**: Note down details such as the location (street name and direction), size of the pothole, and any other relevant information like if it's near a school or busy intersection.\n\n3. **Contact Local Authorities**: Reach out to your local government department responsible for road maintenance. This could be the city council, public works department, or transportation authority. You can usually find their contact details on the official municipal website or by searching online.\n\n4. **Use Online Platforms**: Many cities have online platforms where you can report potholes directly through a form or map interface. Check if your local government offers such services.\n\n5. **Call Hotline**: Some areas provide a hotline number specifically for reporting road issues like potholes.\n\n6. **Photograph the Pothole**: Take clear photos of the pothole from different angles to help authorities assess the situation more accurately.\n\n7. **Follow Up**: After submitting your report, keep an eye on the area and possibly follow up if the pothole remains unaddressed for a reasonable amount of time.\n\nBy following these steps, you can effectively contribute to maintaining safer roads in your community.",
+      "raw_score": 0,
+      "malaya_output": "To report potholes in a road, you can follow these steps:\n\n1. **Identify the Pothole**: Make sure it's a significant pothole that poses a risk to drivers or pedestrians.\n\n2. **Gather Information**: Note down details such as the location (street name and direction), size of the pothole, and any other relevant information like if it's near a school or busy intersection.\n\n3. **Contact Local Authorities**: Reach out to your local government department responsible for road maintenance. This could be the city council, public works department, or transportation authority. You can usually find their contact details on the official municipal website or by searching online.\n\n4. **Use Online Platforms**: Many cities have online platforms where you can report potholes directly through a form or map interface. Check if your local government offers such services.\n\n5. **Call Hotline**: Some areas provide a hotline number specifically for reporting road issues like potholes.\n\n6. **Photograph the Pothole**: Take clear photos of the pothole from different angles to help authorities assess the situation more accurately.\n\n7. **Follow Up**: After submitting your report, keep an eye on the area and possibly follow up if the pothole remains unaddressed for a reasonable amount of time.\n\nBy following these steps, you can effectively contribute to maintaining safer roads in your community.",
+      "malaya_score": 0
+    },
+    {
+      "id": 89,
+      "category": "Local issue",
+      "input": "jiran bising malam-malam, boleh report polis tak?",
+      "raw_output": "Ya, boleh report polis. Jika kamu merasa aman tidak, tapi kalau cuma mimpi atau hal biasa, mungkin tak perlu. Tapi kalau ada tanda-tanda serius seperti bunyi aneh atau melihat sesuatu yang mencurigakan, report aje ke polis untuk amannya.",
+      "raw_score": 1,
+      "malaya_output": "Ya, boleh report polis. Jika kamu merasa aman tidak, tapi kalau cuma mimpi atau hal biasa, mungkin tak perlu. Tapi kalau ada tanda-tanda serius seperti bunyi aneh atau melihat sesuatu yang mencurigakan, report aje ke polis untuk amannya.",
+      "malaya_score": 1
+    },
+    {
+      "id": 90,
+      "category": "Local issue",
+      "input": "sampah tak kutip seminggu, nak adu kat mana?",
+      "raw_output": "Bro, kalau sampah tu tak diambil se minggu, boleh cuba adu ke tempat sampah umum atau kawasan dekat rumah. Jadi jangan lama-lama nampaknya.",
+      "raw_score": 0,
+      "malaya_output": "Bro, kalau sampah tu tak diambil se minggu, boleh cuba adu ke tempat sampah umum atau kawasan dekat rumah. Jadi jangan lama-lama nampaknya.",
+      "malaya_score": 0
+    },
+    {
+      "id": 91,
+      "category": "Local issue",
+      "input": "anjing liar banyak kat taman ni, bahaya",
+      "raw_output": "Oh no, that sounds scary! Better tell a grown-up or someone you trust about it. They can check it out and make sure everyone's safe. Meanwhile, try to stay away from the area and don't go near those dogs.",
+      "raw_score": 0,
+      "malaya_output": "Oh no, that sounds scary! Better tell a grown-up or someone you trust about it. They can check it out and make sure everyone's safe. Meanwhile, try to stay away from the area and don't go near those dogs.",
+      "malaya_score": 0
+    },
+    {
+      "id": 92,
+      "category": "Local issue",
+      "input": "paip air pecah, syabas contact number",
+      "raw_output": "I'm sorry, but the request seems unclear. Could you please provide more details or clarify which company or service \"paip\" refers to? Without additional context, it's difficult to determine what specific information is being sought regarding a contact number.",
+      "raw_score": 0,
+      "malaya_output": "I'm sorry, but the request seems unclear. Could you please provide more details or clarify which company or service \"paip\" refers to? Without additional context, it's difficult to determine what specific information is being sought regarding a contact number.",
+      "malaya_score": 0
+    },
+    {
+      "id": 93,
+      "category": "Local issue",
+      "input": "blackout rumah aku sorang je, kenapa?",
+      "raw_output": "Ohh, sounds like you had a power outage at home. That can be pretty annoying, especially if you were in the middle of something important. Did you try checking if it's just your house or the whole area? Sometimes it could be due to a tripped circuit breaker or maybe even a tree branch falling on the power lines. If it keeps happening, you might want to call an electrician to check things out.",
+      "raw_score": 1,
+      "malaya_output": "Ohh, sounds like you had a power outage at home. That can be pretty annoying, especially if you were in the middle of something important. Did you try checking if it's just your house or the whole area? Sometimes it could be due to a tripped circuit breaker or maybe even a tree branch falling on the power lines. If it keeps happening, you might want to call an electrician to check things out.",
+      "malaya_score": 1
+    },
+    {
+      "id": 94,
+      "category": "Tech issue",
+      "input": "internet unifi slow gila hari ni",
+      "raw_output": "It sounds like you're experiencing slow internet speeds on Gila Hari Ni, which is likely a reference to a specific location or network. Here are some common reasons for slow internet and potential solutions:\n\n1. **Distance from Modem/Router**: Ensure your device is not too far away from the modem/router. The farther you are, the weaker the signal.\n\n2. **Interference**: Other electronic devices can interfere with Wi-Fi signals. Try moving your router to a less crowded area or turning off nearby devices that might be causing interference.\n\n3. **Device Settings**: Check if any background apps on your device are using data. Close them to free up bandwidth for more important tasks.\n\n4. **Router Firmware**: Make sure the firmware on your router is updated. Manufacturers often release updates to improve performance and fix bugs.\n\n5. **Bandwidth Usage**: Too many devices connected or heavy usage of streaming services can slow down internet speeds. Limit the number of active connections if possible.\n\n6. **ISP Issues**: Contact your Internet Service Provider (ISP) to check for any known issues in your area. They might be experiencing maintenance or have a technical problem that needs addressing.\n\n7. **Router Placement**: Place your router in a central location and avoid placing it near metal objects, microwaves, or other electronic devices that can interfere with the signal.\n\n8. **Speed Test**: Run a speed test to see if your actual speeds match what you're paying for. This will help determine if the issue is with your internet service or something else.\n\nIf none of these solutions work, it might be best to contact your ISP for further assistance.",
+      "raw_score": 1,
+      "malaya_output": "It sounds like you're experiencing slow internet speeds on Gila Hari Ni, which is likely a reference to a specific location or network. Here are some common reasons for slow internet and potential solutions:\n\n1. **Distance from Modem/Router**: Ensure your device is not too far away from the modem/router. The farther you are, the weaker the signal.\n\n2. **Interference**: Other electronic devices can interfere with Wi-Fi signals. Try moving your router to a less crowded area or turning off nearby devices that might be causing interference.\n\n3. **Device Settings**: Check if any background apps on your device are using data. Close them to free up bandwidth for more important tasks.\n\n4. **Router Firmware**: Make sure the firmware on your router is updated. Manufacturers often release updates to improve performance and fix bugs.\n\n5. **Bandwidth Usage**: Too many devices connected or heavy usage of streaming services can slow down internet speeds. Limit the number of active connections if possible.\n\n6. **ISP Issues**: Contact your Internet Service Provider (ISP) to check for any known issues in your area. They might be experiencing maintenance or have a technical problem that needs addressing.\n\n7. **Router Placement**: Place your router in a central location and avoid placing it near metal objects, microwaves, or other electronic devices that can interfere with the signal.\n\n8. **Speed Test**: Run a speed test to see if your actual speeds match what you're paying for. This will help determine if the issue is with your internet service or something else.\n\nIf none of these solutions work, it might be best to contact your ISP for further assistance.",
+      "malaya_score": 1
+    },
+    {
+      "id": 95,
+      "category": "Tech issue",
+      "input": "celcom line takde signal",
+      "raw_output": "It seems like you're asking about Celcom's network coverage or signal strength. Celcom is a mobile telecommunications company in Malaysia, and their service quality can vary depending on the location. For better signal, try restarting your device, moving to an open area, or checking for any obstructions that might be affecting the signal. If you continue to experience issues, contacting Celcom customer support might help resolve the problem.",
+      "raw_score": 1,
+      "malaya_output": "It seems like you're asking about Celcom's network coverage or signal strength. Celcom is a mobile telecommunications company in Malaysia, and their service quality can vary depending on the location. For better signal, try restarting your device, moving to an open area, or checking for any obstructions that might be affecting the signal. If you continue to experience issues, contacting Celcom customer support might help resolve the problem.",
+      "malaya_score": 1
+    },
+    {
+      "id": 96,
+      "category": "Tech issue",
+      "input": "mytv tak dapat siaran",
+      "raw_output": "Ohh, you mean like when the signal goes haywire and there's no TV show on your channel? Yeah, that can happen sometimes. Maybe check if your antenna is properly positioned or if there's something blocking it. Also, make sure your TV is tuned to the right frequency or channel. If it's a streaming service, try checking your internet connection too.",
+      "raw_score": 1,
+      "malaya_output": "Ohh, you mean like when the signal goes haywire and there's no TV show on your channel? Yeah, that can happen sometimes. Maybe check if your antenna is properly positioned or if there's something blocking it. Also, make sure your TV is tuned to the right frequency or channel. If all else fails, maybe give them a call at their customer service number; they might be able to help you out.",
+      "malaya_score": 1
+    },
+    {
+      "id": 97,
+      "category": "Service issue",
+      "input": "grab driver cancel last minute, geramnya",
+      "raw_output": "OK, so you want to know about grabbing a driver at the last minute, right? Like when you need a ride but don't have time to plan ahead. You can usually do that through ride-hailing apps like Grab or Uber. Just open the app, tap on 'Request Ride,' and choose your destination. The driver will get notified and hopefully accept if they're nearby. But remember, it might be harder to find a driver at very short notice during peak hours or in busy areas.",
+      "raw_score": 0,
+      "malaya_output": "OK, so you want to know about grabbing a driver at the last minute, right? Like when you need a ride but don't have time to plan ahead. You can usually do that through ride-hailing apps like Grab or Uber. Just open the app, tap on 'Request Ride,' and choose your destination. The driver will get notified and hopefully accept if they're nearby. But remember, it might be harder to find a driver at very short notice during peak hours or in busy areas.",
+      "malaya_score": 0
+    },
+    {
+      "id": 98,
+      "category": "Service issue",
+      "input": "shopee delivery lambat sampai",
+      "raw_output": "Yeah, Shopee delivery can be slow sometimes. They might take a few days to reach you, depending on where you're located. Try checking their tracking info for an update.",
+      "raw_score": 1,
+      "malaya_output": "Yeah, Shopee delivery can be slow sometimes. They might take a few days to reach you, depending on where you're located. Try checking their tracking info for an update.",
+      "malaya_score": 1
+    },
+    {
+      "id": 99,
+      "category": "Service issue",
+      "input": "foodpanda wrong order refund",
+      "raw_output": "If you got a wrong order from foodpanda and want a refund, first check if the mistake is on their end or yours. If it's definitely their fault, contact their customer service through their app or website. They usually have a process for handling such issues, which might include getting a new order sent out or giving you a refund. Make sure to keep any proof of the wrong order like photos or chat history with foodpanda.",
+      "raw_score": 1,
+      "malaya_output": "If you got a wrong order from foodpanda and want a refund, first check if the mistake is on their end or yours. If it's definitely their fault, contact their customer service through their app or website. They usually have a process for handling such issues, which might include getting a new order sent out or giving you a refund. Make sure to keep any proof of the wrong order like photos or chat history with foodpanda.",
+      "malaya_score": 1
+    },
+    {
+      "id": 100,
+      "category": "Education",
+      "input": "tolong buat kesimpulan untuk essay ni pasal kemerdekaan",
+      "raw_output": "OK then, let's make a conclusion for your essay on independence. Independence is when a country or region gains freedom from control by another country. It's like when you grow up and can make your own decisions without your parents telling you what to do all the time. For countries, gaining independence means they get to decide their own laws, leaders, and how they want to run things on their own. This is a big deal because it gives people more freedom and control over their lives. Independence also helps countries develop and grow stronger by making their own choices and working together as one nation. So, in your essay, you can say that independence is crucial for a country's growth and the happiness of its people. It's about being free to make decisions that are best for everyone living there.",
+      "raw_score": 0,
+      "malaya_output": "OK then, let's make a conclusion for your essay on independence. Independence is when a country or region gains freedom from control by another country. It's like when you grow up and can make your own decisions without your parents telling you what to do all the time. For countries, gaining independence means they get to decide their own laws, leaders, and how they want to run things on their own. This is a big deal because it gives people more freedom and control over their lives. Independence also helps countries develop and grow stronger by making their own choices and working together as one nation. So, in your essay, you can say that independence is crucial for a country's growth and the happiness of its people. It's about being free to make decisions that are best for everyone living there.",
+      "malaya_score": 0
+    }
+  ],
+  "custom_metrics": {
+    "total_time_seconds": 3664.1995277404785,
+    "avg_time_per_case_seconds": 36.64199527740479
+  }
+}

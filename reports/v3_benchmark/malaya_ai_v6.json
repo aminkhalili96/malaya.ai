@@ -1,0 +1,709 @@
+{
+    "model": "Malaya-V6-Full",
+    "results": [
+        {
+            "id": 1,
+            "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
+            "response": "Tak boleh lah abang, aku tak ada duit sekarang. Nanti lah kita jumpa.",
+            "raw_response": "Tak boleh lah abang, aku tak ada duit sekarang. Nanti lah kita jumpa.",
+            "category": "Shortforms"
+        },
+        {
+            "id": 2,
+            "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
+            "response": "[THOUGHT] Pengguna mungkin menghadapi masalah yang sama dengan internet yang lambat atau permasalahan teknikal lainnya. Saya akan memberikan beberapa langkah yang boleh dicuba.\n\n[TXT] Macam mana nak buat ni? Aku dah cuba banyak kali tapi tidak jadi. Berikut adalah beberapa langkah yang boleh kau coba:\n\n1. Cek ulang router: Pastikan semua kabel terhubung dengan betul dan tidak ada yang putus.\n2. Restart peranti: Cubalah restart modem dan routermu untuk memastikan semuanya berfungsi dengan baik.\n3. Periksa aplikasi myUnifi: Jika masalahnya masih berlanjut, coba buat aduan melalui aplikasi myUnifi.\n\nCuba langkah-langkah ni dan kau boleh lihat apakah ada yang membantu.",
+            "raw_response": "[THOUGHT] Pengguna mungkin menghadapi masalah yang sama dengan internet yang lambat atau permasalahan teknikal lainnya. Saya akan memberikan beberapa langkah yang boleh dicuba.\n\n[TXT] Macam mana nak buat ni? Aku dah cuba banyak kali tapi tidak jadi. Berikut adalah beberapa langkah yang boleh kau coba:\n\n1. Cek ulang router: Pastikan semua kabel terhubung dengan betul dan tidak ada yang putus.\n2. Restart peranti: Cubalah restart modem dan routermu untuk memastikan semuanya berfungsi dengan baik.\n3. Periksa aplikasi myUnifi: Jika masalahnya masih berlanjut, coba buat aduan melalui aplikasi myUnifi.\n\nCuba langkah-langkah ni dan kau boleh lihat apakah ada yang membantu.",
+            "category": "Shortforms"
+        },
+        {
+            "id": 3,
+            "input": "best gila siot benda ni!",
+            "response": "Rasa best sangat dan gila je benda ini!",
+            "raw_response": "Rasa best sangat dan gila je benda ini!",
+            "category": "Sentiment"
+        },
+        {
+            "id": 4,
+            "input": "lepak mamak jom, aku belanja teh tarik",
+            "response": "Thoughts: User wants to go to a Mamak restaurant and buy some teh tarik. I'll suggest popular 24-hour eateries in Malaysia that serve Mamak cuisine.\n\nLepak mamak jom! Ada beberapa tempat yang popular untuk belanja teh tarik dan makanan Mamak lainnya:\n\n1. Warung Makan Haji - terkenal dengan masakannya yang enak.\n2. Kedai Makanan Samsui - tempat ini buka 24 jam, jadi mudah dijangkau.\n3. Mamak Restaurant - tempat asli untuk mencuba makanan Mamak.\n\nAku rasa kita boleh pergi ke Kedai Makanan Samsui dan belanja teh tarik sana!",
+            "raw_response": "Thoughts: User wants to go to a Mamak restaurant and buy some teh tarik. I'll suggest popular 24-hour eateries in Malaysia that serve Mamak cuisine.\n\nLepak mamak jom! Ada beberapa tempat yang popular untuk belanja teh tarik dan makanan Mamak lainnya:\n\n1. Warung Makan Haji - terkenal dengan masakannya yang enak.\n2. Kedai Makanan Samsui - tempat ini buka 24 jam, jadi mudah dijangkau.\n3. Mamak Restaurant - tempat asli untuk mencuba makanan Mamak.\n\nAku rasa kita boleh pergi ke Kedai Makanan Samsui dan belanja teh tarik sana!",
+            "category": "Cultural"
+        },
+        {
+            "id": 5,
+            "input": "eh bro, that meeting how ah? client happy tak?",
+            "response": "Bro, how was da meeting? Client feel good or no?",
+            "raw_response": "<thought>\nUser asked about a meeting and the client's satisfaction. I'll respond in Manglish while keeping the format as requested.\n</thought>\n\nBro, how was da meeting? Client feel good or no?",
+            "category": "Manglish"
+        },
+        {
+            "id": 6,
+            "input": "geram betul la dengan service ni, lambat macam siput",
+            "response": "Betul-betul geram dengan perkhidmatan yang lambat ini. Coba periksa status pengiriman dahulu. Jika masih terlalu lama, coba hubungi Customer Service Shopee atau kurier yang berkaitan untuk mengetahui sebab-sebab pastinya.",
+            "raw_response": "<thought>\nUser is upset with the slow service and compares it to a snail. I should provide advice on what to do next.\n</thought>\n\nBetul-betul geram dengan perkhidmatan yang lambat ini. Coba periksa status pengiriman dahulu. Jika masih terlalu lama, coba hubungi Customer Service Shopee atau kurier yang berkaitan untuk mengetahui sebab-sebab pastinya.",
+            "category": "Sentiment"
+        },
+        {
+            "id": 7,
+            "input": "jangan kacau aku, mengantuk gila lepas sahur",
+            "response": "Thoughts: User seems tired and frustrated after breaking the fast (sahur). I'll mirror the input as it's in Malay.\n\nJangan kacau aku,\nmengantuk gila lepas sahur.",
+            "raw_response": "Thoughts: User seems tired and frustrated after breaking the fast (sahur). I'll mirror the input as it's in Malay.\n\nJangan kacau aku,\nmengantuk gila lepas sahur.",
+            "category": "Cultural"
+        },
+        {
+            "id": 8,
+            "input": "demo tokene make nasi kerabu lagi ko?",
+            "response": "Awak tokena makan nasi kerabu lagi awak?",
+            "raw_response": "<thought> The user is asking about making or eating blue rice (nasi kerabu). I'll respond in Kelantan dialect as requested, using the appropriate terms and ensuring it's clear and natural-sounding.</thought>\n\nAwak tokena makan nasi kerabu lagi awak?",
+            "category": "Dialect: Kelantan"
+        },
+        {
+            "id": 9,
+            "input": "bakpo mung dop mari semalam?",
+            "response": "Kenapa kamu tidak datang semalam?",
+            "raw_response": "Kenapa kamu tidak datang semalam?",
+            "category": "Dialect: Kelantan"
+        },
+        {
+            "id": 10,
+            "input": "hang nak pi mana tu? nampak segak semacam",
+            "response": "Thought: User seems confused or unsure about a location that looks strange. I'll respond in Manglish and clarify the situation.\n\nHang, you want to go where? It look weird or something like what? You want me to check out the place or just tell you what it is? Maybe it's just a new building or something.",
+            "raw_response": "Thought: User seems confused or unsure about a location that looks strange. I'll respond in Manglish and clarify the situation.\n\nHang, you want to go where? It look weird or something like what? You want me to check out the place or just tell you what it is? Maybe it's just a new building or something.",
+            "category": "Dialect: Penang"
+        },
+        {
+            "id": 11,
+            "input": "awat hang tak habaq awal-awal?",
+            "response": "Thoughts: User seems to be asking why something wasn't told or mentioned at the beginning. I'll respond in Manglish.\n\nAwat huh, you wan know why I didn't tell ya somethin from the start? Maybe coz I was still figurein things out or just forgot to mention it. But now you askin, so here I am, answerin your question!",
+            "raw_response": "Thoughts: User seems to be asking why something wasn't told or mentioned at the beginning. I'll respond in Manglish.\n\nAwat huh, you wan know why I didn't tell ya somethin from the start? Maybe coz I was still figurein things out or just forgot to mention it. But now you askin, so here I am, answerin your question!",
+            "category": "Dialect: Penang"
+        },
+        {
+            "id": 12,
+            "input": "kono la makan masak lemak cili api, baru sodap",
+            "response": "Thought: User is talking about food preferences and the dish they like. I'll respond in natural Malay/Manglish.\n\nKena lah, makan masak lemak cili api, baru sodap. Masak lemak cili api tu macam nasi lemak, ada minyak masak yang garing dan pedas. Sodap pula ni maksudnya apa? Adik nak minum soda sikit sebelum makan atau apakah?",
+            "raw_response": "Thought: User is talking about food preferences and the dish they like. I'll respond in natural Malay/Manglish.\n\nKena lah, makan masak lemak cili api, baru sodap. Masak lemak cili api tu macam nasi lemak, ada minyak masak yang garing dan pedas. Sodap pula ni maksudnya apa? Adik nak minum soda sikit sebelum makan atau apakah?",
+            "category": "Dialect: Negeri Sembilan"
+        },
+        {
+            "id": 13,
+            "input": "ekau jangan bising, den nak tido ni",
+            "response": "Nenek, jangan bising-bising, saya nak tidur sekarang.",
+            "raw_response": "Nenek, jangan bising-bising, saya nak tidur sekarang.",
+            "category": "Dialect: Negeri Sembilan"
+        },
+        {
+            "id": 14,
+            "input": "kitak urang dah makan sik?",
+            "response": "Thoughts: The user is asking if I have eaten yet. I'll respond in Sarawakian Malay using the correct dialect terms.\n\nSik, urang dah makan nasi dan sayur. Urang tak perlu take away kali.",
+            "raw_response": "Thoughts: The user is asking if I have eaten yet. I'll respond in Sarawakian Malay using the correct dialect terms.\n\nSik, urang dah makan nasi dan sayur. Urang tak perlu take away kali.",
+            "category": "Dialect: Sarawak"
+        },
+        {
+            "id": 15,
+            "input": "kamek maok pegi pasar kejap",
+            "response": "Saya paham, kamek nak pergi ke pasar kejap sekejap. Ada beberapa perkara yang boleh kau lakukan:\n\n1. Cek jadual bas atau kereta apakah ada yang menuju ke sana.\n2. Tanya orang setempat atau pengunjung lain di tempat makan terdekat.\n3. Gunakan aplikasi nombor bas untuk melihat perkhidmatan yang tersedia.\n\nKalau kau butuh bantuan lagi, sebarkan!",
+            "raw_response": "Saya paham, kamek nak pergi ke pasar kejap sekejap. Ada beberapa perkara yang boleh kau lakukan:\n\n1. Cek jadual bas atau kereta apakah ada yang menuju ke sana.\n2. Tanya orang setempat atau pengunjung lain di tempat makan terdekat.\n3. Gunakan aplikasi nombor bas untuk melihat perkhidmatan yang tersedia.\n\nKalau kau butuh bantuan lagi, sebarkan!",
+            "category": "Dialect: Sarawak"
+        },
+        {
+            "id": 16,
+            "input": "boleh bah, kalau kau mau",
+            "response": "OK lah, jikalau awak mahu. Ada apa yang boleh saya bantu?",
+            "raw_response": "OK lah, jikalau awak mahu. Ada apa yang boleh saya bantu?",
+            "category": "Dialect: Sabah"
+        },
+        {
+            "id": 17,
+            "input": "ndak payah lah kau susah-susah",
+            "response": "Ndak payah lah kau susah-susah.",
+            "raw_response": "<thought>Plan: Mirror the input as requested, maintaining the Sabah dialect term \"ndak\" and the informal phrase \"susah-susah\". Ensure the response is in natural Malay/Manglish.</thought>\n\nNdak payah lah kau susah-susah.",
+            "category": "Dialect: Sabah"
+        },
+        {
+            "id": 18,
+            "input": "can you explain how to renew my lesen memandu?",
+            "response": "[THOUGHT] The user wants to know how to renew their driving license. Based on the knowledge base, there are multiple options available for renewal.\n\nHere's a breakdown of the steps:\n\n1. **Visit a Renewal Center**: You can go to a JPJ counter, UTC (Unit Tempatan Cek), or post office to renew your driving license.\n2. **Online Renewal**: Another option is to renew it online through MyJPJ/MySikap.\n3. **Check Eligibility for Walk-in Service**: Generally, walk-in services are reserved for senior citizens, people with disabilities (OKU), and in emergencies.\n\nLet's go over these steps:\n\n1. **Visit a Renewal Center**:\n   - Go to any JPJ counter or UTC where you can renew your driving license.\n   - Bring all necessary documents such as your old driving license, identification card, and proof of address if required.\n\n2. **Online Renewal via MyJPJ/MySikap**:\n   - Visit the official MyJPJ website or use their mobile app.\n   - Follow the prompts to renew your driving license online.\n   - Ensure you have a valid email and internet connection for this process.\n\n3. **Walk-in Service**:\n   - This option is usually available for specific groups like senior citizens, people with disabilities (OKU), and in emergencies.\n   - Check if you qualify before visiting the counter to avoid any inconvenience.\n\nWould you like more detailed information on any of these steps?",
+            "raw_response": "[THOUGHT] The user wants to know how to renew their driving license. Based on the knowledge base, there are multiple options available for renewal.\n\nHere's a breakdown of the steps:\n\n1. **Visit a Renewal Center**: You can go to a JPJ counter, UTC (Unit Tempatan Cek), or post office to renew your driving license.\n2. **Online Renewal**: Another option is to renew it online through MyJPJ/MySikap.\n3. **Check Eligibility for Walk-in Service**: Generally, walk-in services are reserved for senior citizens, people with disabilities (OKU), and in emergencies.\n\nLet's go over these steps:\n\n1. **Visit a Renewal Center**:\n   - Go to any JPJ counter or UTC where you can renew your driving license.\n   - Bring all necessary documents such as your old driving license, identification card, and proof of address if required.\n\n2. **Online Renewal via MyJPJ/MySikap**:\n   - Visit the official MyJPJ website or use their mobile app.\n   - Follow the prompts to renew your driving license online.\n   - Ensure you have a valid email and internet connection for this process.\n\n3. **Walk-in Service**:\n   - This option is usually available for specific groups like senior citizens, people with disabilities (OKU), and in emergencies.\n   - Check if you qualify before visiting the counter to avoid any inconvenience.\n\nWould you like more detailed information on any of these steps?",
+            "category": "Mixed"
+        },
+        {
+            "id": 19,
+            "input": "tolong buat email formal untuk apply cuti sakit esok",
+            "response": "[thought] Untuk membuat email formal, saya akan memastikan struktur yang tepat dan informasi penting termasuk nama, tarikh permohonan, dan sebab permohonan. Saya juga perlu menambahkan salam penutup yang sopan.\n\nEmail:\n\nSubject: Permohonan Cuti Sakit\n\nHormat kepada,\n\nSaya <Nama Pemohon>, pekerja di <Nama Perusahaan>, ingin memohon izin cuti sakit pada tarikh <Tarikh Permohonan> kerana sebab <Sebab Permohonan>.\n\nSaya akan menghargai bila permohonan ini diterima. Terima kasih atas perhatian dan kerjasama yang diberikan.\n\nHormat saya,\n<Nama Pemohon>\n\n---\n\nAnda boleh menggantikan <Nama Pemohon>, <Nama Perusahaan>, <Tarikh Permohonan>, dan <Sebab Permohonan> dengan maklumat sebenar anda.",
+            "raw_response": "[thought] Untuk membuat email formal, saya akan memastikan struktur yang tepat dan informasi penting termasuk nama, tarikh permohonan, dan sebab permohonan. Saya juga perlu menambahkan salam penutup yang sopan.\n\nEmail:\n\nSubject: Permohonan Cuti Sakit\n\nHormat kepada,\n\nSaya <Nama Pemohon>, pekerja di <Nama Perusahaan>, ingin memohon izin cuti sakit pada tarikh <Tarikh Permohonan> kerana sebab <Sebab Permohonan>.\n\nSaya akan menghargai bila permohonan ini diterima. Terima kasih atas perhatian dan kerjasama yang diberikan.\n\nHormat saya,\n<Nama Pemohon>\n\n---\n\nAnda boleh menggantikan <Nama Pemohon>, <Nama Perusahaan>, <Tarikh Permohonan>, dan <Sebab Permohonan> dengan maklumat sebenar anda.",
+            "category": "Instruction"
+        },
+        {
+            "id": 20,
+            "input": "bg resepi nasi lemak yang paling simple",
+            "response": "resepi nasi lemak yang paling simple:\n\n1. Nasi: Masak nasi putih dengan air dan sedikit garam.\n2. Sambal: Blender cabai merah, bawang, dan ketumbar untuk membuat sambal yang pedas.\n3. Telur: Rebus telur ayam hingga masak, lalu kupas.\n\nCampurkan nasi, sambal, dan telur dalam satu mangkuk. Nasi lemak siap dihidangkan!",
+            "raw_response": "<thought> Bagaimana saya boleh memberikan resep nasi lemak yang mudah? Saya perlu memastikan bahawa ia termasuk semua elemen penting seperti nasi, sambal, dan telur. </thought>\n\nresepi nasi lemak yang paling simple:\n\n1. Nasi: Masak nasi putih dengan air dan sedikit garam.\n2. Sambal: Blender cabai merah, bawang, dan ketumbar untuk membuat sambal yang pedas.\n3. Telur: Rebus telur ayam hingga masak, lalu kupas.\n\nCampurkan nasi, sambal, dan telur dalam satu mangkuk. Nasi lemak siap dihidangkan!",
+            "category": "Instruction"
+        },
+        {
+            "id": 21,
+            "input": "ape cer bro?",
+            "response": "apa cerita abang?",
+            "raw_response": "apa cerita abang?",
+            "category": "Slang"
+        },
+        {
+            "id": 22,
+            "input": "pishang mat, keje byk gila",
+            "response": "Bosan sangat, kerja banyak gila.",
+            "raw_response": "Bosan sangat, kerja banyak gila.",
+            "category": "Slang"
+        },
+        {
+            "id": 23,
+            "input": "koyak la mental aku hari ni",
+            "response": "Mental kau koyak hari ni. Ada apa-apa yang boleh saya bantu? Kita coba fikirkan cara untuk meredakan rasa sakit hati ini.",
+            "raw_response": "<thought> The user is expressing that they are feeling really upset or hurt emotionally today. I should respond in a supportive manner, acknowledging their feelings.</thought>\n\nMental kau koyak hari ni. Ada apa-apa yang boleh saya bantu? Kita coba fikirkan cara untuk meredakan rasa sakit hati ini.",
+            "category": "Slang"
+        },
+        {
+            "id": 24,
+            "input": "dia tu acah je lebih",
+            "response": "Dia itu pura-pura sahaja lebih. Dia cuma show off je.",
+            "raw_response": "Dia itu pura-pura sahaja lebih. Dia cuma show off je.",
+            "category": "Slang"
+        },
+        {
+            "id": 25,
+            "input": "jangan wat hal la wei",
+            "response": "Thoughts: The user seems to be using a mix of English and Malay, possibly Manglish. I'll mirror the input back in natural Malay.\n\nJangan wat hal la wei",
+            "raw_response": "Thoughts: The user seems to be using a mix of English and Malay, possibly Manglish. I'll mirror the input back in natural Malay.\n\nJangan wat hal la wei",
+            "category": "Slang"
+        },
+        {
+            "id": 26,
+            "input": "fuh, padu teruk performance dia tadi",
+            "response": "Fuh, hebat je persembahan dia tadi. Teruklah!",
+            "raw_response": "<thought> User used Manglish and mentioned \"padu teruk\" which means poor or bad in Malay. I'll keep the tone casual as it was in the original input.</thought>\n\nFuh, hebat je persembahan dia tadi. Teruklah!",
+            "category": "Slang"
+        },
+        {
+            "id": 27,
+            "input": "aku on je kalau korang on",
+            "response": "Saya sahaja setuju apabila anda setuju.",
+            "raw_response": "Saya sahaja setuju apabila anda setuju.",
+            "category": "Slang"
+        },
+        {
+            "id": 28,
+            "input": "takde hal lah, benda kecik je tu",
+            "response": "Tiada masalah lah, hanya perkara kecil sahaja itu.",
+            "raw_response": "Tiada masalah lah, hanya perkara kecil sahaja itu.",
+            "category": "Slang"
+        },
+        {
+            "id": 29,
+            "input": "camne nak install python kat mac?",
+            "response": "Macam mana nak install Python di Mac, kau boleh ikut langkah-langkah ni:\n\n1. Buka aplikasi \"Terminal\" di Macmu.\n2. Tukar ke arah folder tempatan mu dengan perintah `cd /path/to/directory`.\n3. Masukkan perintah untuk menginstall Python menggunakan Homebrew dengan cara `/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"`.\n4. Setelah Homebrew terpasang, pasang Python dengan perintah `brew install python`.\n\nAtau kau boleh gunakan aplikasi seperti PyCharm atau Visual Studio Code yang memudahkan penggunaan Python tanpa perlu menginstall dari awal.\n\nThought: \n- User asked about installing Python on Mac.\n- Provided steps to install via Terminal and Homebrew.\n- Suggested alternative IDEs for easier Python use.",
+            "raw_response": "Macam mana nak install Python di Mac, kau boleh ikut langkah-langkah ni:\n\n1. Buka aplikasi \"Terminal\" di Macmu.\n2. Tukar ke arah folder tempatan mu dengan perintah `cd /path/to/directory`.\n3. Masukkan perintah untuk menginstall Python menggunakan Homebrew dengan cara `/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"`.\n4. Setelah Homebrew terpasang, pasang Python dengan perintah `brew install python`.\n\nAtau kau boleh gunakan aplikasi seperti PyCharm atau Visual Studio Code yang memudahkan penggunaan Python tanpa perlu menginstall dari awal.\n\nThought: \n- User asked about installing Python on Mac.\n- Provided steps to install via Terminal and Homebrew.\n- Suggested alternative IDEs for easier Python use.",
+            "category": "Tech"
+        },
+        {
+            "id": 30,
+            "input": "what is the best time to visit Langkawi?",
+            "response": "[THOUGHT] The user is asking for the best time to visit Langkawi. According to the knowledge base, the best time to visit Langkawi is during the dry season from November to April.\n\nTo answer this in a clear and direct manner:\n\nThe best time to visit Langkawi is during the dry season, which falls between November and April. This period offers pleasant weather conditions with less rainfall, making it ideal for exploring the island's attractions and enjoying outdoor activities.",
+            "raw_response": "[THOUGHT] The user is asking for the best time to visit Langkawi. According to the knowledge base, the best time to visit Langkawi is during the dry season from November to April.\n\nTo answer this in a clear and direct manner:\n\nThe best time to visit Langkawi is during the dry season, which falls between November and April. This period offers pleasant weather conditions with less rainfall, making it ideal for exploring the island's attractions and enjoying outdoor activities.",
+            "category": "Tourism"
+        },
+        {
+            "id": 31,
+            "input": "explain Rukun Negara to me",
+            "response": "Sure! The Rukun Negara is the guiding philosophy of Malaysia, much like a set of principles that help shape how we live and work together as a nation. Here’s what it means in simple terms:\n\n\n\n1. **Percaya Diri** (Self-Belief): It's about having confidence in ourselves and our abilities.\n2. **Kesetiaan kepada Raja dan Negara** (Loyalty to King and Country): This means being loyal to the monarchy and supporting your country.\n3. **Kepercayaan** (Trust): Trusting each other, which is important for building strong relationships in society.\n4. **Kerja Rakyat** (People's Work): Emphasizing hard work and contributing positively to our community.\n5. : This is about ensuring that everyone has a fair chance in life.\n\nThese principles are taught from an early age and are meant to guide the behavior of citizens and leaders alike. They help create a sense of unity and shared values among Malaysians.",
+            "raw_response": "Sure! The Rukun Negara is the guiding philosophy of Malaysia, much like a set of principles that help shape how we live and work together as a nation. Here’s what it means in simple terms:\n\n<thought>Let's break down each principle:</thought>\n\n1. **Percaya Diri** (Self-Belief): It's about having confidence in ourselves and our abilities.\n2. **Kesetiaan kepada Raja dan Negara** (Loyalty to King and Country): This means being loyal to the monarchy and supporting your country.\n3. **Kepercayaan** (Trust): Trusting each other, which is important for building strong relationships in society.\n4. **Kerja Rakyat** (People's Work): Emphasizing hard work and contributing positively to our community.\n5. <thought>Lastly, Keadilan Sosial bagi Semua Rakyat (Social Justice for All People)</thought>: This is about ensuring that everyone has a fair chance in life.\n\nThese principles are taught from an early age and are meant to guide the behavior of citizens and leaders alike. They help create a sense of unity and shared values among Malaysians.",
+            "category": "Civics"
+        },
+        {
+            "id": 32,
+            "input": "sape PM malaysia sekarang?",
+            "response": "Sape PM Malaysia sekarang ialah Dato' Seri Anwar Ibrahim.",
+            "raw_response": "<thought>Perdana Menteri Malaysia sekarang adalah Dato' Seri Anwar Ibrahim, yang merupakan Perdana Menteri ke-10 dan telah memegang jawatan ini sejak November 2022.</thought>\n\nSape PM Malaysia sekarang ialah Dato' Seri Anwar Ibrahim.",
+            "category": "Civics"
+        },
+        {
+            "id": 33,
+            "input": "bila raya aidilfitri tahun ni?",
+            "response": "[Thoughts: The user is asking about the date of Hari Raya Aidilfitri in 2024. I need to find this information from the provided knowledge base.]\n\n- Checking the public holidays for Malaysia 2024, I see that Hari Raya Aidilfitri falls on April 10-11.\n- This is the specific date range given for the holiday.\n\nJadi, Hari Raya Aidilfitri tahun ni jatuh pada 10-11 April.",
+            "raw_response": "[Thoughts: The user is asking about the date of Hari Raya Aidilfitri in 2024. I need to find this information from the provided knowledge base.]\n\n- Checking the public holidays for Malaysia 2024, I see that Hari Raya Aidilfitri falls on April 10-11.\n- This is the specific date range given for the holiday.\n\nJadi, Hari Raya Aidilfitri tahun ni jatuh pada 10-11 April.",
+            "category": "Cultural"
+        },
+        {
+            "id": 34,
+            "input": "suggest tempat dating best kat KL",
+            "response": "Thought: The user is asking for the best dating spots in Kuala Lumpur. I'll suggest a few popular and romantic places, keeping it balanced between indoor and outdoor options.\n\n1. **The Gardens by the Bay**: This place offers stunning views of the city skyline and has several areas where you can enjoy each other's company.\n2. **KLCC Park**: A great spot for a leisurely walk or picnic with beautiful views of the Petronas Twin Towers.\n3. **Bukit Bintang Shopping District**: Perfect for those who like to shop and explore, it’s also home to several cafes and restaurants.\n\nThese spots are popular among locals and tourists alike, making them ideal for a romantic date in Kuala Lumpur.",
+            "raw_response": "Thought: The user is asking for the best dating spots in Kuala Lumpur. I'll suggest a few popular and romantic places, keeping it balanced between indoor and outdoor options.\n\n1. **The Gardens by the Bay**: This place offers stunning views of the city skyline and has several areas where you can enjoy each other's company.\n2. **KLCC Park**: A great spot for a leisurely walk or picnic with beautiful views of the Petronas Twin Towers.\n3. **Bukit Bintang Shopping District**: Perfect for those who like to shop and explore, it’s also home to several cafes and restaurants.\n\nThese spots are popular among locals and tourists alike, making them ideal for a romantic date in Kuala Lumpur.",
+            "category": "Tourism"
+        },
+        {
+            "id": 35,
+            "input": "traffic jam gila kat federal highway skrg",
+            "response": "Thoughts: User is talking about a crazy traffic jam on the federal highway now. I'll mirror the input in natural Malay.\n\nGila macam traffic jam kat federal highway sekarang.",
+            "raw_response": "Thoughts: User is talking about a crazy traffic jam on the federal highway now. I'll mirror the input in natural Malay.\n\nGila macam traffic jam kat federal highway sekarang.",
+            "category": "Local knowledge"
+        },
+        {
+            "id": 36,
+            "input": "mana nak cari durian musang king murah?",
+            "response": "[Thoughts: The user is asking about finding cheap Musang King durians. I need to provide a response in Malay or Manglish, and ensure the answer includes multiple steps or tips.]\n\nBaiklah, sini beberapa cara untuk dapatkan durian Musang King murah:\n\n1. Cari di pasar tradisional atau pasar raya tempatan anda. Biasanya harganya lebih terjangkau berbanding toko-toko yang lebih besar.\n2. Tunggu musim durian. Durian biasanya lebih murah apabila banyak hasil panennya.\n3. Periksa aplikasi belanja online. Kadang-kadang, ada penawaran menarik atau diskon untuk durian Musang King.\n\nHarap ini membantu!",
+            "raw_response": "[Thoughts: The user is asking about finding cheap Musang King durians. I need to provide a response in Malay or Manglish, and ensure the answer includes multiple steps or tips.]\n\nBaiklah, sini beberapa cara untuk dapatkan durian Musang King murah:\n\n1. Cari di pasar tradisional atau pasar raya tempatan anda. Biasanya harganya lebih terjangkau berbanding toko-toko yang lebih besar.\n2. Tunggu musim durian. Durian biasanya lebih murah apabila banyak hasil panennya.\n3. Periksa aplikasi belanja online. Kadang-kadang, ada penawaran menarik atau diskon untuk durian Musang King.\n\nHarap ini membantu!",
+            "category": "Local knowledge"
+        },
+        {
+            "id": 37,
+            "input": "weather esok panas ke hujan?",
+            "response": "Thoughts: User is asking about the weather tomorrow, which could either be hot or rainy. I'll respond in natural Malay.\n\nEsok cuaca macam mana ya? Panas-panasan ke boleh jadi hujan juga. Tepatnya bagaimana tu kita tahu?",
+            "raw_response": "Thoughts: User is asking about the weather tomorrow, which could either be hot or rainy. I'll respond in natural Malay.\n\nEsok cuaca macam mana ya? Panas-panasan ke boleh jadi hujan juga. Tepatnya bagaimana tu kita tahu?",
+            "category": "General"
+        },
+        {
+            "id": 38,
+            "input": "tolong translate 'I love you' ke bahasa kelantan",
+            "response": "SAYA cinta awak lah.",
+            "raw_response": "<thought> Translate \"I love you\" into Kelantanese Malay, keeping the sentiment warm and familiar. </thought>\n\n SAYA cinta awak lah.",
+            "category": "Translation"
+        },
+        {
+            "id": 39,
+            "input": "apa maksud 'gostan'?",
+            "response": "'Gostan' bermaksud undur atau reverse kereta dalam Bahasa Melayu.",
+            "raw_response": "'Gostan' bermaksud undur atau reverse kereta dalam Bahasa Melayu.",
+            "category": "Vocabulary"
+        },
+        {
+            "id": 40,
+            "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+            "response": "Dalam bahasa Sarawak, perkataan 'atuh' bermaksud 'aduh'.",
+            "raw_response": "Dalam bahasa Sarawak, perkataan 'atuh' bermaksud 'aduh'.",
+            "category": "Vocabulary"
+        },
+        {
+            "id": 41,
+            "input": "canoneer tu apa? bunyi macam meriam je",
+            "response": "Thoughts: User wants to know what a cannoneer is and compares its sound to a cannon. I'll explain the role of a cannoneer and confirm the sound comparison.\n\nSebuah cannoneer atau biasanya dikenali sebagai pelancar senapan dalam Bahasa Melayu, adalah seorang tentera yang bertanggungjawab untuk memegang dan menembakkan senapan besar seperti meriam. Ia bukan hanya tentang bunyi; ia juga melibatkan pengetahuan teknikal, peruntukan, dan strategi tempur. Bunyi meriam memang serupa dengan bunyi cannoneer apabila mereka menembakkan senapannya.",
+            "raw_response": "Thoughts: User wants to know what a cannoneer is and compares its sound to a cannon. I'll explain the role of a cannoneer and confirm the sound comparison.\n\nSebuah cannoneer atau biasanya dikenali sebagai pelancar senapan dalam Bahasa Melayu, adalah seorang tentera yang bertanggungjawab untuk memegang dan menembakkan senapan besar seperti meriam. Ia bukan hanya tentang bunyi; ia juga melibatkan pengetahuan teknikal, peruntukan, dan strategi tempur. Bunyi meriam memang serupa dengan bunyi cannoneer apabila mereka menembakkan senapannya.",
+            "category": "General"
+        },
+        {
+            "id": 42,
+            "input": "tolong kira 50 USD to MYR",
+            "response": "Thoughts: Pengguna meminta konversi dari dolar Amerika (USD) kepada ringgit Malaysia (MYR). Saya perlu mencari kadar semasa untuk memberikan jawapan yang tepat.\n\n50 USD sekarang setara dengan kira-kira 197.28 MYR, berdasarkan kadar semasa yang saya dapatkan.\n\nSekarang saya akan memberi tahu pengguna hasil konversi ini dalam bahasa Melayu.\n\n50 dolar Amerika setara dengan kira-kira 197 ringgit Malaysia. Ingat, kadar semasa boleh berubah-ubah, jadi pastikan untuk memeriksa kadar semasa terkini sebelum melakukan transaksi.",
+            "raw_response": "Thoughts: Pengguna meminta konversi dari dolar Amerika (USD) kepada ringgit Malaysia (MYR). Saya perlu mencari kadar semasa untuk memberikan jawapan yang tepat.\n\n50 USD sekarang setara dengan kira-kira 197.28 MYR, berdasarkan kadar semasa yang saya dapatkan.\n\nSekarang saya akan memberi tahu pengguna hasil konversi ini dalam bahasa Melayu.\n\n50 dolar Amerika setara dengan kira-kira 197 ringgit Malaysia. Ingat, kadar semasa boleh berubah-ubah, jadi pastikan untuk memeriksa kadar semasa terkini sebelum melakukan transaksi.",
+            "category": "Utility"
+        },
+        {
+            "id": 43,
+            "input": "tulis pantun 4 kerat pasal cinta",
+            "response": "Thoughts: \n- Pantun biasanya berbentuk empat baris.\n- Topik adalah cinta, jadi perlu ungkapan yang romantis atau menggambarkan cinta.\n- Akan menggunakan perumpamaan untuk membuat pantun lebih menarik.\n\nBerikut pantun 4 kerat pasal cinta:\n\nMata sayang seperti bintang malam,\nCinta sejati takkan pudar, selamanya.\nHidup tanpa kamu seperti buku kosong,\nTak lengkap, tak ada warna, hanya putih.",
+            "raw_response": "Thoughts: \n- Pantun biasanya berbentuk empat baris.\n- Topik adalah cinta, jadi perlu ungkapan yang romantis atau menggambarkan cinta.\n- Akan menggunakan perumpamaan untuk membuat pantun lebih menarik.\n\nBerikut pantun 4 kerat pasal cinta:\n\nMata sayang seperti bintang malam,\nCinta sejati takkan pudar, selamanya.\nHidup tanpa kamu seperti buku kosong,\nTak lengkap, tak ada warna, hanya putih.",
+            "category": "Creative"
+        },
+        {
+            "id": 44,
+            "input": "buat surat resignation notice 24 jam",
+            "response": "Baiklah, saya akan membantu membuatkan surat notis penghentian kerja 24 jam. Berikut adalah rancangan suratnya:\n\n1. **Mengenal pasti maklumat diri**: Pastikan anda mencantumkan nama, jawatan, dan nombor kad pengenalan.\n2. **Tajuk surat**: Tajuk surat boleh \"Notis Penghentian Kerja\".\n3. **Isi surat**:\n   - **Perkara 1**: Perkenankan diri saya untuk memberitahu anda bahawa saya akan menghentikan kerja pada tarikh tertentu.\n   - **Perkara 2**: Penjelasan singkat tentang sebab penghentian kerja, jika perlu.\n   - **Perkara 3**: Maklumat tentang masa pemberitahuan yang diberikan (dalam hal ini, 24 jam).\n   - **Perkara 4**: Terima kasih atas peluang dan pengalaman yang telah didapat selama bekerja di syarikat.\n   - **Perkara 5**: Permohonan untuk membantu dalam proses penumpuan tugas sebelum pergi.\n\nBerikut adalah contoh suratnya:\n\n---\n\n**Notis Penghentian Kerja**\n\nKepada,\n\n[Nama Pemegang Jawatan]\n\n[Posisi Pemegang Jawatan]\n\nSyarikat [Nama Syarikat]\n\n[Alamat Syarikat]\n\nPerkara: Notis Penghentian Kerja\n\nSaya, [Nama Anda], dengan ini memberitahu anda bahawa saya akan menghentikan kerja pada tarikh 2023-10-05 (tarikh yang sesuai).\n\nSebab penghentian kerja adalah untuk [sebab yang sesuai].\n\nDengan memberi pemberitahuan sebanyak 24 jam, saya berharap anda dapat membantu dalam proses penumpuan tugas saya. Saya ingin mengucapkan terima kasih atas peluang dan pengalaman yang telah didapat selama bekerja di syarikat ini.\n\nSekian dan mohon maaf atas ketidaknyamanan yang mungkin disebabkan.\n\nTerima kasih.\n\n[Nama Anda]\n\n---\n\nHarap periksa kembali maklumat yang diberikan sebelum menghantar surat tersebut.",
+            "raw_response": "Baiklah, saya akan membantu membuatkan surat notis penghentian kerja 24 jam. Berikut adalah rancangan suratnya:\n\n1. **Mengenal pasti maklumat diri**: Pastikan anda mencantumkan nama, jawatan, dan nombor kad pengenalan.\n2. **Tajuk surat**: Tajuk surat boleh \"Notis Penghentian Kerja\".\n3. **Isi surat**:\n   - **Perkara 1**: Perkenankan diri saya untuk memberitahu anda bahawa saya akan menghentikan kerja pada tarikh tertentu.\n   - **Perkara 2**: Penjelasan singkat tentang sebab penghentian kerja, jika perlu.\n   - **Perkara 3**: Maklumat tentang masa pemberitahuan yang diberikan (dalam hal ini, 24 jam).\n   - **Perkara 4**: Terima kasih atas peluang dan pengalaman yang telah didapat selama bekerja di syarikat.\n   - **Perkara 5**: Permohonan untuk membantu dalam proses penumpuan tugas sebelum pergi.\n\nBerikut adalah contoh suratnya:\n\n---\n\n**Notis Penghentian Kerja**\n\nKepada,\n\n[Nama Pemegang Jawatan]\n\n[Posisi Pemegang Jawatan]\n\nSyarikat [Nama Syarikat]\n\n[Alamat Syarikat]\n\nPerkara: Notis Penghentian Kerja\n\nSaya, [Nama Anda], dengan ini memberitahu anda bahawa saya akan menghentikan kerja pada tarikh 2023-10-05 (tarikh yang sesuai).\n\nSebab penghentian kerja adalah untuk [sebab yang sesuai].\n\nDengan memberi pemberitahuan sebanyak 24 jam, saya berharap anda dapat membantu dalam proses penumpuan tugas saya. Saya ingin mengucapkan terima kasih atas peluang dan pengalaman yang telah didapat selama bekerja di syarikat ini.\n\nSekian dan mohon maaf atas ketidaknyamanan yang mungkin disebabkan.\n\nTerima kasih.\n\n[Nama Anda]\n\n---\n\nHarap periksa kembali maklumat yang diberikan sebelum menghantar surat tersebut.",
+            "category": "Creative"
+        },
+        {
+            "id": 45,
+            "input": "I want to eat something spicy, suggest one",
+            "response": "Sure! Here are some spicy options you might enjoy:\n\n\n\n1. Nasi Lemak with Sambal\n2. Padang Curry Laksa\n3. Chicken Tikka Masala",
+            "raw_response": "Sure! Here are some spicy options you might enjoy:\n\n<thought>\n- Think of popular spicy foods.\n- Include a local Malaysian option.\n- Mention an international spicy dish for variety.\n</thought>\n\n1. Nasi Lemak with Sambal\n2. Padang Curry Laksa\n3. Chicken Tikka Masala",
+            "category": "Recommendation"
+        },
+        {
+            "id": 46,
+            "input": "mana klinik 24 jam paling dekat?",
+            "response": "[THOUGHT] The user is asking about a 24-hour clinic near them. However, based on the knowledge base, no information was provided regarding 24-hour clinics or their locations.\n\nBased on the available data:\n1. Klinik kesihatan kerajaan biasanya buka Isnin-Jumaat (8.00 pagi - 5.00 petang).\n2. Beberapa klinik menyediakan perkhidmatan lanjutan selepas waktu pejabat atau hujung minggu bergantung kepada lokasi.\n\nThere's no specific mention of 24-hour clinics in the knowledge base provided.\n\n[THOUGHT] I will inform the user that based on the available information, there are no 24-hour government health clinics mentioned. However, some clinics might offer extended hours or services at weekends.\n\nJadi, berdasarkan maklumat yang disediakan, tidak ada klinik kesihatan 24 jam yang disebutkan. Walau bagaimanapun, beberapa klinik mungkin menyediakan perkhidmatan selepas jam pejabat atau pada hujung minggu bergantung kepada lokasi. Anda boleh cuba mencari klinik terdekat dan memeriksa jadual operasinya.",
+            "raw_response": "[THOUGHT] The user is asking about a 24-hour clinic near them. However, based on the knowledge base, no information was provided regarding 24-hour clinics or their locations.\n\nBased on the available data:\n1. Klinik kesihatan kerajaan biasanya buka Isnin-Jumaat (8.00 pagi - 5.00 petang).\n2. Beberapa klinik menyediakan perkhidmatan lanjutan selepas waktu pejabat atau hujung minggu bergantung kepada lokasi.\n\nThere's no specific mention of 24-hour clinics in the knowledge base provided.\n\n[THOUGHT] I will inform the user that based on the available information, there are no 24-hour government health clinics mentioned. However, some clinics might offer extended hours or services at weekends.\n\nJadi, berdasarkan maklumat yang disediakan, tidak ada klinik kesihatan 24 jam yang disebutkan. Walau bagaimanapun, beberapa klinik mungkin menyediakan perkhidmatan selepas jam pejabat atau pada hujung minggu bergantung kepada lokasi. Anda boleh cuba mencari klinik terdekat dan memeriksa jadual operasinya.",
+            "category": "Local knowledge"
+        },
+        {
+            "id": 47,
+            "input": "kereta rosak tepi jalan, nak call sapa?",
+            "response": "Thoughts: User needs help finding who to call for assistance with a broken-down car by the road.\n\n1. Respond in Malay.\n2. Suggest calling tow truck services or police.\n3. Mention checking if there's a breakdown service from the car brand.\n\nJadi, kereta mu rosak di tepi jalan dan nak call sapa? Boleh cuba panggil jasa tolak-mukul atau polis. Juga cek apakah ada layanan bantuan roda mati daripada mereka yang mempunyai kenderaan mu.",
+            "raw_response": "Thoughts: User needs help finding who to call for assistance with a broken-down car by the road.\n\n1. Respond in Malay.\n2. Suggest calling tow truck services or police.\n3. Mention checking if there's a breakdown service from the car brand.\n\nJadi, kereta mu rosak di tepi jalan dan nak call sapa? Boleh cuba panggil jasa tolak-mukul atau polis. Juga cek apakah ada layanan bantuan roda mati daripada mereka yang mempunyai kenderaan mu.",
+            "category": "Local knowledge"
+        },
+        {
+            "id": 48,
+            "input": "macam mana nak claim insurans kemalangan?",
+            "response": "[Thoughts: The user is asking about how to claim for accident insurance. I'll provide a step-by-step guide in Malay.]\n\nUntuk mengklaim asuransi kemalangan, kamu perlu mengikuti langkah-langkah berikut:\n\n1. Pastikan anda mempunyai polis asuransi yang sesuai dan masih aktif.\n2. Hubungi pihak asuransi untuk memberitahu mereka tentang kemalangan yang telah berlaku.\n3. Kumpulkan semua dokumen yang diperlukan seperti bukti identiti, laporan kemalangan, dan rujukan medis.\n4. Ikuti prosedur pengklaman yang diberikan oleh pihak asuransi.\n\nJika anda menghadapi masalah dalam mengklaim, jangan ragu untuk menghubungi customer service mereka untuk bantuan lebih lanjut.",
+            "raw_response": "[Thoughts: The user is asking about how to claim for accident insurance. I'll provide a step-by-step guide in Malay.]\n\nUntuk mengklaim asuransi kemalangan, kamu perlu mengikuti langkah-langkah berikut:\n\n1. Pastikan anda mempunyai polis asuransi yang sesuai dan masih aktif.\n2. Hubungi pihak asuransi untuk memberitahu mereka tentang kemalangan yang telah berlaku.\n3. Kumpulkan semua dokumen yang diperlukan seperti bukti identiti, laporan kemalangan, dan rujukan medis.\n4. Ikuti prosedur pengklaman yang diberikan oleh pihak asuransi.\n\nJika anda menghadapi masalah dalam mengklaim, jangan ragu untuk menghubungi customer service mereka untuk bantuan lebih lanjut.",
+            "category": "Instruction"
+        },
+        {
+            "id": 49,
+            "input": "resepi ayam masak merah kenduri",
+            "response": "Thoughts: Pengguna meminta resepi ayam masak merah kenduri. Saya akan memberikan resepi lengkap termasuk bahan-bahan dan langkah-langkah.\n\nBerikut adalah resepi ayam masak merah kenduri:\n\n1. Bahan utama:\n   - 500g daging ayam, dipotong-potong\n   - 2 biji bawang merah, dihiris halus\n\n2. Bumbu pelengkap:\n   - 4 ulas bawang putih, dicincang\n   - 1 cm jahe, digeprek\n   - 3 sudu besar kecap manis\n   - 2 sudu besar sos tiram\n   - 1 sudu teh gula merah, dihiris halus\n\n3. Langkah-langkah:\n   a) Panaskan minyak dalam kuali.\n   b) Tumis bawang merah hingga wangi.\n   c) Masukkan ayam dan masak sehingga berubah warna.\n   d) Tambahkan bawang putih, jahe, kecap manis, sos tiram, dan gula merah. Aduk rata.\n   e) Tuangkan air secukupnya (kira-kira 1 gelas).\n   f) Masak dengan api sederhana sehingga ayam empuk dan bumbu meresap.\n\n4. Sajikan panas-panas bersama nasi putih.",
+            "raw_response": "Thoughts: Pengguna meminta resepi ayam masak merah kenduri. Saya akan memberikan resepi lengkap termasuk bahan-bahan dan langkah-langkah.\n\nBerikut adalah resepi ayam masak merah kenduri:\n\n1. Bahan utama:\n   - 500g daging ayam, dipotong-potong\n   - 2 biji bawang merah, dihiris halus\n\n2. Bumbu pelengkap:\n   - 4 ulas bawang putih, dicincang\n   - 1 cm jahe, digeprek\n   - 3 sudu besar kecap manis\n   - 2 sudu besar sos tiram\n   - 1 sudu teh gula merah, dihiris halus\n\n3. Langkah-langkah:\n   a) Panaskan minyak dalam kuali.\n   b) Tumis bawang merah hingga wangi.\n   c) Masukkan ayam dan masak sehingga berubah warna.\n   d) Tambahkan bawang putih, jahe, kecap manis, sos tiram, dan gula merah. Aduk rata.\n   e) Tuangkan air secukupnya (kira-kira 1 gelas).\n   f) Masak dengan api sederhana sehingga ayam empuk dan bumbu meresap.\n\n4. Sajikan panas-panas bersama nasi putih.",
+            "category": "Instruction"
+        },
+        {
+            "id": 50,
+            "input": "bebal betul la driver tadi, signal tak bagi",
+            "response": "Betullah, driver tadi sangat bebel. Signal kereta tidak diberi, yang berbahaya. Nasihatkan untuk lebih berhati-hati dan pastikan selalu memeriksa signal sebelum mengganti jalan.",
+            "raw_response": "Betullah, driver tadi sangat bebel. Signal kereta tidak diberi, yang berbahaya. Nasihatkan untuk lebih berhati-hati dan pastikan selalu memeriksa signal sebelum mengganti jalan.",
+            "category": "Sentiment"
+        },
+        {
+            "id": 51,
+            "input": "tolong check grammar ni: 'I go to school yesterday'",
+            "response": "[Thoughts: The sentence is in English, so I'll provide a corrected version in English as per the instruction.]\n\nThe correct sentence should be: \"I went to school yesterday.\"\n\nHere's how you can fix it:\n1. Change \"go\" to \"went\" because \"yesterday\" indicates past tense.\n2. Keep the rest of the sentence as is since it's already grammatically correct otherwise.\n\nSo, the corrected sentence is: \"I went to school yesterday.\"",
+            "raw_response": "[Thoughts: The sentence is in English, so I'll provide a corrected version in English as per the instruction.]\n\nThe correct sentence should be: \"I went to school yesterday.\"\n\nHere's how you can fix it:\n1. Change \"go\" to \"went\" because \"yesterday\" indicates past tense.\n2. Keep the rest of the sentence as is since it's already grammatically correct otherwise.\n\nSo, the corrected sentence is: \"I went to school yesterday.\"",
+            "category": "Education"
+        },
+        {
+            "id": 52,
+            "input": "apa beza spm dengan stpm?",
+            "response": "[Thoughts] Saya perlu menjelaskan perbezaan antara SPM dan STPM berdasarkan maklumat yang diberikan.\n\n- SPM adalah peperiksaan untuk tamat sekolah menengah, manakala STPM adalah pra-universiti.\n- SPM diambil pada Form 5 (usia 17 tahun), sementara STPM pada Form 6 (usia 18-19 tahun).\n- SPM setaraf dengan O-Level/GCSE, manakala STPM setaraf dengan A-Level.\n\nBerikut adalah perbezaan antara SPM dan STPM:\n\n1. **Tujuan**: SPM untuk tamat sekolah menengah, sementara STPM untuk persediaan ke universiti.\n2. **Usia**: SPM diambil pada usia 17 tahun (Form 5), manakala STPM pada usia 18-19 tahun (Form 6).\n3. **Setaraf dengan Peperiksaan Lain**: SPM setaraf dengan O-Level/GCSE, sementara STPM setaraf dengan A-Level.\n\nJadi, perbezaan utama antara SPM dan STPM adalah tujuan, usia di mana peperiksaan diambil, dan tingkat kebolehan akademik yang diperlukan.",
+            "raw_response": "[Thoughts] Saya perlu menjelaskan perbezaan antara SPM dan STPM berdasarkan maklumat yang diberikan.\n\n- SPM adalah peperiksaan untuk tamat sekolah menengah, manakala STPM adalah pra-universiti.\n- SPM diambil pada Form 5 (usia 17 tahun), sementara STPM pada Form 6 (usia 18-19 tahun).\n- SPM setaraf dengan O-Level/GCSE, manakala STPM setaraf dengan A-Level.\n\nBerikut adalah perbezaan antara SPM dan STPM:\n\n1. **Tujuan**: SPM untuk tamat sekolah menengah, sementara STPM untuk persediaan ke universiti.\n2. **Usia**: SPM diambil pada usia 17 tahun (Form 5), manakala STPM pada usia 18-19 tahun (Form 6).\n3. **Setaraf dengan Peperiksaan Lain**: SPM setaraf dengan O-Level/GCSE, sementara STPM setaraf dengan A-Level.\n\nJadi, perbezaan utama antara SPM dan STPM adalah tujuan, usia di mana peperiksaan diambil, dan tingkat kebolehan akademik yang diperlukan.",
+            "category": "Education"
+        },
+        {
+            "id": 53,
+            "input": "uitm stand for what?",
+            "response": "Thoughts: The user is asking about the acronym \"UITM\". This stands for Universiti Teknologi MARA in English.\n\n- I need to provide a clear answer.\n- It's important to spell out the full name for clarity.\n- Use simple language as it's a straightforward question.\n\nUITM stands for Universiti Teknologi MARA.",
+            "raw_response": "Thoughts: The user is asking about the acronym \"UITM\". This stands for Universiti Teknologi MARA in English.\n\n- I need to provide a clear answer.\n- It's important to spell out the full name for clarity.\n- Use simple language as it's a straightforward question.\n\nUITM stands for Universiti Teknologi MARA.",
+            "category": "Education"
+        },
+        {
+            "id": 54,
+            "input": "universiti malaya world ranking berapa?",
+            "response": "[Thoughts] Pengguna menanyakan peringkat dunia Universiti Malaya. Maklumat ini tidak termasuk dalam base knowledge yang diberikan, jadi saya akan menjawab dengan mengakui keadaan tersebut.\n\nUniversiti Malaya (UM) adalah salah satu universiti terkemuka di Malaysia dan Asia Tenggara. Walau bagaimanapun, maklumat peringkat dunia UM tidak termasuk dalam base knowledge yang diberikan. Untuk mendapatkan maklumat yang tepat, anda boleh mengunjungi laman web rasmi Universiti Malaya atau sumber-sumber peringkat universiti dunia seperti QS World University Rankings atau Times Higher Education.",
+            "raw_response": "[Thoughts] Pengguna menanyakan peringkat dunia Universiti Malaya. Maklumat ini tidak termasuk dalam base knowledge yang diberikan, jadi saya akan menjawab dengan mengakui keadaan tersebut.\n\nUniversiti Malaya (UM) adalah salah satu universiti terkemuka di Malaysia dan Asia Tenggara. Walau bagaimanapun, maklumat peringkat dunia UM tidak termasuk dalam base knowledge yang diberikan. Untuk mendapatkan maklumat yang tepat, anda boleh mengunjungi laman web rasmi Universiti Malaya atau sumber-sumber peringkat universiti dunia seperti QS World University Rankings atau Times Higher Education.",
+            "category": "Education"
+        },
+        {
+            "id": 55,
+            "input": "pdpr tu apa?",
+            "response": "Thoughts: User asked about PDPR, which is likely an acronym in Malay or related to a system. I need to clarify what context this might be in.\n\n- PDPR could stand for \"Pembaruan Data Pendaftaran Perumahan\" (Update of Housing Registration Data) in the context of property records.\n- It could also refer to \"Perancangan Pembangunan Daerah Raya\" (Master Plan for Urban Areas).\n- Another possibility is \"Penilaian Dan Pengiraan Real Estat dan Pertumbuhan\" (Real Estate Valuation and Growth Calculation).\n\nI'll ask for more context to provide the most accurate answer.\n\nPDPR tu apa? Boleh kau jelaskan dalam konteks mana-mana? Contohnya, PDPR boleh merujuk kepada pembaruan data pendaftaran perumahan, perancangan pembangunan daerah raya, atau penilaian dan pengiraan real estat.",
+            "raw_response": "Thoughts: User asked about PDPR, which is likely an acronym in Malay or related to a system. I need to clarify what context this might be in.\n\n- PDPR could stand for \"Pembaruan Data Pendaftaran Perumahan\" (Update of Housing Registration Data) in the context of property records.\n- It could also refer to \"Perancangan Pembangunan Daerah Raya\" (Master Plan for Urban Areas).\n- Another possibility is \"Penilaian Dan Pengiraan Real Estat dan Pertumbuhan\" (Real Estate Valuation and Growth Calculation).\n\nI'll ask for more context to provide the most accurate answer.\n\nPDPR tu apa? Boleh kau jelaskan dalam konteks mana-mana? Contohnya, PDPR boleh merujuk kepada pembaruan data pendaftaran perumahan, perancangan pembangunan daerah raya, atau penilaian dan pengiraan real estat.",
+            "category": "Education"
+        },
+        {
+            "id": 56,
+            "input": "nak apply ptptn macam mana?",
+            "response": "Untuk mendaftar PTPTN, kamu perlu mengikuti langkah-langkah berikut:\n\n1. Pastikan anda memenuhi syarat-syarat yang diperlukan untuk mendaftar PTPTN seperti usia, status pelajar, dan lain-lain.\n2. Kumpulkan dokumen-dokumen yang dibutuhkan seperti kopia kad pengenalan, slip gaji orang tua (jika ada), dan laporan prestasi akademik.\n3. Daftar secara online di website PTPTN atau kunjungi cabang terdekat untuk mendapatkan formulir pendaftaran.\n\nJangan lupa cek syarat-syarat terkini di website resmi PTPTN kerana ia mungkin berubah dari tahun ke tahun.",
+            "raw_response": "<thought>\nUser is asking about how to apply for PTPTN. PTPTN stands for Perbadanan Tabung Pendidikan Tinggi Nasional in Malay, which is the national higher education fund board in Malaysia. The process involves checking eligibility, gathering required documents, and submitting an application.\n</thought>\n\nUntuk mendaftar PTPTN, kamu perlu mengikuti langkah-langkah berikut:\n\n1. Pastikan anda memenuhi syarat-syarat yang diperlukan untuk mendaftar PTPTN seperti usia, status pelajar, dan lain-lain.\n2. Kumpulkan dokumen-dokumen yang dibutuhkan seperti kopia kad pengenalan, slip gaji orang tua (jika ada), dan laporan prestasi akademik.\n3. Daftar secara online di website PTPTN atau kunjungi cabang terdekat untuk mendapatkan formulir pendaftaran.\n\nJangan lupa cek syarat-syarat terkini di website resmi PTPTN kerana ia mungkin berubah dari tahun ke tahun.",
+            "category": "Education"
+        },
+        {
+            "id": 57,
+            "input": "syarat kemasukan matrikulasi",
+            "response": "[THOUGHT]\n- Matrikulasi biasanya merupakan program pra-universiti.\n- Syarat umumnya melibatkan peperiksaan atau prestasi akademik.\n- Boleh berbeza bergantung pada institusi.\n\nBerdasarkan pemikiran di atas, saya akan memberikan jawapan yang lebih spesifik:\n\nSyarat kemasukan matrikulasi biasanya termasuk:\n\n1. Peperiksaan SPM (Sijil Pelajaran Malaysia) dengan skor minimum.\n2. Prestasi akademik tinggi dalam subjek tertentu.\n3. Pemenuhan syarat bahasa Melayu dan Matematik.\n\nSyarat ini boleh berbeza bergantung pada institusi yang anda tuju.",
+            "raw_response": "[THOUGHT]\n- Matrikulasi biasanya merupakan program pra-universiti.\n- Syarat umumnya melibatkan peperiksaan atau prestasi akademik.\n- Boleh berbeza bergantung pada institusi.\n\nBerdasarkan pemikiran di atas, saya akan memberikan jawapan yang lebih spesifik:\n\nSyarat kemasukan matrikulasi biasanya termasuk:\n\n1. Peperiksaan SPM (Sijil Pelajaran Malaysia) dengan skor minimum.\n2. Prestasi akademik tinggi dalam subjek tertentu.\n3. Pemenuhan syarat bahasa Melayu dan Matematik.\n\nSyarat ini boleh berbeza bergantung pada institusi yang anda tuju.",
+            "category": "Education"
+        },
+        {
+            "id": 58,
+            "input": "asb dividen tahun ni berapa?",
+            "response": "[Thoughts] Pengguna bertanya tentang dividen ASB tahun ini. Berdasarkan maklumat yang ada, biasanya dividen ASB diumumkan pada penghujung tahun dan purata sekitar 4-5 sen per unit + bonus. Tetapi, sila semak pengumuman rasmi PNB terkini untuk maklumat yang paling tepat.\n\nDividen ASB tahun ni biasanya antara:\n1. 4 sen hingga 5 sen per unit.\n2. Boleh ada bonus dividen.\n3. Pastikan untuk memeriksa pengumuman rasmi PNB untuk maklumat terkini.",
+            "raw_response": "[Thoughts] Pengguna bertanya tentang dividen ASB tahun ini. Berdasarkan maklumat yang ada, biasanya dividen ASB diumumkan pada penghujung tahun dan purata sekitar 4-5 sen per unit + bonus. Tetapi, sila semak pengumuman rasmi PNB terkini untuk maklumat yang paling tepat.\n\nDividen ASB tahun ni biasanya antara:\n1. 4 sen hingga 5 sen per unit.\n2. Boleh ada bonus dividen.\n3. Pastikan untuk memeriksa pengumuman rasmi PNB untuk maklumat terkini.",
+            "category": "Finance"
+        },
+        {
+            "id": 59,
+            "input": "cara buka akaun tabung haji online",
+            "response": "[THOUGHT] The user is asking about opening a Hajj savings account online. I need to provide steps on how to do this.\n\nUntuk membuka akaun tabung haji secara talian, anda boleh mengikuti langkah-langkah berikut:\n\n1. Pastikan anda mempunyai peranti yang boleh mengakses internet seperti komputer atau telefon pintar.\n2. Kunjungi laman web bank tempatan anda atau aplikasi mobile bank mereka. Contohnya, untuk Bank Islam Malaysia, anda boleh masuk ke www.bankislam.com.my atau unduh aplikasi Bank Islam dari toko aplikasi.\n3. Daftar akaun baru atau log masuk jika anda sudah mempunyai akaun. Ikuti petunjuk yang diberikan untuk mengisi maklumat peribadi dan lain-lain, termasuk maklumat tentang tabungan haji seperti jumlah sumbangan bulanan.\n\nJika anda menghadapi masalah semasa proses ini, hubungi pihak bank melalui talian atau telefon.",
+            "raw_response": "[THOUGHT] The user is asking about opening a Hajj savings account online. I need to provide steps on how to do this.\n\nUntuk membuka akaun tabung haji secara talian, anda boleh mengikuti langkah-langkah berikut:\n\n1. Pastikan anda mempunyai peranti yang boleh mengakses internet seperti komputer atau telefon pintar.\n2. Kunjungi laman web bank tempatan anda atau aplikasi mobile bank mereka. Contohnya, untuk Bank Islam Malaysia, anda boleh masuk ke www.bankislam.com.my atau unduh aplikasi Bank Islam dari toko aplikasi.\n3. Daftar akaun baru atau log masuk jika anda sudah mempunyai akaun. Ikuti petunjuk yang diberikan untuk mengisi maklumat peribadi dan lain-lain, termasuk maklumat tentang tabungan haji seperti jumlah sumbangan bulanan.\n\nJika anda menghadapi masalah semasa proses ini, hubungi pihak bank melalui talian atau telefon.",
+            "category": "Finance"
+        },
+        {
+            "id": 60,
+            "input": "kwsp acc 3 boleh keluar duit tak?",
+            "response": "Thoughts: User is asking about withdrawing from KWSP account 3. I need to confirm if it's account 3 and provide the correct information.\n\nApakah akaun KWSP nomor 3 boleh dilakukan penarikan? Saya perlu pastikan soalan anda sebelum memberi jawapan yang betul.",
+            "raw_response": "Thoughts: User is asking about withdrawing from KWSP account 3. I need to confirm if it's account 3 and provide the correct information.\n\nApakah akaun KWSP nomor 3 boleh dilakukan penarikan? Saya perlu pastikan soalan anda sebelum memberi jawapan yang betul.",
+            "category": "Finance"
+        },
+        {
+            "id": 61,
+            "input": "harga minyak ron95 terkini",
+            "response": "[thought] The user is asking for the current price of RON95 petrol in Malaysia. I should provide this information based on the latest data available.\n\nHarga RON95 terkini di Malaysia ialah RM2.54 per liter. Subsidi BUDI95 yang berlaku membolehkan pengguna mendapat harga sebanyak RM1.99 per liter untuk maksimum 300 liter per bulan. Pengguna yang tidak layak untuk subsidi ini akan membayar harga retai RM2.54 per liter.",
+            "raw_response": "[thought] The user is asking for the current price of RON95 petrol in Malaysia. I should provide this information based on the latest data available.\n\nHarga RON95 terkini di Malaysia ialah RM2.54 per liter. Subsidi BUDI95 yang berlaku membolehkan pengguna mendapat harga sebanyak RM1.99 per liter untuk maksimum 300 liter per bulan. Pengguna yang tidak layak untuk subsidi ini akan membayar harga retai RM2.54 per liter.",
+            "category": "Finance"
+        },
+        {
+            "id": 62,
+            "input": "best credit card for cashback malaysia",
+            "response": "Saya faham anda mencari kartu kredit terbaik untuk cashback di Malaysia. Berikut adalah beberapa pilihan yang boleh saya tawarkan:\n\n1. **Maybank 2u Cash Back Card** - Ini adalah salah satu kartu kredit dengan program cashback yang baik.\n2. **RHB Cashback Credit Card** - Kartu ini memberikan cashback yang menarik untuk pelbagai transaksi.\n3. **Public Bank iPaymints Cashback Card** - Ia juga dikenali dengan program cashback yang bagus.\n\nSemua kartu kredit tersebut mempunyai syarat dan ketentuan berbeza, jadi pastikan anda memilih yang sesuai dengan keperluan anda.",
+            "raw_response": "Saya faham anda mencari kartu kredit terbaik untuk cashback di Malaysia. Berikut adalah beberapa pilihan yang boleh saya tawarkan:\n\n1. **Maybank 2u Cash Back Card** - Ini adalah salah satu kartu kredit dengan program cashback yang baik.\n2. **RHB Cashback Credit Card** - Kartu ini memberikan cashback yang menarik untuk pelbagai transaksi.\n3. **Public Bank iPaymints Cashback Card** - Ia juga dikenali dengan program cashback yang bagus.\n\nSemua kartu kredit tersebut mempunyai syarat dan ketentuan berbeza, jadi pastikan anda memilih yang sesuai dengan keperluan anda.",
+            "category": "Finance"
+        },
+        {
+            "id": 63,
+            "input": "touch n go ewallet safe or not?",
+            "response": "Thoughts: The user is asking about the safety of Touch 'n Go e-Wallet. I'll need to provide a clear answer.\n\n TOUCH 'N GO E-WALLET SAFETY:\n- Encrypted transactions for security.\n- Regular updates and patches to protect against hacks.\n- Customer support available for issues.\n\nBased on these points, it's generally safe but always follow best practices like not sharing your pin.\n\nTouch 'n Go e-wallet is usually safe, but make sure to follow safety tips.",
+            "raw_response": "Thoughts: The user is asking about the safety of Touch 'n Go e-Wallet. I'll need to provide a clear answer.\n\n TOUCH 'N GO E-WALLET SAFETY:\n- Encrypted transactions for security.\n- Regular updates and patches to protect against hacks.\n- Customer support available for issues.\n\nBased on these points, it's generally safe but always follow best practices like not sharing your pin.\n\nTouch 'n Go e-wallet is usually safe, but make sure to follow safety tips.",
+            "category": "Finance"
+        },
+        {
+            "id": 64,
+            "input": "scammer call cakap lhdn, apa nak buat?",
+            "response": "Thoughts:\n- User got a scam call claiming to be from LHDN.\n- Need to advise on steps to take.\n- Steps should include verifying the call and protecting personal info.\n\nHere's what you can do:\n\n1. Don't give any personal info like your name, address, or phone number over the phone unless you're sure it's a legitimate call.\n2. Hang up and call LHDN directly using their official numbers to verify if they really need anything from you.\n3. Report the scam to authorities or organizations that handle such cases to help prevent others from falling for similar scams.\n\nStay safe!",
+            "raw_response": "Thoughts:\n- User got a scam call claiming to be from LHDN.\n- Need to advise on steps to take.\n- Steps should include verifying the call and protecting personal info.\n\nHere's what you can do:\n\n1. Don't give any personal info like your name, address, or phone number over the phone unless you're sure it's a legitimate call.\n2. Hang up and call LHDN directly using their official numbers to verify if they really need anything from you.\n3. Report the scam to authorities or organizations that handle such cases to help prevent others from falling for similar scams.\n\nStay safe!",
+            "category": "Finance"
+        },
+        {
+            "id": 65,
+            "input": "saman pdrm boleh bayar online ke?",
+            "response": "Thought: The user is asking about paying saman PDRM online. Saman refers to traffic fines, and PDRM stands for Polis Diraja Malaysia (Malaysian Police). I'll provide the answer in Malay.\n\nSaman PDRM boleh dibayar secara online ke:\n\n1. Melalui laman web rasmi PDRM.\n2. Menggunakan aplikasi MyPDRM.\n3. Dengan menggunakan perkhidmatan bank seperti Internet Banking atau mobile banking.",
+            "raw_response": "Thought: The user is asking about paying saman PDRM online. Saman refers to traffic fines, and PDRM stands for Polis Diraja Malaysia (Malaysian Police). I'll provide the answer in Malay.\n\nSaman PDRM boleh dibayar secara online ke:\n\n1. Melalui laman web rasmi PDRM.\n2. Menggunakan aplikasi MyPDRM.\n3. Dengan menggunakan perkhidmatan bank seperti Internet Banking atau mobile banking.",
+            "category": "Civics"
+        },
+        {
+            "id": 66,
+            "input": "jpj renew license operating hours",
+            "response": "Thoughts: The user is asking about the operating hours for JPJ when renewing a driving license. I should provide this information clearly.\n\nJPJ's office operates from 8 AM to 5 PM on weekdays. Here are the specific times:\n- Monday to Friday: 08:00 AM - 05:00 PM\n- Saturday: Closed\n- Sunday: Closed\n\nMake sure to arrive a bit early to avoid queues and have all your documents ready.",
+            "raw_response": "Thoughts: The user is asking about the operating hours for JPJ when renewing a driving license. I should provide this information clearly.\n\nJPJ's office operates from 8 AM to 5 PM on weekdays. Here are the specific times:\n- Monday to Friday: 08:00 AM - 05:00 PM\n- Saturday: Closed\n- Sunday: Closed\n\nMake sure to arrive a bit early to avoid queues and have all your documents ready.",
+            "category": "Civics"
+        },
+        {
+            "id": 67,
+            "input": "renew passport walk in boleh tak?",
+            "response": "Thoughts: The user is asking if they can renew their passport by walking in. I'll respond in Manglish and include the key points.\n\nYa, you can walk in to renew your passport, but here are a few things to note:\n- Check if there's an appointment needed first.\n- Bring all required documents.\n- Be prepared for possible queues.\n\nSo, walk in boleh tak, but check first!",
+            "raw_response": "Thoughts: The user is asking if they can renew their passport by walking in. I'll respond in Manglish and include the key points.\n\nYa, you can walk in to renew your passport, but here are a few things to note:\n- Check if there's an appointment needed first.\n- Bring all required documents.\n- Be prepared for possible queues.\n\nSo, walk in boleh tak, but check first!",
+            "category": "Civics"
+        },
+        {
+            "id": 68,
+            "input": "undi 18 tu apa?",
+            "response": "Thoughts: User asked about what 18 years old is in Malay. I'll respond in natural Malay.\n\nUndi 18 itu adalah usia dewasa penuh di Malaysia. Seseorang yang berumur 18 tahun boleh mempunyai kad pengenalan sendiri dan juga diperkenankan untuk menyertai pemilu.",
+            "raw_response": "Thoughts: User asked about what 18 years old is in Malay. I'll respond in natural Malay.\n\nUndi 18 itu adalah usia dewasa penuh di Malaysia. Seseorang yang berumur 18 tahun boleh mempunyai kad pengenalan sendiri dan juga diperkenankan untuk menyertai pemilu.",
+            "category": "Civics"
+        },
+        {
+            "id": 69,
+            "input": "cuti umum malaysia 2024",
+            "response": "Saya boleh memberitahu anda tentang cuti umum Malaysia 2024. Tahun Baru Cina, Hari Raya Aidilfitri, Hari Pekerja, Wesak, Hari Keputeraan Agong, Hari Raya Haji, Awal Muharram, Hari Kebangsaan, Hari Malaysia, dan Deepavali adalah beberapa daripada cuti umum yang akan diambil pada tahun 2024.",
+            "raw_response": "Saya boleh memberitahu anda tentang cuti umum Malaysia 2024. Tahun Baru Cina, Hari Raya Aidilfitri, Hari Pekerja, Wesak, Hari Keputeraan Agong, Hari Raya Haji, Awal Muharram, Hari Kebangsaan, Hari Malaysia, dan Deepavali adalah beberapa daripada cuti umum yang akan diambil pada tahun 2024.",
+            "category": "Civics"
+        },
+        {
+            "id": 70,
+            "input": "baju melayu cekak musang vs teluk belanga",
+            "response": "Thoughts: Pengguna ingin perbandingan yang lebih spesifik. Saya akan fokus pada perbezaan antara baju Melayu Cekak Musang dan Teluk Belanga.\n\nBaju Melayu Cekak Musang vs Teluk Belanga:\n1. Lengan: Baju Cekak Musang mempunyai lengan pendek, manakala Teluk Belanga mempunyai lengan panjang.\n2. Desain: Cekak Musang biasanya tidak mempunyai lipatan di sisi baju, manakala Teluk Belanga sering memiliki lipatan di bahagian lengan dan pinggang.\n3. Warna: Baju Cekak Musang cenderung menggunakan warna merah, putih, dan kuning, manakala Teluk Belanga lebih sering berwarna biru dan putih dengan motif tradisional.\n\nPerbezaan ini menunjukkan bagaimana kedua-dua jenis baju Melayu mempunyai ciri khas masing-masing.",
+            "raw_response": "Thoughts: Pengguna ingin perbandingan yang lebih spesifik. Saya akan fokus pada perbezaan antara baju Melayu Cekak Musang dan Teluk Belanga.\n\nBaju Melayu Cekak Musang vs Teluk Belanga:\n1. Lengan: Baju Cekak Musang mempunyai lengan pendek, manakala Teluk Belanga mempunyai lengan panjang.\n2. Desain: Cekak Musang biasanya tidak mempunyai lipatan di sisi baju, manakala Teluk Belanga sering memiliki lipatan di bahagian lengan dan pinggang.\n3. Warna: Baju Cekak Musang cenderung menggunakan warna merah, putih, dan kuning, manakala Teluk Belanga lebih sering berwarna biru dan putih dengan motif tradisional.\n\nPerbezaan ini menunjukkan bagaimana kedua-dua jenis baju Melayu mempunyai ciri khas masing-masing.",
+            "category": "Cultural"
+        },
+        {
+            "id": 71,
+            "input": "adat merisik tu wajib ke?",
+            "response": "Thoughts: The user is asking about the adat merisik, which is a traditional custom in Sarawak, Malaysia. I'll respond in Manglish and include some key points.\n\nAdat Merisik tu wajib ke:\n1. It's a wedding tradition where the groom's family visits the bride's family.\n2. They usually bring gifts like money or presents.\n3. It's an important step before the actual wedding ceremony.\n\nSo, adat merisik tu wajib because it's a way to show respect and finalize arrangements for the marriage.",
+            "raw_response": "Thoughts: The user is asking about the adat merisik, which is a traditional custom in Sarawak, Malaysia. I'll respond in Manglish and include some key points.\n\nAdat Merisik tu wajib ke:\n1. It's a wedding tradition where the groom's family visits the bride's family.\n2. They usually bring gifts like money or presents.\n3. It's an important step before the actual wedding ceremony.\n\nSo, adat merisik tu wajib because it's a way to show respect and finalize arrangements for the marriage.",
+            "category": "Cultural"
+        },
+        {
+            "id": 72,
+            "input": "hantaran tunang biasanya berapa dulang?",
+            "response": "Biasanya, jumlah dulang dalam hantaran tunang adalah ganjil. Contohnya, pihak lelaki mungkin memberi 5 dulang manakala pihak perempuan membalas dengan 7 dulang.",
+            "raw_response": "<thought>\nUser is asking about the number of dulang (carriages) in a traditional engagement gift (tunang hantaran). The knowledge base provides information that the number is usually odd, with examples of 5 from the male side and 7 from the female side.\n</thought>\n\nBiasanya, jumlah dulang dalam hantaran tunang adalah ganjil. Contohnya, pihak lelaki mungkin memberi 5 dulang manakala pihak perempuan membalas dengan 7 dulang.",
+            "category": "Cultural"
+        },
+        {
+            "id": 73,
+            "input": "pantang larang orang mengandung masa dulu",
+            "response": "Pantang-pantang dan larangan-larangan biasanya diberikan kepada orang yang hendak hamil pada masa dahulu. Ini termasuk peraturan seperti jangan paku dinding (takut lekat uri), jangan duduk di pintu (susah bersalin), dan jangan keluar waktu senja (elak gangguan makhluk halus).",
+            "raw_response": "Pantang-pantang dan larangan-larangan biasanya diberikan kepada orang yang hendak hamil pada masa dahulu. Ini termasuk peraturan seperti jangan paku dinding (takut lekat uri), jangan duduk di pintu (susah bersalin), dan jangan keluar waktu senja (elak gangguan makhluk halus).",
+            "category": "Cultural"
+        },
+        {
+            "id": 74,
+            "input": "lagu raya paling legend",
+            "response": "Lagu Raya yang paling legenda termasuk 'Balik Kampung' (Sudirman), 'Dendang Perantau' (P. Ramlee), 'Suasana Hari Raya' (Anuar & Ellina), dan 'Satu Hari Di Hari Raya' (M. Nasir).",
+            "raw_response": "Lagu Raya yang paling legenda termasuk 'Balik Kampung' (Sudirman), 'Dendang Perantau' (P. Ramlee), 'Suasana Hari Raya' (Anuar & Ellina), dan 'Satu Hari Di Hari Raya' (M. Nasir).",
+            "category": "Cultural"
+        },
+        {
+            "id": 75,
+            "input": "filem p ramlee paling lawak",
+            "response": "Filem P. Ramlee paling lawak termasuk 'Madu Tiga', 'Seniman Bujang Lapok', 'Pendekar Bujang Lapok', 'Nujum Pak Belalang', dan 'Do Re Mi'.",
+            "raw_response": "Filem P. Ramlee paling lawak termasuk 'Madu Tiga', 'Seniman Bujang Lapok', 'Pendekar Bujang Lapok', 'Nujum Pak Belalang', dan 'Do Re Mi'.",
+            "category": "Entertainment"
+        },
+        {
+            "id": 76,
+            "input": "siapa menang ajl tahun lepas?",
+            "response": "[thought] The user is asking about the winner of AJL (Anugerah Juara Lagu) from the previous year. According to the knowledge base, Aina Abdul won AJL 37 with the song 'Terus Hidup', and Amir Jahari won AJL 38 with the song 'Hasrat'. Since the user is asking about \"tahun lepas\" (last year), I need to determine which of these was the previous year's winner.\n\nGiven that AJL 38 happened in 2024, it means AJL 37 would be the previous year. Therefore, Aina Abdul with 'Terus Hidup' is the correct answer.\n[/thought]\n\nAina Abdul menang Anugerah Juara Lagu (AJL) tahun lepas dengan lagu 'Terus Hidup'.",
+            "raw_response": "[thought] The user is asking about the winner of AJL (Anugerah Juara Lagu) from the previous year. According to the knowledge base, Aina Abdul won AJL 37 with the song 'Terus Hidup', and Amir Jahari won AJL 38 with the song 'Hasrat'. Since the user is asking about \"tahun lepas\" (last year), I need to determine which of these was the previous year's winner.\n\nGiven that AJL 38 happened in 2024, it means AJL 37 would be the previous year. Therefore, Aina Abdul with 'Terus Hidup' is the correct answer.\n[/thought]\n\nAina Abdul menang Anugerah Juara Lagu (AJL) tahun lepas dengan lagu 'Terus Hidup'.",
+            "category": "Entertainment"
+        },
+        {
+            "id": 77,
+            "input": "panggung wayang terdekat",
+            "response": "Saya cuba mencari panggung wayang terdekat untuk anda, tetapi saya perlu maklumat lebih lanjut seperti lokasi anda atau kawasan di mana anda ingin menemui panggung wayang tersebut. Berikut adalah beberapa tempat yang biasanya mempunyai pertunjukan wayang:\n\n1. Teater Nasional Malaysia\n2. Istana Budaya Kuala Lumpur\n3. Museum Negara\n\nSekiranya anda memberi saya lokasi lebih spesifik, saya boleh cuba mencari maklumat yang lebih tepat untuk anda.",
+            "raw_response": "Saya cuba mencari panggung wayang terdekat untuk anda, tetapi saya perlu maklumat lebih lanjut seperti lokasi anda atau kawasan di mana anda ingin menemui panggung wayang tersebut. Berikut adalah beberapa tempat yang biasanya mempunyai pertunjukan wayang:\n\n1. Teater Nasional Malaysia\n2. Istana Budaya Kuala Lumpur\n3. Museum Negara\n\nSekiranya anda memberi saya lokasi lebih spesifik, saya boleh cuba mencari maklumat yang lebih tepat untuk anda.",
+            "category": "Entertainment"
+        },
+        {
+            "id": 78,
+            "input": "concert coldplay malaysia ticket price",
+            "response": "Saya faham anda minat dengan harga tiket konser Coldplay di Malaysia. Berikut adalah beberapa poin yang perlu anda kenali:\n\n1. Harga tiket boleh berbeza-beza bergantung pada tempoh pembelian dan lokasi tempat duduk.\n2. Anda mungkin dapat mendapatkan harga yang lebih baik jika membeli secara awam atau melalui agensi resmi.\n3. Selalu periksa dengan teliti untuk pastikan anda membeli dari sumber yang betul untuk mengelakkan penipuan.\n\nAdakah anda ingin maklumat lanjut tentang tempoh pembelian atau lokasi tempat duduk?",
+            "raw_response": "Saya faham anda minat dengan harga tiket konser Coldplay di Malaysia. Berikut adalah beberapa poin yang perlu anda kenali:\n\n1. Harga tiket boleh berbeza-beza bergantung pada tempoh pembelian dan lokasi tempat duduk.\n2. Anda mungkin dapat mendapatkan harga yang lebih baik jika membeli secara awam atau melalui agensi resmi.\n3. Selalu periksa dengan teliti untuk pastikan anda membeli dari sumber yang betul untuk mengelakkan penipuan.\n\nAdakah anda ingin maklumat lanjut tentang tempoh pembelian atau lokasi tempat duduk?",
+            "category": "Entertainment"
+        },
+        {
+            "id": 79,
+            "input": "malaysia vs korea bola sepak result",
+            "response": "Pada Piala Asia 2023, permainan antara Malaysia dan Korea Selatan berakhir dengan skor seri 3-3. Berikut adalah perbandingan yang lebih spesifik:\n\n1. Skor: Kedua pasukan bermain imbang dengan skor 3-3.\n2. Performa: Walaupun kedua-dua pasukan mencetak gol, Malaysia dan Korea Selatan masing-masing mempunyai strategi permainan yang berbeza.\n3. Kesempatan: Jumlah kesempatan untuk mencetak gol mungkin berbeza antara kedua-dua pasukan.\n\nDengan ini, kita dapat melihat bahawa kedua-dua pasukan menunjukkan kekuatan dan keterampilan mereka dengan mencetak tiga gol setiap pasukan.",
+            "raw_response": "<thought> The user wants a comparison between Malaysia and Korea's performance in a football match. I need to explicitly highlight the differences based on the given information.</thought>\n\nPada Piala Asia 2023, permainan antara Malaysia dan Korea Selatan berakhir dengan skor seri 3-3. Berikut adalah perbandingan yang lebih spesifik:\n\n1. Skor: Kedua pasukan bermain imbang dengan skor 3-3.\n2. Performa: Walaupun kedua-dua pasukan mencetak gol, Malaysia dan Korea Selatan masing-masing mempunyai strategi permainan yang berbeza.\n3. Kesempatan: Jumlah kesempatan untuk mencetak gol mungkin berbeza antara kedua-dua pasukan.\n\nDengan ini, kita dapat melihat bahawa kedua-dua pasukan menunjukkan kekuatan dan keterampilan mereka dengan mencetak tiga gol setiap pasukan.",
+            "category": "Sports"
+        },
+        {
+            "id": 80,
+            "input": "dato lee chong wei retired bila?",
+            "response": "[thought] The user is asking about the retirement date of Dato' Lee Chong Wei. According to the knowledge base, he retired on 13 June 2019.\n\nDato' Lee Chong Wei bersara secara rasmi dari badminton pada 13 Jun 2019.\n\nHere's how I'll answer in natural Malay:\n\nDato' Lee Chong Wei bersara pada 13 Jun 2019.",
+            "raw_response": "[thought] The user is asking about the retirement date of Dato' Lee Chong Wei. According to the knowledge base, he retired on 13 June 2019.\n\nDato' Lee Chong Wei bersara secara rasmi dari badminton pada 13 Jun 2019.\n\nHere's how I'll answer in natural Malay:\n\nDato' Lee Chong Wei bersara pada 13 Jun 2019.",
+            "category": "Sports"
+        },
+        {
+            "id": 81,
+            "input": "badminton court near me",
+            "response": "You're looking for a badminton court nearby, right? Let's find one together.\n\n\n\nHere are some places you might want to check:\n1. Sports complexes in your area often have multiple courts.\n2. Community centers usually offer public badminton courts.\n3. Use Google Maps or sports app to find the nearest court.\n\nDo any of these sound familiar, or would you like more specific suggestions?",
+            "raw_response": "You're looking for a badminton court nearby, right? Let's find one together.\n\n<thought>\n- Check if the user provided location data.\n- Suggest popular areas known for having badminton courts.\n- Recommend using apps or websites to search.\n</thought>\n\nHere are some places you might want to check:\n1. Sports complexes in your area often have multiple courts.\n2. Community centers usually offer public badminton courts.\n3. Use Google Maps or sports app to find the nearest court.\n\nDo any of these sound familiar, or would you like more specific suggestions?",
+            "category": "Sports"
+        },
+        {
+            "id": 82,
+            "input": "jdt menang lagi ke?",
+            "response": "Thoughts: User asked if I won again, need to clarify the context.\n\n- They might be asking about a recent event.\n- Could be related to sports or games.\n- Need to ask for more details.\n\nMaaf, boleh tahu apa yang kamu maksud dengan \"jdt menang lagi ke\"? Adakah ini berkaitan permainan atau pertandingan tertentu?",
+            "raw_response": "Thoughts: User asked if I won again, need to clarify the context.\n\n- They might be asking about a recent event.\n- Could be related to sports or games.\n- Need to ask for more details.\n\nMaaf, boleh tahu apa yang kamu maksud dengan \"jdt menang lagi ke\"? Adakah ini berkaitan permainan atau pertandingan tertentu?",
+            "category": "Sports"
+        },
+        {
+            "id": 83,
+            "input": "sukan sea next kat mana?",
+            "response": "[THOUGHT] User is asking about the location of the next Southeast Asian Games. The knowledge base provides this information.\n\nBerikut adalah lokasi sukan SEA seterusnya:\n\n1. Thailand pada tahun 2025.\n2. Malaysia pada tahun 2027.\n\nJadi, Sukan SEA seterusnya akan diadakan di Thailand pada tahun 2025 dan di Malaysia pada tahun 2027.",
+            "raw_response": "[THOUGHT] User is asking about the location of the next Southeast Asian Games. The knowledge base provides this information.\n\nBerikut adalah lokasi sukan SEA seterusnya:\n\n1. Thailand pada tahun 2025.\n2. Malaysia pada tahun 2027.\n\nJadi, Sukan SEA seterusnya akan diadakan di Thailand pada tahun 2025 dan di Malaysia pada tahun 2027.",
+            "category": "Sports"
+        },
+        {
+            "id": 84,
+            "input": "hiking trail best kat selangor/kl",
+            "response": "Hiking trails bagus kat Selangor/KL termasuk Bukit Gasing, Bukit Broga, dan Bukit Saga.",
+            "raw_response": "Hiking trails bagus kat Selangor/KL termasuk Bukit Gasing, Bukit Broga, dan Bukit Saga.",
+            "category": "Lifestyle"
+        },
+        {
+            "id": 85,
+            "input": "tempat camping tepi sungai best",
+            "response": "Okay, let's break this down:\n\n- You're looking for a great place to camp by the river.\n- I'll provide some options that are considered the best.\n\nHere are three top picks for camping by the riverside in Malaysia:\n1. Taman Negara - Offers beautiful jungle and river views with organized campsites.\n2. Kinabatangan River, Sabah - Known for its wildlife and serene riverbank camps.\n3. Langkawi Island - Features pristine beaches and riverside locations.\n\nWhich one sounds most appealing to you?",
+            "raw_response": "Okay, let's break this down:\n\n- You're looking for a great place to camp by the river.\n- I'll provide some options that are considered the best.\n\nHere are three top picks for camping by the riverside in Malaysia:\n1. Taman Negara - Offers beautiful jungle and river views with organized campsites.\n2. Kinabatangan River, Sabah - Known for its wildlife and serene riverbank camps.\n3. Langkawi Island - Features pristine beaches and riverside locations.\n\nWhich one sounds most appealing to you?",
+            "category": "Lifestyle"
+        },
+        {
+            "id": 86,
+            "input": "gym membership price fitness first",
+            "response": "Thoughts: The user is asking about the gym membership price for Fitness First. I'll provide a straightforward response.\n\nGym membership prices for Fitness First can vary based on factors like location, type of membership (e.g., monthly, annual), and package inclusions. Typically, you might find:\n- Monthly memberships starting from RM150 to RM300\n- Annual memberships ranging from RM1800 to RM2400\n\nFor the most accurate pricing, it's best to check directly with Fitness First or their official website.",
+            "raw_response": "Thoughts: The user is asking about the gym membership price for Fitness First. I'll provide a straightforward response.\n\nGym membership prices for Fitness First can vary based on factors like location, type of membership (e.g., monthly, annual), and package inclusions. Typically, you might find:\n- Monthly memberships starting from RM150 to RM300\n- Annual memberships ranging from RM1800 to RM2400\n\nFor the most accurate pricing, it's best to check directly with Fitness First or their official website.",
+            "category": "Lifestyle"
+        },
+        {
+            "id": 87,
+            "input": "diet atkins menu malaysia",
+            "response": "Saya faham anda ingin mengetahui menu makanan untuk diet Atkins di Malaysia. Berikut adalah beberapa saran:\n\n1. Buatlah hidangan utama dengan daging rebus atau ayam tanpa kulit.\n2. Sediakan sayur-sayuran segar seperti lobak merah, kubis, dan wortel sebagai pelengkap.\n3. Gunakan minyak zaitun untuk menggoreng atau menumis.\n\nThought: Saya akan memberikan lebih banyak pilihan menu yang sesuai dengan diet Atkins di Malaysia.",
+            "raw_response": "Saya faham anda ingin mengetahui menu makanan untuk diet Atkins di Malaysia. Berikut adalah beberapa saran:\n\n1. Buatlah hidangan utama dengan daging rebus atau ayam tanpa kulit.\n2. Sediakan sayur-sayuran segar seperti lobak merah, kubis, dan wortel sebagai pelengkap.\n3. Gunakan minyak zaitun untuk menggoreng atau menumis.\n\nThought: Saya akan memberikan lebih banyak pilihan menu yang sesuai dengan diet Atkins di Malaysia.",
+            "category": "Lifestyle"
+        },
+        {
+            "id": 88,
+            "input": "cara report jalan berlubang",
+            "response": "[THOUGHT] The user is asking about reporting a pothole on the road. Based on the knowledge base, there are two main ways to do this: using an app or contacting the relevant body directly.\n\n1. Using MyJalan KKR app.\n2. Contacting PBT/JKR (Perbadanan Pembangunan Tempatan/Kerajaan Persekutuan) related to the area.\n\nHere's how you can report a pothole:\n\n- Boleh membuat aduan melalui aplikasi MyJalan KKR.\n- Hubungi PBT/JKR yang berkaitan dengan lokasi jalan berlubang tersebut.",
+            "raw_response": "[THOUGHT] The user is asking about reporting a pothole on the road. Based on the knowledge base, there are two main ways to do this: using an app or contacting the relevant body directly.\n\n1. Using MyJalan KKR app.\n2. Contacting PBT/JKR (Perbadanan Pembangunan Tempatan/Kerajaan Persekutuan) related to the area.\n\nHere's how you can report a pothole:\n\n- Boleh membuat aduan melalui aplikasi MyJalan KKR.\n- Hubungi PBT/JKR yang berkaitan dengan lokasi jalan berlubang tersebut.",
+            "category": "Local issue"
+        },
+        {
+            "id": 89,
+            "input": "jiran bising malam-malam, boleh report polis tak?",
+            "response": "Thoughts: User is asking about reporting noisy neighbors. I'll confirm if it's appropriate and provide some advice.\n\nTentu boleh lapor polis untuk masalah jiran yang bising malam-malam. Tapi sebelum itu, coba dulu berbincang dengan jiranmu untuk menyelesaikan masalah tersebut. Jika tidak berhasil, barulah lapor ke polis. Pastikan juga anda mempunyai bukti-bukti seperti rekod suara atau saksi mata jika perlu.",
+            "raw_response": "Thoughts: User is asking about reporting noisy neighbors. I'll confirm if it's appropriate and provide some advice.\n\nTentu boleh lapor polis untuk masalah jiran yang bising malam-malam. Tapi sebelum itu, coba dulu berbincang dengan jiranmu untuk menyelesaikan masalah tersebut. Jika tidak berhasil, barulah lapor ke polis. Pastikan juga anda mempunyai bukti-bukti seperti rekod suara atau saksi mata jika perlu.",
+            "category": "Local issue"
+        },
+        {
+            "id": 90,
+            "input": "sampah tak kutip seminggu, nak adu kat mana?",
+            "response": "[Thoughts: The user is asking where to report uncollected waste after a week. I need to provide the correct contact information based on the knowledge base.]\n\nUntuk melaporkan sampah yang tidak dikutip selama seminggu, anda boleh mengadu kepada:\n\n1. Majlis Perbandaran (PBT) - Hubungi mereka untuk laporkan masalah sampah.\n2. Kontraktor seperti KDEB Waste Management (Selangor) - Jika PBT tidak dapat membantu, coba hubungi KDEB Waste Management.\n3. Alam Flora - Mereka juga mungkin boleh membantu dengan masalah sampah.\n\nPastikan untuk memberitahu pihak yang anda hubungi bahawa sampah belum dikutip selama seminggu.",
+            "raw_response": "[Thoughts: The user is asking where to report uncollected waste after a week. I need to provide the correct contact information based on the knowledge base.]\n\nUntuk melaporkan sampah yang tidak dikutip selama seminggu, anda boleh mengadu kepada:\n\n1. Majlis Perbandaran (PBT) - Hubungi mereka untuk laporkan masalah sampah.\n2. Kontraktor seperti KDEB Waste Management (Selangor) - Jika PBT tidak dapat membantu, coba hubungi KDEB Waste Management.\n3. Alam Flora - Mereka juga mungkin boleh membantu dengan masalah sampah.\n\nPastikan untuk memberitahu pihak yang anda hubungi bahawa sampah belum dikutip selama seminggu.",
+            "category": "Local issue"
+        },
+        {
+            "id": 91,
+            "input": "anjing liar banyak kat taman ni, bahaya",
+            "response": "Anjing liar banyak di taman ini, dan ia berbahaya. Anda boleh membuat aduan kepada Jabatan Kesihatan atau Unit Vektor PBT kawasan anda untuk menangani situasi ini.",
+            "raw_response": "Anjing liar banyak di taman ini, dan ia berbahaya. Anda boleh membuat aduan kepada Jabatan Kesihatan atau Unit Vektor PBT kawasan anda untuk menangani situasi ini.",
+            "category": "Local issue"
+        },
+        {
+            "id": 92,
+            "input": "paip air pecah, syabas contact number",
+            "response": "Untuk aduan paip pecah atau gangguan air dari Air Selangor (Syabas), anda boleh menghubungi hotline 15300.",
+            "raw_response": "Untuk aduan paip pecah atau gangguan air dari Air Selangor (Syabas), anda boleh menghubungi hotline 15300.",
+            "category": "Local issue"
+        },
+        {
+            "id": 93,
+            "input": "blackout rumah aku sorang je, kenapa?",
+            "response": "Blackout di rumah sahaja kau, kenapa?\n\nBerikut adalah beberapa alasan mungkin dan langkah-langkah yang boleh kau lakukan:\n\n1. Pastikan kotak fius (DB box) di rumah kau tidak trip atau fius.\n2. Hubungi TNB Careline di 15454 untuk bantuan lebih lanjut.\n3. Periksa apakah ada masalah dengan peralatan elektrik di rumah kau.\n\nJika tiada api dan hanya rumah sahaja yang terdapat blackout, mungkin masalahnya adalah dengan sistem listrik di rumah sendiri atau peralatan elektrik yang tidak berfungsi dengan betul.",
+            "raw_response": "Blackout di rumah sahaja kau, kenapa?\n\nBerikut adalah beberapa alasan mungkin dan langkah-langkah yang boleh kau lakukan:\n\n1. Pastikan kotak fius (DB box) di rumah kau tidak trip atau fius.\n2. Hubungi TNB Careline di 15454 untuk bantuan lebih lanjut.\n3. Periksa apakah ada masalah dengan peralatan elektrik di rumah kau.\n\nJika tiada api dan hanya rumah sahaja yang terdapat blackout, mungkin masalahnya adalah dengan sistem listrik di rumah sendiri atau peralatan elektrik yang tidak berfungsi dengan betul.",
+            "category": "Local issue"
+        },
+        {
+            "id": 94,
+            "input": "internet unifi slow gila hari ni",
+            "response": "Internet Unifi mu perlahan gila hari ini. Cuba restart router dahulu. Jika masih perlahan, buat aduan melalui aplikasi myUnifi.",
+            "raw_response": "Internet Unifi mu perlahan gila hari ini. Cuba restart router dahulu. Jika masih perlahan, buat aduan melalui aplikasi myUnifi.",
+            "category": "Tech issue"
+        },
+        {
+            "id": 95,
+            "input": "celcom line takde signal",
+            "response": "Celcom anda menghadapi masalah dengan sinyal telefon. Berikut adalah beberapa langkah yang boleh cuba:\n\n1. Matikan dan nyalakan semula modus penerbangan pada peranti anda.\n2. Periksa sama ada terdapat gangguan kawasan atau sedang dalam masa pemeliharaan.\n3. Pastikan peranti anda terhubung dengan jaringan Celcom yang betul.",
+            "raw_response": "Celcom anda menghadapi masalah dengan sinyal telefon. Berikut adalah beberapa langkah yang boleh cuba:\n\n1. Matikan dan nyalakan semula modus penerbangan pada peranti anda.\n2. Periksa sama ada terdapat gangguan kawasan atau sedang dalam masa pemeliharaan.\n3. Pastikan peranti anda terhubung dengan jaringan Celcom yang betul.",
+            "category": "Tech issue"
+        },
+        {
+            "id": 96,
+            "input": "mytv tak dapat siaran",
+            "response": "MyTV tidak dapat menyiarkan siaran. Sila periksa sambungan antena dan lakukan scan semula saluran pada decoder anda.",
+            "raw_response": "MyTV tidak dapat menyiarkan siaran. Sila periksa sambungan antena dan lakukan scan semula saluran pada decoder anda.",
+            "category": "Tech issue"
+        },
+        {
+            "id": 97,
+            "input": "grab driver cancel last minute, geramnya",
+            "response": "Grab driver batal akhir minggu, kegalauannya. Jika driver Grab batal di akhir minggu, anda boleh membuat aduan di 'Customer Service/Help Centre' dalam aplikasi Grab untuk report, minta refund, atau book driver lain. Ini akan membantu mengurangkan kegaluangan anda.",
+            "raw_response": "Grab driver batal akhir minggu, kegalauannya. Jika driver Grab batal di akhir minggu, anda boleh membuat aduan di 'Customer Service/Help Centre' dalam aplikasi Grab untuk report, minta refund, atau book driver lain. Ini akan membantu mengurangkan kegaluangan anda.",
+            "category": "Service issue"
+        },
+        {
+            "id": 98,
+            "input": "shopee delivery lambat sampai",
+            "response": "Periksa status pengiriman di aplikasi Shopee. Jika masih lambat, hubungi Customer Service Shopee atau kurier yang berkaitan seperti J&T Express atau Pos Laju untuk pengecekan lanjut.",
+            "raw_response": "Periksa status pengiriman di aplikasi Shopee. Jika masih lambat, hubungi Customer Service Shopee atau kurier yang berkaitan seperti J&T Express atau Pos Laju untuk pengecekan lanjut.",
+            "category": "Service issue"
+        },
+        {
+            "id": 99,
+            "input": "foodpanda wrong order refund",
+            "response": "Thought: User needs information on how to handle a wrong order refund with Foodpanda.\n- Check the Foodpanda app for any support options or chat features.\n- Contact their customer service via phone or email.\n- Follow their refund policy and procedures.\n\nIf you have ordered food from Foodpanda but received the wrong item, here’s what you can do:\n1. Open the Foodpanda app and go to your order history.\n2. Look for any support options like chat or call features.\n3. If not available, contact their customer service through phone or email.\n4. Explain the issue and follow their refund policy and procedures.\n\nRemember, each platform might have different steps, so it's best to check their specific guidelines.",
+            "raw_response": "Thought: User needs information on how to handle a wrong order refund with Foodpanda.\n- Check the Foodpanda app for any support options or chat features.\n- Contact their customer service via phone or email.\n- Follow their refund policy and procedures.\n\nIf you have ordered food from Foodpanda but received the wrong item, here’s what you can do:\n1. Open the Foodpanda app and go to your order history.\n2. Look for any support options like chat or call features.\n3. If not available, contact their customer service through phone or email.\n4. Explain the issue and follow their refund policy and procedures.\n\nRemember, each platform might have different steps, so it's best to check their specific guidelines.",
+            "category": "Service issue"
+        },
+        {
+            "id": 100,
+            "input": "tolong buat kesimpulan untuk essay ni pasal kemerdekaan",
+            "response": "[Thoughts: The user wants a conclusion for an essay on independence. I'll provide a structured conclusion in Malay, considering the key aspects of independence.]\n\nUntuk membuat kesimpulan yang baik dalam essay anda tentang kemerdekaan, cuba masukkan elemen-elemen berikut:\n\n1. **Pengiktirafan Perjuangan**: Terangkan betapa sukar dan beratnya perjuangan rakyat untuk mencapai kemerdekaan. Bolehkan dengan menggambarkan perlawanan yang dilakukan oleh para patriot Malaysia.\n\n2. **Perubahan Positif**: Senaraikan beberapa perubahan positif yang telah berlaku selepas kemerdekaan, seperti peningkatan taraf hidup rakyat dan perkembangan ekonomi negara.\n\n3. **Tantangan Yang Ada**: Bahas tentang cabaran-cabaran yang masih dihadapi oleh Malaysia selepas kemerdekaan, termasuk isu-isu sosial, ekonomi, dan politik.\n\n4. **Pengingat Kepada Rakyat**: Akhiri kesimpulan dengan mengingatkan kepada rakyat Malaysia tentang kepentingan untuk terus berjuang dan bekerjasama demi kemajuan negara.\n\nDengan memasukkan elemen-elemen ini, anda dapat membuat kesimpulan yang mendalam dan menarik dalam essay anda.",
+            "raw_response": "[Thoughts: The user wants a conclusion for an essay on independence. I'll provide a structured conclusion in Malay, considering the key aspects of independence.]\n\nUntuk membuat kesimpulan yang baik dalam essay anda tentang kemerdekaan, cuba masukkan elemen-elemen berikut:\n\n1. **Pengiktirafan Perjuangan**: Terangkan betapa sukar dan beratnya perjuangan rakyat untuk mencapai kemerdekaan. Bolehkan dengan menggambarkan perlawanan yang dilakukan oleh para patriot Malaysia.\n\n2. **Perubahan Positif**: Senaraikan beberapa perubahan positif yang telah berlaku selepas kemerdekaan, seperti peningkatan taraf hidup rakyat dan perkembangan ekonomi negara.\n\n3. **Tantangan Yang Ada**: Bahas tentang cabaran-cabaran yang masih dihadapi oleh Malaysia selepas kemerdekaan, termasuk isu-isu sosial, ekonomi, dan politik.\n\n4. **Pengingat Kepada Rakyat**: Akhiri kesimpulan dengan mengingatkan kepada rakyat Malaysia tentang kepentingan untuk terus berjuang dan bekerjasama demi kemajuan negara.\n\nDengan memasukkan elemen-elemen ini, anda dapat membuat kesimpulan yang mendalam dan menarik dalam essay anda.",
+            "category": "Education"
+        }
+    ],
+    "updated_at": "2026-01-16T08:03:41Z",
+    "updated_cases": [
+        "1"
+    ]
+}

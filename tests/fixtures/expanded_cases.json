@@ -1,502 +1,1613 @@
 [
     {
         "id": 1,
+        "category": "Shortforms",
         "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
-        "category": "Shortforms"
+        "expected_keywords": [
+            "cannot",
+            "tak boleh",
+            "money",
+            "duit",
+            "tiada",
+            "no money",
+            "problem",
+            "masalah",
+            "ok",
+            "steady",
+            "no problem"
+        ],
+        "negative_keywords": [
+            "indonesia",
+            "rupiah"
+        ],
+        "reference_answer": "Tak boleh la bro, aku tak ada duit sekarang. Nanti la kita jumpa."
     },
     {
         "id": 2,
+        "category": "Shortforms",
         "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
-        "category": "Shortforms"
+        "expected_keywords": [
+            "how",
+            "macam mana",
+            "tried",
+            "cuba",
+            "tak jadi",
+            "not working",
+            "fail",
+            "help",
+            "bantu",
+            "masalah",
+            "explain"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Macam mana nak buat ni? Aku dah cuba banyak kali tapi tak jadi."
     },
     {
         "id": 3,
+        "category": "Sentiment",
         "input": "best gila siot benda ni!",
-        "category": "Sentiment"
+        "expected_keywords": [
+            "awesome",
+            "great",
+            "bagus",
+            "best",
+            "padu",
+            "mantap",
+            "excited",
+            "happy",
+            "suka"
+        ],
+        "negative_keywords": [
+            "crazy",
+            "insane",
+            "bad"
+        ],
+        "reference_answer": "Benda ni memang best gila!"
     },
     {
         "id": 4,
+        "category": "Cultural",
         "input": "lepak mamak jom, aku belanja teh tarik",
-        "category": "Cultural"
+        "expected_keywords": [
+            "mamak",
+            "teh tarik",
+            "on",
+            "jom",
+            "join",
+            "treat",
+            "belanja",
+            "PMX",
+            "Johor"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Jom lepak mamak, aku belanja teh tarik."
     },
     {
         "id": 5,
+        "category": "Manglish",
         "input": "eh bro, that meeting how ah? client happy tak?",
-        "category": "Manglish"
+        "expected_keywords": [
+            "meeting",
+            "happy",
+            "ok",
+            "good",
+            "satisfied",
+            "puas hati"
+        ],
+        "negative_keywords": [
+            "what is meeting",
+            "translating"
+        ],
+        "reference_answer": "Eh bro, macam mana meeting tadi? Client puas hati tak?"
     },
     {
         "id": 6,
+        "category": "Sentiment",
         "input": "geram betul la dengan service ni, lambat macam siput",
-        "category": "Sentiment"
+        "expected_keywords": [
+            "angry",
+            "geram",
+            "marah",
+            "slow",
+            "lambat",
+            "frust",
+            "sabar",
+            "calm",
+            "sorry",
+            "bantu"
+        ],
+        "negative_keywords": [
+            "snail",
+            "siput sedut"
+        ],
+        "reference_answer": "Geram betul dengan servis ni, lambat macam siput."
     },
     {
         "id": 7,
+        "category": "Cultural",
         "input": "jangan kacau aku, mengantuk gila lepas sahur",
-        "category": "Cultural"
+        "expected_keywords": [
+            "sleepy",
+            "mengantuk",
+            "sahur",
+            "puasa",
+            "sleep",
+            "tidur",
+            "rehat",
+            "rest"
+        ],
+        "negative_keywords": [
+            "breakfast"
+        ],
+        "reference_answer": "Jangan kacau aku, mengantuk sangat lepas sahur."
     },
     {
         "id": 8,
+        "category": "Dialect: Kelantan",
         "input": "demo tokene make nasi kerabu lagi ko?",
-        "category": "Dialect: Kelantan"
+        "expected_keywords": [
+            "makan",
+            "eat",
+            "nasi kerabu",
+            "you",
+            "awak",
+            "kau",
+            "sedap",
+            "make"
+        ],
+        "negative_keywords": [
+            "demo version",
+            "demonstration"
+        ],
+        "reference_answer": "Demo tak makan nasi kerabu lagi ke?"
     },
     {
         "id": 9,
+        "category": "Dialect: Kelantan",
         "input": "bakpo mung dop mari semalam?",
-        "category": "Dialect: Kelantan"
+        "expected_keywords": [
+            "kenapa",
+            "why",
+            "datang",
+            "come",
+            "yesterday",
+            "semalam",
+            "tak",
+            "sorry",
+            "maaf",
+            "busy",
+            "hal"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kenapa mu tak datang semalam?"
     },
     {
         "id": 10,
+        "category": "Dialect: Penang",
         "input": "hang nak pi mana tu? nampak segak semacam",
-        "category": "Dialect: Penang"
+        "expected_keywords": [
+            "pergi",
+            "go",
+            "handsome",
+            "kacak",
+            "segak",
+            "lawa",
+            "smart",
+            "thank",
+            "terima kasih",
+            "mana"
+        ],
+        "negative_keywords": [
+            "hang computer",
+            "hanging"
+        ],
+        "reference_answer": "Hang nak pergi mana tu? Nampak segak semacam."
     },
     {
         "id": 11,
+        "category": "Dialect: Penang",
         "input": "awat hang tak habaq awal-awal?",
-        "category": "Dialect: Penang"
+        "expected_keywords": [
+            "kenapa",
+            "why",
+            "cakap",
+            "tell",
+            "bagitahu",
+            "early",
+            "awal",
+            "sorry",
+            "maaf",
+            "lupa"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kenapa hang tak bagitahu awal-awal?"
     },
     {
         "id": 12,
+        "category": "Dialect: Negeri Sembilan",
         "input": "kono la makan masak lemak cili api, baru sodap",
-        "category": "Dialect: Negeri Sembilan"
+        "expected_keywords": [
+            "makan",
+            "eat",
+            "sedap",
+            "delicious",
+            "masak lemak",
+            "betul",
+            "setuju",
+            "agree"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kena la makan masak lemak cili api, baru sedap."
     },
     {
         "id": 13,
+        "category": "Dialect: Negeri Sembilan",
         "input": "ekau jangan bising, den nak tido ni",
-        "category": "Dialect: Negeri Sembilan"
+        "expected_keywords": [
+            "diam",
+            "quiet",
+            "tidur",
+            "sleep",
+            "bising",
+            "noisy",
+            "sorry",
+            "ya",
+            "makan"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kau jangan bising, aku nak tidur ni."
     },
     {
         "id": 14,
+        "category": "Dialect: Sarawak",
         "input": "kitak urang dah makan sik?",
-        "category": "Dialect: Sarawak"
+        "expected_keywords": [
+            "makan",
+            "eat",
+            "dah",
+            "already",
+            "belum",
+            "not yet",
+            "kenyang"
+        ],
+        "negative_keywords": [
+            "sick"
+        ],
+        "reference_answer": "Kitak orang dah makan belum?"
     },
     {
         "id": 15,
+        "category": "Dialect: Sarawak",
         "input": "kamek maok pegi pasar kejap",
-        "category": "Dialect: Sarawak"
+        "expected_keywords": [
+            "pergi",
+            "go",
+            "pasar",
+            "market",
+            "nak",
+            "want",
+            "ok",
+            "jalan",
+            "hati-hati"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kamek nak pergi pasar kejap."
     },
     {
         "id": 16,
+        "category": "Dialect: Sabah",
         "input": "boleh bah, kalau kau mau",
-        "category": "Dialect: Sabah"
+        "expected_keywords": [
+            "boleh",
+            "can",
+            "ok",
+            "mah",
+            "on",
+            "thank",
+            "terima kasih"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Boleh bah, kalau kau mahu."
     },
     {
         "id": 17,
+        "category": "Dialect: Sabah",
         "input": "ndak payah lah kau susah-susah",
-        "category": "Dialect: Sabah"
+        "expected_keywords": [
+            "tak payah",
+            "no need",
+            "susah",
+            "trouble",
+            "don't worry",
+            "ok",
+            "segan"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tak payah la kau susah-susah."
     },
     {
         "id": 18,
+        "category": "Mixed",
         "input": "can you explain how to renew my lesen memandu?",
-        "category": "Mixed"
+        "expected_keywords": [
+            "renew",
+            "license",
+            "lesen",
+            "jpj",
+            "utc",
+            "post office",
+            "pejabat pos",
+            "myeg"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Anda boleh memperbaharui lesen memandu di JPJ, UTC, Pejabat Pos, atau melalui MyEG."
     },
     {
         "id": 19,
+        "category": "Instruction",
         "input": "tolong buat email formal untuk apply cuti sakit esok",
-        "category": "Instruction"
+        "expected_keywords": [
+            "subject",
+            "perkara",
+            "sakit",
+            "sick",
+            "leave",
+            "mc",
+            "medical certificate",
+            "dear",
+            "kepada"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Subjek: Permohonan Cuti Sakit\n\nKepada HR,\n\nSaya ingin memohon cuti sakit untuk esok kerana tidak sihat. Sijil sakit akan disertakan."
     },
     {
         "id": 20,
+        "category": "Instruction",
         "input": "bg resepi nasi lemak yang paling simple",
-        "category": "Instruction"
+        "expected_keywords": [
+            "nasi",
+            "santan",
+            "ikan bilis",
+            "sambal",
+            "timun",
+            "telur"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Resepi nasi lemak simple: Masak nasi dengan santan, halia, dan daun pandan. Hidangkan dengan sambal ikan bilis, telur rebus, timun, dan kacang."
     },
     {
         "id": 21,
+        "category": "Slang",
         "input": "ape cer bro?",
-        "category": "Slang"
+        "expected_keywords": [
+            "khabar",
+            "news",
+            "ok",
+            "baik",
+            "cerita",
+            "what's up",
+            "macam biasa"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Apa khabar bro? Ada cerita apa?"
     },
     {
         "id": 22,
+        "category": "Slang",
         "input": "pishang mat, keje byk gila",
-        "category": "Slang"
+        "expected_keywords": [
+            "bosan",
+            "bored",
+            "banyak kerja",
+            "busy",
+            "stress",
+            "sabar",
+            "rehat"
+        ],
+        "negative_keywords": [
+            "banana"
+        ],
+        "reference_answer": "Bosan betul mat, kerja banyak gila."
     },
     {
         "id": 23,
+        "category": "Slang",
         "input": "koyak la mental aku hari ni",
-        "category": "Slang"
+        "expected_keywords": [
+            "stress",
+            "penat",
+            "mental",
+            "breakdown",
+            "sabar",
+            "rilek",
+            "chill"
+        ],
+        "negative_keywords": [
+            "rubbish",
+            "paper"
+        ],
+        "reference_answer": "Stress betul mental aku hari ini."
     },
     {
         "id": 24,
+        "category": "Slang",
         "input": "dia tu acah je lebih",
-        "category": "Slang"
+        "expected_keywords": [
+            "pretend",
+            "pura-pura",
+            "show off",
+            "berlagak",
+            "biar",
+            "ignore"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Dia tu berlagak je lebih."
     },
     {
         "id": 25,
+        "category": "Slang",
         "input": "jangan wat hal la wei",
-        "category": "Slang"
+        "expected_keywords": [
+            "masalah",
+            "problem",
+            "don't",
+            "jangan",
+            "gaduh",
+            "sabar",
+            "ok"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Jangan buat hal lah wei."
     },
     {
         "id": 26,
+        "category": "Slang",
         "input": "fuh, padu teruk performance dia tadi",
-        "category": "Slang"
+        "expected_keywords": [
+            "hebat",
+            "great",
+            "awesome",
+            "padu",
+            "power",
+            "betul",
+            "setuju"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Persembahan dia tadi memang padu teruk."
     },
     {
         "id": 27,
+        "category": "Slang",
         "input": "aku on je kalau korang on",
-        "category": "Slang"
+        "expected_keywords": [
+            "join",
+            "ok",
+            "ikut",
+            "setuju",
+            "agree",
+            "jom",
+            "set"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Aku setuju je kalau korang setuju."
     },
     {
         "id": 28,
+        "category": "Slang",
         "input": "takde hal lah, benda kecik je tu",
-        "category": "Slang"
+        "expected_keywords": [
+            "masalah",
+            "problem",
+            "small",
+            "ok",
+            "fine",
+            "no worries",
+            "thanks"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tak ada masalah lah, tu benda kecil je."
     },
     {
         "id": 29,
+        "category": "Tech",
         "input": "camne nak install python kat mac?",
-        "category": "Tech"
+        "expected_keywords": [
+            "brew",
+            "installer",
+            "python.org",
+            "terminal",
+            "command",
+            "download"
+        ],
+        "negative_keywords": [
+            "snake"
+        ],
+        "reference_answer": "Untuk install Python di Mac, buka Terminal dan taip 'brew install python'. Pastikan Homebrew dah install."
     },
     {
         "id": 30,
+        "category": "Tourism",
         "input": "what is the best time to visit Langkawi?",
-        "category": "Tourism"
+        "expected_keywords": [
+            "dry season",
+            "november",
+            "april",
+            "cuaca",
+            "weather",
+            "hujan",
+            "best"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "The best time to visit Langkawi is during the dry season, from November to April."
     },
     {
         "id": 31,
+        "category": "Civics",
         "input": "explain Rukun Negara to me",
-        "category": "Civics"
+        "expected_keywords": [
+            "faith",
+            "god",
+            "king",
+            "country",
+            "constitution",
+            "law",
+            "morality",
+            "kepercayaan",
+            "kesetiaan"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Rukun Negara ialah ideologi kebangsaan Malaysia yang mempunyai 5 prinsip: Kepercayaan kepada Tuhan, Kesetiaan kepada Raja dan Negara, Keluhuran Perlembagaan, Kedaulatan Undang-undang, Kesopanan dan Kesusilaan."
     },
     {
         "id": 32,
+        "category": "Civics",
         "input": "sape PM malaysia sekarang?",
-        "category": "Civics"
+        "expected_keywords": [
+            "anwar",
+            "ibrahim",
+            "dsai",
+            "pmx",
+            "perdana menteri"
+        ],
+        "negative_keywords": [
+            "najib",
+            "mahathir",
+            "muhyiddin",
+            "ismail"
+        ],
+        "reference_answer": "Perdana Menteri Malaysia sekarang ialah Datuk Seri Anwar Ibrahim."
     },
     {
         "id": 33,
+        "category": "Cultural",
         "input": "bila raya aidilfitri tahun ni?",
-        "category": "Cultural"
+        "expected_keywords": [
+            "syawal",
+            "date",
+            "tarikh",
+            "bulan",
+            "ramadan",
+            "april",
+            "check"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tarikh Hari Raya Aidilfitri berubah setiap tahun mengikut kalendar Islam (Syawal). Sila semak tarikh rasmi."
     },
     {
         "id": 34,
+        "category": "Tourism",
         "input": "suggest tempat dating best kat KL",
-        "category": "Tourism"
+        "expected_keywords": [
+            "klcc",
+            "pavilion",
+            "taman",
+            "bukit bintang",
+            "aquaria",
+            "cafe"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tempat dating best kat KL: KLCC Park, Pavilion, Aquaria KLCC, atau cafe di Bukit Bintang."
     },
     {
         "id": 35,
+        "category": "Local knowledge",
         "input": "traffic jam gila kat federal highway skrg",
-        "category": "Local knowledge"
+        "expected_keywords": [
+            "jam",
+            "sabar",
+            "waze",
+            "map",
+            "trafik",
+            "elak",
+            "sesak"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Jalan sesak teruk di Federal Highway sekarang. Guna Waze untuk cari jalan alternatif."
     },
     {
         "id": 36,
+        "category": "Local knowledge",
         "input": "mana nak cari durian musang king murah?",
-        "category": "Local knowledge"
+        "expected_keywords": [
+            "ss2",
+            "pj",
+            "raub",
+            "gerai",
+            "stall",
+            "musang king",
+            "durian"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Musang King murah boleh cari di kawasan SS2 Petaling Jaya atau terus ke Raub, Pahang."
     },
     {
         "id": 37,
+        "category": "General",
         "input": "weather esok panas ke hujan?",
-        "category": "General"
+        "expected_keywords": [
+            "ramalan",
+            "forecast",
+            "metmalaysia",
+            "check",
+            "app",
+            "hujan",
+            "panas"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Sila semak ramalan cuaca terkini di laman web MetMalaysia atau aplikasi cuaca."
     },
     {
         "id": 38,
+        "category": "Translation",
         "input": "tolong translate 'I love you' ke bahasa kelantan",
-        "category": "Translation"
+        "expected_keywords": [
+            "sayang",
+            "kasih",
+            "kawe",
+            "demo",
+            "suka",
+            "cinto"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Dalam bahasa Kelantan, 'I love you' boleh disebut 'Kawe sayang demo'."
     },
     {
         "id": 39,
+        "category": "Vocabulary",
         "input": "apa maksud 'gostan'?",
-        "category": "Vocabulary"
+        "expected_keywords": [
+            "reverse",
+            "undur",
+            "belakamg",
+            "go astern",
+            "kereta"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Gostan bermaksud 'undur' atau 'reverse', selalunya digunakan untuk kenderaan."
     },
     {
         "id": 40,
+        "category": "Vocabulary",
         "input": "maksud 'atuh' dalam bahasa sarawak apa?",
-        "category": "Vocabulary"
+        "expected_keywords": [
+            "aduh",
+            "pain",
+            "sakit",
+            "expression"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Dalam bahasa Sarawak, 'atuh' atau 'aduh' ialah ungkapan sakit."
     },
     {
         "id": 41,
+        "category": "General",
         "input": "canoneer tu apa? bunyi macam meriam je",
-        "category": "General"
+        "expected_keywords": [
+            "minion",
+            "league",
+            "lol",
+            "game",
+            "meriam",
+            "cannon",
+            "mobile legends"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Canoneer ialah minion yang membawa meriam dalam permainan Mobile Legends atau League of Legends."
     },
     {
         "id": 42,
+        "category": "Utility",
         "input": "tolong kira 50 USD to MYR",
-        "category": "Utility"
+        "expected_keywords": [
+            "ringgit",
+            "rate",
+            "exchange",
+            "nilai",
+            "convert"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Untuk kira 50 USD ke MYR, darabkan dengan kadar tukaran semasa (contohnya 4.5). Jadi sekitar RM225."
     },
     {
         "id": 43,
+        "category": "Creative",
         "input": "tulis pantun 4 kerat pasal cinta",
-        "category": "Creative"
+        "expected_keywords": [
+            "kita",
+            "cinta",
+            "sayang",
+            "kasih",
+            "buah",
+            "manis"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Buah cempedak di luar pagar,\nAmbil galah tolong jolokkan;\nSaya budak baru belajar,\nKalau salah tolong tunjukkan. (Contoh pantun cinta: Dua tiga kucing berlari, Mana nak sama si kucing belang...)"
     },
     {
         "id": 44,
+        "category": "Creative",
         "input": "buat surat resignation notice 24 jam",
-        "category": "Creative"
+        "expected_keywords": [
+            "resign",
+            "berhenti",
+            "notis",
+            "sebab",
+            "tarikh",
+            "terima kasih"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Saya ingin memaklumkan perletakan jawatan saya berkuatkuasa serta-merta (notis 24 jam). Terima kasih atas peluang yang diberikan."
     },
     {
         "id": 45,
+        "category": "Recommendation",
         "input": "I want to eat something spicy, suggest one",
-        "category": "Recommendation"
+        "expected_keywords": [
+            "nasi lemak",
+            "laksa",
+            "tomyam",
+            "sambal",
+            "pedas",
+            "curry"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau nak pedas, saya cadangkan makan Nasi Lemak Sambal Sotong, Tomyam, atau Laksa."
     },
     {
         "id": 46,
+        "category": "Local knowledge",
         "input": "mana klinik 24 jam paling dekat?",
-        "category": "Local knowledge"
+        "expected_keywords": [
+            "klinik",
+            "hospital",
+            "google maps",
+            "waze",
+            "check",
+            "nearby"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Sila cari klinik 24 jam terdekat menggunakan Google Maps atau Waze."
     },
     {
         "id": 47,
+        "category": "Local knowledge",
         "input": "kereta rosak tepi jalan, nak call sapa?",
-        "category": "Local knowledge"
+        "expected_keywords": [
+            "insurans",
+            "towing",
+            "bengkel",
+            "plus",
+            "polis",
+            "bantuan"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau kereta rosak tepi jalan, call nombor bantuan insurans anda untuk towing percuma, atau PLUS ronda jika di lebuhraya."
     },
     {
         "id": 48,
+        "category": "Instruction",
         "input": "macam mana nak claim insurans kemalangan?",
-        "category": "Instruction"
+        "expected_keywords": [
+            "report",
+            "polis",
+            "gambar",
+            "dokumen",
+            "claim form",
+            "agent"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Untuk claim insurans kemalangan: Buat report polis dalam 24 jam, ambil gambar kerosakan, dan hubungi ejen insurans anda."
     },
     {
         "id": 49,
+        "category": "Instruction",
         "input": "resepi ayam masak merah kenduri",
-        "category": "Instruction"
+        "expected_keywords": [
+            "ayam",
+            "cili",
+            "bawang",
+            "sos",
+            "goreng",
+            "tumis"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Resepi Ayam Masak Merah: Goreng ayam kunyit separuh masak. Tumis bawang, cili kisar, sos cili, sos tomato. Masukkan ayam dan gaul rata."
     },
     {
         "id": 50,
+        "category": "Sentiment",
         "input": "bebal betul la driver tadi, signal tak bagi",
-        "category": "Sentiment"
+        "expected_keywords": [
+            "marah",
+            "sabar",
+            "dangerous",
+            "bahaya",
+            "stupid",
+            "report",
+            "hati-hati"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Sabar, memang bahaya kalau driver tak bagi signal. Hati-hati memandu."
     },
     {
         "id": 51,
+        "category": "Education",
         "input": "tolong check grammar ni: 'I go to school yesterday'",
-        "category": "Education"
+        "expected_keywords": [
+            "went",
+            "past tense",
+            "salah",
+            "wrong",
+            "betul"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Grammar yang betul ialah: 'I went to school yesterday' (sebab past tense 'yesterday')."
     },
     {
         "id": 52,
+        "category": "Education",
         "input": "apa beza spm dengan stpm?",
-        "category": "Education"
+        "expected_keywords": [
+            "level",
+            "tingkatan",
+            "form 6",
+            "matrikulasi",
+            "universiti",
+            "pre-u"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "SPM ialah peperiksaan Tingkatan 5. STPM ialah Tingkatan 6 (Pra-Universiti) yang setaraf dengan A-Level/Matrikulasi."
     },
     {
         "id": 53,
+        "category": "Education",
         "input": "uitm stand for what?",
-        "category": "Education"
+        "expected_keywords": [
+            "universiti",
+            "teknologi",
+            "mara"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "UiTM stands for Universiti Teknologi MARA."
     },
     {
         "id": 54,
+        "category": "Education",
         "input": "universiti malaya world ranking berapa?",
-        "category": "Education"
+        "expected_keywords": [
+            "top",
+            "tahniah",
+            "rank",
+            "qs",
+            "65",
+            "100"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Syarat kemasukan Matrikulasi: Warganegara Malaysia, lulus SPM dengan kredit dalam BM, BI, Matematik, dan subjek sains berkaitan."
     },
     {
         "id": 55,
+        "category": "Education",
         "input": "pdpr tu apa?",
-        "category": "Education"
+        "expected_keywords": [
+            "pengajaran",
+            "pembelajaran",
+            "rumah",
+            "online",
+            "class",
+            "home"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Taman Negara yang popular di Malaysia: Taman Negara Pahang, Taman Negara Bako (Sarawak), Taman Kinabalu (Sabah)."
     },
     {
         "id": 56,
+        "category": "Education",
         "input": "nak apply ptptn macam mana?",
-        "category": "Education"
+        "expected_keywords": [
+            "sspn",
+            "online",
+            "website",
+            "dokumen",
+            "pinjaman",
+            "loan"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "PDPR ialah Pengajaran dan Pembelajaran di Rumah (Home-based Learning)."
     },
     {
         "id": 57,
+        "category": "Education",
         "input": "syarat kemasukan matrikulasi",
-        "category": "Education"
+        "expected_keywords": [
+            "spm",
+            "kredit",
+            "sains",
+            "matematik",
+            "bumiputera",
+            "pointer"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Lagu 'Lemak Manis' dinyanyikan oleh Roslan Madun."
     },
     {
         "id": 58,
+        "category": "Finance",
         "input": "asb dividen tahun ni berapa?",
-        "category": "Finance"
+        "expected_keywords": [
+            "sen",
+            "peratus",
+            "bonus",
+            "umum",
+            "5."
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Undi 18 bermaksud warganegara berumur 18 tahun ke atas layak mengundi secara automatik."
     },
     {
         "id": 59,
+        "category": "Finance",
         "input": "cara buka akaun tabung haji online",
-        "category": "Finance"
+        "expected_keywords": [
+            "thijari",
+            "app",
+            "kaunter",
+            "bank",
+            "islam",
+            "daftar"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Untuk mendaftar PADU (Pangkalan Data Utama), layari laman web rasmi PADU dan isi maklumat profil anda."
     },
     {
         "id": 60,
+        "category": "Finance",
         "input": "kwsp acc 3 boleh keluar duit tak?",
-        "category": "Finance"
+        "expected_keywords": [
+            "akaun",
+            "fleksibel",
+            "bila-bila",
+            "masa",
+            "had",
+            "boleh",
+            "withdrawal"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Harga minyak RON95 terkini masih disubsidi pada RM2.05 seliter (sehingga pengumuman subsidi bersasar)."
     },
     {
         "id": 61,
+        "category": "Finance",
         "input": "harga minyak ron95 terkini",
-        "category": "Finance"
+        "expected_keywords": [
+            "2.05",
+            "liter",
+            "mingguan",
+            "subsidi",
+            "harga"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Touch 'n Go eWallet selamat digunakan kerana dikawal selia oleh Bank Negara Malaysia. Jangan kongsi OTP."
     },
     {
         "id": 62,
+        "category": "Finance",
         "input": "best credit card for cashback malaysia",
-        "category": "Finance"
+        "expected_keywords": [
+            "maybank",
+            "public bank",
+            "uob",
+            "cimb",
+            "petrol",
+            "grocery",
+            "apply"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau scammer call cakap LHDN, letak telefon terus. Jangan layan. LHDN tak akan call guna nombor handphone peribadi."
     },
     {
         "id": 63,
+        "category": "Finance",
         "input": "touch n go ewallet safe or not?",
-        "category": "Finance"
+        "expected_keywords": [
+            "safe",
+            "pidm",
+            "bank negara",
+            "secure",
+            "selamat",
+            "yes"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Saman PDRM boleh dibayar online melalui MyBayar Saman atau mesin ATM."
     },
     {
         "id": 64,
+        "category": "Finance",
         "input": "scammer call cakap lhdn, apa nak buat?",
-        "category": "Finance"
+        "expected_keywords": [
+            "letak",
+            "hang up",
+            "report",
+            "polis",
+            "jangan layan",
+            "block",
+            "nsrc",
+            "997",
+            "ccid",
+            "lhdn",
+            "police"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau scammer call cakap LHDN, letak telefon terus. Jangan layan. LHDN tak akan call guna nombor handphone peribadi."
     },
     {
         "id": 65,
+        "category": "Civics",
         "input": "saman pdrm boleh bayar online ke?",
-        "category": "Civics"
+        "expected_keywords": [
+            "mybayar",
+            "eght",
+            "online",
+            "boleh",
+            "jual",
+            "app"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kaunter JPJ biasanya buka 8 pagi hingga 5 petang (Isnin-Jumaat). UTC buka sampai malam dan hujung minggu."
     },
     {
         "id": 66,
+        "category": "Civics",
         "input": "jpj renew license operating hours",
-        "category": "Civics"
+        "expected_keywords": [
+            "pagi",
+            "petang",
+            "utc",
+            "ahad",
+            "sabtu",
+            "8",
+            "5"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Renew passport boleh walk-in untuk warga emas, OKU, dan kanak-kanak. Orang dewasa digalakkan buat online appointment."
     },
     {
         "id": 67,
+        "category": "Civics",
         "input": "renew passport walk in boleh tak?",
-        "category": "Civics"
+        "expected_keywords": [
+            "online",
+            "appointment",
+            "temujanji",
+            "tak boleh",
+            "walk-in",
+            "queue"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Cuti umum Malaysia 2024 termasuk Hari Raya, Tahun Baru Cina, Deepavali, Krismas, Hari Kebangsaan, dan Hari Malaysia."
     },
     {
         "id": 68,
+        "category": "Civics",
         "input": "undi 18 tu apa?",
-        "category": "Civics"
+        "expected_keywords": [
+            "umur",
+            "18",
+            "mengundi",
+            "pilihan raya",
+            "daftar",
+            "vote"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Baju Melayu Cekak Musang ada butang dan kolar tinggi. Teluk Belanga tiada kolar (leher bulat) dan satu butang."
     },
     {
         "id": 69,
+        "category": "Civics",
         "input": "cuti umum malaysia 2024",
-        "category": "Civics"
+        "expected_keywords": [
+            "kalendar",
+            "merdeka",
+            "raya",
+            "thaipusam",
+            "labor day",
+            "public holiday"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Dalam adat Melayu, merisik tidak wajib tetapi digalakkan untuk kenal latar belakang keluarga."
     },
     {
         "id": 70,
+        "category": "Cultural",
         "input": "baju melayu cekak musang vs teluk belanga",
-        "category": "Cultural"
+        "expected_keywords": [
+            "kolar",
+            "butang",
+            "johor",
+            "leher",
+            "samping",
+            "beza"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Hantaran tunang biasanya nombor ganjil, contohnya 5 dulang berbalas 7."
     },
     {
         "id": 71,
+        "category": "Cultural",
         "input": "adat merisik tu wajib ke?",
-        "category": "Cultural"
+        "expected_keywords": [
+            "tak wajib",
+            "adat",
+            "kenal",
+            "bukan syarak",
+            "islam",
+            "optional"
+        ],
+        "negative_keywords": [
+            "compulsory",
+            "required"
+        ],
+        "reference_answer": "Pantang larang orang mengandung dulu-dulu: Jangan paku dinding, jangan duduk di pintu, jangan keluar waktu senja."
     },
     {
         "id": 72,
+        "category": "Cultural",
         "input": "hantaran tunang biasanya berapa dulang?",
-        "category": "Cultural"
+        "expected_keywords": [
+            "ganjil",
+            "5",
+            "7",
+            "balas",
+            "adat",
+            "dulang"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Lagu raya legend: 'Suasana Hari Raya' (Anuar & Ellina), 'Balik Kampung' (Sudirman), 'Dendang Perantau' (P. Ramlee)."
     },
     {
         "id": 73,
+        "category": "Cultural",
         "input": "pantang larang orang mengandung masa dulu",
-        "category": "Cultural"
+        "expected_keywords": [
+            "jangan",
+            "paku",
+            "makan",
+            "nenek moyang",
+            "logik",
+            "percaya"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Filem P. Ramlee paling lawak: 'Madu Tiga', 'Seniman Bujang Lapok', 'Pendekar Bujang Lapok'."
     },
     {
         "id": 74,
+        "category": "Cultural",
         "input": "lagu raya paling legend",
-        "category": "Cultural"
+        "expected_keywords": [
+            "sudirman",
+            "saloma",
+            "p ramlee",
+            "dendang perantau",
+            "balik kampung",
+            "inang"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Pemenang AJL (Anugerah Juara Lagu) tahun lepas ialah Aina Abdul (Terus Hidup) - *contoh*."
     },
     {
         "id": 75,
+        "category": "Entertainment",
         "input": "filem p ramlee paling lawak",
-        "category": "Entertainment"
+        "expected_keywords": [
+            "bujang lapok",
+            "do re mi",
+            "madu tiga",
+            "nujum pak belalang",
+            "seniman"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Panggung wayang terdekat boleh dicari guna Google Maps (GSC/TGV)."
     },
     {
         "id": 76,
+        "category": "Entertainment",
         "input": "siapa menang ajl tahun lepas?",
-        "category": "Entertainment"
+        "expected_keywords": [
+            "aina abdul",
+            "amir jahari",
+            "juara",
+            "lagu",
+            "hasrat"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Harga tiket konsert Coldplay di Malaysia bermula dari RM228 hingga RM3000+."
     },
     {
         "id": 77,
+        "category": "Entertainment",
         "input": "panggung wayang terdekat",
-        "category": "Entertainment"
+        "expected_keywords": [
+            "gsc",
+            "tgv",
+            "mall",
+            "wayang",
+            "check",
+            "cinema"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Keputusan bola sepak Malaysia vs Korea: Malaysia seri 3-3 (Piala Asia 2023)."
     },
     {
         "id": 78,
+        "category": "Entertainment",
         "input": "concert coldplay malaysia ticket price",
-        "category": "Entertainment"
+        "expected_keywords": [
+            "mahal",
+            "sold out",
+            "stadium",
+            "bukit jalil",
+            "scalper",
+            "harga"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Dato' Lee Chong Wei bersara pada tahun 2019."
     },
     {
         "id": 79,
+        "category": "Sports",
         "input": "malaysia vs korea bola sepak result",
-        "category": "Sports"
+        "expected_keywords": [
+            "3-3",
+            "seri",
+            "draw",
+            "piala asia",
+            "harimau malaya",
+            "goal"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Badminton court near me: Search Google Maps untuk gelanggang badminton terdekat."
     },
     {
         "id": 80,
+        "category": "Sports",
         "input": "dato lee chong wei retired bila?",
-        "category": "Sports"
+        "expected_keywords": [
+            "2019",
+            "kanser",
+            "bersara",
+            "legend",
+            "badminton"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "JDT (Johor Darul Ta'zim) sering menang Liga Super Malaysia."
     },
     {
         "id": 81,
+        "category": "Sports",
         "input": "badminton court near me",
-        "category": "Sports"
+        "expected_keywords": [
+            "dewan",
+            "arena",
+            "booking",
+            "check",
+            "sport",
+            "gelanggang"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Sukan SEA seterusnya akan diadakan di Thailand (2025) dan Malaysia (2027)."
     },
     {
         "id": 82,
+        "category": "Sports",
         "input": "jdt menang lagi ke?",
-        "category": "Sports"
+        "expected_keywords": [
+            "menang",
+            "juara",
+            "liga super",
+            "piala",
+            "dominate",
+            "yes"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Hiking trail best di Selangor: Bukit Broga, Bukit Gasing, Bukit Saga, Air Terjun Chiling."
     },
     {
         "id": 83,
+        "category": "Sports",
         "input": "sukan sea next kat mana?",
-        "category": "Sports"
+        "expected_keywords": [
+            "thailand",
+            "bangkok",
+            "2025"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tempat camping tepi sungai: Janda Baik, Hulu Langat, Gopeng."
     },
     {
         "id": 84,
+        "category": "Lifestyle",
         "input": "hiking trail best kat selangor/kl",
-        "category": "Lifestyle"
+        "expected_keywords": [
+            "bukit gasing",
+            "broga",
+            "saga",
+            "kiara",
+            "apeh",
+            "gunung"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Harga gym membership Fitness First sekitar RM150-RM250 sebulan bergantung pakej."
     },
     {
         "id": 85,
+        "category": "Lifestyle",
         "input": "tempat camping tepi sungai best",
-        "category": "Lifestyle"
+        "expected_keywords": [
+            "janda baik",
+            "hulu langat",
+            "gopeng",
+            "campsite",
+            "nature",
+            "sungai"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Menu Diet Atkins Malaysia: Telur rebus, ayam goreng kunyit (tanpa nasi), sup sayur, ikan bakar."
     },
     {
         "id": 86,
+        "category": "Lifestyle",
         "input": "gym membership price fitness first",
-        "category": "Lifestyle"
+        "expected_keywords": [
+            "bulan",
+            "mahal",
+            "contract",
+            "package",
+            "check",
+            "harga"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Untuk report jalan berlubang, guna aplikasi MyJalan KKR."
     },
     {
         "id": 87,
+        "category": "Lifestyle",
         "input": "diet atkins menu malaysia",
-        "category": "Lifestyle"
+        "expected_keywords": [
+            "kurangkan",
+            "nasi",
+            "karbohidrat",
+            "protein",
+            "ayam",
+            "ikan",
+            "telur"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau jiran bising malam-malam, boleh report polis atas gangguan ketenteraman awam (nuisance)."
     },
     {
         "id": 88,
+        "category": "Local issue",
         "input": "cara report jalan berlubang",
-        "category": "Local issue"
+        "expected_keywords": [
+            "jkr",
+            "pbt",
+            "majlis",
+            "app",
+            "aduan",
+            "mysjalan",
+            "myjalan",
+            "sispaa"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Aduan sampah tak kutip boleh dibuat kepada PBT (Majlis Perbandaran) atau KDEB Waste Management (Selangor)."
     },
     {
         "id": 89,
+        "category": "Local issue",
         "input": "jiran bising malam-malam, boleh report polis tak?",
-        "category": "Local issue"
+        "expected_keywords": [
+            "boleh",
+            "ganggu",
+            "ketenteraman",
+            "polis",
+            "majlis",
+            "report"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Aduan anjing liar boleh dibuat kepada Jabatan Kesihatan/Vektor PBT kawasan anda."
     },
     {
         "id": 90,
+        "category": "Local issue",
         "input": "sampah tak kutip seminggu, nak adu kat mana?",
-        "category": "Local issue"
+        "expected_keywords": [
+            "pbt",
+            "kde b",
+            "swm",
+            "alam flora",
+            "majlis",
+            "aduan",
+            "report",
+            "kdeb",
+            "kutip",
+            "waste",
+            "penguasa"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Talian hotline Air Selangor (Syabas) ialah 15300."
     },
     {
         "id": 91,
+        "category": "Local issue",
         "input": "anjing liar banyak kat taman ni, bahaya",
-        "category": "Local issue"
+        "expected_keywords": [
+            "report",
+            "majlis",
+            "dbkl",
+            "mbpj",
+            "tangkap",
+            "aduan",
+            "pbt",
+            "jkr"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau blackout rumah sorang je, check DB box (tendang fius). Kalau satu taman, call TNB Careline 15454."
     },
     {
         "id": 92,
+        "category": "Local issue",
         "input": "paip air pecah, syabas contact number",
-        "category": "Local issue"
+        "expected_keywords": [
+            "air selangor",
+            "15300",
+            "app",
+            "aduan",
+            "call",
+            "syabas",
+            "report",
+            "pbt",
+            "jkr"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kalau internet Unifi slow, restart router dulu. Kalau tak okey, report guna aplikasi myUnifi."
     },
     {
         "id": 93,
+        "category": "Local issue",
         "input": "blackout rumah aku sorang je, kenapa?",
-        "category": "Local issue"
+        "expected_keywords": [
+            "tnb",
+            "db",
+            "box",
+            "trip",
+            "bill",
+            "fuse"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Masalah line Celcom tiada signal, cuba on/off flight mode atau report ke Celcom."
     },
     {
         "id": 94,
+        "category": "Tech issue",
         "input": "internet unifi slow gila hari ni",
-        "category": "Tech issue"
+        "expected_keywords": [
+            "restart",
+            "router",
+            "tm",
+            "report",
+            "kabel",
+            "sabar"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "MyTV tak dapat siaran: Check antenna, scan semula channel, atau pastikan decoder on."
     },
     {
         "id": 95,
+        "category": "Tech issue",
         "input": "celcom line takde signal",
-        "category": "Tech issue"
+        "expected_keywords": [
+            "coverage",
+            "kawasan",
+            "maintenance",
+            "tukar",
+            "check"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Shopee delivery lambat: Check tracking number. Kalau peram lama sangat, contact customer service Shopee."
     },
     {
         "id": 96,
+        "category": "Tech issue",
         "input": "mytv tak dapat siaran",
-        "category": "Tech issue"
+        "expected_keywords": [
+            "decoder",
+            "antenna",
+            "scan",
+            "signal",
+            "semula",
+            "setup"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Foodpanda wrong order: Tangkap gambar makanan, report dalam app Foodpanda untuk refund."
     },
     {
         "id": 97,
+        "category": "Service issue",
         "input": "grab driver cancel last minute, geramnya",
-        "category": "Service issue"
+        "expected_keywords": [
+            "report",
+            "customer service",
+            "refund",
+            "driver lain",
+            "sabar",
+            "book"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Kesimpulan essay kemerdekaan: Kemerdekaan bukan sekadar bebas penjajah, tapi membina jati diri bangsa."
     },
     {
         "id": 98,
+        "category": "Service issue",
         "input": "shopee delivery lambat sampai",
-        "category": "Service issue"
+        "expected_keywords": [
+            "tracking",
+            "j&t",
+            "pos laju",
+            "seller",
+            "ship",
+            "wait"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Beza 'affect' dan 'effect': Affect ialah kata kerja (kesan kepda), Effect ialah kata nama (akibat/hasil)."
     },
     {
         "id": 99,
+        "category": "Service issue",
         "input": "foodpanda wrong order refund",
-        "category": "Service issue"
+        "expected_keywords": [
+            "help center",
+            "chat",
+            "refund",
+            "gambar",
+            "bukti",
+            "report"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Resume yang baik perlu ringkas (1-2 muka surat), ada maklumat kontak, pengalaman kerja, dan kemahiran relevan."
     },
     {
         "id": 100,
+        "category": "Education",
         "input": "tolong buat kesimpulan untuk essay ni pasal kemerdekaan",
-        "category": "Education"
+        "expected_keywords": [
+            "perpaduan",
+            "keharmonian",
+            "negara",
+            "bangsa",
+            "patriotik",
+            "merdeka"
+        ],
+        "negative_keywords": [],
+        "reference_answer": "Tips interview kerja: Datang awal, berpakaian kemas, buat research pasal company, dan jawab dengan yakin."
     }
 ]

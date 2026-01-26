@@ -1,0 +1,12 @@
+FROM ./Qwen2.5-7B-Instruct.Q4_K_M.gguf
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .User }}### Instruction:
+{{ .User }}
+
+### Response:
+{{ end }}{{ if .Assistant }}{{ .Assistant }}<|im_end|>
+{{ end }}"""
+PARAMETER stop "### Instruction:"
+PARAMETER stop "### Response:"
+PARAMETER stop "<|im_end|>"

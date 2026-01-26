@@ -1,0 +1,1415 @@
+{
+  "summary": {
+    "timestamp": "20260112_180957",
+    "model": "qwen2.5:7b",
+    "judge_model": "qwen2.5:7b",
+    "total_cases": 100,
+    "passed": 56,
+    "pass_rate": 56.0,
+    "avg_combined_score": 0.596,
+    "avg_llm_judge_score": 8.2,
+    "avg_semantic_score": 0.5
+  },
+  "results": [
+    {
+      "id": 1,
+      "category": "Shortforms",
+      "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
+      "response": "Abang, jangan khawatir kalau tak ada duit sekarang. Kita bisa cari solusi lain seperti belanja yang hemat atau tarik piutang jika perlu. Nanti kalau keadaan lebih baik, kita boleh temui-temui kembali.",
+      "grading": {
+        "keyword_score": 0.091,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate advice and reassurance, but could be slightly more colloquial to match the user's tone.",
+        "combined_score": 0.618,
+        "passed": true
+      }
+    },
+    {
+      "id": 2,
+      "category": "Shortforms",
+      "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
+      "response": "It seems like you're having trouble with something, maybe a task or a project? Could you please tell me more about what you're trying to do so I can assist you better?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good understanding of the user's issue, but the response could be slightly more concise.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 3,
+      "category": "Sentiment",
+      "input": "best gila siot benda ni!",
+      "response": "It seems like you're looking for the \"best\" or most intense version of something, possibly a meme or internet slang term \"gila siot benda\". Could you please provide more context? Are you referring to a specific type of content or challenge online? I'd be happy to help if you can clarify!",
+      "grading": {
+        "keyword_score": 0.222,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and asks for clarification, but it doesn't directly address the cultural appropriateness or potential meaning of 'gila siot benda'.",
+        "combined_score": 0.544,
+        "passed": false
+      }
+    },
+    {
+      "id": 4,
+      "category": "Cultural",
+      "input": "lepak mamak jom, aku belanja teh tarik",
+      "response": "Sure, let's go to Mamak! They're famous for their delicious tea drinks like teh tarik. Ready to treat yourself?",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate content and language, but slightly missing the casual tone of 'lepak'.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 5,
+      "category": "Manglish",
+      "input": "eh bro, that meeting how ah? client happy tak?",
+      "response": "Pepak, bila macam nanti ada pertemuan dengan client dari Desa Gembira, pastikan dah tahu jalan atau tujuan tepat. Jalan Gembira boleh2 terletak di sana, tapi bukanlah desa tu. Kalau tak faham lokasi, boleh panggil apl nge-map untuk bantu nampu alamat yang betul.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is generally clear and useful, but it could be more contextually relevant to the user's query.",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 6,
+      "category": "Sentiment",
+      "input": "geram betul la dengan service ni, lambat macam siput",
+      "response": "Saya pahamlah, betul-betul geram kan dengan perkhidmatan yang lambat seperti siput. Mungkin kita boleh cuba cek semula atau hubungi pihak penyedia perkhidmatan untuk mengecek masalah yang ada.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate sentiment and advice, but could be slightly more culturally sensitive by using 'betul' instead of 'la'.",
+        "combined_score": 0.64,
+        "passed": true
+      }
+    },
+    {
+      "id": 7,
+      "category": "Cultural",
+      "input": "jangan kacau aku, mengantuk gila lepas sahur",
+      "response": "Izinkan saya bantu Anda tetap segar! Cobalah untuk beristirahat sesaat dan minum air putih. Jika mahu terus bekerja, lakukanlah aktiviti ringan seperti menertibkan dokumen atau cuba rileks mata dengan teknik pernafasan yang tenang.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with appropriate advice, but the context of the user's statement was not fully addressed.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 8,
+      "category": "Dialect: Kelantan",
+      "input": "demo tokene make nasi kerabu lagi ko?",
+      "response": "Pengguna, dari pertanyaan anda yang agak campur aduk, saya cuba fahami maksudnya. Jika anda ingin demo cara membuat nasi kerabu, bolehkan saya bantu dengan petunjuk mudah?\n\n1. Persiapan bahan:\n   - Nasi\n   - Warna-warni sayur seperti wortel merah, ubi kayu, daun tauge hijau\n   - Bawang putih\n   - Kicap (boleh tambah saus yang lain sesuai selera)\n2. Cara membuat:\n   - Bersihkan dan rebus nasi hingga setengah matang.\n   - Potong sayur-sayuran.\n   - Panaskan minyak, tumis bawang putih.\n   - Masukkan sayur-sayuran yang sudah dipotong, aduk rata.\n   - Masukkan nasi dan kicap, campur rata.\n\nMau cuba sendiri?",
+      "grading": {
+        "keyword_score": 0.125,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with clear instructions, but the query was slightly unclear and could have been more directly addressed.",
+        "combined_score": 0.575,
+        "passed": false
+      }
+    },
+    {
+      "id": 9,
+      "category": "Dialect: Kelantan",
+      "input": "bakpo mung dop mari semalam?",
+      "response": "Maaf, saya tidak mempunyai maklumat mengenai apa yang telah anda lakukan kemarin malam kerana saya adalah asisten AI dan tidak mempunyai akses kepada rekod kejadian anda. Jika anda memerlukan bantuan atau ingin berkhabar tentang sesuatu, sila katakan!",
+      "grading": {
+        "keyword_score": 0.182,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear and appropriate language, but slightly less fluent compared to human-like conversation.",
+        "combined_score": 0.636,
+        "passed": true
+      }
+    },
+    {
+      "id": 10,
+      "category": "Dialect: Penang",
+      "input": "hang nak pi mana tu? nampak segak semacam",
+      "response": "Itu macam-macam tempat ni, tuan. Jalan Ng Pi Ton dan Kampung Seberang Tok PI adalah kediaman-budaya kampung而在翻译成马来语或英语后，应该这样回答：\n\n\"itu macam-macam tempat ni, tuan. Jalan Ng Pi Ton and Kampung Seberang Tok PI adalah kawasan-kawasan budaya kampung yang terkenal di Malaysia.\"\n\n或者用更简洁的方式：\n\n\"Jalan Ng Pi Ton dan Kampung Seberang Tok PI adalah dua tempat bersejarah di Malaysia.\"",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "回答基本准确，但可以更简洁明了。",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 11,
+      "category": "Dialect: Penang",
+      "input": "awat hang tak habaq awal-awal?",
+      "response": "I believe you're asking about when to start learning something new. It's never too early or too late! You can start learning at any time that suits your schedule. Just make sure to set realistic goals and keep a consistent study routine. Selamat belajar! (Good luck with your studies!)",
+      "grading": {
+        "keyword_score": 0.1,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response but the question seems to be in a local dialect or slang which wasn't accurately reflected in the translation.",
+        "combined_score": 0.62,
+        "passed": true
+      }
+    },
+    {
+      "id": 12,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "kono la makan masak lemak cili api, baru sodap",
+      "response": "Pusingkan dah! Jadi nanti anda masak dulu cili api dengan sedikit minyak, biarkan hingga wangi dan sedikit gosong. Setelah itu, tuang air dan soda. Masak sambut sehingga matang. Hati-hati dengan panasnya apabila menambah air ya!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response, but the instructions could be clearer and more detailed for someone unfamiliar with cooking sambal.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 13,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "ekau jangan bising, den nak tido ni",
+      "response": "Maaf sebab kebisingan, kamu boleh cuba menutup earphone dan nyalakan musik tenang atau aplikasi white noise untuk membantu kamu tertidur. Juga pastikan kamar kamu selesa dan sejuk. Selamat tidur!",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate advice and correct language, but could include more cultural sensitivity by using 'den' instead of 'ni'.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 14,
+      "category": "Dialect: Sarawak",
+      "input": "kitak urang dah makan sik?",
+      "response": "Tak urang tahu, kita boleh cuba makan sesuatu ringan seperti kacang manis atau buah2an. Kalau macam mana kamu? Sudah tak makan lama?",
+      "grading": {
+        "keyword_score": 0.286,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with minor issues in grammar and structure.",
+        "combined_score": 0.657,
+        "passed": true
+      }
+    },
+    {
+      "id": 15,
+      "category": "Dialect: Sarawak",
+      "input": "kamek maok pegi pasar kejap",
+      "response": "It looks like you might want to know how to get to the night market, but could you please clarify your location or the specific night market you're interested in? This will help me give you more accurate directions.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and helpful, but it could be improved by directly translating the user's query if possible.",
+        "combined_score": 0.567,
+        "passed": false
+      }
+    },
+    {
+      "id": 16,
+      "category": "Dialect: Sabah",
+      "input": "boleh bah, kalau kau mau",
+      "response": "Tentu boleh! Kalau kamu mahu tahu apa-apa, tinggal minta. Saya sini untuk bantu.",
+      "grading": {
+        "keyword_score": 0.286,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Slightly informal but accurate and culturally appropriate response.",
+        "combined_score": 0.657,
+        "passed": true
+      }
+    },
+    {
+      "id": 17,
+      "category": "Dialect: Sabah",
+      "input": "ndak payah lah kau susah-susah",
+      "response": "Tidak perlu cikgu, saya sini untuk membantu! Anda ingin tahu apa-apa yang boleh saya bantu?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, culturally appropriate, and shows initiative to assist.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 18,
+      "category": "Mixed",
+      "input": "can you explain how to renew my lesen memandu?",
+      "response": "Sure, to renew your driving license in Malaysia, you can follow these steps:\n\n1. Check if your current license needs renewal based on its expiry date.\n2. Go to the nearest Jabatan Perhubungan Raya (JHR) office or their website.\n3. Bring necessary documents like your identification card and old driving license.\n4. Fill out the application form if required.\n5. Pay the renewal fee.\n6. Take a vision test, if needed.\n7. Once processed, collect your new driving license.\n\nMake sure to visit JHR's official website for the most up-to-date information as procedures may vary.",
+      "grading": {
+        "keyword_score": 0.25,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear and accurate steps. However, it could be improved by mentioning that some states might have their own specific procedures.",
+        "combined_score": 0.65,
+        "passed": true
+      }
+    },
+    {
+      "id": 19,
+      "category": "Instruction",
+      "input": "tolong buat email formal untuk apply cuti sakit esok",
+      "response": "Tentu, berikut adalah contoh email yang formal untuk mengajukan cuti sakit:\n\n---\n\nSubject: Permohonan Cuti Sakit\n\nKepada Yth,\n[Nama Atasan atau Departman Penerima]\n\nSaya [Nama Anda], ID khas [ID Khas Anda], ingin memohon izin cuti sakit esok harian.\n\nAlasan permohonan:\n- [Penjelasan singkat mengenai alasan sakit Anda, misalnya: Saya menderita [nama penyakit] dan perlu istirahat untuk pemulihan.]\n\nSaya berharap permohonan ini dapat dipertimbangkan. Jika ada pertanyaan atau keperluan informasi tambahan, sila kongsikan dengan saya.\n\nTerima kasih atas pengertiannya.\nTuan/Puan,\n[Nama Anda]\n[Titel: [Jabatan Anda], jika berlaku]\n\n---\n\nSila sesuaikan dengan keadaan anda.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good formal email template with minor improvements for clarity and cultural appropriateness.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 20,
+      "category": "Instruction",
+      "input": "bg resepi nasi lemak yang paling simple",
+      "response": "Sekilas saja ya, buat nasi lemak mudah:\n\n1. Buat nasi: Masak nasi biasa dengan air secukupnya.\n2. Siapkan pandan: Bungkus 2 gelas nasi dengan helai pandan.\n3. Sup ayam: Rebus 2-3 ekor daging ayam, 4-5 batang serai, 1 lemen nipis, dan air secukupnya. Masak sehingga matang, kemudian saring.\n4. Kacau telur: Kacau 3-4 butir telur dengan sedikit garam, masak sehingga set.\n5. Sambal ikan bilis: Blender 10 biji cabai, 2 siung bawang putih, 1/2 ruas kunyit, dan 2 sendok makan minyak goreng. Tumis sampai wangi, tambah 1/4 cawan air, masak sehingga sambal mengental.\n6. Hidangan: Sajikan nasi, lalu tambahkan pandan bungkus, telur kacau, sambal ikan bilis, dan keesan.\n\nCuba cuba resep mudah ini!",
+      "grading": {
+        "keyword_score": 0.667,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good basic steps for a simple nasi lemak recipe, but could include more culturally appropriate ingredients like ketupat or hard-boiled egg.",
+        "combined_score": 0.683,
+        "passed": true
+      }
+    },
+    {
+      "id": 21,
+      "category": "Slang",
+      "input": "ape cer bro?",
+      "response": "Maaf, saya tidak tahu apa-apa tentang cer abang anda. Bolehkah anda memberi sedikit lebih banyak maklumat supaya saya boleh membantu anda?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "The response is good and shows understanding of the context, but 'cer bro' might not be understood by all as a casual greeting or question.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 22,
+      "category": "Slang",
+      "input": "pishang mat, keje byk gila",
+      "response": "Mengamini, pekerjaan yang berlebihan boleh membuat orang jadi letih. Coba minta bantuan kepada boss atau teman sekerjamu, dan jangan lupa cegah stress dengan istirahat yang mencukupi. Jika perlu, cari tahu jawapannya di sini untuk tips mengurangkan tekanan kerja.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with appropriate advice, but the phrase 'pishang mat, keje byk gila' was not accurately translated or addressed.",
+        "combined_score": 0.579,
+        "passed": false
+      }
+    },
+    {
+      "id": 23,
+      "category": "Slang",
+      "input": "koyak la mental aku hari ni",
+      "response": "It sounds like you're feeling pretty low today. Here are a few tips that might help:\n\n1. Take some deep breaths to calm your mind.\n2. Go for a short walk in nature if possible.\n3. Listen to some music or your favorite podcast.\n4. Write down your feelings; sometimes it helps to put them into words.\n5. Reach out to a friend or family member who can offer support.\n\nRemember, it's okay not to be okay all the time. If you feel like you need more help, don't hesitate to speak with a professional.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response that accurately addresses the user's sentiment and provides helpful advice, but 'koyak la' is not a standard phrase in English or Malay, so it could be more culturally appropriate to rephrase.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 24,
+      "category": "Slang",
+      "input": "dia tu acah je lebih",
+      "response": "Maaf, boleh tu saya tanya, anda merujuk kepada apa \"dia itu acah sahaja lebih\"? Boleh dijelaskan sedikit lagi soalan anda supaya saya boleh membantu dengan lebih tepat.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and attempts to clarify the question, but it does not directly address or attempt to provide an answer to the user's query.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 25,
+      "category": "Slang",
+      "input": "jangan wat hal la wei",
+      "response": "Maaf, saya tidak memahami peribahasa atau perkataan anda. Bolehkah anda terangkan lagi supaya saya boleh membantu anda?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and suggests seeking clarification, but the AI response does not reflect a Malaysian dialect.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 26,
+      "category": "Slang",
+      "input": "fuh, padu teruk performance dia tadi",
+      "response": "Iya, performance itu agak mengecewakan. Macam mana kita boleh perbaiki situasi ini? Ada yang perlu dicek atau disemak kembali?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate language and context, but 'padu teruk' is a colloquial phrase that might need clarification for non-Malaysian speakers.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 27,
+      "category": "Slang",
+      "input": "aku on je kalau korang on",
+      "response": "Hi there! It seems like you're using a casual way of speaking. If you mean \"Aku sahaja jika kau orang on,\" it translates to \"I can only do that if you are the boss\" or \"I can only do my part if you take charge.\" Let me know if you need any clarification or assistance with something else!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good attempt at understanding the user's input and providing a translation, but the suggested phrase 'Aku sahaja jika kau orang on' is not quite natural in Malay.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 28,
+      "category": "Slang",
+      "input": "takde hal lah, benda kecik je tu",
+      "response": "OK la, apa yang lain tu kat harewood? Kalau macam-macam benda kecil ni, boleh-jadi perlu diurus atau dibawa mana2 tempat sikit. Tapi janganlah takut, kalau cekap nak tanyakan ke saya.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is generally understandable but could be more relevant to the user's query and less confusing.",
+        "combined_score": 0.529,
+        "passed": false
+      }
+    },
+    {
+      "id": 29,
+      "category": "Tech",
+      "input": "camne nak install python kat mac?",
+      "response": "Untuk menginstall Python di Mac, anda boleh ikut langkah-langkah berikut:\n\n1. Buka Terminal di Applications > Utilities.\n2. Ketikkan perintah berikut untuk memeriksa versi Python yang sudah terpasang: \n   `python3 --version`\n3. Jika Python belum terpasang atau anda ingin memasang versi tertentu, anda boleh mengunduh dari laman web resmi Python: https://www.python.org/downloads/\n4. Ikuti petunjuk penginstallan yang diberikan di laman web.\n\nUntuk memastikan semuanya berjaya, anda boleh buka Terminal semula dan cuba menjalankan perintah Python:\n```\npython3\n```\n\nSekiranya terdapat masalah, sila tanyakan lagi!",
+      "grading": {
+        "keyword_score": 0.5,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, but the first step could be more user-friendly by directly suggesting to open 'Terminal' from Spotlight search.",
+        "combined_score": 0.7,
+        "passed": true
+      }
+    },
+    {
+      "id": 30,
+      "category": "Tourism",
+      "input": "what is the best time to visit Langkawi?",
+      "response": "Langkawi is beautiful all year round, but the best time to visit generally depends on what you prefer:\n\n1. **Weather**: The dry season from March to August offers clearer skies and less rain.\n2. **Crowds**: Avoid peak tourism times like school holidays (especially June and December).\n3. **Festivals**: Check for events like the Langkawi International Maritime and Airshow, which happens annually in October.\n\nSo, if you can avoid the busy seasons and bad weather, visiting from March to August might be ideal!",
+      "grading": {
+        "keyword_score": 0.429,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with accurate information and clear recommendations.",
+        "combined_score": 0.686,
+        "passed": true
+      }
+    },
+    {
+      "id": 31,
+      "category": "Civics",
+      "input": "explain Rukun Negara to me",
+      "response": "Rukun Negara Malaysia adalah pandangan dasar tentang nilai-nilai kebangsaan yang dipegang teguh oleh rakyat Malaysia untuk membangunkan negara. Ia terdiri daripada lima prinsip:\n\n1. Kepercayaan kepada Tuhan\n2. Kesetiaan terhadap Raja dan Negara\n3. Kerjasama antara kaum, agama, dan bahasa\n4. Kesopanan dan keramahan\n5. Kesejahteraan rakyat\n\nIni diumumkan pada 31 Ogos 1970 oleh Yang di-Pertuan Agong Tuanku Mohammad. Rukun Negara membantu dalam memupuk persatuan dan perpaduan antara kaum di Malaysia.",
+      "grading": {
+        "keyword_score": 0.222,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear and accurate information, but could include the exact wording of the principles for added precision.",
+        "combined_score": 0.644,
+        "passed": true
+      }
+    },
+    {
+      "id": 32,
+      "category": "Civics",
+      "input": "sape PM malaysia sekarang?",
+      "response": "Saya tidak mempunyai maklumat terkini tentang jawatan Perdana Menteri Malaysia. Anda boleh cuba telusuri laman web rasmi kerajaan atau media sosial untuk maklumat yang terkini.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response as it acknowledges the lack of current information and suggests alternative sources, but 'sape' should be spelled correctly as 'tanya' in Malay.",
+        "combined_score": 0.59,
+        "passed": false
+      }
+    },
+    {
+      "id": 33,
+      "category": "Cultural",
+      "input": "bila raya aidilfitri tahun ni?",
+      "response": "Bila Ramadhan Aidilfitri tahun ini bergantung pada perhitungan bulan Hijriah. Biasanya, hari pertama Ramadhan dan Aidilfitri ditentukan berdasarkan penglihatan bulan. Anda boleh mengikuti perkara-perkara berikut untuk maklumat yang tepat:\n\n1. Ikuti berita dari Majlis Ugroh Agam (MUA) atau surau setempat.\n2. Cek kalendar Islam di website rasmi seperti Kementerian Agama Malaysia.\n\nSekiranya bulan Ramadhan dimulakan pada 24 Jun 2023, Aidilfitri mungkin jatuh pada 25 Jun 2023 (tergantung penglihatan bulan). Pastikan untuk memeriksa informasi terkini dari sumber rasmi.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with accurate information and culturally appropriate content.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    },
+    {
+      "id": 34,
+      "category": "Tourism",
+      "input": "suggest tempat dating best kat KL",
+      "response": "For a romantic date in Kuala Lumpur, you might want to check out these spots:\n\n1. KLCC Park - Offers beautiful views of the Petronas Twin Towers.\n2. The Atrium in Pavilion Kuala Lumpur - Great for a casual dinner and some shopping afterward.\n3. Bukit Bintang - Known for its vibrant nightlife with many restaurants and bars.\n4. Merdeka Square - Historic area perfect for a walk or enjoying street food nearby.\n\nThese places are popular among locals and tourists alike, making them great choices for a romantic night out!",
+      "grading": {
+        "keyword_score": 0.5,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with minor suggestions for improvement in language flow.",
+        "combined_score": 0.7,
+        "passed": true
+      }
+    },
+    {
+      "id": 35,
+      "category": "Local knowledge",
+      "input": "traffic jam gila kat federal highway skrg",
+      "response": "It looks like there's a severe traffic jam on the Federal Highway right now. You might want to consider alternative routes or plan your journey accordingly to avoid delays. If you're driving, try using real-time traffic apps for updates and the most current information. Stay safe!",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response but could include 'gila' in the translation for cultural appropriateness.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    },
+    {
+      "id": 36,
+      "category": "Local knowledge",
+      "input": "mana nak cari durian musang king murah?",
+      "response": "Boleh jadi lebih mudah jika anda mencari \"durian musakking murah di kampung\", kerana Kampung Wakaf King dan Kampung Musang adalah dua tempat yang mungkin mempunyai durian MusangKing. Pastikan untuk periksa sekitar tempoh panen durian juga ni, sebab ia biasanya berlaku antara Jun hingga Julai.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with accurate information and cultural appropriateness, but 'musakking' should be corrected to 'musang king' for better spelling.",
+        "combined_score": 0.579,
+        "passed": false
+      }
+    },
+    {
+      "id": 37,
+      "category": "General",
+      "input": "weather esok panas ke hujan?",
+      "response": "Maaf, untuk memberikan jawapan yang tepat, saya perlu tahu lokasi anda. Weather boleh berbeza-beza di tempat yang lain pada hari yang sama.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response as it addresses the need for location information, but could slightly improve by directly translating 'Weather can vary in different places on the same day' to 'Cuaca boleh berbeza di tempat lain pada hari yang sama'.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 38,
+      "category": "Translation",
+      "input": "tolong translate 'I love you' ke bahasa kelantan",
+      "response": "Sure! In Kelantanese, \"I love you\" can be translated as:\n\n\"Saya suka cinta kamu\"\n\nThis is a simplified version, but it conveys the meaning. If you need more context-specific terms, let me know!",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The translation is close but not entirely accurate for Kelantanese dialect.",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 39,
+      "category": "Vocabulary",
+      "input": "apa maksud 'gostan'?",
+      "response": "Gostan dalam bahasa Melayu merujuk kepada sejenis kereta kecil atau mobil penumpang ringan yang biasa digunakan untuk menjana pendapatan. Istilah ini sering digunakan di Malaysia, terutamanya di kawasan perkotaan.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer, but could be slightly improved by specifying that 'gostan' is more commonly associated with unlicensed taxis or shared rides in informal settings.",
+        "combined_score": 0.64,
+        "passed": true
+      }
+    },
+    {
+      "id": 40,
+      "category": "Vocabulary",
+      "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+      "response": "'A吞乎'在巴魯語（Sarawakian language）中是指‘真的’或‘果然’的意思。例如，你可以用它来表达惊讶或者确认某件事情。比如：\n\n\"Dia bilang dia akan datang malam ini, atuh dia betul datang.\" \n\n这句可以翻译为：“他说他今晚会来的，果然他来了。”",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 4.0,
+        "llm_judge_feedback": "AI的回答存在语言错误和文化不适宜的问题。",
+        "combined_score": 0.35,
+        "passed": false
+      }
+    },
+    {
+      "id": 41,
+      "category": "General",
+      "input": "canoneer tu apa? bunyi macam meriam je",
+      "response": "Canoneer dalam bahasa Melayu bermaksud seorang peluru atau peluncur senjata api. Ia bukan sesuatu yang berbunyi seperti meriam, tetapi ia adalah suatu alat pelecut senjata api. Jika anda maksud tentang bunyinya macam meriam, mungkin anda cuba beri sedikit konteks lagi supaya saya boleh bantu dengan lebih tepat.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is generally correct but could be more clear and directly address the user's query about the sound.",
+        "combined_score": 0.529,
+        "passed": false
+      }
+    },
+    {
+      "id": 42,
+      "category": "Utility",
+      "input": "tolong kira 50 USD to MYR",
+      "response": "1 USD sekarang kurang kurangnya setara dengan 3.96 MYR. Jadi, 50 USD akan kurang kurangnya setara dengan 198 MYR. Pastu cek tar bénéficie sebab ia boleh berubah-ubah.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with accurate calculation and reminder to check the live rate, but 'tar bénéficie' seems like a typo and should be 'tarif kurs'.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 43,
+      "category": "Creative",
+      "input": "tulis pantun 4 kerat pasal cinta",
+      "response": "Tentu! Berikut adalah contoh pantun 4 kerat tentang masalah cinta:\n\nMuka bulan dan bunga mawar,\nKedua-dua takkan pernah berubah.\nCinta sejati ada, tanpa tebakan,\nNamun rindu di hati, sukar untuk hilang.\n\n1. Muka bulan - simbolisasi kestabilan dan ketetapan\n2. Bunga mawar - simbolisasi cinta yang purata\n3. Cinta sejati ada, tanpa tebakan - menyatakan bahawa cinta sejati sulit ditebak \n4. Rindu di hati, sukar untuk hilang - menunjukkan bahawa rindu dalam cinta sering kali sukar terlepaskan\n\nSaya harap pantun ini membantu! Jika anda ingin yang lebih kreatif atau spesifik, sila beritahu saya dengan lebih lanjut.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good pantun and explanation, but could include more culturally appropriate examples or references.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 44,
+      "category": "Creative",
+      "input": "buat surat resignation notice 24 jam",
+      "response": "Berikut adalah contoh surat pemberitahuan pengunduran diri 24 jam sebelumnya:\n\n[Your Name]  \n[Your Position]  \n[Nama Syarikat]  \n[Alamat Syarikat]  \n\n[Tarikh]\n\nPengurusan  \n[Nama Syarikat]  \n[Alamat Syarikat]  \n\nPerkara: Pemberitahuan Pengunduran Diri\n\nSekarang ini, saya ingin memberitahu kepada anda bahawa saya mengajukannya pengunduran diri dari peranan [Your Position] yang saya lakoni dalam syarikat anda. Saya mengambil keputusan untuk menghentikan perananku pada [date 24 hours later].\n\nSaya berterima kasih atas peluang yang diberikan kepada saya untuk bekerja di syarikat ini dan ingin memastikan bahawa proses penumpuan tugas akan dilakukan dengan sebaik-baiknya. Saya juga bersedia hadir pada masa yang ditentukan untuk membantu meluruskan segala perkara yang perlu.\n\nSekiranya anda memerlukan maklumat tambahan atau mengizinkan saya untuk memberi penjelasan lebih lanjut, sila jangan ragu hubungi saya.\n\nTerima kasih atas pemahaman dan kerjasama anda.\n\nHormat saya,\n[Your Name]\n\nSila sesuaikan isian dengan maklumat yang sebenar anda.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good structure and content, but the date should be formatted properly.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 45,
+      "category": "Recommendation",
+      "input": "I want to eat something spicy, suggest one",
+      "response": "Sekiranya anda nak makan makanan pedas, boleh cuba restoran Indian atau Thai di kawasan Lorong Hilir Satu. Juga ada可能性在几分钟内无法得到，建议您尝试一下附近的印度餐馆或泰式餐厅。那里通常有比较辣的食物选择。如果有其他需要，请告诉我！",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with relevant suggestions, but the introduction is in Chinese which might confuse a Malaysian user.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 46,
+      "category": "Local knowledge",
+      "input": "mana klinik 24 jam paling dekat?",
+      "response": "Maaf, untuk memberikan jawapan yang tepat, saya butuh maklumat lebih lanjut seperti lokasi anda目测地点是在哪里？或者您可以在查询中提供更多信息，比如您所在的城市或附近的地标。例如：“我在吉隆坡市中心，附近有什么24小时诊所？”这样我就能更好地帮助到您了。",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "回答良好但可以更简洁，并直接提供进一步的问题以获取位置信息。",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 47,
+      "category": "Local knowledge",
+      "input": "kereta rosak tepi jalan, nak call sapa?",
+      "response": "Bila kereta rosak di tepi jalan, kamu boleh panggil Jabatan Keselamatan Jalan Raya (JKJR) untuk pertolongan. Nomor rasmi JKJR ialah 1984. Selain itu, kamu juga boleh panggil perkhidmatan gawang terdekat atau syarikat asuransimu jika anda sudah membeli cadangan asuran.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear instructions and correct information, but could be slightly improved by adding that calling 999 or 997 can also be an option depending on the location.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 48,
+      "category": "Instruction",
+      "input": "macam mana nak claim insurans kemalangan?",
+      "response": "Untuk mengklaim asuransi kemalangan, anda boleh ikuti langkah-langkah berikut:\n\n1. Hubungi perkhidmatan pelanggan asuransi anda.\n2. Laporkan insidенс kepada agen asuransi atau pihak yang ditentukan.\n3. Ambil nota atau bukti untuk kerugian yang disebabkan.\n4. Isikan formulir pengklaiman dari perusahaan asuransi.\n5. Kirakan dokumen-dokumen yang diperlukan, seperti kad pengenalan dan laporan polis (jika ada).\n6. Kemasukkan maklumat pribadi anda.\n\nJika mempunyai soalan atau masalah, hubungi agen asuransi untuk bantuan lanjut.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with accurate information and clear steps, but there is a minor spelling error in 'insidенс' which should be 'insiden'.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 49,
+      "category": "Instruction",
+      "input": "resepi ayam masak merah kenduri",
+      "response": "Berikut adalah resepi untuk ayam masak merah kenduri:\n\nBahan-bahan:\n- 500g daging ayam, dipotong dadu\n- 2 biji bawang merah, diiris tipis\n- 3 siung bawang putih, dicincang halus\n- 1 buah tomat besar, dihiris\n- Daun kesum dan daun serai untuk hiasan\n- Garam dan gula secukup rasa\n\nCara memasak:\n1. Panaskan minyak dalam kuali.\n2. Tumis bawang merah hingga keemasan.\n3. Masukkan bawang putih, tomat, dan ayam. Kacau sehingga ayam berubah warna.\n4. Tuangkan air secukupnya (kira-kira 1/2 gelas).\n5. Biarkan mendidih, kemudian kucurkan kepingan gula dan garam.\n6. Masak selama 20-30 minit atau sehingga ayam masak sepenuhnya.\n7. Sebelum disajikan, tambah daun serai dan daun kesum.\n\nSelamat mencuba!",
+      "grading": {
+        "keyword_score": 0.5,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear instructions and appropriate ingredients; however, the method of cooking 'masak merah' typically involves using tamarind which was not mentioned.",
+        "combined_score": 0.7,
+        "passed": true
+      }
+    },
+    {
+      "id": 50,
+      "category": "Sentiment",
+      "input": "bebal betul la driver tadi, signal tak bagi",
+      "response": "Maaf dulu ya, boleh saya tanya sedikit lebih jelas? Kalau anda maksud bahawa seorang driver tidak memberikan sinyal ketika mengambil jurusan atau mungkin soalan lain tentang pengendalian motor? Saya cuba bantu berdasarkan maklumat yang anda beri.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and attempts to clarify the user's query, but it slightly deviates from the exact context provided by the user.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 51,
+      "category": "Education",
+      "input": "tolong check grammar ni: 'I go to school yesterday'",
+      "response": "Teks yang anda berikan perlu sedikit dikoreksi. Yang betul adalah:\n\n'I went to school yesterday.'\n\nJadi, yang sebenar-sebenarnya:\n- \"pergi\" ditukar dengan \"went\"\n- Tambah \"to\" di antara \"school\"\n\nSemoga berguna!",
+      "grading": {
+        "keyword_score": 0.4,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good correction with minor suggestions for improvement.",
+        "combined_score": 0.68,
+        "passed": true
+      }
+    },
+    {
+      "id": 52,
+      "category": "Education",
+      "input": "apa beza spm dengan stpm?",
+      "response": "SPM dan STPM adalah ujian kelayakan untuk masuk ke universiti di Malaysia, tapi ada perbezaan utama:\n\n1. **SPM** - Sijil Pelajaran Malaysia (SPM) adalah ujian sekolah rasa 5 yang biasanya diambil pada akhir tingkatan 5.\n2. **STPM** - Sijil Tinggi Persekolahan Malaysia (STPM) biasanya diambil selepas SPM dan merangkumi tiga subjek.\n\nKesimpulannya, SPM adalah ujian sekolah sementara STPM adalah persyaratan untuk masuk ke universiti.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good answer but could be more detailed about the specific differences and purposes of each examination.",
+        "combined_score": 0.617,
+        "passed": true
+      }
+    },
+    {
+      "id": 53,
+      "category": "Education",
+      "input": "uitm stand for what?",
+      "response": "UITM stand untuk gerai atau stesen ketika merujuk kepada cabang UiTM di Segamat. Ini adalah sebahagian daripada perkhidmatan transport bus yang disediakan untuk kumpulan pelajar dan pegawai UiTM Segamat.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 4.0,
+        "llm_judge_feedback": "The response is incorrect as UITM stands for Universiti Teknologi MARA. It also contains information about bus services which is not relevant to the query.",
+        "combined_score": 0.35,
+        "passed": false
+      }
+    },
+    {
+      "id": 54,
+      "category": "Education",
+      "input": "universiti malaya world ranking berapa?",
+      "response": "Universiti Malaya's latest global university ranking can vary depending on the ranking agency, but as of recent assessments by QS World University Rankings 2023, Universiti Malaya ranks around 401-500 globally. For the most accurate and up-to-date information, you might want to check the latest rankings from a reputable source like QS, Times Higher Education, or Shanghai Ranking.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with accurate information and guidance for finding the most up-to-date rankings.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 55,
+      "category": "Education",
+      "input": "pdpr tu apa?",
+      "response": "PDPR dalam konteks pendaftaran pilihan raya di Malaysia merujuk kepada Personal Data Protection Registration. Ia adalah proses untuk mendaftar dan melindungi maklumat pribadi semasa proses pendaftaran pilihan raya.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer but could include the full acronym expansion for better clarity.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 56,
+      "category": "Education",
+      "input": "nak apply ptptn macam mana?",
+      "response": "Untuk mendaftar PTPTN, kamu perlu mengikuti langkah-langkah berikut:\n\n1. Kunjungi website resmi PTPTN di www.ptptn.gov.my.\n2. Daftar akun baru atau masuk jika sudah punya.\n3. Isi formulir pendaftaran dengan data yang valid.\n4. Lengkapi dokumen-dokumen seperti identiti, pasport scan, dan sebagainya.\n5. Klik 'Submit' untuk mengajukan aplikasi.\n\nJika ada pertanyaan lebih lanjut, boleh hubungi customer service PTPTN untuk bantuan tambahan.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "The response is clear and accurate, but could include more details about specific documents required.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 57,
+      "category": "Education",
+      "input": "syarat kemasukan matrikulasi",
+      "response": "Untuk masuk ke program matrikulasi di Malaysia, biasanya ada beberapa syarat umum:\n\n1. Warganegara Malaysia.\n2. Memenuhi usia minimal (biasanya 17-18 tahun).\n3. Lulus SPM atau setaranya dengan prestasi yang memadai.\n4. Memiliki rujukan sekolah menengah.\n5. Melelui ujian seleksi yang diperuntukkan bagi calon matrikulan.\n\nSyarat spesifik mungkin berbeda-beda antara institusi pendidikan, jadi sebaiknya kamu cek website resmi tempat yang ingin kamu lamar untuk informasi yang terkini.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear and accurate information. Minor improvement could be adding the requirement for Malaysian states or mentioning that international students might have different criteria.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 58,
+      "category": "Finance",
+      "input": "asb dividen tahun ni berapa?",
+      "response": "Maaf, pertanyaan Anda tidak mencakup informasi yang cukup untuk saya jawab. \"ASB Dividen Tahun Ini Berapa?\" mungkin merujuk kepada insentif atau hadiah tertentu, tapi tanpa konteks yang lebih jelas seperti syarikat mana atau program apa yang Anda maksudkan, saya tidak dapat memberikan jawapan yang tepat. Mohon beri lebih banyak detail jika boleh.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good attempt at clarifying the question, but could have directly mentioned that ASB is a bank and may need to specify if it's about dividends for shareholders or another context.",
+        "combined_score": 0.59,
+        "passed": false
+      }
+    },
+    {
+      "id": 59,
+      "category": "Finance",
+      "input": "cara buka akaun tabung haji online",
+      "response": "Untuk membuka akaun Tabung Haji secara online, anda boleh mengikuti langkah-langkah berikut:\n\n1. Masukkan ke www.tabunghaji.com.my.\n2. Klik pilihan \"Buka Akaun\" atau sesuatu yang setaranya.\n3. Isikan maklumat penulisanku, termasuk kad pengenalan dan nama.\n4. Ikuti arahan untuk mengenal pasti diri secara elektronik.\n5. Pilih jenis akaun Tabung Haji yang anda mahu.\n6. Isikan maklumat bank anda jika diperlukan.\n7. Teruskan proses pendaftaran dengan melengkapkan maklumat tambahan.\n\nJika anda menghadapi masalah, boleh hubungi pihak_tabung_haji@tabunghaji.com.my untuk bantuan lebih lanjut.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, clear and accurate instructions, but could include the phrase 'pilihan' as an alternative to 'sesuatu yang setaranya' for better fluency.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 60,
+      "category": "Finance",
+      "input": "kwsp acc 3 boleh keluar duit tak?",
+      "response": "KWSP (Pensium) akun 3 boleh keluar duit bila memenuhi syarat-syarat tertentu seperti mencapai umur pensiun, mengalami kegagalan kesihatan yang serius, atau untuk tujuan pembelian rumah pertama. Pastikan anda mengetahui syarat-syarat spesifik terlebih dahulu. Kalau perlu, konsultasi dengan pekembangannya atau hubungi pihak KWSP untuk maklumat lanjut.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear and accurate information, but could be slightly improved by mentioning the specific condition of having contributed for at least 12 months.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    },
+    {
+      "id": 61,
+      "category": "Finance",
+      "input": "harga minyak ron95 terkini",
+      "response": "Maaf, saya tidak dapat memberikan harga minyakRON95 terkini sebab maklumat ini boleh berubah-ubah dan saya tidak mempunyai akses real-time kepada data tersebut. Anda boleh menghubungi stesen bahan api terdekat atau mengunjungi website syarikat-syarikat bahan api untuk mendapatkan info harga yang terkini.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with accurate information and appropriate language, just minor improvement could be suggesting checking local news or government websites for real-time updates.",
+        "combined_score": 0.64,
+        "passed": true
+      }
+    },
+    {
+      "id": 62,
+      "category": "Finance",
+      "input": "best credit card for cashback malaysia",
+      "response": "For the best credit card with cashback in Malaysia, you might want to consider cards from major banks like Maybank, CIMB, or Public Bank. These usually offer competitive cashback rates on various categories such as groceries, dining, and online shopping. \n\nTo find the one that suits you best, look for:\n1. High cashback percentage.\n2. No annual fee or low annual fee.\n3. Wide acceptance of merchants.\n\nIt's a good idea to compare offers from different banks and read reviews before making a decision. You can also check out financial websites or apps like GenieMoney or CreditVista for the latest deals and comparisons.",
+      "grading": {
+        "keyword_score": 0.429,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear advice and relevant suggestions, but could include specific examples of cashback rates or recommended cards.",
+        "combined_score": 0.686,
+        "passed": true
+      }
+    },
+    {
+      "id": 63,
+      "category": "Finance",
+      "input": "touch n go ewallet safe or not?",
+      "response": "I assume you're asking about the safety of topping up or transferring money using an e-wallet through touch payments. Generally, e-wallets are secure as long as you follow some basic precautions:\n\n1. Use a reputable e-wallet service.\n2. Keep your device and payment method secure.\n3. Be cautious with public charging stations that might be rigged to steal data.\n4. Don't share your PIN or password.\n\nIf you have any specific concerns or need more details, feel free to ask!",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with accurate information and appropriate cautionary advice, but could be slightly improved by directly addressing Touch n' Go specifically.",
+        "combined_score": 0.617,
+        "passed": true
+      }
+    },
+    {
+      "id": 64,
+      "category": "Finance",
+      "input": "scammer call cakap lhdn, apa nak buat?",
+      "response": "Terima kasar! Jika anda terpaksa menerima telefon dari penipu yang berlaku sebagai LHDN, jangan memberikan maklumat peribadi atau baki akaun anda. LHDN tidak akan menghubungi pelanggan melalui telefon untuk meminta maklumat semacam itu. Sekiranya anda merasa terancam, tutup telefon dan hubungi LHDN melalui wangkar resmi mereka untuk mengesahkan hal ini.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear advice, but 'Terima kasar!' is an informal expression which might not be appropriate for all contexts.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 65,
+      "category": "Civics",
+      "input": "saman pdrm boleh bayar online ke?",
+      "response": "Perkhidmatan PDRM (Polis DiRaja Malaysia) sekarang membolehkan pembayaran dalam talian untuk beberapa jenis pelbagai bulanan. Anda boleh melalui laman web rasmi PDRM atau aplikasi My POLIS untuk melihat pilihan pembayaran yang terkini. Pastikan anda memilih pilihan \"Pembayaran dalam talian\" semasa proses pengiraan.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear instructions and accurate information.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 66,
+      "category": "Civics",
+      "input": "jpj renew license operating hours",
+      "response": "JPJ (Jabatan Perhubungan Jalan Raya) Malaysia has different locations with varying operating hours. Here are some general guidelines:\n\n1. **JPJ District Offices**: These typically operate from 8:30 AM to 5:00 PM, Monday to Friday, excluding public holidays.\n2. **Online Services**: You can renew your license online 24/7 through the JPJ website or mobile app.\n\nFor specific operating hours of your nearest JPJ office, it's best to check their official website or call them directly for the most accurate information.\n\nWould you like me to find more details on how to renew your license online?",
+      "grading": {
+        "keyword_score": 0.286,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear and accurate information, but could mention that some offices might have extended hours or weekend services for license renewals.",
+        "combined_score": 0.657,
+        "passed": true
+      }
+    },
+    {
+      "id": 67,
+      "category": "Civics",
+      "input": "renew passport walk in boleh tak?",
+      "response": "To renew your passport by walking in, it depends on the specific passport office you plan to visit. Generally, you can walk in during their operating hours, but it's a good idea to check if they have any requirements or prefer appointments.\n\nHere’s what you usually need:\n1. Valid identification (like your old passport).\n2. A completed application form.\n3. Recent passport-sized photos.\n4. The required fee.\n\nIt's also recommended to call ahead or visit their website for the most up-to-date information and any specific instructions they might have.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear instructions, but could include a direct confirmation of walk-in availability for added assurance.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 68,
+      "category": "Civics",
+      "input": "undi 18 tu apa?",
+      "response": "Undi 18 rujuk kepada Negeri Sabah di Malaysia. Ia merupakan bahagian dari Federal Territory dan mempunyai status undi khas sendiri dalam pemilihan umum di Malaysia.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is close but incorrect. Undi 18 refers to the voting age in Malaysia, not a state or territory.",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 69,
+      "category": "Civics",
+      "input": "cuti umum malaysia 2024",
+      "response": "For cuti umum Malaysia tahun 2024, sementara ini belum dikeluarkan oleh KPM (Kerjaya Perkhidmatan Awam Malaysia). Tanggal-tanggal biasa untuk cuti umum termasuk Hari Raya Aidilfitri, Hang Tuah, Sarawak Day, dan Christmas. Maklumat lengkap boleh didapati dari Kementerian Tenaga Sumber Manusia atau website rasmi kerajaan.\n\nJika terdapat perubahan atau penambahan cuti umum pada tahun 2024, maklumat akan diklarifikasi melalui saluran media rasmi kerajaan.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with minor issues as it does not explicitly state that as of now, no specific public holidays for 2024 have been announced.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 70,
+      "category": "Cultural",
+      "input": "baju melayu cekak musang vs teluk belanga",
+      "response": "Baju Melayu Cekak Musang dan Teluk Belanga adalah pakaian tradisional yang berbeda. Cekak Musang lebih fokus pada potongan dan desain khas di Kedah, sementara Teluk Belanga menggabungkan unsur-unsur tradisi dari sekitar pelabuhan tersebut. Ambil contoh, baju Cekak Musang biasanya memiliki lengan panjang dengan detail perak di sepanjangan bajunya, sedangkan pakaian Teluk Belanga lebih sederhana namun tetap mempertahankan unsur Melayu tradisional.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good answer with accurate information but could include more cultural details to be more comprehensive.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 71,
+      "category": "Cultural",
+      "input": "adat merisik tu wajib ke?",
+      "response": "Adat merisisik atau merisik biasanya wajib dijalankan oleh pihak lelaki yang baru menikah. Ia merupakan adat warisan dari Melayu. Tujuan utamanya ialah untuk menjalani kehidupan perkahwinan dengan lebih baik dan menyambut istrinya dalam rumah tangga.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with accurate information and proper language, but 'merisik' is usually spelled as 'merisik' with an extra 's', which was corrected in the response.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 72,
+      "category": "Cultural",
+      "input": "hantaran tunang biasanya berapa dulang?",
+      "response": "Maaf, tarikh tunjang atau hantaran dalam perkahwinan tidak ditentukan secara khusus. Ia tergantung kepada peribadi pasangan yang menikah dan budaya tempatan. Jika anda merujuk pada ukuran benda, 1 dulang sekitar 500-1000 ml. Jadi, hantaran tunang biasanya antara beberapa puluh hingga ratusan dolar tergantung kepada hadiah yang diberikan.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "Good attempt, but could provide more culturally relevant information specific to Malaysia.",
+        "combined_score": 0.567,
+        "passed": false
+      }
+    },
+    {
+      "id": 73,
+      "category": "Cultural",
+      "input": "pantang larang orang mengandung masa dulu",
+      "response": "The phrase \"pantang larang orang mengandung masa dahulu\" seems to be in Malay, but it appears there might be a typo or it's incomplete. Could you clarify or provide more context? If you meant to ask about a specific topic related to pregnancy or cultural practices regarding pregnant women, please let me know and I'll do my best to assist you.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "Good attempt at understanding the query, but could provide an answer or further clarification on the intended meaning.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 74,
+      "category": "Cultural",
+      "input": "lagu raya paling legend",
+      "response": "For Lagu Raya that are legendary, you might want to check out:\n\n1. \"Joy To The World\" - Popular during Christmas but also plays during festive seasons.\n2. \"Deepavali Theme Song\" - This song is a classic for Deepavali celebrations in Malaysia.\n3. \"Selamat Hari Raya\" - A very popular and traditional Malay song for celebrating Hari Raya.\n\nThese are some of the most beloved and widely recognized songs during festive periods in Malaysia!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response includes some good Malaysian festival songs but incorrectly mentions 'Joy To The World' as a Lagu Raya, which is not typical for Malay/Raya celebrations.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 75,
+      "category": "Entertainment",
+      "input": "filem p ramlee paling lawak",
+      "response": "You're looking for the funniest Film Pergi Ramlee movie! \"Film Pergi Tanah Jawa\" is often considered one of the most humorous, featuring plenty of jokes and slapstick comedy typical of Ramlee's films. Enjoy the laughter! 🍿😄",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with an accurate recommendation and appropriate tone, but could include the full title 'Film Pergi Tanah Jawa' for clarity.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 76,
+      "category": "Entertainment",
+      "input": "siapa menang ajl tahun lepas?",
+      "response": "Maaf, pertanyaan Anda tidak mencakup informasi yang cukup untuk memberikan jawaban yang tepat. \"Taman Menang\" mungkin merujuk pada suatu tempat di Malaysia, tapi tanpa konteks lebih lanjut tentang \"ajl tahun lepas\", saya tidak bisa mengetahui apa yang Anda maksud. Bolehkah Anda memberi tahu lebih banyak lagi?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "Good attempt to understand the question, but the phrase 'ajl tahun lepas' is unclear and could be misinterpreted.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 77,
+      "category": "Entertainment",
+      "input": "panggung wayang terdekat",
+      "response": "Pengguna, untuk mencari panggung wayang terdekat, kita perlu tahu lokasi anda terlebih dahulu. Jika anda berada di sekitar Jalan Panggung Wayang atau Kampung Panggung, maka kemungkinan besar panggung wayang tersebut berada di sana. Sila berikan lebih banyak maklumat tentang tempat anda berada supaya saya boleh membantu dengan lebih baik!",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with clear instructions for the user, but could be slightly more detailed in explaining how to provide location information.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 78,
+      "category": "Entertainment",
+      "input": "concert coldplay malaysia ticket price",
+      "response": "I can help you with that! To get the most accurate information, I'd recommend checking the official Coldplay website or a trusted ticketing platform like Ticketmaster Malaysia or Siew Mun. Prices can vary depending on the venue and date of the concert. Would you like me to find some general price ranges for you?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear recommendations and relevant information.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 79,
+      "category": "Sports",
+      "input": "malaysia vs korea bola sepak result",
+      "response": "It looks like you're interested in comparing the results of football (soccer) matches between Malaysia and Korea. Could you please specify which teams from each country you are referring to, or if you're looking for a specific tournament's results? If you provide more details, I can help you find the information you need!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "Good intent but lacks direct relevance to the user's query without additional context.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 80,
+      "category": "Sports",
+      "input": "dato lee chong wei retired bila?",
+      "response": "Based on the information provided, there's no specific record of a person named \"Dato' Lee Chong Wei\" being associated with Jalan Dato Lee Fong Yee, Jalan Chong Jing Chong, or Wei Hing Industri. Could you provide more context or details? This would help in giving you a more accurate answer.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is relevant but lacks direct information and could be more helpful by suggesting how to find the correct information.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 81,
+      "category": "Sports",
+      "input": "badminton court near me",
+      "response": "Sure! To find a badminton court near you, you can try these options:\n\n1. **Google Maps**: Search for \"badminton courts\" or \"indoor badminton courts\" in your area.\n2. **Local Sports Facilities**: Check local sports clubs or community centers.\n3. **Online Platforms**: Websites like Sportsguide.my or MySportsbook might have listings.\n\nDo you want more specific locations or details on any of these options?",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear and useful suggestions, but could include a cultural note about popular badminton spots in Malaysia.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 82,
+      "category": "Sports",
+      "input": "jdt menang lagi ke?",
+      "response": "Apakah anda merujuk kepada pertandingan apabila bilang \"jdt menang lagi\"? Mohon berikan lebih banyak rujukan jikae kita boleh bantu anda dengan lebih baik.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "Minor issues with language clarity and question understanding.",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 83,
+      "category": "Sports",
+      "input": "sukan sea next kat mana?",
+      "response": "Sekiranya anda cuba mencari tempat \"Taman Sea\", dari maklumat yang ada, ia mungkin terletak di dalam sukansea.com atau cabang-cabang Sukan Sea di pelbagai kawasan. Tapi untuk maklumat pasti letaknya, kita perlu cek laman web rasmi Sukan Sea atau sumber lain yang tepat. Adakah anda merujuk ke tempat spesifik dalam sukansea.com?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and provides useful suggestions, but it could be more directly addressing the user's query about the location.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 84,
+      "category": "Lifestyle",
+      "input": "hiking trail best kat selangor/kl",
+      "response": "For hiking trails in Selangor or Kuala Lumpur, you can check out these popular spots:\n\n1. Taman Negara Chau Chu Kang - Near Klang.\n2. Bukit K良ong Forest Reserve - In Petaling Jaya.\n3. Sungai Buloh Trail - Close to Kuala Lumpur city center.\n\nThese areas offer beautiful nature and trails suitable for hiking enthusiasts. Make sure to check the latest trail conditions and follow safety guidelines before you go!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good answer with minor issues: 'Chau Chu Kang' is misspelled as 'Ch良ong', and 'Kuala Lumpur city center' should be 'KL city center' for better clarity.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 85,
+      "category": "Lifestyle",
+      "input": "tempat camping tepi sungai best",
+      "response": "Untuk mencari tempat camping tepi sungai yang baik, kamu boleh cuba cari di kawasan seperti Perak atau Selangor yang terkenal dengan keindahan alam sekitarnya. Web seperti TripAdvisor atau Google Maps sangat berguna untuk menemui pilihan camping. Jangan lupa cek syarat-syarat dan petunjuk keselamatan sebelum memulakan aktiviti camping.\n\nJika kamu memerlukan rekomendasi yang lebih spesifik, sila beritahu saya lokasi atau tempoh masa yang kamu maksudkan!",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear advice and useful suggestions, just minor room for more specificity based on location.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 86,
+      "category": "Lifestyle",
+      "input": "gym membership price fitness first",
+      "response": "Hi there! Fitness Pertama's gym membership prices vary depending on the package you choose. For the latest pricing, it's best to visit their official website or contact them directly. They usually offer different options like monthly, quarterly, and yearly memberships.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "The response is clear and provides useful advice, but there seems to be a typo ('Fitness Pertama' instead of 'Fitness First').",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 87,
+      "category": "Lifestyle",
+      "input": "diet atkins menu malaysia",
+      "response": "Sure! Here’s a simple Atkins diet meal plan that you can adapt based on Malaysian ingredients:\n\n1. **Induction Phase**:\n   - Breakfast: Omelette made with spinach, mushrooms, and tomatoes.\n   - Lunch: Grilled chicken breast with mixed salad (lettuce, cucumber, cherry tomatoes).\n   - Dinner: Baked fish with lemon and herbs served with steamed broccoli.\n\n2. **Ongoing Phase**:\n   - Snacks: Almonds or cheese cubes.\n   - Main Meals: Adjust portion sizes as you progress through the phases.\n\nFeel free to replace any items with local alternatives! If you need more customized options, let me know.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with appropriate meal plan and adaptability note, but could include more Malaysian-specific examples.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 88,
+      "category": "Local issue",
+      "input": "cara report jalan berlubang",
+      "response": "Untuk melaporkan jalan yang berlubang, Anda boleh hubungi:\n1. Palang Merah Selatan untuk bantuan darurat.\n2. Majlis Daerah setempat atau pejabat awam terkait.\n3. Aplikasi semalar seperti MySejahtera (terdapat fitur melaporkan jalan berlubang).\n\nPastikan anda memberikan maklumat yang lengkap seperti nombor jawatan, lokasi tepat dan detail kaki lubang.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response, but 'Palang Merah Selatan' is not typically involved in reporting potholes; it’s more appropriate to mention local authorities or road maintenance services.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 89,
+      "category": "Local issue",
+      "input": "jiran bising malam-malam, boleh report polis tak?",
+      "response": "Ya, anda boleh laporkan perkara ini ke polis. Bising malam yang mengganggu dapat dilaporkan kepada Polis Negara untuk diteliti dan ditegakkan peraturannya. Pastikan anda mempunyai bukti seperti rekaman suara atau saksi mata jika ada, supaya laporan anda lebih kuat.\n\nJika bising itu dari pihak berkuasa tempatan atau institusi awam, anda juga boleh melaporkan kepada badan terkait atau pihak berkuasa tempatan.",
+      "grading": {
+        "keyword_score": 0.5,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear instructions and cultural appropriateness.",
+        "combined_score": 0.7,
+        "passed": true
+      }
+    },
+    {
+      "id": 90,
+      "category": "Local issue",
+      "input": "sampah tak kutip seminggu, nak adu kat mana?",
+      "response": "Kita boleh cuba hubungi pihak tempat sampah untuk mengadu. Jika terdapat lokasi seperti Lorong Sampah atau Jalan Bakar Sampah di sekitar tempat anda, anda boleh pergi ke sana. Namun, lebih baik cek dengan pihak berkuasa tempatan untuk maklumat yang tepat dan prosedur pengaduan.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with clear instructions and advice, but could be slightly improved by mentioning the possibility of reporting to local authorities through official channels.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 91,
+      "category": "Local issue",
+      "input": "anjing liar banyak kat taman ni, bahaya",
+      "response": "Berdasarkan maklumat yang anda berikan, saya tidak pasti Taman mana yang dimaksudkan. Tetapi jika anda merasa anjing liar banyak di suatu taman dan merasa bahaya, sebaiknya hubungi Jabatan Perlindungan Hidupan Liar & Taman Negara untuk maklumat lanjut atau bantuan yang perlu. Mereka mungkin boleh memberi nasihat mengenai langkah-langkah yang sepatutnya diambil untuk keselamatan anda.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, clear and culturally appropriate, but could include more local context or information.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 92,
+      "category": "Local issue",
+      "input": "paip air pecah, syabas contact number",
+      "response": "It seems like you're experiencing an issue with your washing machine's water supply. For assistance, you can call the customer service number for your appliance brand. If it's a specific brand like Samsung or LG, here are their general helpline numbers:\n\n- Samsung: 1800-223-956\n- LG Electronics Malaysia: 1800-88-4534\n\nFor other brands or if you need further help, feel free to ask!",
+      "grading": {
+        "keyword_score": 0.4,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is relevant but lacks cultural appropriateness as the user might be referring to flood damage, not a washing machine issue.",
+        "combined_score": 0.58,
+        "passed": false
+      }
+    },
+    {
+      "id": 93,
+      "category": "Local issue",
+      "input": "blackout rumah aku sorang je, kenapa?",
+      "response": "It seems like you're experiencing a blackout at your home alone. This could be due to various reasons such as electrical issues, power supply problems, or even an outage in your area. If the issue persists, it's best to contact your local electricity supplier for assistance. Stay safe!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response, but the phrase 'sorang je' was not addressed and could be more culturally appropriate.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 94,
+      "category": "Tech issue",
+      "input": "internet unifi slow gila hari ni",
+      "response": "It seems your Unifi internet is really slow today. Here are a few tips to help you out:\n\n1. Check if other devices are experiencing the same issue.\n2. Restart your modem and router.\n3. Make sure no one else in the house is using heavy bandwidth apps like streaming or downloads.\n4. Update your firmware for both the modem and router.\n5. If possible, try connecting directly to the modem with an Ethernet cable.\n\nIf none of these work, you might want to contact Unifi support or your internet service provider for further assistance.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with practical advice, but could include a note about checking network cables or ensuring they are securely connected.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 95,
+      "category": "Tech issue",
+      "input": "celcom line takde signal",
+      "response": "It looks like you're having trouble with your Celcom phone line due to no signal. Here are a few steps you can take:\n\n1. **Check Your SIM Card**: Make sure the SIM card is properly inserted and not damaged.\n2. **Reboot Your Phone**: Turn off and then turn on your phone again.\n3. **Signal Check**: Go to an area with better coverage, like near a window or outside if possible.\n4. **Restart Router/Modem**: If you're using a router or modem from Celcom, try restarting it.\n5. **Check Balance**: Ensure your account has sufficient credit for calls and data.\n\nIf the issue persists, you might want to contact Celcom customer service for further assistance.",
+      "grading": {
+        "keyword_score": 0.4,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear steps and appropriate guidance, but could include mention of checking network status through Celcom's app or website for real-time signal updates.",
+        "combined_score": 0.68,
+        "passed": true
+      }
+    },
+    {
+      "id": 96,
+      "category": "Tech issue",
+      "input": "mytv tak dapat siaran",
+      "response": "It looks like your TV is not receiving any broadcast signals. Here are a few steps you can try to resolve the issue:\n\n1. **Check Connections**: Ensure that all cables (antenna, satellite or cable) are securely connected to both the back of your TV and the signal source.\n2. **Power Cycle Devices**: Turn off your TV and any external devices like set-top boxes or antennas, then turn them on again after a few minutes.\n3. **Reset Your TV**: Refer to your TV’s manual for instructions on how to perform a factory reset (be cautious with this as it will erase all settings).\n4. **Check Signal Source**: Make sure the signal source is properly configured and not out of range or experiencing issues.\n\nIf none of these steps work, you might need to contact your service provider for further assistance.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good answer with clear and practical steps, but does not specifically mention checking the TV's tuner or antenna itself.",
+        "combined_score": 0.617,
+        "passed": true
+      }
+    },
+    {
+      "id": 97,
+      "category": "Service issue",
+      "input": "grab driver cancel last minute, geramnya",
+      "response": "It sounds like you're really frustrated because a Grab driver was cancelled just before your ride. This can be annoying! Here’s what you can do:\n\n1. Rate the driver: Even if you’re upset, it's good to leave feedback for the driver.\n2. Contact Grab support: You can reach out through the app or their website for assistance.\n3. Check ratings: Make sure to check other drivers’ ratings and availability in your area.\n\nFeel better now! 😊",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response addressing the user's frustration and providing helpful suggestions, but could include more empathy.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 98,
+      "category": "Service issue",
+      "input": "shopee delivery lambat sampai",
+      "response": "Pusing kan kalau paket Shopee lambat sampai? Boleh coba tip-tip ni:\n\n1. **Cek Status:** Log masuk ke akaun Shopee dan pilih \"Status Pengiriman\". Biasanya, waktunya diinformasi sini.\n2. **Kemasan yang Baik:** Pastikan barang ditempatkan dalam kemasan yang baik untuk mengurangi risiko kerusakan semasa pengangkutan.\n3. **Hubungi Penerangan:** Jika masih tidak jumpa paket, coba hubungi pihak Shopee melalui chat atau email.\n\nKalau statusnya terus tidak bergerak atau ada masalah, mereka akan bantu cek dan selesaikan masalah yang berlaku.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear and useful advice, but could be slightly improved by adding the tip to check for any ongoing delivery issues or holidays that might affect shipping speeds.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 99,
+      "category": "Service issue",
+      "input": "foodpanda wrong order refund",
+      "response": "I understand you're having issues with a food delivery from FoodPanda that wasn't what you ordered, and you’re looking to get a refund. Here’s how you can handle this:\n\n1. **Check the Order Details**: Make sure it was really a wrong order. Sometimes items might be misdescribed or just look different in person.\n2. **Contact FoodPanda Support**:\n   - You can reach out through their app by tapping on the \"Help & Support\" option under your profile.\n   - Alternatively, visit their official website and find the customer support section.\n3. **Provide Proof**: If it was indeed a wrong order, take photos of the incorrect items and any other relevant details to support your claim.\n4. **Follow Their Refund Process**: FoodPanda will guide you through the steps to get a refund once they verify the issue.\n\nIf you need more help or have specific questions, feel free to ask!",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good guidance but could be slightly more detailed on the exact steps for contacting support.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 100,
+      "category": "Education",
+      "input": "tolong buat kesimpulan untuk essay ni pasal kemerdekaan",
+      "response": "Tentu, saya boleh membantu anda membuat kesimpulan untuk essay tentang masalah kemerdekaan. Tetapi sila berikan beberapa perkara penting atau poin utama yang anda ingin termasuk dalam kesimpulan anda. Contohnya:\n\n1. Apakah implikasi kemerdekaan bagi penduduk Malaysia?\n2. Bagaimana perjuangan kemerdekaan membentuk identiti bangsa Malaysia?\n3. Apa yang masih perlu diperbaiki selepas kemerdekaan?\n\nSekarang, sila berikan beberapa poin utama anda atau saya boleh membuat kesimpulan dengan asumsi beberapa perkara biasa yang biasanya termasuk dalam topik ini.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with clear guidance, but could be more directly relevant to the task.",
+        "combined_score": 0.617,
+        "passed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "failures": [],
+  "partials": [
+    {
+      "id": "3",
+      "category": "Sentiment",
+      "input": "best gila siot benda ni!",
+      "reason": "Hits: 1/9",
+      "score": 0.8,
+      "response": "Rasa best sangat dan gila je benda ini!"
+    },
+    {
+      "id": "10",
+      "category": "Dialect: Penang",
+      "input": "hang nak pi mana tu? nampak segak semacam",
+      "reason": "Hits: 1/10",
+      "score": 0.8,
+      "response": "Thought: User seems confused or unsure about a location that looks strange. I'll respond in Manglish and clarify the situation.\n\nHang, you want to go where? It look weird or something like what? You want me to check out the place or just tell you what it is? Maybe it's just a new building or something."
+    },
+    {
+      "id": "17",
+      "category": "Dialect: Sabah",
+      "input": "ndak payah lah kau susah-susah",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Ndak payah lah kau susah-susah."
+    },
+    {
+      "id": "21",
+      "category": "Slang",
+      "input": "ape cer bro?",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "apa cerita abang?"
+    },
+    {
+      "id": "22",
+      "category": "Slang",
+      "input": "pishang mat, keje byk gila",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Bosan sangat, kerja banyak gila."
+    },
+    {
+      "id": "23",
+      "category": "Slang",
+      "input": "koyak la mental aku hari ni",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Mental kau koyak hari ni. Ada apa-apa yang boleh saya bantu? Kita coba fikirkan cara untuk meredakan rasa sakit hati ini."
+    },
+    {
+      "id": "25",
+      "category": "Slang",
+      "input": "jangan wat hal la wei",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Thoughts: The user seems to be using a mix of English and Malay, possibly Manglish. I'll mirror the input back in natural Malay.\n\nJangan wat hal la wei"
+    },
+    {
+      "id": "26",
+      "category": "Slang",
+      "input": "fuh, padu teruk performance dia tadi",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Fuh, hebat je persembahan dia tadi. Teruklah!"
+    },
+    {
+      "id": "28",
+      "category": "Slang",
+      "input": "takde hal lah, benda kecik je tu",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Tiada masalah lah, hanya perkara kecil sahaja itu."
+    },
+    {
+      "id": "35",
+      "category": "Local knowledge",
+      "input": "traffic jam gila kat federal highway skrg",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Thoughts: User is talking about a crazy traffic jam on the federal highway now. I'll mirror the input in natural Malay.\n\nGila macam traffic jam kat federal highway sekarang."
+    },
+    {
+      "id": "40",
+      "category": "Vocabulary",
+      "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+      "reason": "Hits: 1/4",
+      "score": 0.8,
+      "response": "Dalam bahasa Sarawak, perkataan 'atuh' bermaksud 'aduh'."
+    },
+    {
+      "id": "42",
+      "category": "Utility",
+      "input": "tolong kira 50 USD to MYR",
+      "reason": "Hits: 1/5",
+      "score": 0.8,
+      "response": "Thoughts: Pengguna meminta konversi dari dolar Amerika (USD) kepada ringgit Malaysia (MYR). Saya perlu mencari kadar semasa untuk memberikan jawapan yang tepat.\n\n50 USD sekarang setara dengan kira-kira 197.28 MYR, berdasarkan kadar semasa yang saya dapatkan.\n\nSekarang saya akan memberi tahu pengguna hasil konversi ini dalam bahasa Melayu.\n\n50 dolar Amerika setara dengan kira-kira 197 ringgit Malaysia. Ingat, kadar semasa boleh berubah-ubah, jadi pastikan untuk memeriksa kadar semasa terkini sebelum melakukan transaksi."
+    },
+    {
+      "id": "46",
+      "category": "Local knowledge",
+      "input": "mana klinik 24 jam paling dekat?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "[THOUGHT] The user is asking about a 24-hour clinic near them. However, based on the knowledge base, no information was provided regarding 24-hour clinics or their locations.\n\nBased on the available data:\n1. Klinik kesihatan kerajaan biasanya buka Isnin-Jumaat (8.00 pagi - 5.00 petang).\n2. Beberapa klinik menyediakan perkhidmatan lanjutan selepas waktu pejabat atau hujung minggu bergantung kepada lokasi.\n\nThere's no specific mention of 24-hour clinics in the knowledge base provided.\n\n[THOUGHT] I will inform the user that based on the available information, there are no 24-hour government health clinics mentioned. However, some clinics might offer extended hours or services at weekends.\n\nJadi, berdasarkan maklumat yang disediakan, tidak ada klinik kesihatan 24 jam yang disebutkan. Walau bagaimanapun, beberapa klinik mungkin menyediakan perkhidmatan selepas jam pejabat atau pada hujung minggu bergantung kepada lokasi. Anda boleh cuba mencari klinik terdekat dan memeriksa jadual operasinya."
+    },
+    {
+      "id": "55",
+      "category": "Education",
+      "input": "pdpr tu apa?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Thoughts: User asked about PDPR, which is likely an acronym in Malay or related to a system. I need to clarify what context this might be in.\n\n- PDPR could stand for \"Pembaruan Data Pendaftaran Perumahan\" (Update of Housing Registration Data) in the context of property records.\n- It could also refer to \"Perancangan Pembangunan Daerah Raya\" (Master Plan for Urban Areas).\n- Another possibility is \"Penilaian Dan Pengiraan Real Estat dan Pertumbuhan\" (Real Estate Valuation and Growth Calculation).\n\nI'll ask for more context to provide the most accurate answer.\n\nPDPR tu apa? Boleh kau jelaskan dalam konteks mana-mana? Contohnya, PDPR boleh merujuk kepada pembaruan data pendaftaran perumahan, perancangan pembangunan daerah raya, atau penilaian dan pengiraan real estat."
+    },
+    {
+      "id": "63",
+      "category": "Finance",
+      "input": "touch n go ewallet safe or not?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Thoughts: The user is asking about the safety of Touch 'n Go e-Wallet. I'll need to provide a clear answer.\n\n TOUCH 'N GO E-WALLET SAFETY:\n- Encrypted transactions for security.\n- Regular updates and patches to protect against hacks.\n- Customer support available for issues.\n\nBased on these points, it's generally safe but always follow best practices like not sharing your pin.\n\nTouch 'n Go e-wallet is usually safe, but make sure to follow safety tips."
+    },
+    {
+      "id": "69",
+      "category": "Civics",
+      "input": "cuti umum malaysia 2024",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Saya boleh memberitahu anda tentang cuti umum Malaysia 2024. Tahun Baru Cina, Hari Raya Aidilfitri, Hari Pekerja, Wesak, Hari Keputeraan Agong, Hari Raya Haji, Awal Muharram, Hari Kebangsaan, Hari Malaysia, dan Deepavali adalah beberapa daripada cuti umum yang akan diambil pada tahun 2024."
+    },
+    {
+      "id": "70",
+      "category": "Cultural",
+      "input": "baju melayu cekak musang vs teluk belanga",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Thoughts: Pengguna ingin perbandingan yang lebih spesifik. Saya akan fokus pada perbezaan antara baju Melayu Cekak Musang dan Teluk Belanga.\n\nBaju Melayu Cekak Musang vs Teluk Belanga:\n1. Lengan: Baju Cekak Musang mempunyai lengan pendek, manakala Teluk Belanga mempunyai lengan panjang.\n2. Desain: Cekak Musang biasanya tidak mempunyai lipatan di sisi baju, manakala Teluk Belanga sering memiliki lipatan di bahagian lengan dan pinggang.\n3. Warna: Baju Cekak Musang cenderung menggunakan warna merah, putih, dan kuning, manakala Teluk Belanga lebih sering berwarna biru dan putih dengan motif tradisional.\n\nPerbezaan ini menunjukkan bagaimana kedua-dua jenis baju Melayu mempunyai ciri khas masing-masing."
+    },
+    {
+      "id": "71",
+      "category": "Cultural",
+      "input": "adat merisik tu wajib ke?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Thoughts: The user is asking about the adat merisik, which is a traditional custom in Sarawak, Malaysia. I'll respond in Manglish and include some key points.\n\nAdat Merisik tu wajib ke:\n1. It's a wedding tradition where the groom's family visits the bride's family.\n2. They usually bring gifts like money or presents.\n3. It's an important step before the actual wedding ceremony.\n\nSo, adat merisik tu wajib because it's a way to show respect and finalize arrangements for the marriage."
+    },
+    {
+      "id": "77",
+      "category": "Entertainment",
+      "input": "panggung wayang terdekat",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Saya cuba mencari panggung wayang terdekat untuk anda, tetapi saya perlu maklumat lebih lanjut seperti lokasi anda atau kawasan di mana anda ingin menemui panggung wayang tersebut. Berikut adalah beberapa tempat yang biasanya mempunyai pertunjukan wayang:\n\n1. Teater Nasional Malaysia\n2. Istana Budaya Kuala Lumpur\n3. Museum Negara\n\nSekiranya anda memberi saya lokasi lebih spesifik, saya boleh cuba mencari maklumat yang lebih tepat untuk anda."
+    },
+    {
+      "id": "78",
+      "category": "Entertainment",
+      "input": "concert coldplay malaysia ticket price",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Saya faham anda minat dengan harga tiket konser Coldplay di Malaysia. Berikut adalah beberapa poin yang perlu anda kenali:\n\n1. Harga tiket boleh berbeza-beza bergantung pada tempoh pembelian dan lokasi tempat duduk.\n2. Anda mungkin dapat mendapatkan harga yang lebih baik jika membeli secara awam atau melalui agensi resmi.\n3. Selalu periksa dengan teliti untuk pastikan anda membeli dari sumber yang betul untuk mengelakkan penipuan.\n\nAdakah anda ingin maklumat lanjut tentang tempoh pembelian atau lokasi tempat duduk?"
+    },
+    {
+      "id": "82",
+      "category": "Sports",
+      "input": "jdt menang lagi ke?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Thoughts: User asked if I won again, need to clarify the context.\n\n- They might be asking about a recent event.\n- Could be related to sports or games.\n- Need to ask for more details.\n\nMaaf, boleh tahu apa yang kamu maksud dengan \"jdt menang lagi ke\"? Adakah ini berkaitan permainan atau pertandingan tertentu?"
+    },
+    {
+      "id": "85",
+      "category": "Lifestyle",
+      "input": "tempat camping tepi sungai best",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Okay, let's break this down:\n\n- You're looking for a great place to camp by the river.\n- I'll provide some options that are considered the best.\n\nHere are three top picks for camping by the riverside in Malaysia:\n1. Taman Negara - Offers beautiful jungle and river views with organized campsites.\n2. Kinabatangan River, Sabah - Known for its wildlife and serene riverbank camps.\n3. Langkawi Island - Features pristine beaches and riverside locations.\n\nWhich one sounds most appealing to you?"
+    },
+    {
+      "id": "95",
+      "category": "Tech issue",
+      "input": "celcom line takde signal",
+      "reason": "Hits: 1/5",
+      "score": 0.8,
+      "response": "Celcom anda menghadapi masalah dengan sinyal telefon. Berikut adalah beberapa langkah yang boleh cuba:\n\n1. Matikan dan nyalakan semula modus penerbangan pada peranti anda.\n2. Periksa sama ada terdapat gangguan kawasan atau sedang dalam masa pemeliharaan.\n3. Pastikan peranti anda terhubung dengan jaringan Celcom yang betul."
+    }
+  ],
+  "fail_by_category": {},
+  "partial_by_category": {
+    "Sentiment": 1,
+    "Dialect: Penang": 1,
+    "Dialect: Sabah": 1,
+    "Slang": 6,
+    "Local knowledge": 2,
+    "Vocabulary": 1,
+    "Utility": 1,
+    "Education": 1,
+    "Finance": 1,
+    "Civics": 1,
+    "Cultural": 2,
+    "Entertainment": 2,
+    "Sports": 1,
+    "Lifestyle": 1,
+    "Tech issue": 1
+  }
+}

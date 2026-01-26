@@ -12,6 +12,8 @@
 # --- Personal Notes (DO NOT PUSH) ---
 CLAUDE.md
 GEMINI.md
+docs/private/
+docs/project_tracker.md
 INTERVIEW_NOTES.md
 
 # --- Evaluation Results & JSON Data ---
@@ -73,7 +75,8 @@ build/
 
 # --- Logs ---
 *.log
-logs/
+benchmark-tracker/logs/
+npm-debug.log*
 
 # --- Temporary Files ---
 *.tmp
@@ -81,6 +84,10 @@ logs/
 .cache/
 config.runtime.yaml
 data/
+!data/prompts/
+!data/knowledge/
+!data/dictionaries/
+scripts/debug/
 
 # --- ChromaDB / Vector Store ---
 chroma_db/

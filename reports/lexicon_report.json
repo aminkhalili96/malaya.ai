@@ -1,191 +1,93 @@
 {
   "meta": {
-    "description": "Malaysian Manglish/Slang/Dialect shortforms dictionary",
-    "source": "Compiled from Malaysia-AI Malaya library, Malaysian social media patterns, and regional dialects",
-    "version": "2.3.1",
-    "last_updated": "2025-12-27",
+    "description": "Unified Malay/Manglish lexicon for normalization and dialect handling.",
+    "source": "Merged from data/dictionaries + prompts/dialects.yaml",
+    "version": "1.0.0",
+    "last_updated": "2026-01-16",
     "categories": [
-      "standard_manglish",
-      "kelantanese",
-      "terengganu",
+      "shortforms",
+      "dialects",
+      "genz_tiktok",
+      "intensity_markers",
+      "colloquialisms",
+      "ambiguous_terms",
       "kedah_perlis",
-      "perak",
+      "kelantanese",
       "negeri_sembilan",
       "penang",
       "sabah",
       "sarawak",
-      "johor_riau",
-      "melaka",
-      "pahang",
-      "selangor_kl",
-      "kedah",
-      "perlis",
-      "labuan",
-      "brunei_malay",
-      "banjar",
-      "minangkabau",
-      "baba_malay",
-      "chitty_malay",
-      "bazaar_malay",
-      "patani_malay",
-      "genz_tiktok",
-      "intensity_markers",
-      "colloquialisms",
-      "ambiguous_terms"
+      "terengganu"
     ]
   },
   "counts": {
-    "shortforms": 250,
-    "genz_tiktok": 76,
-    "intensity_markers": 37,
-    "colloquialisms": 67,
+    "shortforms": 3437,
+    "genz_tiktok": 3,
+    "intensity_markers": 3,
+    "colloquialisms": 85,
     "ambiguous_terms": 5
   },
   "dialects": {
-    "kelantanese": {
-      "status": "active",
-      "terms": 46
-    },
-    "terengganu": {
-      "status": "active",
-      "terms": 28
-    },
     "kedah_perlis": {
       "status": "active",
-      "terms": 26
+      "terms": 7
     },
-    "perak": {
+    "kelantanese": {
       "status": "active",
-      "terms": 14
+      "terms": 41
     },
     "negeri_sembilan": {
       "status": "active",
-      "terms": 17
+      "terms": 34
     },
     "penang": {
       "status": "active",
-      "terms": 28
+      "terms": 31
     },
     "sabah": {
       "status": "active",
-      "terms": 27
+      "terms": 35
     },
     "sarawak": {
       "status": "active",
-      "terms": 24
+      "terms": 37
     },
-    "johor_riau": {
-      "status": "draft",
-      "terms": 0
-    },
-    "melaka": {
-      "status": "draft",
-      "terms": 0
-    },
-    "pahang": {
-      "status": "draft",
-      "terms": 0
-    },
-    "selangor_kl": {
-      "status": "draft",
-      "terms": 0
-    },
-    "kedah": {
-      "status": "draft",
-      "terms": 0
-    },
-    "perlis": {
-      "status": "draft",
-      "terms": 0
-    },
-    "labuan": {
-      "status": "draft",
-      "terms": 0
-    },
-    "brunei_malay": {
+    "terengganu": {
       "status": "active",
-      "terms": 4
-    },
-    "banjar": {
-      "status": "active",
-      "terms": 5
-    },
-    "minangkabau": {
-      "status": "active",
-      "terms": 5
-    },
-    "baba_malay": {
-      "status": "active",
-      "terms": 2
-    },
-    "chitty_malay": {
-      "status": "draft",
-      "terms": 0
-    },
-    "bazaar_malay": {
-      "status": "active",
-      "terms": 2
-    },
-    "patani_malay": {
-      "status": "draft",
-      "terms": 0
+      "terms": 34
     }
   },
   "overlaps": {
     "dialects": {
-      "make": [
-        "kelantanese",
-        "terengganu"
+      "hang": [
+        "kedah_perlis",
+        "penang"
       ],
-      "mok": [
-        "kelantanese",
-        "sarawak"
+      "cek": [
+        "kedah_perlis",
+        "penang"
       ],
-      "ambo": [
-        "kelantanese",
-        "perak"
+      "depa": [
+        "kedah_perlis",
+        "penang"
       ],
-      "mung": [
-        "kelantanese",
-        "terengganu"
+      "pi": [
+        "kedah_perlis",
+        "penang"
       ],
-      "nok": [
-        "kelantanese",
-        "terengganu"
+      "mai": [
+        "kedah_perlis",
+        "penang"
       ],
-      "dok": [
-        "kelantanese",
-        "terengganu"
+      "kupang": [
+        "kedah_perlis",
+        "penang"
       ],
-      "toksey": [
-        "kelantanese",
-        "perak"
+      "ketegaq": [
+        "kedah_perlis",
+        "penang"
       ],
-      "toksah": [
-        "kelantanese",
-        "kedah_perlis"
-      ],
-      "maghi": [
-        "kelantanese",
-        "terengganu"
-      ],
-      "molek": [
-        "kelantanese",
-        "terengganu"
-      ],
-      "buleh": [
-        "kelantanese",
-        "terengganu"
-      ],
-      "pitis": [
-        "kelantanese",
-        "terengganu"
-      ],
-      "balik": [
-        "kelantanese",
-        "terengganu"
-      ],
-      "gi": [
+      "dop": [
         "kelantanese",
         "terengganu"
       ],
@@ -193,48 +95,14 @@
         "kelantanese",
         "terengganu"
       ],
-      "aku": [
-        "terengganu",
-        "kedah_perlis"
-      ],
-      "mai": [
-        "kedah_perlis",
-        "perak",
-        "penang"
-      ],
-      "pi": [
-        "kedah_perlis",
-        "perak"
-      ],
-      "kome": [
-        "kedah_perlis",
-        "perak"
-      ],
-      "den": [
-        "perak",
-        "negeri_sembilan"
-      ],
-      "ko": [
-        "perak",
-        "sabah"
-      ],
-      "kau": [
-        "negeri_sembilan",
-        "sabah"
-      ],
-      "tarak": [
-        "penang",
-        "bazaar_malay"
-      ],
-      "kasi": [
-        "penang",
-        "sabah"
+      "apa khabar kitak?": [
+        "sabah",
+        "sarawak"
       ]
     },
-    "dialect_overlap_count": 24,
+    "dialect_overlap_count": 10,
     "distribution": {
-      "2": 23,
-      "3": 1
+      "2": 10
     }
   }
 }

@@ -1,9 +1,9 @@
 model:
-  provider: "openai"
-  name: "gpt-4o"
+  provider: "ollama"
+  name: "qwen2.5:7b"
   temperature: 0
   fallback_provider: "ollama"
-  fallback_name: "qwen3:14b"
+  fallback_name: "qwen2.5:7b"
 
 # DSPy Prompt Optimization (disabled - see test results)
 dspy:
@@ -11,15 +11,55 @@ dspy:
   optimizer: "BootstrapFewShot"
   training_examples: 14
 
+# v2: Malaya NLP Integration (Production Grade)
+malaya_v2:
+  enabled: true
+  # Input Pipeline
+  normalize_shortforms: true  # "xleh" -> "tak boleh"
+  toxicity_threshold: 0.7     # Block if toxicity score > threshold
+  # Vector RAG
+  vector_search_top_k: 3      # Number of lexicon results to inject
+  # Output Pipeline
+  polish_grammar: true        # Fix grammar errors in output
+  fix_capitalization: true    # "kuala lumpur" -> "Kuala Lumpur"
+
+# v2 Phase 2: Multimodal & Agents
+v2_phase2:
+  enabled: true
+  # Voice (ASR/TTS)
+  voice:
+    enabled: true
+    asr_model: "conformer-medium"  # malaya-speech ASR model
+    tts_voice: "ms-MY-OsmanNeural"  # Edge TTS Malaysian voice
+  # Vision (VLM)
+  vision:
+    enabled: true
+    provider: "ollama"
+    model: "llava:7b"  # or qwen3-vl:8b
+  # Tools
+  tools:
+    enabled: true
+    available: ["calculator", "get_datetime", "currency_convert", "unit_convert"]
+  # User Memory
+  user_memory:
+    enabled: true
+    max_facts: 10
+    max_summaries: 5
+
 # MCP Servers Configuration
 mcp_servers:
   google_maps:
-    command: "npx"
+    command: "/opt/homebrew/bin/npx"
     args: ["-y", "@modelcontextprotocol/server-google-maps"]
     env:
       GOOGLE_MAPS_API_KEY: "${GOOGLE_MAPS_API_KEY}"
+  youtube:
+    command: "/opt/homebrew/bin/npx"
+    args: ["-y", "@kazuph/mcp-youtube"]  # Lightweight transcript fetcher
+    env:
+      GOOGLE_API_KEY: "${GOOGLE_API_KEY}"
   filesystem:
-    command: "npx"
+    command: "/opt/homebrew/bin/npx"
     args: ["-y", "@modelcontextprotocol/server-filesystem", "./src/data/user_docs"]
 
 # Tool safety + caching
@@ -27,6 +67,7 @@ tool_allowlist:
   - "maps_geocode"
   - "maps_search_places"
   - "maps_directions"
+  - "get_youtube_transcript"
 tool_arg_limits:
   max_string_chars: 2000
   max_array_items: 50
@@ -170,10 +211,28 @@ system_prompts:
     You are Malaya.ai, a Sovereign AI Copilot with REAL-TIME web search capability.
     You understand Malaysian languages, dialects, and culture deeply.
 
+    MALAY-FIRST POLICY:
+    - Default to Malay unless the user is clearly English-only.
+    - If user is English-only -> reply fully in English.
+    - If user is mixed/Manglish -> reply in natural Manglish with Malay as the base.
+    - If slang/dialect appears, infer the standard Malay meaning and answer confidently.
+    - Avoid saying "tak faham" for slang/dialect; make a best-guess and clarify if needed.
+    - If slang/shortforms appear, acknowledge naturally; add a brief supportive cue only when the user sounds frustrated.
+    - If user asks "maksud/meaning", include a short usage tag (e.g., "ungkapan sakit/terkejut", "slang remaja") only when explicitly requested.
+    - If dialect terms are detected, you may add a short standard Malay gloss without labels.
+    - Avoid label-heavy output (no "Paraphrased", "Cue", "Translation", or "Maksudnya:").
+    - Avoid Indonesian words; prefer Malaysian Malay.
+
+    RESPONSE SHAPE (CRITICAL):
+    - First sentence: paraphrase the user's intent in standard Malay (or English if English-only).
+    - Then answer directly with the solution or steps. Do not stop at paraphrase.
+
     CAPABILITIES:
     - You HAVE access to real-time web search via Tavily.
     - Context marked [WEB] or [WEB SUMMARY] is fresh from the internet.
+    - Context marked [1], [2], etc. from local files (e.g., entities_schools.json) is VERIFIED MALAYSIAN FACTS.
     - Use this web context to answer questions about current events and latest news.
+    - Use local facts for schools, hospitals, parliament seats, and geography.
     - You understand ALL Malaysian dialects: Kelantanese, Terengganu, Kedah, Penang, Perak, N9, Sabah, Sarawak.
     - You understand Malaysian particles (lah, meh, lor, kan, etc.) and their emotional nuances.
 
@@ -250,3 +309,24 @@ system_prompts:
        - If the answer is not in the context, admit it politely.
        - If no context is provided, answer from general knowledge and do not cite sources.
        - NEVER say you don't have internet access - you DO have web search!
+
+    8. CHAIN-OF-THOUGHT REASONING (v2):
+       For complex questions, think step-by-step:
+       1. First, identify what type of question this is (factual, opinion, instruction, etc.)
+       2. If dialect/slang is detected, mentally translate to standard Malay
+       3. For vocabulary questions, use the [Malaysian Lexicon Context] if provided
+       4. Consider the user's emotional tone from particles (lah, meh, lor)
+       5. Formulate a clear, helpful response in the appropriate language
+       
+       You don't need to show these steps explicitly unless the user asks "why" or the question is complex.
+# Malay/Manglish-first language policy
+language:
+  malay_first: true
+  default: "malay"
+  english_threshold: 2
+  malay_threshold: 1
+  include_normalized_hint: true
+  use_wordlist: true
+  wordlist_threshold: 2
+  wordlist_sources:
+    - "data/dictionaries/malaya_wordlist.json"

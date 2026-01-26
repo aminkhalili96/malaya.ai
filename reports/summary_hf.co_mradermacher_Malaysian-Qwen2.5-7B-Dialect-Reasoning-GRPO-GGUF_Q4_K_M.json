@@ -1,0 +1,5 @@
+{
+    "model": "hf.co/mradermacher/Malaysian-Qwen2.5-7B-Dialect-Reasoning-GRPO-GGUF:Q4_K_M",
+    "accuracy": 80.0,
+    "time": 9201.328128099442
+}

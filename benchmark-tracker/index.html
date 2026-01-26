@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaya LLM Benchmark Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Light Theme Palette */
+            --bg-warm: #f7f3ee;
+            --bg-white: #ffffff;
+            --bg-subtle: #f0ebe4;
+            --bg-tertiary: #e8e1d9;
+
+            --text-main: #2d2d2a;
+            --text-muted: #6b6b66;
+            --text-light: #8e8e8a;
+
+            --accent: #d1663a;
+            --accent-hover: #bb5a31;
+            --accent-subtle: #f7e8e0;
+            --accent-gradient: linear-gradient(135deg, #d1663a 0%, #e48a5b 100%);
+
+            --border-subtle: #e6e6e6;
+            --border-strong: #d1d1d1;
+
+            --success: #10b981;
+            --success-bg: #ecfdf5;
+            --success-gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            --error: #ef4444;
+            --error-bg: #fef2f2;
+            --warning: #f59e0b;
+            --warning-bg: #fffbeb;
+            --info: #3b82f6;
+            --info-bg: #eff6ff;
+
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+
+            --font-serif: 'Fraunces', serif;
+            --font-sans: 'Space Grotesk', sans-serif;
+
+            /* Animation timings */
+            --transition-fast: 150ms ease;
+            --transition-base: 250ms ease;
+            --transition-slow: 400ms ease;
+            --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] {
+            --bg-warm: #0f0f0f;
+            --bg-white: #1a1a1a;
+            --bg-subtle: #242424;
+            --bg-tertiary: #2a2a2a;
+
+            --text-main: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --text-light: #737373;
+
+            --accent: #f59e6c;
+            --accent-hover: #fb923c;
+            --accent-subtle: #2a1f1a;
+            --accent-gradient: linear-gradient(135deg, #f59e6c 0%, #fbbf24 100%);
+
+            --border-subtle: #2e2e2e;
+            --border-strong: #404040;
+
+            --success-bg: #052e16;
+            --error-bg: #2a0a0a;
+            --warning-bg: #2a1f05;
+            --info-bg: #0c1929;
+
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+            --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-warm);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(600px circle at 12% 8%, rgba(209, 102, 58, 0.12), transparent 60%),
+                radial-gradient(520px circle at 88% 12%, rgba(16, 185, 129, 0.12), transparent 55%),
+                radial-gradient(700px circle at 60% 90%, rgba(59, 130, 246, 0.12), transparent 55%);
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 45%),
+                radial-gradient(circle at top left, rgba(0, 0, 0, 0.04), transparent 35%);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        [data-theme="dark"] body::before {
+            background: radial-gradient(600px circle at 12% 8%, rgba(245, 158, 108, 0.12), transparent 60%),
+                radial-gradient(520px circle at 88% 12%, rgba(59, 130, 246, 0.12), transparent 55%),
+                radial-gradient(700px circle at 60% 90%, rgba(16, 185, 129, 0.12), transparent 55%);
+        }
+
+        [data-theme="dark"] body::after {
+            background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 45%),
+                radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 35%);
+            mix-blend-mode: screen;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            background: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(218, 119, 86, 0.25);
+        }
+
+        .logo-mark svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            fill: none;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .clock-widget {
+            text-align: right;
+        }
+
+        .clock-time {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-main);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .clock-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+        }
+
+        .status-dot.running {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            padding: 4px;
+            background: var(--bg-subtle);
+            border-radius: var(--radius-lg);
+            width: fit-content;
+        }
+
+        .tab {
+            padding: 10px 24px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .tab:hover {
+            color: var(--text-main);
+        }
+
+        .tab.active {
+            background: var(--bg-white);
+            color: var(--accent);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes riseIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content.active .stat-card,
+        .tab-content.active .card {
+            animation: riseIn var(--transition-slow) ease both;
+        }
+
+        .tab-content.active .stat-card:nth-child(2) {
+            animation-delay: 0.05s;
+        }
+
+        .tab-content.active .stat-card:nth-child(3) {
+            animation-delay: 0.1s;
+        }
+
+        .tab-content.active .stat-card:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+
+        /* Cards & Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        .stat-value.accent {
+            color: var(--accent);
+        }
+
+        .stat-value.success {
+            color: var(--success);
+        }
+
+        .stat-subtext {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Progress Bar */
+        .progress-section {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .progress-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .progress-percentage {
+            font-family: var(--font-serif);
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .progress-bar-container {
+            height: 8px;
+            background: var(--bg-subtle);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Layout Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 32px;
+        }
+
+        /* Enhanced Card Styles */
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(250, 250, 248, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        /* List Items */
+        .results-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .result-item {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: grid;
+            grid-template-columns: 48px 1fr 80px;
+            gap: 20px;
+            align-items: start;
+            transition: background 0.15s;
+        }
+
+        .result-item:hover {
+            background: var(--bg-subtle);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-id {
+            font-family: var(--font-serif);
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .result-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .result-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .result-question {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .result-answer {
+            background: var(--bg-subtle);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border: 1px solid transparent;
+        }
+
+        .result-status {
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .result-status.pass {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .result-status.fail {
+            background: var(--error-bg);
+            color: var(--error);
+        }
+
+        /* Models Grid */
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .model-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+            top: 0;
+        }
+
+        .model-card:hover {
+            top: -4px;
+            box-shadow: var(--shadow-hover);
+            border-color: #dcdcdc;
+        }
+
+        .model-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .model-card-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .model-card-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #fff;
+            padding: 4px;
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .model-card-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .model-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .model-card-company {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .model-cell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .model-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .model-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .model-logo-text {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.04em;
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .status-badge.complete {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .status-badge.running {
+            background: var(--accent-subtle);
+            color: var(--accent);
+        }
+
+        .status-badge.pending {
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
+        }
+
+        .status-badge.queued {
+            background: var(--warning-bg);
+            color: var(--warning);
+            border: 1px solid rgba(224, 159, 62, 0.1);
+        }
+
+        .status-badge.neutral {
+            background: var(--bg-subtle);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .model-card-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: var(--bg-subtle);
+            border-radius: 8px;
+        }
+
+        .model-card-actions {
+            display: grid;
+            gap: 8px;
+        }
+
+        .model-card-stat-label {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .model-card-stat-value {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Model Card Progress */
+        .model-card-progress {
+            margin-bottom: 16px;
+        }
+
+        .model-card-progress-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            margin-bottom: 6px;
+        }
+
+        .model-card-progress-label {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .model-card-progress-value {
+            color: var(--accent);
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .model-card-progress-bar {
+            height: 8px;
+            background: var(--bg-subtle);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .model-card-progress-fill {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .model-card-progress-fill.running {
+            background-image:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.12) 100%),
+                var(--accent-gradient);
+            background-size: 200% 100%, 100% 100%;
+            animation: progressFlow 2s linear infinite;
+        }
+
+        /* Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid var(--border-subtle);
+            background: white;
+            color: var(--text-main);
+        }
+
+        .btn:hover {
+            background: var(--bg-subtle);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: 1px solid var(--accent);
+            box-shadow: 0 2px 4px rgba(218, 119, 86, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(218, 119, 86, 0.3);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Leaderboard Table */
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .leaderboard-table th {
+            padding: 16px 24px;
+            text-align: left;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-bottom: 2px solid var(--border-subtle);
+            font-weight: 600;
+        }
+
+        .leaderboard-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .leaderboard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .leaderboard-table tr:hover td {
+            background: var(--bg-subtle);
+        }
+
+        .rank {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 40px;
+            color: var(--text-muted);
+        }
+
+        .rank-1 {
+            color: #d4af37;
+        }
+
+        .rank-2 {
+            color: #a9a9a9;
+        }
+
+        .rank-3 {
+            color: #cd7f32;
+        }
+
+        /* Skeleton Loading */
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-subtle) 25%, var(--bg-warm) 50%, var(--bg-subtle) 75%);
+            background-size: 200% 100%;
+            animation: skeleton-shimmer 1.5s ease-in-out infinite;
+            border-radius: var(--radius-sm);
+        }
+
+        @keyframes skeleton-shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        .skeleton-text {
+            height: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .skeleton-text.short {
+            width: 60%;
+        }
+
+        .skeleton-title {
+            height: 1.5em;
+            width: 40%;
+            margin-bottom: 1em;
+        }
+
+        /* Enhanced Progress Bar */
+        .progress-bar-container {
+            height: 12px;
+            background: var(--bg-subtle);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 6px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar.running {
+            background-image:
+                linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%),
+                var(--accent-gradient);
+            background-size: 200% 100%, 100% 100%;
+            animation: progressFlow 1.5s linear infinite, progressPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes progressFlow {
+            0% {
+                background-position: -100% 50%, 0 0;
+            }
+
+            100% {
+                background-position: 200% 50%, 0 0;
+            }
+        }
+
+        @keyframes progressPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 8px rgba(209, 102, 58, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 16px rgba(209, 102, 58, 0.7);
+            }
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all var(--transition-fast);
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-white);
+            border-color: var(--border-strong);
+            color: var(--text-main);
+        }
+
+        /* Search & Filter */
+        .search-filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 16px 20px;
+            background: var(--bg-subtle);
+            border-radius: var(--radius-md);
+        }
+
+        .search-input,
+        .filter-select {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            padding: 10px 14px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            background: var(--bg-white);
+            color: var(--text-main);
+            transition: all var(--transition-fast);
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-input:focus,
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-subtle);
+        }
+
+        .filter-select {
+            min-width: 140px;
+            cursor: pointer;
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .field-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+        }
+
+        .field-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .field-input,
+        .field-textarea {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            padding: 12px 14px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            background: var(--bg-white);
+            color: var(--text-main);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .field-input:focus,
+        .field-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-subtle);
+        }
+
+        .field-input {
+            width: 100%;
+        }
+
+        .field-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .field-range {
+            width: 100%;
+            accent-color: var(--accent);
+        }
+
+        .range-value {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+            min-width: 36px;
+            text-align: right;
+        }
+
+        .live-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 12px 0 16px;
+        }
+
+        .playground-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 20px;
+        }
+
+        .playground-output {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            min-height: 240px;
+            white-space: pre-wrap;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+        }
+
+        .playground-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        .playground-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Queue List */
+        .queue-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .queue-item:last-child {
+            border-bottom: none;
+        }
+
+        .queue-item.running {
+            background: var(--bg-subtle);
+        }
+
+        .queue-item-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .queue-item-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .queue-item-status {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .donut-chart {
+            display: none;
+            /* Hide donut chart */
+        }
+
+        .donut-chart::after {
+            content: none;
+        }
+
+        .donut-chart::after {
+            content: '';
+            position: absolute;
+            width: 62%;
+            height: 62%;
+            border-radius: 50%;
+            background: var(--bg-white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .donut-center {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .donut-score {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .donut-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-light);
+        }
+
+        .category-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--accent);
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 20px;
+        }
+
+        .analysis-summary {
+            display: grid;
+            gap: 12px;
+        }
+
+        .analysis-summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .analysis-summary-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .analysis-summary-value {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .analysis-score-card {
+            padding: 14px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .analysis-score-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .analysis-score-model {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .analysis-score-model h4 {
+            font-size: 0.95rem;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 220px;
+        }
+
+        .analysis-score-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .analysis-score-value {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .analysis-score-bar {
+            height: 8px;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            overflow: hidden;
+        }
+
+        .analysis-score-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: var(--accent-gradient);
+            transition: width var(--transition-base);
+        }
+
+        .analysis-category-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .analysis-category-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .analysis-category-bar {
+            flex: 1;
+            height: 6px;
+            margin: 0 10px;
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            overflow: hidden;
+        }
+
+        .analysis-category-fill {
+            height: 100%;
+            border-radius: 999px;
+        }
+
+        .analysis-log-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .analysis-log-controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* Expandable Result Rows */
+        .result-item {
+            cursor: pointer;
+            transition: background var(--transition-fast);
+        }
+
+        .result-item.expanded {
+            background: var(--bg-subtle);
+        }
+
+        .result-details {
+            display: none;
+            padding: 16px 24px;
+            background: var(--bg-subtle);
+            border-top: 1px dashed var(--border-subtle);
+            font-size: 0.85rem;
+            animation: slideDown var(--transition-base);
+        }
+
+        .result-item.expanded+.result-details,
+        .result-details.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .detail-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            min-width: 100px;
+        }
+
+        .detail-value {
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        /* Focus States */
+        .tab:focus-visible,
+        .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Empty State Enhancement */
+        .empty-state {
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .empty-state-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* Export Buttons */
+        .export-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 0.75rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-subtle);
+        }
+
+        /* Chart Container */
+        .chart-container {
+            padding: 20px;
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 0;
+        }
+
+        .chart-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        /* Sortable Table Headers */
+        .sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: background var(--transition-fast);
+        }
+
+        .sortable:hover {
+            background: var(--bg-subtle);
+        }
+
+        .sort-indicator {
+            display: inline-block;
+            margin-left: 4px;
+            opacity: 0.4;
+        }
+
+        .sortable.asc .sort-indicator::after {
+            content: ' ↑';
+            opacity: 1;
+        }
+
+        .sortable.desc .sort-indicator::after {
+            content: ' ↓';
+            opacity: 1;
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            box-shadow: var(--shadow-hover);
+            z-index: 1000;
+            animation: slideInUp 0.3s ease;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .search-filter-bar {
+                flex-wrap: wrap;
+            }
+
+            .playground-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .tabs {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h1>Malaya LLM Benchmark</h1>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">Dark Mode</button>
+                <div class="clock-widget">
+                    <div class="clock-time" id="clockTime">--:--:--</div>
+                    <div class="clock-date" id="clockDate">--</div>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot running" id="statusDot"></div>
+                    <span id="statusText">Connecting</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="live">Live Benchmark</button>
+            <button class="tab" data-tab="leaderboard">Leaderboard</button>
+            <button class="tab" data-tab="models">Run Benchmark</button>
+            <button class="tab" data-tab="report">Report</button>
+            <button class="tab" data-tab="testcases">Test Cases</button>
+            <button class="tab" data-tab="playground">Model Playground</button>
+        </div>
+
+        <!-- Live Benchmark Tab -->
+        <div id="tab-live" class="tab-content active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Progress</div>
+                    <div class="stat-value accent" id="progressCount">0/100</div>
+                    <div class="stat-subtext">Cases completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Accuracy</div>
+                    <div class="stat-value success" id="accuracyValue">0%</div>
+                    <div class="stat-subtext" id="scoreText">0/0 correct</div>
+                </div>
+                <!-- Time & Duration -->
+                <div class="stat-card">
+                    <div class="stat-label">Running Time</div>
+                    <div class="stat-value" id="elapsedTime">00:00</div>
+                    <div class="stat-subtext" id="startTimeText">Started: --:--</div>
+                </div>
+                <!-- ETA -->
+                <div class="stat-card">
+                    <div class="stat-label">Finish Estimation</div>
+                    <div class="stat-value" id="etaValue">--</div>
+                    <div class="stat-subtext">MYT (Approx.)</div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span class="progress-title">Overall Progress</span>
+                    <span class="progress-percentage" id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Test Results</span>
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div class="export-group">
+                                <button class="btn btn-sm btn-outline" onclick="exportResults('csv')">Export
+                                    CSV</button>
+                                <button class="btn btn-sm btn-outline" onclick="exportResults('json')">Export
+                                    JSON</button>
+                            </div>
+                            <span class="card-meta" id="resultCount">0 results</span>
+                        </div>
+                    </div>
+                    <div class="search-filter-bar">
+                        <input type="text" class="search-input" id="searchInput"
+                            placeholder="Search questions or answers...">
+                        <select class="filter-select" id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="pass">Pass Only</option>
+                            <option value="fail">Fail Only</option>
+                        </select>
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="results-list" id="resultsList">
+                        <div class="empty-state">
+                            <div class="empty-state-title">No results yet</div>
+                            <div class="empty-state-desc">Start a benchmark from the Run Benchmark tab to see results
+                                here.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Model</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="model-card-info" style="margin-bottom: 16px;">
+                                <div class="model-card-logo" id="modelLogo">
+                                    <span class="model-logo-text">AI</span>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 4px;" id="modelName">--
+                                    </h4>
+                                    <span class="model-card-company" id="modelCompany">--</span>
+                                </div>
+                            </div>
+                            <div class="live-controls">
+                                <div class="field-group">
+                                    <label class="field-label" for="liveModelSelect">Live model</label>
+                                    <div class="field-row">
+                                        <select class="field-input" id="liveModelSelect">
+                                            <option value="auto">Auto (Active Run)</option>
+                                        </select>
+                                        <button class="btn btn-outline btn-sm" id="followActive">Follow Active</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Status</span>
+                                <span id="modelStatus">Idle</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Parameters</span>
+                                <span id="modelSize">Unknown</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="category-name">Test Cases</span>
+                                <span id="modelCases">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Queue</span>
+                        </div>
+                        <div class="card-body" id="queueList">
+                            <div class="empty-state" style="padding: 16px 0;">No models in queue</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Categories</span>
+                        </div>
+                        <div class="card-body" id="categoryList">
+                            <div class="empty-state" style="padding: 16px 0;">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Tab -->
+        <div id="tab-leaderboard" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Model Leaderboard</span>
+                    <span class="card-meta">Click column headers to sort</span>
+                </div>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th class="sortable" data-sort="accuracy" onclick="sortLeaderboard('accuracy')">Accuracy
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th class="sortable" data-sort="cases" onclick="sortLeaderboard('cases')">Cases <span
+                                    class="sort-indicator"></span></th>
+                            <th class="sortable" data-sort="status" onclick="sortLeaderboard('status')">Status <span
+                                    class="sort-indicator"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <tr>
+                            <td colspan="5" class="empty-state">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Models Tab -->
+        <div id="tab-models" class="tab-content">
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 4px;">Installed Models</h3>
+                <p style="font-size: 0.8125rem; color: var(--text-muted);">Run benchmarks on your locally installed
+                    Ollama models</p>
+            </div>
+            <div class="models-grid" id="modelsGrid">
+                <div class="empty-state">Loading models...</div>
+            </div>
+        </div>
+
+        <!-- Report Tab -->
+        <div id="tab-report" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Comparative Analysis Report</span>
+                    <div style="display: flex; gap: 8px;">
+                         <button class="btn btn-sm btn-outline" onclick="fetchReport()">Refresh</button>
+                    </div>
+                </div>
+                <div class="card-body" style="overflow-x: auto;">
+                    <table class="leaderboard-table" id="reportTable">
+                        <thead>
+                            <tr id="reportHeaderRow">
+                                <th>Benchmark / Category</th>
+                                <!-- Model columns will be injected here -->
+                            </tr>
+                        </thead>
+                        <tbody id="reportBody">
+                            <tr><td class="empty-state">Loading report...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Cases Tab -->
+        <div id="tab-testcases" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Test Cases Benchmark Suite</span>
+                    <span class="card-meta" id="testCasesCount">0 cases</span>
+                </div>
+                <div
+                    style="padding: 24px; background: var(--bg-subtle); border-bottom: 1px solid var(--border-subtle);">
+                    <h3 style="font-size: 1rem; margin-bottom: 8px;">About this Benchmark</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 800px;">
+                        This benchmark suite consists of test cases designed to evaluate LLM capabilities across various
+                        domains including reasoning, coding, creativity, and general knowledge.
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 800px; margin-top: 8px;">
+                        <strong>Scoring Methodology:</strong> Each model's response is evaluated against a set of
+                        <em>Expected Keywords</em> (must include at least one) and <em>Negative Keywords</em> (must not
+                        include any). A score of <strong>1</strong> (Pass) or <strong>0</strong> (Fail) is assigned
+                        automatically based on these criteria.
+                    </p>
+                </div>
+                <div class="search-filter-bar"
+                    style="border-radius: 0; border: none; border-bottom: 1px solid var(--border-subtle);">
+                    <input type="text" class="search-input" id="testCaseSearch" placeholder="Search test cases...">
+                </div>
+                <div class="results-list" id="testCasesList">
+                    <div class="empty-state">Loading test cases...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playground Tab -->
+        <div id="tab-playground" class="tab-content">
+            <div class="playground-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Run a Prompt</span>
+                        <span class="card-meta">Local Ollama models</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="field-group">
+                            <label class="field-label" for="playgroundModel">Model</label>
+                            <select class="field-input" id="playgroundModel">
+                                <option value="">Select a model</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label" for="playgroundSystem">System prompt (optional)</label>
+                            <textarea class="field-textarea" id="playgroundSystem" rows="3"
+                                placeholder="Give the model a role or style."></textarea>
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label" for="playgroundPrompt">Prompt</label>
+                            <textarea class="field-textarea" id="playgroundPrompt" rows="6"
+                                placeholder="Ask the model a question..."></textarea>
+                        </div>
+                        <div class="field-group">
+                            <label class="field-label" for="playgroundTemp">Temperature</label>
+                            <div class="field-row">
+                                <input class="field-range" id="playgroundTemp" type="range" min="0" max="1" step="0.1"
+                                    value="0.2">
+                                <span class="range-value" id="playgroundTempValue">0.2</span>
+                            </div>
+                        </div>
+                        <div class="playground-actions">
+                            <button class="btn btn-primary" id="playgroundRun">Run Prompt</button>
+                            <button class="btn btn-outline btn-sm" id="playgroundClear">Clear</button>
+                            <div class="playground-meta" id="playgroundMeta">Ready</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Response</span>
+                        <span class="card-meta" id="playgroundLatency">--</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="playground-output" id="playgroundOutput">Select a model and run a prompt.</div>
+                        <div class="playground-actions">
+                            <button class="btn btn-outline btn-sm" id="playgroundCopy">Copy Response</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = (window.location.protocol === 'http:' || window.location.protocol === 'https:')
+            ? window.location.origin
+            : 'http://localhost:5050';
+        let serverStartTime = null;
+        let allResults = [];
+        let categoryColors = {};
+        let availableModels = [];
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.textContent = 'Light Mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            if (current === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.textContent = 'Dark Mode';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = 'Light Mode';
+            }
+        });
+
+        // Tab switching with animation
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                const content = document.getElementById(`tab-${tab.dataset.tab}`);
+                content.classList.add('active');
+
+                if (tab.dataset.tab === 'leaderboard') fetchLeaderboard();
+                if (tab.dataset.tab === 'models') fetchModels();
+                if (tab.dataset.tab === 'playground') fetchModels();
+                if (tab.dataset.tab === 'testcases') fetchTestCases();
+                if (tab.dataset.tab === 'report') fetchReport();
+            });
+        });
+
+        // Test Case Search
+        const testCaseSearch = document.getElementById('testCaseSearch');
+        if (testCaseSearch) {
+            testCaseSearch.addEventListener('input', filterTestCases);
+        }
+
+        const liveModelSelect = document.getElementById('liveModelSelect');
+        const followActiveButton = document.getElementById('followActive');
+        if (liveModelSelect) {
+            liveModelSelect.addEventListener('change', () => fetchData());
+        }
+        if (followActiveButton) {
+            followActiveButton.addEventListener('click', () => {
+                liveModelSelect.value = 'auto';
+                fetchData();
+            });
+        }
+
+        const playgroundModel = document.getElementById('playgroundModel');
+        const playgroundSystem = document.getElementById('playgroundSystem');
+        const playgroundPrompt = document.getElementById('playgroundPrompt');
+        const playgroundTemp = document.getElementById('playgroundTemp');
+        const playgroundTempValue = document.getElementById('playgroundTempValue');
+        const playgroundRun = document.getElementById('playgroundRun');
+        const playgroundClear = document.getElementById('playgroundClear');
+        const playgroundOutput = document.getElementById('playgroundOutput');
+        const playgroundMeta = document.getElementById('playgroundMeta');
+        const playgroundLatency = document.getElementById('playgroundLatency');
+        const playgroundCopy = document.getElementById('playgroundCopy');
+
+        if (playgroundTemp) {
+            playgroundTemp.addEventListener('input', () => {
+                playgroundTempValue.textContent = playgroundTemp.value;
+            });
+        }
+        if (playgroundRun) {
+            playgroundRun.addEventListener('click', runPlayground);
+        }
+        if (playgroundClear) {
+            playgroundClear.addEventListener('click', () => {
+                playgroundSystem.value = '';
+                playgroundPrompt.value = '';
+                playgroundOutput.textContent = 'Ready for a new prompt.';
+                playgroundMeta.textContent = 'Ready';
+                playgroundLatency.textContent = '--';
+            });
+        }
+        if (playgroundCopy) {
+            playgroundCopy.addEventListener('click', () => copyText(playgroundOutput.textContent));
+        }
+
+        // Search and Filter
+        const searchInput = document.getElementById('searchInput');
+        const statusFilter = document.getElementById('statusFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+
+        searchInput.addEventListener('input', filterResults);
+        statusFilter.addEventListener('change', filterResults);
+        categoryFilter.addEventListener('change', filterResults);
+
+        function filterResults() {
+            const query = searchInput.value.toLowerCase();
+            const status = statusFilter.value;
+            const category = categoryFilter.value;
+
+            const filtered = allResults.filter(r => {
+                const inputText = (r.input || '').toString().toLowerCase();
+                const outputText = (r.output || '').toString().toLowerCase();
+                const matchesQuery = !query ||
+                    inputText.includes(query) ||
+                    outputText.includes(query);
+                const matchesStatus = status === 'all' ||
+                    (status === 'pass' && r.score === 1) ||
+                    (status === 'fail' && r.score !== 1);
+                const matchesCategory = category === 'all' || r.category === category;
+                return matchesQuery && matchesStatus && matchesCategory;
+            });
+
+            renderResults(filtered);
+        }
+
+        function renderResults(results) {
+            const resultsList = document.getElementById('resultsList');
+            if (results.length === 0) {
+                resultsList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-title">No matching results</div>
+                        <div class="empty-state-desc">Try adjusting your search or filters.</div>
+                    </div>
+                `;
+                return;
+            }
+
+            resultsList.innerHTML = results.slice().reverse().map(r => {
+                const output = (r.output || '').toString();
+                const input = r.input || 'N/A';
+                const snippet = output.length > 200 ? `${output.substring(0, 200)}...` : (output || 'No response');
+                return `
+                <div class="result-item" onclick="toggleResultDetails(this)">
+                    <div class="result-id">#${r.id}</div>
+                    <div class="result-content">
+                        <div class="result-category">${r.category || 'General'}</div>
+                        <div class="result-question">${escapeHtml(input)}</div>
+                        <div class="result-answer">${escapeHtml(snippet)}</div>
+                    </div>
+                    <div class="result-status ${r.score === 1 ? 'pass' : 'fail'}">${r.score === 1 ? 'Pass' : 'Fail'}</div>
+                </div>
+                <div class="result-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Question:</span>
+                        <span class="detail-value">${escapeHtml(input)}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Response:</span>
+                        <span class="detail-value">${escapeHtml(output || 'No response')}</span>
+                    </div>
+                    ${r.expected ? `
+                    <div class="detail-row">
+                        <span class="detail-label">Expected:</span>
+                        <span class="detail-value">${escapeHtml(r.expected)}</span>
+                    </div>
+                    ` : ''}
+                    ${r.negative ? `
+                    <div class="detail-row">
+                        <span class="detail-label">Avoid:</span>
+                        <span class="detail-value">${escapeHtml(r.negative)}</span>
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+            }).join('');
+        }
+
+        function toggleResultDetails(item) {
+            item.classList.toggle('expanded');
+            const details = item.nextElementSibling;
+            if (details && details.classList.contains('result-details')) {
+                details.classList.toggle('show');
+            }
+        }
+
+        // Export functionality
+        function exportResults(format) {
+            if (allResults.length === 0) {
+                alert('No results to export');
+                return;
+            }
+
+            let content, filename, type;
+            if (format === 'json') {
+                content = JSON.stringify(allResults, null, 2);
+                filename = `benchmark_results_${new Date().toISOString().split('T')[0]}.json`;
+                type = 'application/json';
+            } else {
+                const headers = ['ID', 'Category', 'Question', 'Response', 'Score'];
+                const rows = allResults.map(r => [
+                    r.id,
+                    r.category,
+                    `"${(r.input || '').replace(/"/g, '""')}"`,
+                    `"${(r.output || '').replace(/"/g, '""')}"`,
+                    r.score
+                ]);
+                content = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+                filename = `benchmark_results_${new Date().toISOString().split('T')[0]}.csv`;
+                type = 'text/csv';
+            }
+
+            const blob = new Blob([content], { type });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        async function fetchReport() {
+            try {
+                const response = await fetch(`${API_BASE}/api/analysis`);
+                const data = await response.json();
+                renderReport(data);
+            } catch (error) {
+                console.error('Report error:', error);
+                document.getElementById('reportBody').innerHTML = '<tr><td colspan="100" class="empty-state" style="color: var(--error)">Failed to load report</td></tr>';
+            }
+        }
+
+        function renderReport(data) {
+            const models = data.models || [];
+            if (models.length === 0) {
+                 document.getElementById('reportBody').innerHTML = '<tr><td colspan="100" class="empty-state">No benchmark data available</td></tr>';
+                 return;
+            }
+
+            // Extract all unique categories across all models
+            const allCategories = new Set();
+            models.forEach(m => {
+                if (m.categories) {
+                    Object.keys(m.categories).forEach(c => allCategories.add(c));
+                }
+            });
+            const categories = Array.from(allCategories).sort();
+
+            // Build Header Row
+            const headerRow = document.getElementById('reportHeaderRow');
+            let headerHtml = '<th>Benchmark / Category</th>';
+            models.forEach(m => {
+                 const logo = getLogoHtml(m);
+                 headerHtml += `
+                    <th style="min-width: 150px; text-align: center;">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                            <div class="model-logo" style="width: 48px; height: 48px;">${logo}</div>
+                            <div style="font-size: 0.9rem;">${escapeHtml(m.model)}</div>
+                        </div>
+                    </th>
+                 `;
+            });
+            headerRow.innerHTML = headerHtml;
+
+            // Build Body
+            let bodyHtml = '';
+
+            // Overall Score Row
+            bodyHtml += '<tr style="background: var(--bg-subtle); font-weight: 700;">';
+            bodyHtml += '<td>Overall Accuracy</td>';
+            models.forEach(m => {
+                const acc = m.accuracy || 0;
+                const color = acc >= 80 ? 'var(--success)' : acc >= 60 ? 'var(--warning)' : 'var(--error)';
+                bodyHtml += `<td style="text-align: center; color: ${color}; font-size: 1.1rem;">${acc.toFixed(1)}%</td>`;
+            });
+            bodyHtml += '</tr>';
+
+            // Category Rows
+            categories.forEach(cat => {
+                bodyHtml += '<tr>';
+                bodyHtml += `<td style="font-weight: 500;">${escapeHtml(cat)}</td>`;
+                models.forEach(m => {
+                    const stats = m.categories && m.categories[cat];
+                    if (stats) {
+                        const acc = stats.accuracy || 0;
+                        bodyHtml += `<td style="text-align: center;">${acc.toFixed(1)}%</td>`;
+                    } else {
+                        bodyHtml += '<td style="text-align: center; color: var(--text-muted);">-</td>';
+                    }
+                });
+                bodyHtml += '</tr>';
+            });
+
+             // Duration Row (Optional)
+             bodyHtml += '<tr>';
+             bodyHtml += '<td style="color: var(--text-muted); font-size: 0.85rem;">Avg Latency (s)</td>';
+             models.forEach(m => {
+                 const lat = m.avg_duration ? m.avg_duration.toFixed(2) : '-';
+                 bodyHtml += `<td style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">${lat}</td>`;
+             });
+             bodyHtml += '</tr>';
+
+
+            document.getElementById('reportBody').innerHTML = bodyHtml;
+        }
+
+        // Clock Widget
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clockTime').textContent = now.toLocaleTimeString('en-US', { hour12: false });
+            document.getElementById('clockDate').textContent = now.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short' });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        async function fetchData() {
+            try {
+                const selection = liveModelSelect ? liveModelSelect.value : 'auto';
+                const url = selection && selection !== 'auto'
+                    ? `${API_BASE}/api/benchmark?model=${encodeURIComponent(selection)}`
+                    : `${API_BASE}/api/benchmark`;
+                const response = await fetch(url);
+                const data = await response.json();
+                updateLiveTab(data);
+                const status = (data.status || 'idle').toLowerCase();
+                const statusDot = document.getElementById('statusDot');
+                if (status === 'running') {
+                    statusDot.style.background = 'var(--success)';
+                    statusDot.classList.add('running');
+                } else if (status === 'queued') {
+                    statusDot.style.background = 'var(--warning)';
+                    statusDot.classList.remove('running');
+                } else if (status === 'complete') {
+                    statusDot.style.background = 'var(--success)';
+                    statusDot.classList.remove('running');
+                } else if (status === 'idle') {
+                    statusDot.style.background = 'var(--text-light)';
+                    statusDot.classList.remove('running');
+                } else {
+                    statusDot.style.background = 'var(--error)';
+                    statusDot.classList.remove('running');
+                }
+                document.getElementById('statusText').textContent = status.charAt(0).toUpperCase() + status.slice(1);
+
+                // Update progress bar running state
+                const progressBar = document.getElementById('progressBar');
+                if (status === 'running') {
+                    progressBar.classList.add('running');
+                } else {
+                    progressBar.classList.remove('running');
+                }
+            } catch (error) {
+                document.getElementById('statusDot').style.background = 'var(--error)';
+                document.getElementById('statusDot').classList.remove('running');
+                document.getElementById('statusText').textContent = 'Offline';
+                document.getElementById('modelStatus').textContent = 'Offline';
+                document.getElementById('modelName').textContent = '--';
+                document.getElementById('modelCompany').textContent = '--';
+                document.getElementById('modelSize').textContent = 'Unknown';
+                document.getElementById('modelCases').textContent = '0';
+                document.getElementById('modelLogo').innerHTML = '<span class=\"model-logo-text\">--</span>';
+            }
+        }
+
+
+
+        async function fetchLeaderboard() {
+            try {
+                const response = await fetch(`${API_BASE}/api/leaderboard`);
+                const data = await response.json();
+                leaderboardData = data.leaderboard || [];
+                updateLeaderboard(leaderboardData);
+            } catch (error) {
+                console.error('Leaderboard error:', error);
+            }
+        }
+
+        let testCasesData = [];
+
+        async function fetchTestCases() {
+            try {
+                const response = await fetch(`${API_BASE}/api/test-cases`);
+                const data = await response.json();
+                testCasesData = data.cases || [];
+                document.getElementById('testCasesCount').textContent = `${testCasesData.length} cases`;
+                filterTestCases();
+            } catch (error) {
+                console.error('Test cases error:', error);
+            }
+        }
+
+        function filterTestCases() {
+            const searchTerm = document.getElementById('testCaseSearch').value.toLowerCase();
+            const filtered = testCasesData.filter(tc =>
+                tc.prompt.toLowerCase().includes(searchTerm) ||
+                tc.category.toLowerCase().includes(searchTerm)
+            );
+            updateTestCasesList(filtered);
+        }
+
+        function updateTestCasesList(cases) {
+            const list = document.getElementById('testCasesList');
+            if (cases.length === 0) {
+                list.innerHTML = '<div class="empty-state">No test cases found</div>';
+                return;
+            }
+
+            list.innerHTML = cases.map(tc => {
+                const expected = tc.expected_keywords ? tc.expected_keywords.map(k => `<span class="tag tag-success">${k}</span>`).join('') : '<span class="text-muted">None</span>';
+                const negative = tc.negative_keywords && tc.negative_keywords.length > 0 ? tc.negative_keywords.map(k => `<span class="tag tag-error">${k}</span>`).join('') : '<span class="text-muted">None</span>';
+
+                return `
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span class="result-id">ID: ${tc.id}</span>
+                            <span class="result-category">${tc.category}</span>
+                        </div>
+                        <div class="result-prompt">${escapeHtml(tc.prompt)}</div>
+                        <div style="margin-top: 12px; font-size: 0.85rem;">
+                            <div style="margin-bottom: 6px;"><strong>Expected Keywords:</strong> ${expected}</div>
+                            <div><strong>Negative Keywords:</strong> ${negative}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        async function fetchQueue() {
+            try {
+                const response = await fetch(`${API_BASE}/api/queue`);
+                const data = await response.json();
+                updateQueueList(data);
+            } catch (error) {
+                console.error('Queue error:', error);
+            }
+        }
+
+        function updateQueueList(data) {
+            const queueList = document.getElementById('queueList');
+            if (!queueList) return;
+
+            const running = data.running || [];
+            const queued = data.queued || [];
+
+            if (running.length === 0 && queued.length === 0) {
+                queueList.innerHTML = '<div class="empty-state" style="padding: 16px 0;">No models in queue</div>';
+                return;
+            }
+
+            let html = '';
+
+            // Show running models first
+            running.forEach(m => {
+                const logo = getLogoHtml(m);
+                const percent = m.total_cases ? (m.progress / m.total_cases * 100).toFixed(0) : 0;
+                html += `
+                    <div class="queue-item running">
+                        <div class="queue-item-info">
+                            <div class="model-logo">${logo}</div>
+                            <div>
+                                <div class="queue-item-name">${escapeHtml(m.name)}</div>
+                                <div class="queue-item-status">Running: ${m.progress}/${m.total_cases} (${percent}%)</div>
+                            </div>
+                        </div>
+                        <span class="status-badge running">Running</span>
+                    </div>
+                `;
+            });
+
+            // Show queued models
+            queued.forEach((m, index) => {
+                const logo = getLogoHtml(m);
+                html += `
+                    <div class="queue-item">
+                        <div class="queue-item-info">
+                            <div class="model-logo">${logo}</div>
+                            <div>
+                                <div class="queue-item-name">${escapeHtml(m.name)}</div>
+                                <div class="queue-item-status">Position: #${index + 1}</div>
+                            </div>
+                        </div>
+                        <span class="status-badge queued">Queued</span>
+                    </div>
+                `;
+            });
+
+            queueList.innerHTML = html;
+        }
+
+        async function fetchModels() {
+            try {
+                const response = await fetch(`${API_BASE}/api/models`);
+                const data = await response.json();
+                availableModels = data.models || [];
+                updateModelsGrid(availableModels);
+                updateModelSelectors(availableModels);
+            } catch (error) {
+                console.error('Models error:', error);
+            }
+        }
+
+        async function runBenchmark(model, buttonEl, restart = false) {
+            try {
+                const btn = buttonEl;
+                btn.disabled = true;
+                btn.textContent = 'Starting...';
+
+                const response = await fetch(`${API_BASE}/api/run-benchmark`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ model, restart })
+                });
+
+                const data = await response.json();
+                if (data.status === 'started' || data.status === 'queued') {
+                    btn.textContent = data.status === 'queued' ? 'Queued' : 'Running...';
+                    if (liveModelSelect) {
+                        liveModelSelect.value = model;
+                    }
+                    fetchModels();
+                    fetchData();
+                } else {
+                    btn.textContent = 'Run Benchmark';
+                    btn.disabled = false;
+                    alert(data.error || 'Failed to start');
+                }
+            } catch (error) {
+                console.error('Run error:', error);
+            }
+        }
+
+        function updateLiveTab(data) {
+            const results = data.results || [];
+            const total = Number.isFinite(data.total) ? data.total : results.length;
+            const completed = Number.isFinite(data.completed) ? data.completed : results.length;
+            const score = Number.isFinite(data.score) ? data.score : 0;
+            const accuracy = Number.isFinite(data.accuracy) ? data.accuracy : 0;
+            const categories = data.categories || {};
+            const etaMinutes = Number.isFinite(data.eta_minutes) ? data.eta_minutes : 0;
+            const startTime = data.start_time_ts || null;
+            const status = (data.status || 'idle').toLowerCase();
+            const modelName = data.model || 'Unknown model';
+            const modelInfo = data.model_info || {};
+            const modelSize = data.model_size || 'Unknown';
+            const company = modelInfo.company || 'Unknown';
+
+            allResults = results;
+
+            const percent = total ? Math.round((completed / total) * 100) : 0;
+            animateNumber('progressCount', `${completed}/${total || 0}`);
+            document.getElementById('progressPercent').textContent = `${percent}%`;
+            document.getElementById('progressBar').style.width = `${percent}%`;
+            animateNumber('accuracyValue', `${accuracy.toFixed(1)}%`);
+            document.getElementById('scoreText').textContent = `${score}/${completed || 0} correct`;
+            document.getElementById('modelStatus').textContent = formatStatus(status);
+
+            document.getElementById('modelName').textContent = modelName;
+            document.getElementById('modelCompany').textContent = company;
+            document.getElementById('modelSize').textContent = modelSize;
+            document.getElementById('modelCases').textContent = total || 0;
+            const modelLogo = document.getElementById('modelLogo');
+            modelLogo.innerHTML = getLogoHtml({ logo: modelInfo.logo, company, name: modelName });
+
+            categoryColors = buildCategoryColors(categories);
+            updateCategoryFilter(categories);
+            updateCategoryChart(categories, categoryColors);
+
+            if (startTime) {
+                serverStartTime = startTime * 1000;
+                const startDate = new Date(serverStartTime);
+                document.getElementById('startTimeText').textContent =
+                    `Started: ${startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+
+                const now = Date.now();
+                const diff = Math.floor((now - serverStartTime) / 1000);
+                const h = Math.floor(diff / 3600);
+                const m = Math.floor((diff % 3600) / 60);
+                const s = diff % 60;
+                document.getElementById('elapsedTime').textContent =
+                    `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+
+                if (etaMinutes > 0) {
+                    const finishTime = new Date(now + etaMinutes * 60000);
+                    document.getElementById('etaValue').textContent =
+                        finishTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                } else {
+                    document.getElementById('etaValue').textContent = status === 'running' ? '--' : 'Done';
+                }
+            } else {
+                serverStartTime = null;
+                document.getElementById('startTimeText').textContent = 'Started: --:--';
+                document.getElementById('elapsedTime').textContent = '00:00';
+                document.getElementById('etaValue').textContent = etaMinutes > 0 ? `${etaMinutes}m` : '--';
+            }
+
+            filterResults();
+            document.getElementById('resultCount').textContent = `${results.length} results`;
+
+            const categoryList = document.getElementById('categoryList');
+            if (Object.keys(categories).length === 0) {
+                categoryList.innerHTML = '<div class="empty-state" style="padding: 16px 0;">No data</div>';
+            } else {
+                categoryList.innerHTML = Object.entries(categories).map(([name, stats]) => {
+                    const pct = stats.total > 0 ? (stats.correct / stats.total * 100) : 0;
+                    const cls = pct >= 80 ? 'good' : pct >= 50 ? 'medium' : 'bad';
+                    const dot = categoryColors[name] || 'var(--accent)';
+                    return `<div class="category-item"><span class="category-name"><span class="category-dot" style="background:${dot}"></span>${name}</span><span class="category-score ${cls}">${stats.correct}/${stats.total}</span></div>`;
+                }).join('');
+            }
+        }
+
+        function updateCategoryFilter(categories) {
+            const filter = document.getElementById('categoryFilter');
+            const current = filter.value;
+            const options = ['<option value="all">All Categories</option>'];
+            Object.keys(categories).forEach(cat => {
+                options.push(`<option value="${cat}" ${current === cat ? 'selected' : ''}>${cat}</option>`);
+            });
+            filter.innerHTML = options.join('');
+        }
+
+        function animateNumber(elementId, newValue) {
+            const el = document.getElementById(elementId);
+            if (el.textContent !== newValue) {
+                el.style.transform = 'scale(1.1)';
+                el.textContent = newValue;
+                setTimeout(() => { el.style.transform = 'scale(1)'; }, 150);
+            }
+        }
+
+        function updateLeaderboard(leaderboard) {
+            const tbody = document.getElementById('leaderboardBody');
+            if (!leaderboard.length) {
+                tbody.innerHTML = '<tr><td colspan="5" class="empty-state">No data</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = leaderboard.map((m, i) => {
+                const rankClass = i < 3 ? `rank-${i + 1}` : '';
+                const accuracy = Number.isFinite(m.accuracy) ? m.accuracy : Number(m.accuracy) || 0;
+                const accClass = accuracy >= 80 ? 'high' : accuracy >= 60 ? 'medium' : 'low';
+                const status = (m.status || 'pending').toLowerCase();
+                const statusClass = status === 'complete' ? 'complete' : status === 'running' ? 'running' : 'pending';
+                const logo = getLogoHtml(m);
+                const safeModel = escapeHtml(m.model);
+                const safeCompany = escapeHtml(m.company || 'Unknown');
+
+                return `
+                    <tr>
+                        <td class="rank ${rankClass}">${i + 1}</td>
+                        <td>
+                            <div class="model-cell">
+                                <div class="model-logo">${logo}</div>
+                                <div class="model-info">
+                                    <h4>${safeModel}</h4>
+                                    <span>${safeCompany}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div class="accuracy-bar"><div class="accuracy-fill ${accClass}" style="width: ${accuracy}%"></div></div>
+                                <span class="accuracy-value">${accuracy.toFixed(1)}%</span>
+                            </div>
+                        </td>
+                        <td>${m.cases}</td>
+                        <td><span class="status-badge ${statusClass}">${formatStatus(status)}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function updateModelsGrid(models) {
+            const grid = document.getElementById('modelsGrid');
+            if (!models.length) {
+                grid.innerHTML = '<div class="empty-state"><div class="empty-state-title">No models found</div><div class="empty-state-desc">Install models via Ollama to run benchmarks.</div></div>';
+                return;
+            }
+
+            grid.innerHTML = models.map(m => {
+                const logo = getLogoHtml(m);
+                const safeName = escapeHtml(m.name);
+                const safeCompany = escapeHtml(m.company || 'Unknown');
+                const hasBenchmark = m.benchmarked && m.benchmark;
+                const status = hasBenchmark ? (m.benchmark.status || '') : '';
+                const isComplete = hasBenchmark && status === 'complete';
+                const isIncomplete = hasBenchmark && status === 'incomplete';
+                const accuracy = hasBenchmark ? m.benchmark.accuracy : '--';
+                const cases = hasBenchmark ? m.benchmark.cases : 0;
+                let statusLabel = 'Not Run';
+                let statusClass = 'neutral';
+                if (m.running) {
+                    statusLabel = 'Running';
+                    statusClass = 'running';
+                } else if (m.queued) {
+                    statusLabel = 'Queued';
+                    statusClass = 'queued';
+                } else if (isComplete) {
+                    statusLabel = 'Complete';
+                    statusClass = 'complete';
+                } else if (isIncomplete) {
+                    statusLabel = 'Incomplete';
+                    statusClass = 'pending';
+                }
+                const buttonLabel = m.running
+                    ? 'Running...'
+                    : m.queued
+                        ? 'Queued'
+                        : isComplete
+                            ? 'Re-run Benchmark'
+                            : isIncomplete
+                                ? 'Resume Benchmark'
+                                : 'Run Benchmark';
+
+                // Progress bar for running benchmarks
+                const totalCases = m.total_cases || 100;
+                const progressPercent = m.running && m.progress !== null
+                    ? (m.progress / totalCases * 100).toFixed(1)
+                    : 0;
+                const progressSection = m.running && m.progress !== null ? `
+                    <div class="model-card-progress">
+                        <div class="model-card-progress-header">
+                            <span class="model-card-progress-label">Running Test Cases</span>
+                            <span class="model-card-progress-value">${m.progress}/${totalCases}</span>
+                        </div>
+                        <div class="model-card-progress-bar">
+                            <div class="model-card-progress-fill running" style="width: ${progressPercent}%"></div>
+                        </div>
+                    </div>
+                ` : '';
+
+                return `
+                    <div class="model-card">
+                        <div class="model-card-header">
+                            <div class="model-card-info">
+                                <div class="model-card-logo">${logo}</div>
+                                <div>
+                                    <h4>${safeName}</h4>
+                                    <span class="model-card-company">${safeCompany}</span>
+                                </div>
+                            </div>
+                            <span class="status-badge ${statusClass}">
+                                ${statusLabel}
+                            </span>
+                        </div>
+                        ${progressSection}
+                        <div class="model-card-stats">
+                            <div class="model-card-stat">
+                                <div class="model-card-stat-label">Accuracy</div>
+                                <div class="model-card-stat-value" style="color: ${isComplete ? 'var(--success)' : 'var(--text-muted)'}">${accuracy}${hasBenchmark ? '%' : ''}</div>
+                            </div>
+                            <div class="model-card-stat">
+                                <div class="model-card-stat-label">Cases</div>
+                                <div class="model-card-stat-value">${cases}/${totalCases}</div>
+                            </div>
+                            <div class="model-card-stat">
+                                <div class="model-card-stat-label">Size</div>
+                                <div class="model-card-stat-value">${m.size}</div>
+                            </div>
+                        </div>
+                        <div class="model-card-actions">
+                            <button class="btn ${!isComplete && !m.queued && !m.running ? 'btn-primary' : ''}"
+                                onclick="runBenchmark('${m.name}', this, ${isComplete})" ${m.running || m.queued ? 'disabled' : ''}>
+                                ${buttonLabel}
+                            </button>
+                            <button class="btn btn-outline btn-sm" onclick="openPlayground('${m.name}')">
+                                Run Prompt
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function resolveLogoUrl(logo) {
+            if (!logo) return '';
+            if (logo.startsWith('data:') || logo.startsWith('http')) return logo;
+            if (logo.startsWith('/')) return `${API_BASE}${logo}`;
+            return logo;
+        }
+
+        function getLogoHtml(m) {
+            const url = resolveLogoUrl(m.logo || '');
+            if (url) {
+                const label = m.company || m.name || 'Logo';
+                return `<img src="${url}" alt="${escapeHtml(label)}">`;
+            }
+            const initials = (m.company || m.name || '?').substring(0, 2).toUpperCase();
+            return `<span class="model-logo-text">${initials}</span>`;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text == null ? '' : text;
+            return div.innerHTML;
+        }
+
+        function formatStatus(status) {
+            if (!status) return 'Idle';
+            return status.charAt(0).toUpperCase() + status.slice(1);
+        }
+
+        function updateModelSelectors(models) {
+            const modelNames = models.map(model => model.name);
+            if (liveModelSelect) {
+                const current = liveModelSelect.value || 'auto';
+                const options = ['<option value="auto">Auto (Active Run)</option>'];
+                models.forEach(model => {
+                    options.push(`<option value="${model.name}">${model.name}</option>`);
+                });
+                liveModelSelect.innerHTML = options.join('');
+                liveModelSelect.value = modelNames.includes(current) ? current : 'auto';
+            }
+
+            if (playgroundModel) {
+                const currentPlayground = playgroundModel.value || '';
+                const options = ['<option value=\"\">Select a model</option>'];
+                models.forEach(model => {
+                    options.push(`<option value="${model.name}">${model.name}</option>`);
+                });
+                playgroundModel.innerHTML = options.join('');
+                playgroundModel.value = modelNames.includes(currentPlayground) ? currentPlayground : '';
+            }
+        }
+
+        function openPlayground(model) {
+            const tab = document.querySelector('.tab[data-tab="playground"]');
+            if (tab) {
+                tab.click();
+            }
+            if (playgroundModel) {
+                playgroundModel.value = model;
+            }
+            if (playgroundPrompt) {
+                playgroundPrompt.focus();
+            }
+        }
+
+        async function runPlayground() {
+            if (!playgroundModel.value) {
+                playgroundMeta.textContent = 'Select a model first.';
+                return;
+            }
+            const prompt = playgroundPrompt.value.trim();
+            if (!prompt) {
+                playgroundMeta.textContent = 'Prompt cannot be empty.';
+                return;
+            }
+
+            playgroundRun.disabled = true;
+            playgroundMeta.textContent = 'Running...';
+            playgroundLatency.textContent = '--';
+            playgroundOutput.textContent = 'Thinking...';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/run-model`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: playgroundModel.value,
+                        prompt,
+                        system: playgroundSystem.value.trim(),
+                        temperature: parseFloat(playgroundTemp.value)
+                    })
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to run model');
+                }
+
+                playgroundOutput.textContent = data.output || 'No output returned.';
+                playgroundMeta.textContent = 'Completed';
+                playgroundLatency.textContent = data.latency ? `${data.latency}s` : '--';
+            } catch (error) {
+                playgroundOutput.textContent = 'Error running the model. Check Ollama and try again.';
+                playgroundMeta.textContent = error.message || 'Failed to run';
+            } finally {
+                playgroundRun.disabled = false;
+            }
+        }
+
+        function copyText(text) {
+            if (!text) return;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text);
+            } else {
+                const area = document.createElement('textarea');
+                area.value = text;
+                document.body.appendChild(area);
+                area.select();
+                document.execCommand('copy');
+                document.body.removeChild(area);
+            }
+        }
+
+        // Leaderboard sorting
+        let leaderboardData = [];
+        let currentSort = { field: 'accuracy', order: 'desc' };
+
+        function sortLeaderboard(field) {
+            const headers = document.querySelectorAll('.sortable');
+            headers.forEach(h => h.classList.remove('asc', 'desc'));
+
+            if (currentSort.field === field) {
+                currentSort.order = currentSort.order === 'desc' ? 'asc' : 'desc';
+            } else {
+                currentSort.field = field;
+                currentSort.order = 'desc';
+            }
+
+            const header = document.querySelector(`.sortable[data-sort="${field}"]`);
+            header.classList.add(currentSort.order);
+
+            const sorted = [...leaderboardData].sort((a, b) => {
+                let aVal = a[field];
+                let bVal = b[field];
+                if (field === 'status') {
+                    const order = { complete: 4, running: 3, queued: 2, incomplete: 2, pending: 1, idle: 0 };
+                    aVal = order[aVal] || 0;
+                    bVal = order[bVal] || 0;
+                }
+                return currentSort.order === 'desc' ? bVal - aVal : aVal - bVal;
+            });
+
+            updateLeaderboard(sorted);
+        }
+
+        function buildCategoryColors(categories) {
+            const palette = [
+                '#d1663a', '#10b981', '#3b82f6', '#f59e0b', '#0ea5e9',
+                '#e879f9', '#22c55e', '#fb7185', '#6366f1', '#f97316'
+            ];
+            const labels = Object.keys(categories);
+            const colorMap = {};
+            labels.forEach((label, index) => {
+                colorMap[label] = palette[index % palette.length];
+            });
+            return colorMap;
+        }
+
+        function updateCategoryChart(categories, colorMap) {
+            const chart = document.getElementById('categoryChart');
+            if (!chart) return;
+
+            const labels = Object.keys(categories);
+            if (!labels.length) {
+                chart.style.background = `conic-gradient(var(--bg-subtle) 0% 100%)`;
+                chart.innerHTML = `
+                    <div class="donut-center">
+                        <div class="donut-score">0%</div>
+                        <div class="donut-label">overall</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const total = labels.reduce((sum, label) => sum + (categories[label].total || 0), 0);
+            let start = 0;
+            const segments = labels.map(label => {
+                const value = categories[label].total || 0;
+                const percent = total ? (value / total) * 100 : 0;
+                const end = start + percent;
+                const color = colorMap[label] || '#d1663a';
+                const segment = `${color} ${start.toFixed(2)}% ${end.toFixed(2)}%`;
+                start = end;
+                return segment;
+            });
+
+            chart.style.background = `conic-gradient(${segments.join(', ')})`;
+            const correct = labels.reduce((sum, label) => sum + (categories[label].correct || 0), 0);
+            const accuracy = total ? Math.round((correct / total) * 100) : 0;
+            chart.innerHTML = `
+                <div class="donut-center">
+                    <div class="donut-score">${accuracy}%</div>
+                    <div class="donut-label">overall</div>
+                </div>
+            `;
+        }
+
+        // Elapsed time updater
+        setInterval(() => {
+            if (serverStartTime) {
+                const now = Date.now();
+                const diff = Math.floor((now - serverStartTime) / 1000);
+                const h = Math.floor(diff / 3600);
+                const m = Math.floor((diff % 3600) / 60);
+                const s = diff % 60;
+                document.getElementById('elapsedTime').textContent =
+                    `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+        }, 1000);
+
+        fetchModels();
+        fetchData();
+        fetchQueue();
+        setInterval(fetchData, 3000);
+        // Refresh models grid to update progress bars
+        setInterval(fetchModels, 3000);
+        // Refresh queue
+        setInterval(fetchQueue, 3000);
+    </script>
+</body>
+
+</html>

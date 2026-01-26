@@ -1,119 +1,196 @@
 """
-Vision Service for Snap & Translate feature.
-Uses GPT-4o Vision to OCR and translate images.
+Vision Service - v2 Phase 2: Image Understanding
+=================================================
+Provides image analysis using vision-language models.
+Supports Qwen-VL or LLaVA for multimodal understanding.
 """
+
+import logging
 import base64
+from typing import Optional, Dict, Any, List, Union
+from pathlib import Path
 import os
-from openai import AsyncOpenAI
+
+logger = logging.getLogger(__name__)
+
 
 class VisionService:
-    def __init__(self):
-        self.client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.model = "gpt-4o"
+    """
+    Vision service for image understanding using VLM models.
+    Supports multiple backends: Ollama (LLaVA), Qwen-VL.
+    """
     
-    async def translate_image(
-        self, 
-        image_base64: str, 
-        target_language: str = "English",
-        include_context: bool = True
-    ) -> dict:
+    def __init__(self, provider: str = "ollama", model: str = "llava:7b"):
         """
-        Translates text in an image to the target language.
+        Initialize vision service.
         
         Args:
-            image_base64: Base64 encoded image string
-            target_language: Language to translate to (default: English)
-            include_context: Whether to include cultural context
+            provider: Model provider ("ollama" or "qwen")
+            model: Model name (e.g., "llava:7b", "qwen3-vl:8b")
+        """
+        self.provider = provider
+        self.model = model
+        self._client = None
+        self._initialized = False
+        
+    def _ensure_initialized(self):
+        """Lazy initialization of vision model client."""
+        if self._initialized:
+            return
+            
+        if self.provider == "ollama":
+            try:
+                import ollama
+                self._client = ollama
+                self._initialized = True
+                logger.info(f"VisionService initialized with Ollama ({self.model})")
+            except ImportError:
+                logger.error("Ollama package not installed. pip install ollama")
+                raise
+        else:
+            logger.error(f"Unsupported provider: {self.provider}")
+            raise ValueError(f"Unsupported provider: {self.provider}")
+    
+    def _encode_image(self, image_path: str) -> str:
+        """Encode image to base64."""
+        with open(image_path, "rb") as f:
+            return base64.b64encode(f.read()).decode("utf-8")
+    
+    def analyze_image(
+        self, 
+        image_path: str, 
+        prompt: str = "Describe this image in detail.",
+        language: str = "english"
+    ) -> Dict[str, Any]:
+        """
+        Analyze an image and return description.
+        
+        Args:
+            image_path: Path to image file
+            prompt: Question or instruction about the image
+            language: Response language (english, malay, manglish)
             
         Returns:
-            dict with 'original_text', 'translated_text', 'context'
+            Dict with 'description', 'objects', 'text_detected', etc.
         """
-        system_prompt = f"""You are a translation assistant for Malaysian signboards, menus, and documents.
-Your task is to:
-1. Read ALL text visible in the image (Chinese, Jawi, Malay, Tamil, etc.)
-2. Translate it to {target_language}
-3. Provide cultural context if relevant
-
-Respond in this JSON format:
-{{
-    "original_text": "The exact text you see in the image",
-    "language_detected": "Chinese/Jawi/Tamil/Malay/etc",
-    "translated_text": "Translation in {target_language}",
-    "context": "Brief cultural explanation (if applicable, otherwise null)"
-}}
-"""
+        self._ensure_initialized()
         
-        # Handle data URL prefix if present
-        if image_base64.startswith("data:"):
-            # Extract base64 part after the comma
-            image_base64 = image_base64.split(",")[1]
+        if not os.path.exists(image_path):
+            return {"error": f"Image not found: {image_path}"}
         
-        response = await self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": "Translate the text in this image:"},
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{image_base64}",
-                                "detail": "high"
-                            }
-                        }
-                    ]
+        # Add language instruction
+        if language == "malay":
+            prompt = f"Jawab dalam Bahasa Melayu. {prompt}"
+        elif language == "manglish":
+            prompt = f"Reply in Manglish (Malaysian English). {prompt}"
+        
+        try:
+            if self.provider == "ollama":
+                response = self._client.chat(
+                    model=self.model,
+                    messages=[{
+                        "role": "user",
+                        "content": prompt,
+                        "images": [image_path]
+                    }]
+                )
+                
+                return {
+                    "description": response["message"]["content"],
+                    "model": self.model,
+                    "provider": self.provider
                 }
-            ],
-            max_tokens=1000,
-            response_format={"type": "json_object"}
-        )
+                
+        except Exception as e:
+            logger.error(f"Image analysis failed: {e}")
+            return {"error": str(e)}
+    
+    def extract_text(self, image_path: str) -> Dict[str, Any]:
+        """
+        Extract text from image (OCR).
         
-        import json
-        result = json.loads(response.choices[0].message.content)
-        return result
-
-    async def analyze_menu(self, image_base64: str) -> dict:
-        """
-        Analyzes a menu image and extracts items with prices.
-        """
-        system_prompt = """You are a menu reader for Malaysian restaurants.
-Extract all menu items with their prices. Identify any dietary info (halal, vegetarian, spicy level).
-
-Respond in JSON format:
-{
-    "restaurant_type": "Chinese/Malay/Indian/Western/etc",
-    "items": [
-        {"name": "Item name", "price": "RM X.XX", "description": "Brief description", "dietary": ["halal", "spicy"]}
-    ],
-    "recommendations": "Your top 3 picks and why"
-}
-"""
-        if image_base64.startswith("data:"):
-            image_base64 = image_base64.split(",")[1]
+        Args:
+            image_path: Path to image file
             
-        response = await self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": "Analyze this menu:"},
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{image_base64}",
-                                "detail": "high"
-                            }
-                        }
-                    ]
-                }
-            ],
-            max_tokens=2000,
-            response_format={"type": "json_object"}
-        )
+        Returns:
+            Dict with 'text' field containing extracted text
+        """
+        prompt = """Extract ALL text visible in this image. 
+        Return the text exactly as it appears, preserving formatting.
+        If there's no text, say 'No text detected'."""
         
-        import json
-        return json.loads(response.choices[0].message.content)
+        result = self.analyze_image(image_path, prompt)
+        
+        if "error" not in result:
+            return {"text": result.get("description", "")}
+        return result
+    
+    def detect_objects(self, image_path: str) -> Dict[str, Any]:
+        """
+        Detect and list objects in image.
+        
+        Args:
+            image_path: Path to image file
+            
+        Returns:
+            Dict with 'objects' list
+        """
+        prompt = """List all objects you can see in this image.
+        Format as a simple list, one object per line.
+        Be specific (e.g., 'red car' not just 'car')."""
+        
+        result = self.analyze_image(image_path, prompt)
+        
+        if "error" not in result:
+            description = result.get("description", "")
+            # Parse list from response
+            objects = [line.strip().strip("-").strip("•").strip() 
+                      for line in description.split("\n") 
+                      if line.strip() and not line.startswith("#")]
+            return {"objects": objects}
+        return result
+    
+    def answer_question(
+        self, 
+        image_path: str, 
+        question: str,
+        language: str = "english"
+    ) -> str:
+        """
+        Answer a question about an image.
+        
+        Args:
+            image_path: Path to image file
+            question: Question about the image
+            language: Response language
+            
+        Returns:
+            Answer string
+        """
+        result = self.analyze_image(image_path, question, language)
+        
+        if "error" in result:
+            return f"Error: {result['error']}"
+        return result.get("description", "Unable to answer")
+    
+    def get_available_models(self) -> List[str]:
+        """Return list of supported vision models."""
+        return [
+            "llava:7b",
+            "llava:13b",
+            "llava:34b",
+            "qwen3-vl:8b",
+            "bakllava:7b"
+        ]
+
+
+# Singleton instance
+_vision_service: Optional[VisionService] = None
+
+
+def get_vision_service(provider: str = "ollama", model: str = "llava:7b") -> VisionService:
+    """Get or create singleton VisionService."""
+    global _vision_service
+    if _vision_service is None:
+        _vision_service = VisionService(provider=provider, model=model)
+    return _vision_service

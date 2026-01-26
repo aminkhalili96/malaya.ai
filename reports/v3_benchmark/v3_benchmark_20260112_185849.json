@@ -1,0 +1,505 @@
+{
+  "summary": {
+    "timestamp": "20260112_185849",
+    "model": "qwen2.5:7b",
+    "judge_model": "qwen2.5:7b",
+    "total_cases": 35,
+    "passed": 17,
+    "pass_rate": 48.6,
+    "avg_combined_score": 0.59,
+    "avg_llm_judge_score": 8.2,
+    "avg_semantic_score": 0.491
+  },
+  "results": [
+    {
+      "id": 1,
+      "category": "Shortforms",
+      "input": "xleh la bro, aku xde duit skrg. nnt la kita jmpa",
+      "response": "Abang, kalau abang kamu keke sambil menunggu dia punya duit lagi, mungkin coba cari aktiviti sampingan atau minta rujukan duit daripada sumber lain. Kalau nak jumpa rencana, kita bisa rencanakan tempat yang tidak memerlukan banyak uang.",
+      "grading": {
+        "keyword_score": 0.091,
+        "semantic_score": 0.549,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate advice and maintaining the informal tone of the original message.",
+        "combined_score": 0.633,
+        "passed": true
+      }
+    },
+    {
+      "id": 2,
+      "category": "Shortforms",
+      "input": "mcm mane nk buat ni? aku dh try byk kali tp xjd",
+      "response": "It sounds like you're having trouble with something, and you've tried a lot but still can't figure it out. Could you please tell me more about what you're trying to do? That way, I can help you better!",
+      "grading": {
+        "keyword_score": 0.182,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear understanding and a helpful suggestion for the user.",
+        "combined_score": 0.636,
+        "passed": true
+      }
+    },
+    {
+      "id": 3,
+      "category": "Sentiment",
+      "input": "best gila siot benda ni!",
+      "response": "I think you might be asking about the \"best deal\" or \"cheapest option\" for something, but could you clarify what exactly you're looking for? Is it a product, service, or something else? The term \"gila siot benda\" seems to be colloquial and might mean \"crazy item\" in Malay.",
+      "grading": {
+        "keyword_score": 0.111,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is good but could provide more context or directly address the user's query if possible.",
+        "combined_score": 0.522,
+        "passed": false
+      }
+    },
+    {
+      "id": 4,
+      "category": "Cultural",
+      "input": "lepak mamak jom, aku belanja teh tarik",
+      "response": "Sure, let's head to Mamak for some tea! Teh tarik is a must-try when you're there. Where do you want to go?",
+      "grading": {
+        "keyword_score": 0.222,
+        "semantic_score": 0.126,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, culturally appropriate and accurate, but slightly informal for an evaluative context.",
+        "combined_score": 0.532,
+        "passed": false
+      }
+    },
+    {
+      "id": 5,
+      "category": "Manglish",
+      "input": "eh bro, that meeting how ah? client happy tak?",
+      "response": "Eh, kau mcm mana sahkan meeting tu? Client Desa Gembira atau Jalan Gembira? Kalau nak pergi ke Desa Gembira, tu tmpat perumahan. Jalan Gembira tu mungkin kor korang nak ke tempat spesifik dlm desa gembira. Mustahil yang mana2 pula tak ada client, tapi kau boleh ceritak lebih jelas macam mana sahkan?",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is generally clear but could be more concise and relevant to the user's query.",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 6,
+      "category": "Sentiment",
+      "input": "geram betul la dengan service ni, lambat macam siput",
+      "response": "I understand that you're frustrated with the slow service. It must be really annoying! Is there anything specific we can do to help speed things up or improve your experience?",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response that shows understanding and offers assistance, but could slightly more directly address the user's frustration.",
+        "combined_score": 0.64,
+        "passed": true
+      }
+    },
+    {
+      "id": 7,
+      "category": "Cultural",
+      "input": "jangan kacau aku, mengantuk gila lepas sahur",
+      "response": "Maaf kalau ada yang kacau, brother. Cuba tuangkan minyak dalam cawan dan masak nasi goreng atau roti bakar untuk menahan perut sikit sebelum cuba tidur. Pastu coba nyalakan pendingin ruangan atau duduk-duduk di tempat terbuka supaya rasa kantuk kurang. Semoga sah!",
+      "grading": {
+        "keyword_score": 0.125,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "The response is good and offers helpful advice, but it doesn't directly address the user's expression of being very sleepy after breaking the fast.",
+        "combined_score": 0.575,
+        "passed": false
+      }
+    },
+    {
+      "id": 8,
+      "category": "Dialect: Kelantan",
+      "input": "demo tokene make nasi kerabu lagi ko?",
+      "response": "Tiongki, nak demo cara buat nasi kerabu sederhana:\n\nBahan-bahannya:\n- 500g beras putih\n- Air secukupnya untuk cuci beras\n- Air biru untuk pewarna (dapat dari kacang mete yang ditumbuk)\n- Garam secukupnya\n- Pelengkap sesuai selera (seperti telur rebus, sayur-sayuran)\n\nCara membuat:\n1. Cuci beras hingga airnya keluar bening.\n2. Masukkan beras ke dalam wadah dan beri air biru. Uleni rata.\n3. Biarkan semalam agar warna meresap.\n4. Ketukar air nasi hingga berwarna biru pekat.\n5. Didihkan air, masak beras sbb biasa (biasanya 20-25 minit).\n6. Angkat dan campur dengan garam secukupnya.\n7. Sajikan dengan pelengkap.\n\nSelamat cuba, tiongki!",
+      "grading": {
+        "keyword_score": 0.125,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear instructions and appropriate language, but 'tiongki' is not commonly used in Malaysian English.",
+        "combined_score": 0.625,
+        "passed": true
+      }
+    },
+    {
+      "id": 9,
+      "category": "Dialect: Kelantan",
+      "input": "bakpo mung dop mari semalam?",
+      "response": "Maaf, saya tidak pasti maksud anda. Bolehkan anda rujuk lagi soalan anda dalam Bahasa Melayu, Inggeris, atau bahasa lain yang anda gunakan? Contohnya: \"Bakpo mung dor mari semalam?\" boleh jadi anda maksudkan \"Bagaimana mood kamu semalam?\" Atau anda maksud soalan lain?",
+      "grading": {
+        "keyword_score": 0.182,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good attempt at clarification, but the example given might confuse the user as it slightly alters the meaning.",
+        "combined_score": 0.636,
+        "passed": true
+      }
+    },
+    {
+      "id": 10,
+      "category": "Dialect: Penang",
+      "input": "hang nak pi mana tu? nampak segak semacam",
+      "response": "Itu macam mana Jalan Ng Pi Ton ni. Lokasinya di sebelah manca?",
+      "grading": {
+        "keyword_score": 0.1,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is understandable but uses an inappropriate phrase 'Jalan Ng Pi Ton' which might be offensive or confusing.",
+        "combined_score": 0.52,
+        "passed": false
+      }
+    },
+    {
+      "id": 11,
+      "category": "Dialect: Penang",
+      "input": "awat hang tak habaq awal-awal?",
+      "response": "Maaf, pertanyaan anda agak kurang jelas. Boleh tu anda kongsikan lebih lanjut tentang apakah yang anda maksud dengan \"awat hang tidak habaq awal-awal\"? Ini boleh saya faham dalam Bahasa Melayu atau Inggeris. Terima kasih.",
+      "grading": {
+        "keyword_score": 0.2,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and provides helpful clarification, but the question seems to be in a specific dialect or context that wasn't fully addressed.",
+        "combined_score": 0.54,
+        "passed": false
+      }
+    },
+    {
+      "id": 12,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "kono la makan masak lemak cili api, baru sodap",
+      "response": "Kita boleh cuba resepi yang mudah! Masak dulu cili api dengan sedikit minyak sayur sehingga wangi. Tambahkan sayur-sayuran atau bahan utama lain, lalu masak sebentar. Setelah itu, masukkan lemak dan sodak. Aduk rata dan koreksi rasa. Selamat mencuba!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good answer with clear instructions, but 'sodak' is not typically used in Malaysian cooking; it might be a typo for 'santan' (coconut milk).",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 13,
+      "category": "Dialect: Negeri Sembilan",
+      "input": "ekau jangan bising, den nak tido ni",
+      "response": "Tak usah bising, Denise. Saya akan cuba membuat selesa supaya kamu bisa tidur nyenyak. Kalau ada yang perlu dibetulkan di sekitar sini, kata tahu.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.515,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, culturally appropriate and clear, but slightly redundant at the end.",
+        "combined_score": 0.671,
+        "passed": true
+      }
+    },
+    {
+      "id": 14,
+      "category": "Dialect: Sarawak",
+      "input": "kitak urang dah makan sik?",
+      "response": "Eh, maaf tu. Kita faham ada rasa lapukik. Apa makanan yang suka atau macam mana kita boleh bantu cek menu makanan yang sesui untuk kamu hari ini?",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with appropriate local language and context, but the initial response could be more direct.",
+        "combined_score": 0.579,
+        "passed": false
+      }
+    },
+    {
+      "id": 15,
+      "category": "Dialect: Sarawak",
+      "input": "kamek maok pegi pasar kejap",
+      "response": "I think you meant to say \"Apa caranya saya pergi ke pasar kepong?\" \n\nKalau begini, boleh jadi dekat tempatmu ada kitar raya atau taxi. Atau kalau dekat rumah anda, mungkin ada buka-jalan yang boleh ambil. Jika terus jauh, pergi naik bas atau kereta api mungkin lebih nyaman. Ada pula pilihan untuk nge-motor atau menaiki mobil sendiri jika saudara ada punya.\n\nMaafkan saya kalau salah faham!",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is good but the AI's initial rephrasing of the query was incorrect. It should have maintained the original meaning about going to a specific place (pasar kepong) rather than assuming 'kepong' meant something else.",
+        "combined_score": 0.567,
+        "passed": false
+      }
+    },
+    {
+      "id": 16,
+      "category": "Dialect: Sabah",
+      "input": "boleh bah, kalau kau mau",
+      "response": "Tentu boleh! Kalau kamu mahu tanyakan apa-apa atau minta bantuan dalam projek apapun, saya sini untuk membantu!",
+      "grading": {
+        "keyword_score": 0.286,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good Malay response with correct grammar and appropriate context.",
+        "combined_score": 0.657,
+        "passed": true
+      }
+    },
+    {
+      "id": 17,
+      "category": "Dialect: Sabah",
+      "input": "ndak payah lah kau susah-susah",
+      "response": "Maaf, kata-kata anda mungkin perlu lebih jelas. Anda merasa kesukaran dengan apa-apa ya? Saya sini untuk bantu anda.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and attempts to clarify the user's query, but it does not directly address the original phrase.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 18,
+      "category": "Mixed",
+      "input": "can you explain how to renew my lesen memandu?",
+      "response": "Sure, awak boleh follow langkah-langkah berikut untuk menggantikan lesen memandu awak:\n\n1. Pastikan awa ada semua dokumen yang diperlukan seperti:\n   - Lesen memandu lama\n   - Bukti identiti sah (KTP/BIK)\n   - Buku Simpanan Pendidikan atau slip gaji (jika awa masih berusia kurang daripada 21 tahun)\n\n2. Datang ke bilik negara terdekat pada masa yang ditetapkan.\n\n3. Sumbangkan dokumen-dokumen tersebut kepada perkhidmatan meja.\n\n4. Ikuti perintah petugas untuk melaksanakan pelembagaan sidik jari, foto, dan mengisi formulir.\n\n5. Jom diuji teori memandu apabila diluluskan.\n\n6. Ambil lesen memandu baru selepas proses tersebut.\n\nJika awa ada masalah atau perlu maklumat lanjut, boleh hubungi bilik negara untuk mendapatkan bantuan lebih lanjut.",
+      "grading": {
+        "keyword_score": 0.125,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "The response is clear and accurate but could include the term 'drivers' license' for better understanding of English speakers.",
+        "combined_score": 0.625,
+        "passed": true
+      }
+    },
+    {
+      "id": 19,
+      "category": "Instruction",
+      "input": "tolong buat email formal untuk apply cuti sakit esok",
+      "response": "Tentu, berikut adalah contoh email formal untuk mengajukan cuti sakit:\n\n---\n\n**Perkara:** Pengajuan Cuti Sakit\n\nKepada,\nPengurusan Sumber Manusia [Nama Perusahaan]\n\nAssalamualaikum Wr. WB,\n\nSaya [Nombor Jabatan/Nama] dari [Jabatan].\n\nSaya ingin mengambil cuti sakit pada tarikh esok, 12 Julai 2023 (Rabu).\n\nIa adalah untuk keperluan medis pribadi dan saya akan mencadangkan diri kembali setelah kesihatan saya pulih.\n\nSekiranya memerlukan maklumat tambahan atau dokumen, sila hubungi saya di nombor [nomor telefon] atau e-mel [e-mel].\n\nTerima kasih atas pengertian dan bantuan yang diberikan.\n\nWassalamualaikum Wr. WB,\n\n[Tarikh]\n[Nama]\n\n---\n\nSila periksa isytiharkan dengan maklumat spesifik seperti tarikh cuti, nombor jabatan atau pejabat anda, serta maklumat kontak anda.",
+      "grading": {
+        "keyword_score": 0.333,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good formal email, but 'Perkara:' is not commonly used in business emails; consider removing it.",
+        "combined_score": 0.667,
+        "passed": true
+      }
+    },
+    {
+      "id": 20,
+      "category": "Instruction",
+      "input": "bg resepi nasi lemak yang paling simple",
+      "response": "Untuk membuat nasi lemak yang简单版，你可以按照以下步骤：\n\n1. 做椰浆饭：\n   - 将米饭与椰浆、盐一起煮熟。\n\n2. 准备配菜：\n   - 沙拉：切碎的黄瓜和番茄。\n   - 煮鸡蛋：将鸡蛋煮熟后切半。\n   - 椰浆花生：将烤过的花生泡在热椰浆中。\n\n3. 装盘：\n   - 在碗底放一层椰浆饭，上面放配菜，再加一点马来辣椒酱。\n\n这样就能做出简单又美味的 nasi lemak 了！希望你喜欢这个版本。",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "响应内容基本正确，但使用了中文而非预期的马来语，这可能会影响用户的理解。",
+        "combined_score": 0.533,
+        "passed": false
+      }
+    },
+    {
+      "id": 21,
+      "category": "Slang",
+      "input": "ape cer bro?",
+      "response": "Apa cer abang bermaksud cerita tentang kehidupan atau pengalaman seseorang yang disebut \"abang\". Apakah abang yang anda maksudkan? Jika anda ingin tahu cerita spesifik, sila beri tahu saya nama atau latar belakang abang tersebut.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response but 'cer' was not clearly understood as a typo or abbreviation.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    },
+    {
+      "id": 22,
+      "category": "Slang",
+      "input": "pishang mat, keje byk gila",
+      "response": "Hehe, perasaan itu familiar tu! Cari-cari masa untuk istirahat sebentar dan rilek. Boleh cuba latih kemahiran baru atau baca buku sementara cuba-cuba ngalih2kan fikiran dari tugas.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is friendly and offers advice, but the phrase 'pishang mat, keje byk gila' seems to be in a language or dialect not easily identifiable, which might confuse the user.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 23,
+      "category": "Slang",
+      "input": "koyak la mental aku hari ni",
+      "response": "Maaf tu kena macam ni? Jom cuba rileks kan. Boleh cuba ngeri-ngerai ringan atau lalai sedetik? Kalau masih berat, boleh jemput bantuan dari teman sahabat atau ahli konseling profesional ya.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "The response is good and offers helpful advice, but the phrase 'koyak la mental' was not accurately translated or addressed.",
+        "combined_score": 0.579,
+        "passed": false
+      }
+    },
+    {
+      "id": 24,
+      "category": "Slang",
+      "input": "dia tu acah je lebih",
+      "response": "Maaf, boleh tu aku tak faham betul maksud anda. Boleh jelaskan lagi atau ada soalan spesifik yang ingin tanyakan?",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and asks for clarification, but it doesn't directly address the user's input in Malay.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 25,
+      "category": "Slang",
+      "input": "jangan wat hal la wei",
+      "response": "Sorry, can you please clarify your message? I didn't quite get that.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 7.0,
+        "llm_judge_feedback": "The response is clear and asks for clarification, but the language used does not match the user's input.",
+        "combined_score": 0.5,
+        "passed": false
+      }
+    },
+    {
+      "id": 26,
+      "category": "Slang",
+      "input": "fuh, padu teruk performance dia tadi",
+      "response": "Maaf dengar bahawa persembahan atau peperangan lagu itu tidak berjalan sesuai harapan anda. Apa yang boleh saya buat untuk membantu mengatasi masalah ini? Mungkin kita boleh coba kaji ulang skena, penerokaan mikrofon atau pengetua suara untuk meningkatkan persembahan selanjutnya.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with appropriate empathy and constructive suggestions.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 27,
+      "category": "Slang",
+      "input": "aku on je kalau korang on",
+      "response": "Berarti anda hanya percaya apabila lawan anda adalah seorang 'on' atau berkuasa? Ini boleh jadi sukar kerana ada banyak situasi di mana kita perlu membuat keputusan tanpa memandangkan status lawan. Mungkin anda boleh cuba fokus pada kualiti orang tersebut daripada ciri-ciri luarannya.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with clear interpretation and advice, but the user query had a grammatical error that wasn't fully addressed.",
+        "combined_score": 0.579,
+        "passed": false
+      }
+    },
+    {
+      "id": 28,
+      "category": "Slang",
+      "input": "takde hal lah, benda kecik je tu",
+      "response": "Oke de, kalau begitu tiada masalah. Anda boleh kongsikan lebih jelas apa yang ingin anda ketahui atau buat jika perlu sebab saya sini untuk membantu.",
+      "grading": {
+        "keyword_score": 0.286,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response with appropriate language and understanding of the user's query, but the translation could be more natural in English.",
+        "combined_score": 0.607,
+        "passed": true
+      }
+    },
+    {
+      "id": 29,
+      "category": "Tech",
+      "input": "camne nak install python kat mac?",
+      "response": "Untuk menginstall Python di Mac, kamu boleh ikut langkah-langkah ini:\n\n1. Buka App Store di komputer Mac kamu.\n2. Cari \"Python\" dalam search bar.\n3. Klik pada aplikasi Python yang diperkatakan disediakan oleh organisation \"Python Software Foundation\".\n4. Klik \"Get\" dan \"Install\" untuk memulakan proses penginstallan.\n\nSetelah selesai, kamu boleh mengesahkan Python telah dipasang dengan mengetik `python3 --version` dalam terminal Mac.\n\nJika ingin versi terkini atau versi spesifik, kamu juga boleh mengunjungi situs resmi Python dan mengunduh dari sana.",
+      "grading": {
+        "keyword_score": 0.167,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good response but the user might find it more natural if the language was in Malaysian or Bahasa Melayu instead of English.",
+        "combined_score": 0.583,
+        "passed": false
+      }
+    },
+    {
+      "id": 30,
+      "category": "Tourism",
+      "input": "what is the best time to visit Langkawi?",
+      "response": "The best time to visit Langkawi, Malaysia, depends on what you enjoy most! Generally, the dry season from March to August is great for outdoor activities like beach trips and island hopping. September to February can be more comfortable due to milder weather, but it's also when monsoon rains often occur.\n\nFor the best weather and fewer crowds, consider visiting in April or May. Just check the weather forecast before you go as conditions can vary!",
+      "grading": {
+        "keyword_score": 0.571,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with clear information and minor improvements could be made regarding the specific weather conditions in April or May.",
+        "combined_score": 0.714,
+        "passed": true
+      }
+    },
+    {
+      "id": 31,
+      "category": "Civics",
+      "input": "explain Rukun Negara to me",
+      "response": "Rukun Negara adalah panduan dasar dalam kehidupan berbangsa dan bernegara di Malaysia. Ia terdiri daripada 6 prinsip utama:\n\n1. Keadilan Sosial Bagi Semua Rakyat\n2. Perlindungan Agama Orang Islam\n3. Pancasila\n4. Sistem Demokrasi Perwakilan\n5. Kesopanan dan Disiplin Diri\n6. Kepentingan Bangsa Malaysia\n\nRukun Negara membantu rakyat Malaysia untuk bersatu padu dan memajukan negara dengan semangat gotong royong.",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response, but the principle 'Pancasila' is not part of Rukun Negara; it should be 'Perpaduan Bangsa-Bangsa'.",
+        "combined_score": 0.6,
+        "passed": true
+      }
+    },
+    {
+      "id": 32,
+      "category": "Civics",
+      "input": "sape PM malaysia sekarang?",
+      "response": "Maaf, saya tidak dapat mengetahui dengan pasti siapa Perdana Menteri Malaysia saat ini tanpa terhubung ke sumber berita yang up to date. Sekarang (2023), Perdana Menteri Malaysia adalah Anwar Ibrahim. Tetapi untuk informasi terbaru, sila cek sumber berita tepercaya atau situs rasmi Kerajaan Malaysia.",
+      "grading": {
+        "keyword_score": 0.6,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with accurate information and a suggestion for verification from reliable sources.",
+        "combined_score": 0.72,
+        "passed": true
+      }
+    },
+    {
+      "id": 33,
+      "category": "Cultural",
+      "input": "bila raya aidilfitri tahun ni?",
+      "response": "Bila Ramadhan Aidilfitri tahun ini bergantung pada tarikh hijriah yang ditentukan oleh Majlis Ugah Agama Islam Selangor (MUAFIS) atau badan berhampiran. Biasanya, tarikh pastinya dikeluarkan beberapa minggu sebelum Aidilfitri. Untuk maklumat yang tepat, sila takrifkan kembali dari sumber rasmi.",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good answer with minor improvement suggestions for clarity.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    },
+    {
+      "id": 34,
+      "category": "Tourism",
+      "input": "suggest tempat dating best kat KL",
+      "response": "For a romantic date in Kuala Lumpur, you might want to check out these spots:\n\n1. **KL Monorail** - A scenic ride with beautiful city views.\n2. **Tropicana KL** - Great for a meal and drinks with a view of the Petronas Twin Towers.\n3. **Binjai Coffee Shop (Lapangan Boleh)** - Famous for their coffee, it's a cozy spot for a casual date.\n4. **The Star Plaza** - Offers a mix of dining options and entertainment, perfect for a night out.\n\nThese places offer a mix of romance, views, and cuisine that could make your date memorable!",
+      "grading": {
+        "keyword_score": 0.0,
+        "semantic_score": 0.5,
+        "llm_judge_score": 8.0,
+        "llm_judge_feedback": "Good selection of dating spots in Kuala Lumpur, but 'KL Monorail' is not typically considered a spot for dates and could be replaced with a more appropriate recommendation.",
+        "combined_score": 0.55,
+        "passed": false
+      }
+    },
+    {
+      "id": 35,
+      "category": "Local knowledge",
+      "input": "traffic jam gila kat federal highway skrg",
+      "response": "It sounds like there's a severe traffic jam on the Federal Highway right now. You might want to consider alternative routes or plan your journey accordingly. If you're driving, make sure to follow any updates from the Department of Transport Malaysia (JPJ) or local news for real-time information. Safe travels!",
+      "grading": {
+        "keyword_score": 0.143,
+        "semantic_score": 0.5,
+        "llm_judge_score": 9.0,
+        "llm_judge_feedback": "Good response with clear advice and relevant suggestions, just a minor improvement could be adding the word 'potentially' before 'real-time information' for better flow.",
+        "combined_score": 0.629,
+        "passed": true
+      }
+    }
+  ]
+}

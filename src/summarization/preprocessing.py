@@ -37,11 +37,13 @@ def _load_raw_dictionary() -> dict:
         pass
     return {}
 
-def _merge_terms(target: Dict[str, str], source: Dict[str, str], skip_keys: set) -> None:
+def _merge_terms(target: Dict[str, str], source: Dict[str, str], skip_keys: set, override: bool = False) -> None:
     for term, expansion in source.items():
         if term.startswith("_"):
             continue
         if term in skip_keys:
+            continue
+        if not override and term in target:
             continue
         target[term] = expansion
 
@@ -203,18 +205,35 @@ class TextNormalizer:
         text = text.strip()
         normalized = text
 
+        # Apply local slang/dialect expansion before Malaya to avoid English drift.
+        normalized, _ = self._apply_ambiguous_terms(normalized)
+        normalized = self._apply_shortforms(normalized)
+        baseline = normalized
+
         if self._malaya_available and self.normalizer:
             try:
-                normalized = self.normalizer.normalize(text)
-                if isinstance(normalized, dict) and "normalize" in normalized:
-                    normalized = normalized["normalize"]
-                if not isinstance(normalized, str):
-                    normalized = text
+                candidate = self.normalizer.normalize(normalized)
+                if isinstance(candidate, dict) and "normalize" in candidate:
+                    candidate = candidate["normalize"]
+                if isinstance(candidate, str):
+                    english_markers = {
+                        "the", "too", "bored", "crazy", "what", "why", "how", "when",
+                        "where", "who", "with", "without", "slow", "happy", "sad",
+                    }
+                    candidate_lower = candidate.lower()
+                    baseline_lower = normalized.lower()
+                    english_hits = sum(1 for word in english_markers if word in candidate_lower)
+                    baseline_hits = sum(1 for word in english_markers if word in baseline_lower)
+                    # If Malaya normalization introduces English drift, keep local expansion.
+                    if english_hits > baseline_hits and english_hits >= 1:
+                        candidate = normalized
+                    normalized = candidate
+                else:
+                    normalized = baseline
             except Exception as exc:
                 self._init_error = self._init_error or exc
-                normalized = text
+                normalized = baseline
 
-        normalized, _ = self._apply_ambiguous_terms(normalized)
         normalized = self._apply_shortforms(normalized)
 
         # Clean up extra whitespace
@@ -429,6 +448,31 @@ class DialectDetector:
         "patani_malay": "Patani/Thai-Malay",
         "standard": "Standard Malay/Manglish"
     }
+
+    def _combined_indicators(self) -> Dict[str, list]:
+        """Merge static indicators with lexicon-driven dialect terms."""
+        combined = {dialect: list(terms) for dialect, terms in self.DIALECT_INDICATORS.items()}
+        raw_dialects = RAW_DICTIONARY.get("dialects", {})
+        if isinstance(raw_dialects, dict):
+            for dialect, payload in raw_dialects.items():
+                if not isinstance(payload, dict):
+                    continue
+                combined.setdefault(dialect, [])
+                for term in payload.keys():
+                    if str(term).startswith("_"):
+                        continue
+                    combined[dialect].append(str(term).lower())
+        # De-duplicate while preserving order
+        for dialect, terms in combined.items():
+            seen = set()
+            uniq = []
+            for term in terms:
+                if term in seen:
+                    continue
+                seen.add(term)
+                uniq.append(term)
+            combined[dialect] = uniq
+        return combined
     
     def detect(self, text: str) -> Tuple[str, float, list]:
         """
@@ -443,10 +487,11 @@ class DialectDetector:
         text_lower = text.lower()
         words = re.findall(r"\b\w+\b", text_lower)
         
+        indicators = self._combined_indicators()
         active_dialects = {
-            dialect: indicators
-            for dialect, indicators in self.DIALECT_INDICATORS.items()
-            if DIALECT_STATUS.get(dialect, "active") == "active" and indicators
+            dialect: terms
+            for dialect, terms in indicators.items()
+            if DIALECT_STATUS.get(dialect, "active") == "active" and terms
         }
         if not active_dialects:
             return "standard", 0.0, []

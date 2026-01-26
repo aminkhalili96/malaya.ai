@@ -1,0 +1,405 @@
+| Model | Score (Agent Proxy) | Cases |
+| :--- | :--- | :--- |
+| gemma3_27b | 83.7% | 100 |
+| gpt-oss_20b | 78.7% | 100 |
+| Malaya V3 w/ v3 | 78.0% | 5 |
+| Malaya V5 (Agnt) | 74.7% | 100 |
+| hf.co_mradermacher_Malaysian-Qwen2.5-7B-Dialect-Reasoning-GRPO-GGUF_Q4_K_M | 74.6% | 100 |
+| qwen3_14b | 74.4% | 100 |
+| Malaya V5 (Agnt) | 71.8% | 100 |
+| Malaya V3 w/ v3 | 65.4% | 35 |
+| llama3.1_8b | 64.4% | 100 |
+| Malaya V3 w/ v3 | 60.6% | 100 |
+| deepseek-coder-v2_16b | 60.1% | 100 |
+| llama3.2_3b | 58.0% | 100 |
+| Malaya V3 w/ v3 | 49.7% | 100 |
+| phi3_14b | 37.1% | 100 |
+| benchmark_7b_baseline_logs | 0.5% | 100 |
+| benchmark_100_cases_logs | 0.5% | 100 |
+| qwen3-vl_8b | 0.0% | 1 |
+
+=== V5/V4 Failure Analysis ===
+Case 1 (Score 0.0): xleh la bro, aku xde duit skrg. nnt la kita jmpa
+  Response: Bro, tak perlu cemas. Kita boleh jumpa di tempat-tempat yang tidak memerlukan uang, macam ngerjakan aktiviti-aktiviti bebas seperti parkir atau taman. Atau kita boleh sambung call atau video call kalau kau nak bercakap.
+  Reason: Hits: 0/11 ([])
+----------------------------------------
+Case 5 (Score 0.0): eh bro, that meeting how ah? client happy tak?
+  Response: Tak ada info spesifik tentang pertemuan mana yang kamu maksud. Tapi kalau kita bicara umum, biasanya klien senang jika mereka merasa kebutuhan dan harapan mereka terpenuhi. Pastikan kamu sudah mengecek apakah client memberi feedback positif atau tidak setelah pertemuan. Kalau ada, cek juga apakah semua yang disepakati dalam pertemuan itu sudah diimplementasikan dengan baik.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 9 (Score 0.5): bakpo mung dop mari semalam?
+  Response: Bakpo, jika mcm mana ada dop (lubang) mari semalam, anda boleh laporkan ke JKR (Jabatan Kerja Raya) menggunakan MyJalan app atau hubungi PBT (Pegawai Besar Tempat) di tempat tinggal anda.
+  Reason: Hits: 1/11 (['semalam'])
+----------------------------------------
+Case 11 (Score 0.5): awat hang tak habaq awal-awal?
+  Response: Awat hang tak habaq awal-awal? Hari Baru Tahun baru bukanlah hari libur nasional, tetapi pada 1 Januari. Sementara itu, Thaipusam jatuh pada 25 Januari.
+  Reason: Hits: 1/10 (['awal'])
+----------------------------------------
+Case 14 (Score 0.5): kitak urang dah makan sik?
+  Response: Maaf, aku AI jadi tak perlu makan. Tapi kalau urang punya masa sahaja, mungkin boleh cuba makan-makanan khas Malaysia seperti nasi lemak atau rojak?
+  Reason: Hits: 1/7 (['makan'])
+----------------------------------------
+Case 16 (Score 0.5): boleh bah, kalau kau mau
+  Response: Tentu lah! Ada apa yang nak tahu atau bincang? Saya sini untuk membantu dengan maklumat tentang Malaysia atau topik lain yang kamu minati.
+  Reason: Hits: 1/7 (['can'])
+----------------------------------------
+Case 17 (Score 0.0): ndak payah lah kau susah-susah
+  Response: Tidak usah cemas, adik. Saya sini untuk bantu anda. Kalau ada soalan atau masalah yang ingin anda tanyakan tentang Malaysia, kau boleh minta pertolongan saya. Saya cuba menjawab sebaik mungkin.
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 21 (Score 0.0): ape cer bro?
+  Response: Apa cer bro? Kalau nak tahu tarikh libur awam 2024, ada banyak hari-hari penting. Misalnya, Thaipusam pada 25 Januari, Hari Raya Aidilfitri antara 10-11 April, dan Malaysia Day pada 16 September. Kalau nak tahu lebih lanjut atau nak saran aktiviti lain, boleh kongsikan nih!
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 22 (Score 0.0): pishang mat, keje byk gila
+  Response: Pishang Mat Keje adalah salah satu persembahan seni tradisional di Malaysia, terutamanya di Sabah. Ia merupakan sejenis tarian dan persembahan musik yang popular di kalangan kaum Kadazandusun. Lagu ini biasanya menggambarkan kehidupan masyarakat setempat dengan nada yang gila dan menarik.
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 23 (Score 0.0): koyak la mental aku hari ni
+  Response: Hari Raya Malaysia ni dekat, jadi aku nak tawarkan beberapa aktiviti yang boleh bantu kamu merasa lebih baik:
+
+1. **Pergi Hiking**: Jom pergi hiking di Bukit Gasing atau Bukit Broga. Udara segar dan pemandangan indah pasti dapat mengurangkan stres.
+2. **Camping**: Kamu boleh cuba camping di tempat seperti Janda Baik atau Gopeng. Aktiviti alam sekitar ini biasanya dapat meningkatkan mood.
+3. **Makan Makanan Tradisional**: Cobalah makan makanan tradisional Malaysia untuk merayakan hari kemerdekaan kita. Makanan lezat boleh membuat kamu merasa lebih baik.
+
+Jadi, coba salah satu aktiviti ni dan semoga dapat membantu kamu merasa lebih baik!
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 24 (Score 0.0): dia tu acah je lebih
+  Response: Acah P. Ramlee adalah seorang pionir dalam industri hiburan Malaysia yang sangat terkenal. Dia dikenali dengan beberapa genre seperti komedi, drama dan muzik. Berikut adalah beberapa filem komedi terbaik yang pernah dibintanginya:
+
+1. "Madu Tiga" - Filem ini mengisahkan tentang poligami dan menjadi salah satu filem komedi yang paling dikenali.
+2. "Seniman Bujang Lapok" - Filem ini merupakan satir terhadap industri filem, menunjukkan sisi lain dari industri filem Malaysia.
+3. "Pendekar Bujang Lapok" - Filem ini menggabungkan unsur silat dengan komedi, memberikan hiburan yang menyeluruh kepada penonton.
+
+Acah P. Ramlee memang lebih daripada seorang pelakon biasa; dia adalah seorang penyanyi, penulis lagu dan aktor yang berjaya.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 25 (Score 0.5): jangan wat hal la wei
+  Response: Berikut adalah senarai perayaan nasional dan agama penting di Malaysia pada tahun 2024:
+
+1. Tahun Baru (Non-nasional): 1 Januari
+2. Thaipusam: 25 Januari
+3. Tahun Baru Imlek: 10-12 Februari
+4. Hari Raya Aidilfitri: 10-11 April
+5. Hari Buruh: 1 Mei
+6. Wesak: 22 Mei
+7. Ulang Tahun Yang di-Pertuan Agong: 3 Jun
+8. Hari Raya Haji: 17 Jun
+9. Awal Muharram: 7 Julai
+10. Hari Kemerdekaan: 31 Ogos
+11. Hari Malaysia: 16 September
+12. Deepavali: 30 Oktober
+13. Natal: 25 Disember
+
+Perayaan-perayaan ini penting untuk masyarakat Malaysia dan membantu memperkukuh identiti nasional serta kepelbagaian budaya di negara kita.
+  Reason: Hits: 1/7 (['ok'])
+----------------------------------------
+Case 26 (Score 0.5): fuh, padu teruk performance dia tadi
+  Response: Tak sedia baik pula performance kerajaan Padu teruk tadi. Dato' Seri Anwar Ibrahim, yang sekarang jadi Perdana Menteri, memimpin Kerajaan Perpaduan. Sejak November 2022, beliau dan kabinetnya fokus pada pelbagai isu penting seperti ekonomi, sosial, dan perubahan struktural untuk negara. Jika anda nak tahu lebih lanjut tentang kerja-kerja mereka atau isu-isu yang sedang berlaku, boleh cek laman web rasmi Kerajaan Malaysia atau media sosial mereka.
+  Reason: Hits: 1/7 (['padu'])
+----------------------------------------
+Case 27 (Score 0.0): aku on je kalau korang on
+  Response: Tak usah cemas, kalau korang on je, aku on juga!
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 28 (Score 0.5): takde hal lah, benda kecik je tu
+  Response: Oke, aku akan cuba menjawab soalanmu dengan sebaik mungkin berdasarkan maklumat yang ada. Boleh kau tanya soalan spesifik tentang Malaysia atau peribadi? Aku sini untuk membantu!
+  Reason: Hits: 1/7 (['ok'])
+----------------------------------------
+Case 29 (Score 0.5): camne nak install python kat mac?
+  Response: Untuk menginstall Python di Mac, kamu boleh ikuti langkah-langkah berikut:
+
+1. Buka aplikasi "Mac App Store" di komputer Macmu.
+2. Cari "Python" dalam kotak pencarian.
+3. Klik pada ikon Python yang muncul dan klik "Get" untuk mengunduh dan menginstall.
+4. Tunggu hingga proses instalasinya selesai.
+
+Setelah itu, kamu boleh memastikan Python telah terpasang dengan baik melalui terminal Macmu:
+
+1. Buka Terminal dari aplikasi "Utilities".
+2. Ketik perintah `python3 --version` atau `python --version`.
+3. Jika Python telah terpasang, ia akan menunjukkan versi Python yang terinstall.
+
+Jika kamu ingin menggunakan versi Python 2 dan 3 dengan mudah, kamu boleh menginstal "pyenv" untuk mengelola versi Python secara lebih fleksibel.
+  Reason: Hits: 1/6 (['terminal'])
+----------------------------------------
+Case 34 (Score 0.5): suggest tempat dating best kat KL
+  Response: Berikut adalah beberapa tempat dating terbaik di Kuala Lumpur:
+
+1. Taman Tasik Cheras: Tempat ini menawarkan suasana alam yang tenang dan romantis. Anda bisa berjalan-jalan sambil menikmati pemandangan dan udara segar.
+2. Bukit Jalil Park: Dengan area rekreasi yang luas, tempat ini cocok untuk aktivitas seperti jogging atau sekadar duduk-duduk sambil ngobrol.
+3. Taman Tasik Perdana: Tempat ini memiliki pemandangan indah dan suasana yang tenang, membuatnya ideal untuk date malam.
+4. The Gardens Mall: Selain berbelanja, tempat ini juga menawarkan restoran dengan pemandangan kota yang memukau.
+5. Petaling Street: Untuk pengalaman yang lebih tradisional, Anda bisa mencoba makanan lokal di sini dan berjalan-jalan sambil menikmati suasana malam.
+
+Semua tempat ini memberikan suasana romantis dan privasi yang baik untuk pasangan yang ingin menghabiskan waktu bersama.
+  Reason: Hits: 1/6 (['taman'])
+----------------------------------------
+Case 38 (Score 0.0): tolong translate 'I love you' ke bahasa kelantan
+  Response: Maaf, saya tidak pasti betul bagaimana 'I love you' ditranslasi ke dalam bahasa Kelantan. Bahasa-bahasa daerah seperti bahasa Kelantan mempunyai perbezaan yang kecil dengan bahasa Melayu standard, tetapi untuk perkataan 'I love you', ia biasanya diterjemahkan sebagai "Saya cinta kamu" dalam bahasa Melayu. Saya boleh cuba mencari maklumat lebih lanjut jika anda minat.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 39 (Score 0.0): apa maksud 'gostan'?
+  Response: Terdapat beberapa kemungkinan maksud perkataan "gostan" dalam konteks yang berbeza, tetapi tanpa lebih banyak konteks, sulit untuk menentukan mana yang paling tepat. Berikut adalah beberapa kemungkinan:
+
+
+
+1. **Gost (Bahasa Inggeris)**: Ini mungkin merupakan kesalahan pengetikan dan maksudnya adalah "gost" yang merujuk kepada sejenis sayur-sayuran dalam beberapa bahasa Eropah.
+
+2. **Gostar (Bahasa Portugis/Spaen)**: Jika ini adalah kesalahan pengetikan, "gostar" bermaksud "menyukai" atau "menggemari".
+
+3. **Perkataan Lokal**: Dalam beberapa bahasa daerah di Malaysia, mungkin ada istilah yang mirip dengan "gostan" yang merujuk kepada sesuatu perkara tertentu.
+
+4. **Konteks Spesifik**: Jika "gostan" digunakan dalam konteks spesifik seperti budaya, makanan, atau bahasa jerga, ia mungkin mempunyai maksud khusus yang perlu diselidiki lebih lanjut.
+
+Tanpa lebih banyak konteks, sulit untuk menentukan maksud pasti perkataan "gostan". Jika anda boleh memberikan lebih banyak informasi atau konteks di mana perkataan ini digunakan, saya dapat membantu dengan lebih baik.
+  Reason: Hits: 0/5 ([])
+----------------------------------------
+Case 40 (Score 0.0): maksud 'atuh' dalam bahasa sarawak apa?
+  Response: "Atuh" dalam Bahasa Sarawak merujuk kepada sejenis sayur-sayuran, biasanya digunakan sebagai bahan makanan. Ia sering dimasak bersama daging atau ikan untuk membuat hidangan yang lezat.
+
+Jadi, "atuh" dalam bahasa Sarawak merujuk kepada sejenis sayur.
+  Reason: Hits: 0/4 ([])
+----------------------------------------
+Case 42 (Score 0.0): tolong kira 50 USD to MYR
+  Response: 1. Kadar pertukaran USD ke MYR adalah sekitar 4.000 MYR (kadar ini mungkin berbeza-beza dan perlu diperbarui).
+2. Jika kita gunakan kadar 4.000 MYR untuk 1 USD, maka 50 USD akan setara dengan 200,000 MYR.
+3. Namun, jika kadar pertukaran adalah 4.100 MYR per 1 USD, maka 50 USD akan setara dengan 205,000 MYR.
+
+Untuk kiraan yang tepat, sila cek kadar pertukaran terkini dari sumber yang boleh dipercayai seperti bank atau platform mata wang.
+  Reason: Hits: 0/5 ([])
+----------------------------------------
+Case 45 (Score 0.5): I want to eat something spicy, suggest one
+  Response: Mungkin nak cuba Mee Goreng? Ia adalah makanan tradisional Malaysia yang pedas dan lezat. Kalau suka roti, Roti Canai Babi boleh jadi pilihan. Ia juga lembut dan berminyak dengan rasa yang sedap.
+  Reason: Hits: 1/6 (['pedas'])
+----------------------------------------
+Case 46 (Score 0.5): mana klinik 24 jam paling dekat?
+  Response: Maaf, untuk memberikan jawapan yang tepat, saya perlu maklumat lokasi anda atau tempat yang anda rujuk. Tetapi berdasarkan maklumat yang ada di Knowledge Base, saya boleh memberi beberapa saran tentang tempat-tempat yang biasanya mempunyai klinik 24 jam:
+
+
+
+1. **Klinik Kesihatan Universiti Malaya (UMKM)** - Terletak di kampus Universiti Malaya, ini adalah salah satu pilihan utama untuk mahasiswa dan pegawai universiti.
+2. **Klinik Kesihatan UKM** - Lokasi yang sama dengan UMKM, tetapi melayani umum.
+3. **Pusat Perubatan Sultan Azlan Shah (PASS)** - Terletak di Bandar Baru Bukit Gelugor, Pulau Pinang, ini adalah pilihan utama untuk perubatan 24 jam.
+
+Jika anda memberikan lokasi yang lebih spesifik, saya boleh memberi saran tempat yang lebih tepat.
+  Reason: Hits: 1/6 (['klinik'])
+----------------------------------------
+Case 50 (Score 0.0): bebal betul la driver tadi, signal tak bagi
+  Response: Takut-takut tuh, driver tadi! Kadang2 mereka betul-betul lupa bagi signal sebelum belok. Jom kita cuba nak aman-aman jaya:
+
+1. Sebelum belok, pastikan dah kena cek situasi di sekeliling.
+2. Jika terdapat penumpang atau pengguna jalan lain yang mungkin terpengaruh, baru bagi signal.
+3. Jika tak ada orang lain, boleh-boleh saja tak bagi signal, tapi tetap perlu cek situasi dulu.
+
+Nah, kalau nak lebih aman, cuba sikit2 belok dan pastikan dah tidak ada yang akan terganggu sebelum betul-betul belok.
+  Reason: Hits: 0/7 ([])
+----------------------------------------
+Case 55 (Score 0.0): pdpr tu apa?
+  Response: Pardon tu peribahasa "PDPR" mungkin nak tahu tu apa. Boleh jadi tu singkatan atau kod bahasa yang perlu dijelaskan lebih lanjut. Jika tu Perak District Public Relations, katanya. Tapi kalau bukan, boleh tu jelaskan sedikit lebih? Saya cuba bantu je.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 57 (Score 0.5): syarat kemasukan matrikulasi
+  Response: Syarat untuk matrikulasi di Malaysia biasanya termasuk beberapa faktor penting:
+
+1. **Kemahiran Bahasa Melayu**: Kebanyakan program matrikulasi memerlukan pengetahuan yang baik dalam bahasa Melayu.
+2. **Prestasi Akademik**: Markah UPSR, PT3 atau SPM yang baik adalah syarat penting untuk pendaftaran.
+3. **Seleksi Wawancara**: Beberapa institusi mungkin mengadakan wawancara sebagai tahap seleksi tambahan.
+
+Untuk maklumat yang lebih rinci dan terkini, anda boleh merujuk kepada laman web rasmi institusi pengajian tinggi atau pihak berkuasa pendidikan di Malaysia.
+  Reason: Hits: 1/6 (['spm'])
+----------------------------------------
+Case 58 (Score 0.5): asb dividen tahun ni berapa?
+  Response: Maaf, tetapi saya tidak mempunyai maklumat spesifik tentang asb (Anggaran Semenanjung Malaysia) dividen untuk tahun ini dalam sumber yang diberikan. Biasanya, perniagaan atau syarikat akan mengumumkan dividen mereka setelah musim penajaan berakhir dan biasanya diumumkan pada awal tahun berikutnya. Anda boleh cek laman web rasmi syarikat tersebut atau hubungi pihak perkhidmatan pelanggan untuk maklumat yang terkini.
+  Reason: Hits: 1/5 (['umum'])
+----------------------------------------
+Case 64 (Score 0.0): scammer call cakap lhdn, apa nak buat?
+  Response: Jika anda mendapat panggilan telefon dari seseorang yang mengaku sebagai agensi LHDN, berikut adalah langkah-langkah yang boleh diambil:
+
+1. Jangan terburu-buru untuk membayar apa-apa jumlah. Selalu cek dengan pasti sebelum memberikan maklumat peribadi atau membuat pembayaran.
+2. Tanyakan maklum balas kepada agensi rasmi LHDN. Anda boleh hubungi mereka melalui telefon 1300 882 000 atau laman web rasmi LHDN untuk memastikan kebenaran panggilan tersebut.
+3. Laporkan scam ini kepada NSRC (997) atau CCID Scam Response Center. Mereka akan membantu anda dengan proses pelaporan dan memberi nasihat lebih lanjut.
+
+Ingat, selalu cermat dan berhati-hati apabila menerima panggilan telefon yang tidak diingini.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 66 (Score 0.5): jpj renew license operating hours
+  Response: JPJ's license renewal services usually operate during regular working hours. Here’s what you can expect:
+
+1. **Weekdays**: JPJ offices typically open from 8:30 AM to 4:30 PM.
+2. **Holidays and Weekends**: Some JPJ centers might be closed on public holidays, but they may have extended or evening hours during weekends for convenience.
+3. **Online Services**: For a more flexible option, you can renew your license online through the official JPJ website. This service is available 24/7.
+
+It's always a good idea to check with your nearest JPJ office or visit their official website for specific operating hours and any updates that might affect these times.
+  Reason: Hits: 1/7 (['8'])
+----------------------------------------
+Case 67 (Score 0.0): renew passport walk in boleh tak?
+  Response: Ya, anda boleh mendaftar untuk memperbaharui pasport dengan cara datang ke kementerian dalam negeri atau pusat pelayanan yang ditetapkan. Namun, saya perlu pastikan langkah-langkah dan dokumen yang diperlukan. Berikut adalah beberapa langkah umum:
+
+1. Datang ke kementerian dalam negeri atau pusat pelayanan yang ditetapkan.
+2. Bawa dokumen yang diperlukan seperti paspor lama, kad pengenalan, dan fotokopi.
+3. Bayar biroksyen yang mungkin dikenakan.
+
+Saya cadangkan untuk menghubungi kementerian dalam negeri secara langsung atau mengunjungi laman web rasmi mereka untuk maklumat terkini dan lengkap.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 70 (Score 0.5): baju melayu cekak musang vs teluk belanga
+  Response: Baju Melayu Cekak Musang dan Teluk Belanga mempunyai beberapa perbezaan:
+
+1. **Bentuk**: Baju Cekak Musang biasanya lebih panjang dan lebih lebar di dada dibandingkan dengan baju Teluk Belanga yang cenderung lebih pendek dan ketat.
+2. **Warna**: Baju Cekak Musang sering kali berwarna merah atau kuning, sementara baju Teluk Belanga biasanya berwarna putih atau hijau.
+3. **Penggunaan**: Baju Cekak Musang lebih sering digunakan dalam perayaan dan acara tradisional, manakala baju Teluk Belanga lebih lazim digunakan dalam kehidupan sehari-hari.
+
+Kedua-dua pakaian ini merupakan simbol penting dari identiti Melayu dan menunjukkan bagaimana budaya dapat berekspresi melalui pakaian.
+  Reason: Hits: 1/6 (['beza'])
+----------------------------------------
+Case 72 (Score 0.5): hantaran tunang biasanya berapa dulang?
+  Response: Biasanya, hantaran tunang di Malaysia melibatkan beberapa hadiah tradisional seperti emas, perhiasan, dan uang dalam kemasan tertentu. Jumlah dana untuk hantaran tunang boleh bervariasi bergantung kepada keadaan ekonomi pasangan yang menikah, tradisi keluarga, dan hubungan antara kedua-dua keluarga. Dalam beberapa kasus, jumlah uang dalam hantaran tunang mungkin berkisar dari RM500 hingga RM10,000 atau lebih, tergantung pada keadaan individu.
+  Reason: Hits: 1/6 (['5'])
+----------------------------------------
+Case 73 (Score 0.5): pantang larang orang mengandung masa dulu
+  Response: Orang Melayu mempunyai beberapa pantang larang semasa kehamilan untuk mengelakkan masalah selama kehamilan atau kelahiran bayi yang tidak baik. Berikut adalah beberapa pantangan yang biasa dikenal pasti:
+
+1. **Tidak menjalankan pekerjaan rumah tangga**: Kebanyakan wanita hamil dihimbau untuk mengurangkan beban kerja rumah, terutamanya tugas yang memerlukan kekuatan fizikal seperti mencuci piring atau membersihkan lantai.
+2. **Tidak mengerjakan pekerjaan bangunan**: Wanita hamil dianjurkan tidak melakukan pekerjaan seperti menancap atau menggaruk, kerana dianggap dapat menyebabkan bayi memiliki bibir cedera.
+3. **Tidak keluar pada maghrib**: Ada kepercayaan bahawa wanita hamil seharusnya tidak keluar rumah semasa waktu maghrib untuk mengelakkan pengaruh roh jahat.
+
+Pantangan-pantangan ini berasal dari tradisi dan kepercayaan masyarakat Melayu, tetapi penting untuk diingat bahawa mereka bukan dalil medis yang sahih.
+  Reason: Hits: 1/6 (['percaya'])
+----------------------------------------
+Case 74 (Score 0.0): lagu raya paling legend
+  Response: Lagu raya paling legend yang masih sering dihayati masyarakat Malaysia termasuk:
+- "Terus Hidup" oleh Aina Abdul
+- "Hasrat" oleh Amir Jahari
+- "Rasa Sayang" oleh Dato' Sri Jayaraman
+- "Suka Suka Cinta" oleh P. Ramlee
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 77 (Score 0.5): panggung wayang terdekat
+  Response: Maaf, saya tidak dapat memberikan lokasi panggung wayang terdekat berdasarkan informasi yang ada. Tapi biasanya anda boleh menemui wayang di pusat seni tradisional atau selama festival budaya. Anda mungkin perlu mencari di internet atau bertanya kepada tempat-tempat seperti museum atau pusat seni setempat untuk mendapatkan maklumat yang lebih tepat.
+  Reason: Hits: 1/6 (['wayang'])
+----------------------------------------
+Case 80 (Score 0.5): dato lee chong wei retired bila?
+  Response: Dato' Lee Chong Wei, pemain tenis meja terkenal Malaysia, telah berhenti bermain pada tahun 2019. Beliau mengumumkan pensyarahan selepas kalah dalam perlawanan semifinal Olimpik Tokyo 2020 kepada Chen Long daripada China.
+  Reason: Hits: 1/5 (['2019'])
+----------------------------------------
+Case 81 (Score 0.0): badminton court near me
+  Response: Nah, nak tahu tempat bermain bulutangkis dekat rumah kamu? Biasanya, ada beberapa tempat yang boleh kamu cuba:
+
+1. Taman rekreasi: Banyak taman rekreasi di seluruh Malaysia yang mempunyai lapangan bulutangkis.
+2. Clubhouse atau pusat kebugaran: Jika rumah kamu berdekatan dengan clubhouse atau pusat kebugaran, mungkin ada lapangan bulutangkis sana.
+3. Kolej atau institusi pendidikan: Kalau rumah kamu dekat dengan kolej atau institusi pendidikan, biasanya mereka mempunyai lapangan bulutangkis untuk pelajar dan komuniti.
+
+Jadi, cek sekitar rumah kamu atau cari di Google Maps untuk menemui tempat-tempat yang sesuai.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 83 (Score 0.0): sukan sea next kat mana?
+  Response: Maaf, informasi terkini tentang tempat pelaksanaan Sukan Sea Games berikutnya tidak termasuk dalam data yang saya miliki. Biasanya, Sukan Sea Games diadakan setiap dua tahun sekali dan melibatkan negara-negara di kawasan Asia Tenggara. Untuk maklumat terkini tentang tempoh dan lokasi pelaksanaan berikutnya, anda boleh mengakses laman web rasmi Sukan Sea Games atau sumber-sumber berita yang sahih.
+  Reason: Hits: 0/3 ([])
+----------------------------------------
+Case 88 (Score 0.5): cara report jalan berlubang
+  Response: Untuk melaporkan jalan yang berlubang di Malaysia:
+
+1. Gunakan aplikasi MyJalan: Ini adalah cara termudah dan tercepat. Anda hanya perlu mengunduh dan menggunakan aplikasi MyJalan, lalu pilih opsi "Lapor" atau "Report Problem", kemudian ikuti petunjuknya untuk melaporkan jalan yang berlubang.
+2. Hubungi PBT (Perbadanan Perumahan dan Pembangunan Tempatan): Anda juga dapat menghubungi perbadanan tempatan di kawasan anda, biasanya dikenali sebagai PBT. Mereka akan memberikan petunjuk tentang prosedur yang harus dilakukan untuk melaporkan jalan yang berlubang.
+3. Gunakan laman web resmi: Banyak pihak berkuasa tempatan (PBT) juga menyediakan laman web resmi di mana anda boleh melapor secara online. Cari laman web PBT setempat dan cari menu "Laporan Masalah" atau "Report Problem".
+
+Semua cara ini akan membantu memastikan jalan yang berlubang diperbaiki dengan segera, menjadikan perjalanan anda lebih aman dan nyaman.
+  Reason: Hits: 1/6 (['pbt'])
+----------------------------------------
+Case 90 (Score 0.5): sampah tak kutip seminggu, nak adu kat mana?
+  Response: Untuk menyelesaikan masalah sampah yang tidak dikutip seminggu, kamu boleh cuba adu dengan beberapa pihak:
+
+1. **Komuniti Lokal**: Cek dengan komuniti tempatan atau badan amal untuk melihat jika mereka dapat membantu mengumpul sampah sementara.
+2. **Lembaga Air dan Sumber-Sumber Alam (LAMAS)**: Jika kamu tinggal di kawasan perkotaan, coba hubungi LAMAS yang bertanggungjawab untuk mengetahui prosedur pengeluaran sampah secara sementara.
+3. **Pegawai Tempatan**: Hubungi pegawai tempatan dari badan kerajaan setempat atau pihak berkuasa tempatan (PBT) untuk melaporkan masalah dan mendapatkan bantuan.
+
+Jika semua jalan ini gagal, mungkin perlu menghubungi pihak berkuasa tempatan secara langsung untuk mengetahui prosedur yang betul.
+  Reason: Hits: 1/6 (['pbt'])
+----------------------------------------
+Case 91 (Score 0.0): anjing liar banyak kat taman ni, bahaya
+  Response: Taman ni ada banyak anjing liar, perlu diambil tindakan:
+
+1. Hubungi PBT (Pegawai Berkuasa Tempatan) untuk memberitahu situasi ini. Mereka boleh mengirimkan pasukan untuk menangani anjing-anjing tersebut.
+2. Jika masalahnya berkaitan dengan jalan raya, hubungi JKR (MyJalan) untuk melaporkan keadaan.
+3. Pastikan diri sendiri dan orang di sekitar aman. Jangan mencoba mengambil tindakan secara langsung terhadap anjing-anjing tersebut.
+
+Sekiranya situasi menjadi lebih berbahaya, jangan ragu untuk memanggil ambulans pada 999.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 92 (Score 0.5): paip air pecah, syabas contact number
+  Response: Untuk melaporkan masalah paip air pecah, anda boleh menghubungi:
+
+1. **JKR (MyJalan App)** - Anda boleh menggunakan aplikasi ini untuk melaporkan masalah jalan dan infrastruktur, termasuk paip air yang pecah.
+2. **PBT (Local Council)** - Jika masalah paip air pecah terletak di kawasan tempatan anda, hubungi PBT setempat.
+
+Sekiranya anda memerlukan bantuan segera, jangan ragu untuk menghubungi 999 (Police, Fire, Ambulance) untuk penjawab masalah yang lebih mendesak.
+  Reason: Hits: 1/5 (['app'])
+----------------------------------------
+Case 93 (Score 0.0): blackout rumah aku sorang je, kenapa?
+  Response: Rumahmu blackout kerana beberapa sebab. Biasanya, ini berlaku kerana masalah dengan sistem elektrik rumahmu sendiri seperti peralihan arus (breaker) yang bermasalah atau talian listrik yang terputus. Selain itu, faktor luaran juga boleh menjadi sebab, contohnya hujan lebat yang menyebabkan keretakan pada talian listrik. Jika blackout berterusan, lebih baik hubungi perkhidmatan pelanggan tenaga elektrik untuk bantuan.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 94 (Score 0.0): internet unifi slow gila hari ni
+  Response: Hari ini adalah 2024-10-31 dan internet Unifi kamu pergi 'gila' ya? Boleh jadi ada beberapa sebab untuk masalah ini:
+
+1. **Hari Raya Deepavali**: Walaupun hari ini bukan tarikh liburan, tetapi perayaan Deepavali biasanya membawa banyak aktiviti dan kebisingan di kawasan perkotaan yang boleh mempengaruhi sambungan internet.
+2. **Lalu Lintas Berat**: Perayaan Deepavali sering menyaksikan lalu lintas berat, terutamanya di kawasan perkotaan, yang boleh mengakibatkan masalah dengan jaringan internet.
+3. **Perubahan Jaringan**: Kebanyakan penyedia jaringan melakukan perubahan atau pemeliharaan pada tarikh-tarikh tertentu untuk memastikan sambungan internet lancar, tetapi ini biasanya diberitahu sebelum masa.
+
+Jika masalahnya masih berterusan, coba hubungi pihak Unifi untuk bantuan lebih lanjut.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 95 (Score 0.5): celcom line takde signal
+  Response: Sama ada anda berada dalam kawasan perkotaan atau luar bandar, masalah sinyal Celcom mungkin terjadi kerana beberapa sebab. Berikut adalah beberapa pilihan yang boleh anda coba:
+
+1. Cek lokasi: Pastikan anda tidak berada di kawasan dengan pengekalkan sinyal yang rendah seperti dalam talian, bawah tanah, atau di antara bangunan tinggi.
+2. Ganti tempat: Jika mungkin, pindahkan ke tempat lain di mana sinyal lebih baik. Biasanya, area tepi jalan dan bukit boleh memberikan sinyal yang lebih baik.
+3. Periksa peranti anda: Pastikan telefon anda dalam keadaan baik dan tidak ada masalah dengan antena atau modul sinyal.
+4. Hubungi Celcom: Jika masalahnya berterusan, coba hubungi pihak Celcom untuk mendapatkan bantuan teknikal.
+
+Sekiranya masalah sinyal terus berlaku, mungkin perlu mempertimbangkan untuk berganti kepada penyedia lain yang mungkin memberikan sinyal yang lebih baik di kawasan anda.
+  Reason: Hits: 1/5 (['kawasan'])
+----------------------------------------
+Case 96 (Score 0.0): mytv tak dapat siaran
+  Response: Siaran TV anda terputus? Saya boleh bantu dengan beberapa langkah:
+
+1. Pastikan kabel saluran TV anda benar-benar dimasukkan ke dalam port yang betul.
+2. Cek sinyal jaringan anda. Jika menggunakan layanan berlangganan, cek apakah ada pemutakhiran atau gangguan siaran.
+3. Periksa pengaturan TV untuk memastikan tidak ada kesalahan setting yang menyebabkan masalah.
+
+Jika masih terdapat masalah, mungkin perlu hubungi pihak penyedia layanan anda untuk bantuan lebih lanjut.
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 97 (Score 0.5): grab driver cancel last minute, geramnya
+  Response: Jika anda geram kerana driver Grab membatalkan perjalanan pada akhir minit, buruklah? Berikut adalah beberapa pilihan yang boleh anda lakukan:
+
+1. **Hubungi Customer Service**: Boleh hubungi "Help Centre" atau "Customer Service" dalam aplikasi Grab untuk memberi maklumat tentang pembatalan tersebut.
+2. **Beri Ulasan Positif**: Jika driver itu biasanya baik, coba berikan ulasan positif supaya mereka tahu anda masih menghargai jasanya.
+3. **Pahami Alasan Pembatalan**: Kadang-kadang, pembatalan akhir minit adalah kerana masalah seperti laluan yang terhalang atau keadaan darurat. Jika anda merasa itu adalah sebab rasional, mungkin lebih baik memahaminya.
+
+Ingatlah, pelanggan dan driver sama-sama ingin perjalanan berjalan dengan lancar.
+  Reason: Hits: 1/6 (['customer service'])
+----------------------------------------
+Case 98 (Score 0.0): shopee delivery lambat sampai
+  Response: Maafkan ya, kalau Shopee delivery lambat sampai. Berikut beberapa langkah yang boleh kamu cuba:
+
+1. Cek status pengiriman di aplikasi Shopee atau laman web resmi mereka.
+2. Hubungi pihak customer service Shopee melalui chat dalam aplikasi untuk mengetahui keadaan pengiriman.
+3. Jika masalahnya terus berlanjut, coba hubungi KPDN (Kementerian Perdagangan Dalam Negeri) untuk melaporkan isu ini.
+
+Semoga solusi di atas dapat membantu!
+  Reason: Hits: 0/6 ([])
+----------------------------------------
+Case 99 (Score 0.5): foodpanda wrong order refund
+  Response: Untuk kembali wang kerana pesanan yang salah di Foodpanda, berikut adalah langkah-langkah umum yang biasanya dikenakan:
+
+1. **Periksa Notifikasi**: Semasa proses pengiriman, Foodpanda akan mengirim notifikasi kepada pelanggan dan penjual tentang status pesanan.
+2. **Hubungi Penjual**: Jika anda mendapati bahawa pesanan anda salah, hubungi penjual untuk mengetahui sebab-sebabnya. Mereka mungkin boleh memberikan pilihan untuk membatalkan atau menggantikan pesanan.
+3. **Kemaskini Status Pesanan**: Setelah berunding dengan penjual, kemaskini status pesanan di aplikasi Foodpanda. Jika diperlukan, minta bantuan dari pihak Foodpanda.
+4. **Refund**: Jika penjual dan Foodpanda setuju bahawa anda berhak mendapat kembali wang, proses refund akan diproses. Proses ini mungkin memerlukan beberapa hari.
+
+Jika anda menghadapi masalah yang tidak dapat diselesaikan dengan cara-cara di atas, jangan ragu untuk menghubungi pihak pengurusan Foodpanda untuk bantuan lebih lanjut.
+  Reason: Hits: 1/6 (['refund'])
+----------------------------------------

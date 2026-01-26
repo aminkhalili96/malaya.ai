@@ -1,0 +1,288 @@
+{
+  "failures": [
+    {
+      "id": "5",
+      "category": "Manglish",
+      "input": "eh bro, that meeting how ah? client happy tak?",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "eh bro, bagaimana macam pertemuan tu? pelanggan gembira tak?\n\nMaksudnya: Apa keadaan pertemuan tersebut? Pelanggan apakah senang?"
+    },
+    {
+      "id": "7",
+      "category": "Cultural",
+      "input": "jangan kacau aku, mengantuk gila lepas sahur",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Paraphrased in standard Malay: Jangan mengganggu saya, saya sangat terlelap setelah berbuka.\n\nSupportive cue: Kau gila ke? (You're crazy, right?)\n\nThis sentence uses the slang term \"gila\" which means very or crazy. It's a common intensifier used by young people in informal settings."
+    },
+    {
+      "id": "17",
+      "category": "Dialect: Sabah",
+      "input": "ndak payah lah kau susah-susah",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Tidak perlu begitu, kau terlalu serius.\n\nMaksudnya: Tidak usah repot-repot, kamu terlalu serius."
+    },
+    {
+      "id": "23",
+      "category": "Slang",
+      "input": "koyak la mental aku hari ni",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Aku dah sentap la hari ini. Maksudnya: Aku dah koyak la hari ini.\n\nUntuk lebih jelas, kalau kata orang Sabah:\nKau dah koyak la hari ni."
+    },
+    {
+      "id": "26",
+      "category": "Slang",
+      "input": "fuh, padu teruk performance dia tadi",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Fuh, persembahan dia tadi sangat buruk! Teruslah latih nanti supaya lebih baik.\n\n(Cue: Ini adalah ungkapan yang sering digunakan dalam percakapan sehari-hari. Maksudnya: Mengungkapkan kekecewaan terhadap sesuatu yang tidak memuaskan.)\n\nTranslation:\nFuh, his performance today was really bad! Keep practicing so you can do better next time."
+    },
+    {
+      "id": "29",
+      "category": "Tech",
+      "input": "camne nak install python kat mac?",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Macam mana nak install Python di Mac?\n\nMaksudnya: Bagaimana cara untuk menginstall Python pada peranti Mac anda?"
+    },
+    {
+      "id": "38",
+      "category": "Translation",
+      "input": "tolong translate 'I love you' ke bahasa kelantan",
+      "reason": "Failed",
+      "score": 0.0,
+      "response": "Maaf, terjemahan kepada Bahasa Kelantan mungkin tidak tepat kerana ia adalah bahasa tempatan dengan terminologi yang khas. Tetapi, ungkapan \"saya love awak\" dalam Bahasa Melayu biasa boleh digunakan sebagai terjemahannya. \n\nMaksudnya: \n- 'I love you' dalam Bahasa Inggeris\n- 'Saya love awak' dalam Bahasa Melayu (Manglish)"
+    },
+    {
+      "id": "54",
+      "category": "Education",
+      "input": "universiti malaya world ranking berapa?",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Universiti Malaya peringkat dunia berapa?\n\nMaksudnya: Apa peringkat Universiti Malaya dalam kumpulan peringkat universiti di seluruh dunia?"
+    },
+    {
+      "id": "63",
+      "category": "Finance",
+      "input": "touch n go ewallet safe or not?",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Paraphrased in standard Malay: \"Apakah ewallet aman apabila kita sentuh dan pergi?\"\n\nCue in English: This is a common question among users who are unsure about the security of their digital wallets.\n\nMaksudnya: Apakah ewallet aman apabila kita sentuh n pergi?"
+    },
+    {
+      "id": "69",
+      "category": "Civics",
+      "input": "cuti umum malaysia 2024",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Cuti umum Malaysia 2024 merujuk kepada hari-hari liburan awam yang ditetapkan oleh kerajaan untuk tahun tersebut.\n\nMaksudnya: Ini bermaksud tentang cuti-cuti awam yang diberikan di Malaysia pada tahun 2024."
+    },
+    {
+      "id": "70",
+      "category": "Cultural",
+      "input": "baju melayu cekak musang vs teluk belanga",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Baju Melayu Cekak Musang dan Teluk Belanga adalah pakaian tradisional yang popular di Malaysia.\n\nCekak Musang:\n- Memiliki desain khas dengan warna-warna cerah.\n- Biasanya terbuat dari bahan katun ringan untuk kenyamanan.\n- Desainnya sederhana namun elegan, cocok untuk acara-acara formal.\n\nTeluk Belanga:\n- Dikenal dengan motif geometris dan pola-pola tradisional.\n- Bahan yang digunakan lebih tebal dibandingkan Cekak Musang.\n- Warna-warnanya lebih gelap dan kontras, memberikan kesan yang lebih serius.\n\nPerbedaan utama antara Cekak Musang dan Teluk Belanga adalah:\n1. Desain: Cekak Musang memiliki desain sederhana namun elegan, sedangkan Teluk Belanga memiliki motif geometris dan pola-pola tradisional.\n2. Bahan: Cekak Musang terbuat dari bahan katun ringan, sementara Teluk Belanga menggunakan bahan yang lebih tebal.\n3. Warna: Cekak Musang mempunyai warna-warna cerah, sedangkan Teluk Belanga memiliki warna yang lebih gelap dan kontras.\n\nKedua jenis baju Melayu ini memiliki perbedaan dalam desain, warna, dan fungsi."
+    },
+    {
+      "id": "97",
+      "category": "Service issue",
+      "input": "grab driver cancel last minute, geramnya",
+      "reason": "No keyword hits; effort",
+      "score": 0.1,
+      "response": "Grab driver batal dekat akhir, geramnya.\n\nMaksudnya: Grab driver batal terakhir masa, perasaannya geram."
+    }
+  ],
+  "partials": [
+    {
+      "id": "3",
+      "category": "Sentiment",
+      "input": "best gila siot benda ni!",
+      "reason": "Hits: 1/9",
+      "score": 0.8,
+      "response": "Benda ni sangat best dan siot sekali!\n\nMaksudnya: Tempat atau perkara itu sangat baik dan lucu banget!"
+    },
+    {
+      "id": "19",
+      "category": "Instruction",
+      "input": "tolong buat email formal untuk apply cuti sakit esok",
+      "reason": "Hits: 1/9",
+      "score": 0.8,
+      "response": "Saya mohon izin untuk mengirimkan email yang formal untuk permohonan cuti sakit.\n\n---\n\nYth. [Nama Pemegang Cuti],\n\nSaya, [Nama Anda], ingin memohon izin cuti sakit pada [tarikh harian] kerana alasan kesehatan pribadi. Saya akan menghargai bila dapat mendapat persetujuan untuk cuti ini.\n\nTerima kasih atas perhatian dan kerjasama anda.\n\nHormat saya,\n[Nama Anda]\n\n---\n\nMaksudnya: Email formal ini meminta izin cuti sakit dengan alasan kesehatan pribadi."
+    },
+    {
+      "id": "22",
+      "category": "Slang",
+      "input": "pishang mat, keje byk gila",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Bosan banget, kerja banyak sangat.\n\nCue: Kau pusing kan kerja sebanyak tu? (Translation: You're so frustrated with the work, right?) \n\nMaksudnya: Ini adalah ungkapan sakit/terkejut yang digunakan untuk menggambarkan keadaan seseorang yang merasa bosan dan stres dengan beban kerja yang berat."
+    },
+    {
+      "id": "28",
+      "category": "Slang",
+      "input": "takde hal lah, benda kecik je tu",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Tiada masalah lah, tuh hanya sesuatu yang kecil sahaja.\n\nMaksudnya: Tiada masalah lah, itu hanya sesuatu yang kecil sahaja."
+    },
+    {
+      "id": "33",
+      "category": "Cultural",
+      "input": "bila raya aidilfitri tahun ni?",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Raya Aidilfitri pada tahun ni jatuh pada 10 April dan 11 April. Ini adalah masa di mana orang Islam merayakan kemenangan Nabi Muhammad SAW dalam Pertempuran Badar. Maksudnya: Waktu untuk Raya Aidilfitri ini telah ditetapkan."
+    },
+    {
+      "id": "35",
+      "category": "Local knowledge",
+      "input": "traffic jam gila kat federal highway skrg",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Traffic jam sangat gila di Federal Highway skrg.\n\nMaksudnya: There's a really crazy traffic jam on the Federal Highway right now.\n- 'gila' is used here as an intensifier, meaning very bad or severe.\n- 'skrg' is short for 'sekarang', which means 'now'."
+    },
+    {
+      "id": "40",
+      "category": "Vocabulary",
+      "input": "maksud 'atuh' dalam bahasa sarawak apa?",
+      "reason": "Hits: 1/4",
+      "score": 0.8,
+      "response": "Maksud perkataan \"atuh\" dalam bahasa Sarawak adalah 'aduh'. Ungkapan ini sering digunakan untuk mengekspresikan rasa terkejut atau kekecewaan. (Maksudnya: Ini adalah sejenis ungkapan yang biasa digunakan apabila seseorang merasakan keterkejutan atau kekecewaan.)"
+    },
+    {
+      "id": "41",
+      "category": "General",
+      "input": "canoneer tu apa? bunyi macam meriam je",
+      "reason": "Hits: 1/7",
+      "score": 0.8,
+      "response": "Canoneer itu apa? Bunyi macam meriam sahaja.\n\nParafrase dalam bahasa Melayu: Apakah canoneer? Suaranya hanya seperti meriam sahaja.\n\nCue dalam bahasa Melayu: Canoneer adalah sejenis senjata api yang besar dan berat, biasanya digunakan untuk tujuan pertahanan atau perang."
+    },
+    {
+      "id": "43",
+      "category": "Creative",
+      "input": "tulis pantun 4 kerat pasal cinta",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Paraphrased in standard Malay: Tulis satu pantun empat kerat tentang masalah cinta.\n\nBerikut adalah pantun empat kerat tentang masalah cinta:\n\nCinta seperti angin sepoi-sepoi,\nBisa hangat, bisa dingin juga.\nJodoh itu seperti kacang panjang,\nSering dicari, jarang ketemu. \n\n(Cue: This pantun uses metaphors to describe the unpredictable nature of love and relationships.)\n\nMaksudnya: Pantun ini menggunakan perumpamaan untuk menggambarkan sifat tidak terduga cinta dan hubungan."
+    },
+    {
+      "id": "46",
+      "category": "Local knowledge",
+      "input": "mana klinik 24 jam paling dekat?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Paraphrased in standard Malay: Di manakah klinik 24 jam terdekat?\n\nMaksudnya: Anda ingin tahu lokasi klinik kesihatan yang buka selama 24 jam dan terdekat dengan tempat anda sekarang.\n\nSesuai dengan maklumat dalam knowledge base, [KNOWLEDGE BASE] tidak menyediakan maklumat tentang klinik kesihatan yang beroperasi selama 24 jam. Klinik kesihatan kerajaan biasanya buka Isnin-Jumaat dari pukul 08:00 pagi hingga 17:00 petang, dan sesetengah klinik menyediakan perkhidmatan lanjutan selepas waktu pejabat atau hujung minggu bergantung kepada lokasi. Untuk mencari klinik 24 jam terdekat, anda mungkin perlu mencari klinik rawatan gawat atau pusat rawatan gawat di sekitar area anda."
+    },
+    {
+      "id": "49",
+      "category": "Instruction",
+      "input": "resepi ayam masak merah kenduri",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Resipi untuk memasak ayam dalam kuah merah yang khas.\n\nUntuk versi lebih ringkas, boleh dibilang resepi ini adalah cara memasak ayam dengan santan dan bumbu merah yang lezat."
+    },
+    {
+      "id": "51",
+      "category": "Education",
+      "input": "tolong check grammar ni: 'I go to school yesterday'",
+      "reason": "Hits: 1/5",
+      "score": 0.8,
+      "response": "The sentence \"saya pergi ke sekolah kemarin\" is grammatically correct in Malay.\n\nHere's a breakdown:\n1. **Saya** - means \"I\"\n2. **pergi** - means \"go\"\n3. **ke sekolah** - means \"to school\"\n4. **kemarin** - means \"yesterday\"\n\nA supportive cue: Remember, in Malay, the verb \"pergi\" (go) is followed by \"ke\" (to) before the destination.\n\nIf you want to make it more natural, you could say:\n- Saya pergi ke sekolah kemarin. (I went to school yesterday.)\n- Kemarin saya pergi ke sekolah. (Yesterday I went to school.)\n\nBoth are correct and commonly used."
+    },
+    {
+      "id": "56",
+      "category": "Education",
+      "input": "nak apply ptptn macam mana?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Maaf, anda nak tahu caranya cuba mendaftar PTPTN atau ada maksud lain?\n\nMaksudnya: Anda ingin tahu cara mengajukan pinjaman PTPTN bagaimana?"
+    },
+    {
+      "id": "57",
+      "category": "Education",
+      "input": "syarat kemasukan matrikulasi",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Syarat kemasukan matrikulasi biasanya termasuk:\n\n1. Memiliki Sijil Pelajaran Malaysia (SPM) atau setaraf.\n2. Mendapatkan skor minimum dalam subjek-susbjek yang diperlukan.\n3. Mungkin perlu mengikuti ujian seleksi tambahan.\n\nSyarat-exak masing-masing institusi boleh berbeza, jadi pastikan untuk memeriksa dengan institusi yang anda minati."
+    },
+    {
+      "id": "64",
+      "category": "Finance",
+      "input": "scammer call cakap lhdn, apa nak buat?",
+      "reason": "Hits: 1/11",
+      "score": 0.8,
+      "response": "Scammer panggilan bilang LHDN, apa yang nak buat?\n\nMaksudnya: Scammer menelpon dan mengatakan itu adalah LHDN, sekarang apa yang perlu kamu lakukan?"
+    },
+    {
+      "id": "71",
+      "category": "Cultural",
+      "input": "adat merisik tu wajib ke?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Adat merisik tu tidak wajib ke, tapi digalakkan. Maksudnya: Adat merisik bukanlah sesuatu yang perlu dilakukan, tetapi lebih kepada perkara yang diharapkan atau direkomendasikan untuk mengenal pasti latar belakang pasangan sebelum meminang."
+    },
+    {
+      "id": "77",
+      "category": "Entertainment",
+      "input": "panggung wayang terdekat",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Panggung wayang terdekat bermaksud tempat tontonan wayang yang paling dekat dengan lokasi anda.\n\nUntuk lebih jelas, \"panggung wayang\" merujuk kepada tempat persembahan wayang. (Maksudnya: Tempat di mana wayang disajikan atau ditampilkan.)"
+    },
+    {
+      "id": "78",
+      "category": "Entertainment",
+      "input": "concert coldplay malaysia ticket price",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Harga tiket konsert Coldplay di Malaysia bermula dari RM228 hingga RM3,000+. \n\nList harga:\n1. Tiket biasa berharga antara RM228 hingga RM3,000+.\n2. VIP packages dimulai dari RM3,088.\n\nMaksudnya: Harga tiket konsert Coldplay di Malaysia sangat bervariasi tergantung pada jenis tiket yang dipilih."
+    },
+    {
+      "id": "81",
+      "category": "Sports",
+      "input": "badminton court near me",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "Cari lap bulutangkis dekat sini.\n\nUntuk yang lain, anda boleh cek aplikasi peta seperti Google Maps untuk mencari lap bulutangkis terdekat. (Maksudnya: You can also check map apps like Google Maps to find the nearest badminton court.)"
+    },
+    {
+      "id": "82",
+      "category": "Sports",
+      "input": "jdt menang lagi ke?",
+      "reason": "Hits: 1/6",
+      "score": 0.8,
+      "response": "JDT menang lagi, kan?\n\nMaksudnya: Apakah JDT kembali memenangi pertandingan atau liga kali ini juga?"
+    }
+  ],
+  "fail_by_category": {
+    "Manglish": 1,
+    "Cultural": 2,
+    "Dialect: Sabah": 1,
+    "Slang": 2,
+    "Tech": 1,
+    "Translation": 1,
+    "Education": 1,
+    "Finance": 1,
+    "Civics": 1,
+    "Service issue": 1
+  },
+  "partial_by_category": {
+    "Sentiment": 1,
+    "Instruction": 2,
+    "Slang": 2,
+    "Cultural": 2,
+    "Local knowledge": 2,
+    "Vocabulary": 1,
+    "General": 1,
+    "Creative": 1,
+    "Education": 3,
+    "Finance": 1,
+    "Entertainment": 2,
+    "Sports": 2
+  }
+}

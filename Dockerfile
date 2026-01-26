@@ -1,61 +1,42 @@
-# =================================================================
-# Malaya LLM - Multi-Stage Docker Build
-# Architecture: FastAPI (Backend) + React/Vite (Frontend)
-# =================================================================
+# Malaya LLM v2 - Full Mode Container
+# ==========================================
+# Resolves TensorFlow/Numpy incompatibility on macOS ARM64
+# by running in a stable Linux environment.
 
-# -----------------------------------------------------------------
-# Stage 1: Build Frontend
-# -----------------------------------------------------------------
-FROM node:18-slim AS frontend-builder
-
-WORKDIR /app/frontend
-
-# Install dependencies (cache layer)
-COPY frontend/package*.json ./
-RUN npm ci --only=production
-
-# Copy source and build
-COPY frontend/ ./
-RUN npm run build
-
-# -----------------------------------------------------------------
-# Stage 2: Python Backend
-# -----------------------------------------------------------------
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies
+# 1. System Dependencies (for Malaya Speech/Audio)
 RUN apt-get update && apt-get install -y \
     build-essential \
-    curl \
+    libsndfile1 \
+    ffmpeg \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first to leverage cache
+# 2. Python Dependencies
 COPY requirements.txt .
 
-# Install Python dependencies
+# Force Numpy < 2.0 for TensorFlow compatibility
+RUN sed -i 's/numpy>=1.24.0/numpy<2.0.0/' requirements.txt
+
+# Install dependencies
+# Using --no-cache-dir to keep image small
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend application code
-COPY backend/ ./backend/
-COPY src/ ./src/
-COPY config.yaml .
+# 3. Application Code
+COPY . .
 
-# Copy built frontend from Stage 1
-COPY --from=frontend-builder /app/frontend/dist ./static
+# 4. Environment Configuration
+ENV HOST=0.0.0.0
+ENV PORT=8000
+# Ensure Malaya uses Full Mode
+ENV MALAYA_FORCE_MOCK=0
+# Disable CUDA (CPU only mode)
+ENV CUDA_VISIBLE_DEVICES=-1
 
-# Copy entrypoint script
-COPY entrypoint.sh .
-RUN chmod +x entrypoint.sh
-
-# Cloud Run expects the container to listen on $PORT (default 8080)
-ENV PORT=8080
-EXPOSE 8080
-
-# Healthcheck using dynamic port (localhost might not work if binding 0.0.0.0 only, but curl typically fine)
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl --fail http://localhost:$PORT/health || exit 1
-
-# Run via entrypoint
-ENTRYPOINT ["./entrypoint.sh"]
+# 5. Start Server
+EXPOSE 8000
+CMD ["python", "benchmark-tracker/server.py"]
