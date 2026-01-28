@@ -45,8 +45,8 @@ COPY config.yaml .
 # Copy built frontend from Stage 1
 COPY --from=frontend-builder /app/frontend/dist ./static
 
-# Copy entrypoint script
-COPY entrypoint.sh .
+# Copy entrypoint script (from deployment folder, build context is root)
+COPY deployment/entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 # Cloud Run expects the container to listen on $PORT (default 8080)
