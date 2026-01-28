@@ -1,0 +1,40 @@
+# =================================================================
+# Malaya LLM - Production Dependencies (Lightweight for Cloud Run)
+# =================================================================
+# This file excludes heavy ML/GPU dependencies for faster builds
+
+# --- Core Framework ---
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+PyYAML>=6.0
+
+# --- LLM & LangChain (OpenAI for production) ---
+langchain>=0.1.0
+langchain-openai>=0.1.0
+langchain-core>=0.1.0
+langsmith>=0.0.65
+openai>=1.0.0
+
+# --- HTTP Utilities ---
+requests>=2.31.0
+httpx>=0.25.0
+
+# --- Security & Validation ---
+jsonschema>=4.21.0
+sentry-sdk>=1.45.0
+
+# --- Data Processing ---
+numpy>=1.24.0
+pandas>=2.0.0
+
+# --- Observability ---
+slowapi>=0.1.9
+prometheus-client>=0.20.0
+
+# --- Voice (TTS only, lightweight) ---
+edge-tts>=6.1.0
+
+# --- MCP (Model Context Protocol) ---
+mcp>=0.1.0
