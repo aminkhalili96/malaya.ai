@@ -1,7 +1,7 @@
 steps:
   # 1. Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:$COMMIT_SHA', '-t', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest', '-f', 'deployment/Dockerfile', '.']
+    args: ['build', '-t', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest', '-f', 'deployment/Dockerfile', '.']
 
   # 2. Push the container image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
