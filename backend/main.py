@@ -478,3 +478,20 @@ async def search_knowledge(request: KGSearchRequest):
     entities = knowledge_graph.search_entities(request.query, request.entity_type)
     return {"entities": [{"id": e.id, "name": e.name, "type": e.entity_type} for e in entities]}
 
+# ===== STATIC FILE SERVING (Frontend) =====
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
+
+# Serve static assets (JS, CSS, images) from /static folder
+STATIC_DIR = Path(__file__).parent.parent / "static"
+if STATIC_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=STATIC_DIR / "assets"), name="assets")
+    
+    # Catch-all route for SPA - must be LAST
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        """Serve React SPA for all non-API routes."""
+        index_path = STATIC_DIR / "index.html"
+        if index_path.exists():
+            return HTMLResponse(content=index_path.read_text(), status_code=200)
+        return JSONResponse({"error": "Frontend not found"}, status_code=404)
