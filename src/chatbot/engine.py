@@ -122,8 +122,9 @@ class MalayaChatbot:
             self._dspy_enhanced_prompt = None
             
         self._llm_cache = {}
-        self.default_provider = self.config.get("model", {}).get("provider", "ollama")
-        self.default_model_name = self.config.get("model", {}).get("name")
+        # Allow environment variable overrides (Deployment Friendly)
+        self.default_provider = os.environ.get("MODEL_PROVIDER") or self.config.get("model", {}).get("provider", "ollama")
+        self.default_model_name = os.environ.get("MODEL_NAME") or self.config.get("model", {}).get("name")
         self.llm, self.llm_error = self._create_llm(self.default_provider, self.default_model_name)
         if self.llm:
             self._llm_cache[(self.default_provider, self.default_model_name)] = self.llm

@@ -1,0 +1,30 @@
+steps:
+  # 1. Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:$COMMIT_SHA', '-t', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest', '-f', 'deployment/Dockerfile', '.']
+
+  # 2. Push the container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest']
+
+  # 3. Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'malaya-app'
+      - '--image'
+      - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest'
+      - '--region'
+      - 'asia-southeast1'
+      - '--allow-unauthenticated'
+      # Force Production Configuration: ChatGPT (gpt-4o)
+      - '--set-env-vars'
+      - 'MODEL_PROVIDER=openai,MODEL_NAME=gpt-4o,MALAYA_ENV=production'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+images:
+  - 'asia-southeast1-docker.pkg.dev/$PROJECT_ID/malaya-repo/malaya-app:latest'
